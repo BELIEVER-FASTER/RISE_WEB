@@ -1,11 +1,18 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { responSiveSize } from 'utils/style_opt';
 
-export const CLayoutContainer = styled.div`
+export const CLayoutContainer = styled.div<{ height: number }>`
   width: 100%;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  ${({ height }) =>
+    height &&
+    css`
+      height: ${height}px;
+    `}
   video {
     z-index: 0;
     width: 100%;
@@ -66,30 +73,28 @@ export const CHeaderContainer = styled.header`
     p {
       flex: 1;
       text-align: center;
+      br {
+        display: none;
+      }
     }
   }
   @media ${responSiveSize.mobile} {
     flex-direction: column;
     padding: 0 1.23rem;
     margin: 1.23rem 0;
-    p {
-      font-size: 12px;
-      margin-left: 5%;
-      .dash {
-        display: none;
-      }
-      span {
-        display: block;
-        text-align: left;
-      }
-      span + span {
-        margin-top: 0.4rem;
-      }
-    }
     .header__left {
       img {
         width: 5.75rem;
         height: 1.8125rem;
+      }
+      p {
+        font-size: 12px;
+        margin-left: 5%;
+        text-align: start;
+        line-height: 1.3;
+        br {
+          display: initial;
+        }
       }
     }
   }
@@ -107,10 +112,11 @@ export const EmailInputBox = styled.form`
     outline: none;
     border: none;
     font-size: 20px;
-    padding: 0 0.8rem;
+    padding: 0 1rem;
     border-radius: 0;
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
+    background-color: #fff;
   }
   button {
     cursor: pointer;
@@ -128,12 +134,16 @@ export const EmailInputBox = styled.form`
     padding: 0 1.23rem;
     width: 100%;
     height: 3rem;
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 0;
     transform: translatey(-50%);
     input {
       font-size: 16px;
+      background-color: rgba(255, 255, 255, 0.65);
+      &::placeholder {
+        color: #222;
+      }
     }
     button {
       width: 5.75rem;

@@ -13,14 +13,14 @@ export default function EmailInput(): JSX.Element {
   };
 
   return (
-    <EmailInputBox onSubmit={onSubmit}>
+    <EmailInputBox className="email__form" onSubmit={onSubmit}>
       <input
         onChange={onChangeEmail}
         value={email}
         type="email"
-        placeholder="이메일 주소 작성"
+        placeholder="이메일 작성하고 혜택 알림 받기"
       />
-      <button type="submit">알림 받기</button>
+      <button type="submit">보내기</button>
     </EmailInputBox>
   );
 }

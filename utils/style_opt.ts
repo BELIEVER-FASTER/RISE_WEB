@@ -25,7 +25,6 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const responSiveSize = {
-  mobile: '(max-width: 770px)',
-  tablet: '1024px',
+  mobile: '(max-width: 950px)',
   desktop: '1700px',
 };
