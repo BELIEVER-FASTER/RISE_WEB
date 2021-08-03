@@ -1,22 +1,26 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 import CHeader from './CHeader';
 import Counter from './Couter';
 import Social from './Social';
 import { CLayoutContainer } from './styles';
 
+const VideoBG = dynamic(() => import('./VideoLayer'), { ssr: false });
+
 export default function CLayout(): JSX.Element {
   return (
     <CLayoutContainer>
-      <video loop autoPlay muted>
-        <source src="/video/counter_main.mp4" type="video/mp4" />
-      </video>
+      <VideoBG />
       <div className="counter_page__content">
         <CHeader />
         <div className="bottom__content">
           <Counter />
           <div className="social__list">
-            <Social type="Facebook" link="https://developers.facebook.com/" />
-            <Social type="Instagram" link="https://www.instagram.com/?hl=ko" />
+            <Social
+              type="Facebook"
+              link="https://www.facebook.com/%EB%9D%BC%EC%9D%B4%EC%A6%88-RISE-ENM-108682494840345"
+            />
+            <Social type="Instagram" link="https://www.instagram.com/riseenm/" />
           </div>
         </div>
       </div>

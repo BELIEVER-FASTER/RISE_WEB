@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { responSiveSize } from 'utils/style_opt';
 
 export const CLayoutContainer = styled.div`
   width: 100%;
@@ -34,6 +35,16 @@ export const CLayoutContainer = styled.div`
       }
     }
   }
+  @media ${responSiveSize.mobile} {
+    flex-direction: column;
+    .counter_page__content {
+      .bottom__content {
+        padding: 0 1.23rem;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  }
 `;
 
 export const CHeaderContainer = styled.header`
@@ -57,6 +68,31 @@ export const CHeaderContainer = styled.header`
       text-align: center;
     }
   }
+  @media ${responSiveSize.mobile} {
+    flex-direction: column;
+    padding: 0 1.23rem;
+    margin: 1.23rem 0;
+    p {
+      font-size: 12px;
+      margin-left: 5%;
+      .dash {
+        display: none;
+      }
+      span {
+        display: block;
+        text-align: left;
+      }
+      span + span {
+        margin-top: 0.4rem;
+      }
+    }
+    .header__left {
+      img {
+        width: 5.75rem;
+        height: 1.8125rem;
+      }
+    }
+  }
 `;
 
 export const EmailInputBox = styled.form`
@@ -72,6 +108,9 @@ export const EmailInputBox = styled.form`
     border: none;
     font-size: 20px;
     padding: 0 0.8rem;
+    border-radius: 0;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
   }
   button {
     cursor: pointer;
@@ -82,6 +121,24 @@ export const EmailInputBox = styled.form`
     border: none;
     font-size: 20px;
     color: #fff;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
+  @media ${responSiveSize.mobile} {
+    padding: 0 1.23rem;
+    width: 100%;
+    height: 3rem;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translatey(-50%);
+    input {
+      font-size: 16px;
+    }
+    button {
+      width: 5.75rem;
+      font-size: 16px;
+    }
   }
 `;
 
@@ -114,6 +171,14 @@ export const CounterContainer = styled.div`
       100% {
         opacity: 0;
       }
+    }
+  }
+  @media ${responSiveSize.mobile} {
+    p {
+      font-size: 18px;
+    }
+    strong {
+      font-size: 4.5rem;
     }
   }
 `;

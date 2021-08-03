@@ -23,3 +23,9 @@ export const GlobalStyle = createGlobalStyle`
         font-weight:600;
     }
 `;
+
+export const responSiveSize = {
+  mobile: '(max-width: 770px)',
+  tablet: '1024px',
+  desktop: '1700px',
+};
