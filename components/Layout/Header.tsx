@@ -1,32 +1,31 @@
+import React from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/dist/client/router';
 import Logo from 'components/Common/Logo';
 import Icon from 'components/Icon/Icon';
-import React from 'react';
+import { navData } from 'utils/navData';
 import { LogoContainer, NavContainer } from './styles';
 
 export default function Header(): JSX.Element {
+  const router = useRouter();
+
   return (
     <>
-      <LogoContainer>
-        <Logo />
-      </LogoContainer>
+      <Link href="/">
+        <LogoContainer>
+          <Logo />
+        </LogoContainer>
+      </Link>
       <NavContainer>
         <ul>
-          <li>
-            <span>About</span>
-            <Icon name="link_arrow" width={40} height={40} />
-          </li>
-          <li>
-            <span>Live</span>
-            <Icon name="link_arrow" width={40} height={40} />
-          </li>
-          <li>
-            <span>Work</span>
-            <Icon name="link_arrow" width={40} height={40} />
-          </li>
-          <li>
-            <span>Content</span>
-            <Icon name="link_arrow" width={40} height={40} />
-          </li>
+          {navData.map(navItem => (
+            <Link href={navItem.link} key={navItem.id}>
+              <li className={router.asPath === navItem.link ? 'nav__active' : ''}>
+                <span>{navItem.name}</span>
+                <Icon name="link_arrow" width={40} height={40} />
+              </li>
+            </Link>
+          ))}
         </ul>
       </NavContainer>
     </>

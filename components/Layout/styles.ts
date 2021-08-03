@@ -47,6 +47,9 @@ export const NavContainer = styled.nav`
       }
     }
   }
+  li.nav__active {
+    color: #fa370b;
+  }
 `;
 export const FooterContainer = styled.footer`
   position: absolute;
