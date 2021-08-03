@@ -34,6 +34,7 @@ class MyDocument extends Document {
           <meta name="description" content="rise_web" />
           <meta property="og:type" content="website" />
           <meta name="theme-color" content="#222" />
+          <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
           {/* 폰트 */}
           <link
@@ -50,7 +51,6 @@ class MyDocument extends Document {
             crossOrigin="anonymous"
             referrerPolicy="no-referrer"
           />
-          <link rel="icon" href="/favicon.png" />
         </Head>
         <body>
           <Main />
