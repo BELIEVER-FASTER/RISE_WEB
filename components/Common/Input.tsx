@@ -5,7 +5,7 @@ type InputProps = {
   placeholder?: string;
   value?: string | number;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  type?: 'email' | 'text' | 'password';
+  type?: 'email' | 'text' | 'password' | 'tel';
 };
 export default function Input({ type = 'text', ...rest }: InputProps): JSX.Element {
   return (
