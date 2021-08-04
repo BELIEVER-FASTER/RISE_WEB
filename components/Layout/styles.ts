@@ -41,8 +41,10 @@ export const NavContainer = styled.nav<{ isBlack: boolean }>`
     cursor: pointer;
     transition: all 0.2s;
     display: flex;
+    justify-content: flex-end;
     color: #fff;
     i {
+      width: 0;
       transition: all 0.2s;
       margin-left: 0.25rem;
       opacity: 0;
@@ -50,6 +52,7 @@ export const NavContainer = styled.nav<{ isBlack: boolean }>`
     &:hover {
       color: #fa370b;
       i {
+        width: 40px;
         display: initial;
         opacity: 1;
       }
