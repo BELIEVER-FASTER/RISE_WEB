@@ -5,6 +5,7 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
     body {
+        position:relative;
         font-family: 'Pretendard', sans-serif;
     }
     @font-face{

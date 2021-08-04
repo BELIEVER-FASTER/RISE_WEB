@@ -18,7 +18,7 @@ const MainContainer = styled.main`
     bottom: 0;
     left: 0;
     color: #fff;
-    max-width: 1920px;
+    max-width: 120rem;
     font-size: 237px;
     font-weight: 500;
     padding: 0 44px;
@@ -28,7 +28,7 @@ const MainContainer = styled.main`
 `;
 export default function main(): JSX.Element {
   return (
-    <Layout>
+    <Layout footer={false}>
       <MainContainer>
         <img src="/img/main_img.png" alt="main_img" />
         <h1>Unique Live&nbsp;Mcn</h1>
