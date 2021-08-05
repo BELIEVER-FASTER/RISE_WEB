@@ -11,16 +11,12 @@ export default function MainLayout(): JSX.Element {
         <span>i</span>
         <span>q</span>
         <span>u</span>
-        <span>e</span>
-        <strong> </strong>
-        <span>L</span>
+        <span>e</span> <span>L</span>
         <span>i</span>
         <span>v</span>
-        <span>e</span>
-        <strong> </strong>
-        <span>M</span>
-        <span>c</span>
-        <span>n</span>
+        <span>e</span> <span>M</span>
+        <span>C</span>
+        <span>N</span>
       </h1>
     </MainContainer>
   );

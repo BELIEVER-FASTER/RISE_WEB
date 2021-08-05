@@ -9,7 +9,7 @@ export const CLayoutContainer = styled.div<{ height: number }>`
   top: 0;
   left: 0;
   ${({ height }) =>
-    height &&
+    height !== 0 &&
     css`
       height: ${height}px;
     `}
@@ -117,6 +117,10 @@ export const EmailInputBox = styled.form`
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
     background-color: #fff;
+    &:disabled {
+      background-color: #aaa;
+      cursor: default;
+    }
   }
   button {
     cursor: pointer;
@@ -129,6 +133,10 @@ export const EmailInputBox = styled.form`
     color: #fff;
     border-top-right-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
+    &:disabled {
+      background-color: #aaa;
+      cursor: default;
+    }
   }
   @media ${responSiveSize.mobile} {
     padding: 0 1.23rem;

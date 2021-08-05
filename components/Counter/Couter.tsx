@@ -9,9 +9,9 @@ export default function Couter(): JSX.Element {
 
   const getDDay = () => {
     const date = new Date();
-    let ddate = new Date(`October 30, ${date.getFullYear()} 0:00:00`);
+    let ddate = new Date(`August 25, ${date.getFullYear()} 12:00:00`);
     if (ddate.getTime() < date.getTime()) {
-      ddate = new Date(`October 30, ${date.getFullYear() + 1} 0:00:00`);
+      ddate = new Date(`August 25, ${date.getFullYear() + 1} 12:00:00`);
     }
     const between = ddate.getTime() - date.getTime();
     const day = Math.floor(between / (1000 * 60 * 60 * 24));

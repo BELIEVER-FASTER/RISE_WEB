@@ -25,6 +25,7 @@ export const MainContainer = styled.main`
     text-align: justify;
     height: 11.6vw;
     overflow: hidden;
+    white-space: nowrap;
     span {
       display: inline-block;
       transform: translateY(11.6vw);

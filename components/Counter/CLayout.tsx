@@ -11,7 +11,12 @@ export default function CLayout(): JSX.Element {
   const [height, setHeight] = useState(0);
 
   useEffect(() => {
-    setHeight(window.innerHeight);
+    const filter = ['win16', 'win32', 'win64', 'mac', 'macintel', 'macm1'];
+    if (filter.indexOf(navigator.platform.toLowerCase()) < 0) {
+      setHeight(window.innerHeight);
+    } else {
+      setHeight(0);
+    }
   }, []);
 
   return (
