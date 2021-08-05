@@ -1,12 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
+import gsap from 'gsap';
 import Button from 'components/Common/Button';
 import Input from 'components/Common/Input';
 import Textarea from 'components/Common/Textarea';
 import useInput from 'hooks/useInput';
 import { ContactFormContainer } from './styles';
-import { useEffect } from 'react';
 
 export default function ContactForm(): JSX.Element {
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+    triggerOnce: true,
+  });
   const [checked, setChecked] = useState(false);
   const [name, onChangeName] = useInput('');
   const [email, onChangeEmail] = useInput('');
@@ -36,17 +41,55 @@ export default function ContactForm(): JSX.Element {
     setValid(true);
   }, [name, email, phone, company, content, checked]);
 
+  useEffect(() => {
+    const a = gsap.fromTo(
+      '#contact_content',
+      { height: 3, y: 150 },
+      { height: 270, y: 0, duration: 1, opacity: 1 }
+    );
+    const b = gsap.fromTo(
+      '.contact_input',
+      { flex: 0 },
+      { flex: 1, y: 0, duration: 1.5, opacity: 1 }
+    );
+    if (inView) {
+      a.play();
+      b.play();
+    }
+    return () => {
+      a.kill();
+      b.kill();
+    };
+  }, [inView]);
+
   return (
-    <ContactFormContainer>
+    <ContactFormContainer ref={ref} id="contact__form">
       <form onSubmit={onSubmit}>
         <h3>서비스 문의</h3>
         <div className="contact__field">
-          <Input placeholder="이름" value={name} onChange={onChangeName} />
-          <Input placeholder="연락처" type="tel" value={phone} onChange={onChangePhone} />
+          <Input
+            className="contact_input invinsible"
+            placeholder="이름"
+            value={name}
+            onChange={onChangeName}
+          />
+          <Input
+            className="contact_input invinsible"
+            placeholder="연락처"
+            type="tel"
+            value={phone}
+            onChange={onChangePhone}
+          />
         </div>
         <div className="contact__field">
-          <Input placeholder="기업/브랜드명" value={company} onChange={onChangeCompany} />
           <Input
+            className="contact_input invinsible"
+            placeholder="기업/브랜드명"
+            value={company}
+            onChange={onChangeCompany}
+          />
+          <Input
+            className="contact_input invinsible"
             placeholder="이메일"
             type="email"
             value={email}
@@ -54,6 +97,7 @@ export default function ContactForm(): JSX.Element {
           />
         </div>
         <Textarea
+          id="contact_content"
           height={274}
           placeholder="프로젝트 내용, 일정등 자세한 정보를 알려주세요"
           value={content}

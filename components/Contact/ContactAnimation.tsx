@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollTo);
 
 export default function Contact(): JSX.Element {
   useEffect(() => {
-    gsap
+    const a = gsap
       .timeline({
         defaults: {
           scrollTrigger: {
@@ -32,13 +32,27 @@ export default function Contact(): JSX.Element {
         { xPercent: -50 }
       )
       .fromTo(
-        '#contact-animation__box p:nth-of-type(2)',
+        '#contact-animation__box p:last-of-type',
         {
           xPercent: -50,
         },
-        { xPercent: 10 }
+        { xPercent: 20 }
+      )
+      .fromTo(
+        '#contact-animation__box img',
+        {
+          scale: 0.2,
+        },
+        { scale: 1.2 }
       );
+
+    a.play();
+
+    return () => {
+      a.kill();
+    };
   }, []);
+
   return (
     <ContactPhoneContainer id="contact-animation__box">
       <p className="start">START A</p>

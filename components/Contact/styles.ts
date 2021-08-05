@@ -25,6 +25,7 @@ export const ContactBannerContainer = styled.section`
     font-size: 8.125rem;
     font-weight: 600;
     span {
+      display: block;
       z-index: 1;
       position: relative;
     }
@@ -59,7 +60,9 @@ export const ContactInfoContainer = styled.section`
     .email {
       display: flex;
       span {
+        display: block;
         font-size: 32px;
+        color: #444444;
       }
       a {
         cursor: pointer;
@@ -84,7 +87,6 @@ export const ContactPhoneContainer = styled.div`
   align-items: center;
   justify-content: center;
   margin: 18.75rem 0;
-  overflow: hidden;
   p {
     white-space: nowrap;
     position: absolute;

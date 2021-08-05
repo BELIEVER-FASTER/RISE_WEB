@@ -12,7 +12,7 @@ export const MainContainer = styled.main`
   }
   h1 {
     max-width: 120rem;
-    font-family: NHaasGroteskTXPro;
+    font-family: 'NHaasGroteskTXPro';
     position: absolute;
     bottom: 0;
     left: 0;

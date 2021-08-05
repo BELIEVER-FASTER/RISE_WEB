@@ -34,7 +34,7 @@ export const NavContainer = styled.nav<{ isBlack: boolean }>`
   right: 2.75rem;
   cursor: pointer;
   font-size: 48px;
-  font-family: NHaasGroteskTXPro sans-serif;
+  font-family: 'NHaasGroteskTXPro' sans-serif;
   font-weight: 600;
   li {
     padding: 0.25rem 0;

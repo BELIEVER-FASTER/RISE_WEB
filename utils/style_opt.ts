@@ -5,8 +5,9 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
     body {
+        overflow-x: hidden;
         position:relative;
-        font-family: 'Pretendard', sans-serif;
+        font-family: 'Pretendard','Apple SD Gothic Neo', sans-serif;
     }
     @font-face{
         font-family: 'NHaasGroteskTXPro';
@@ -22,6 +23,9 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'NHaasGroteskTXPro';
         src:url('/font/NHaasGroteskTXPro-75Bd.woff') format('woff');
         font-weight:600;
+    }
+    .invinsible{
+        opacity: 0;
     }
 `;
 

@@ -6,7 +6,7 @@ import ContactLayout from 'components/Contact/ContactLayout';
 export default function contact(): JSX.Element {
   useEffect(() => {
     window.scrollTo({ top: 0 });
-  });
+  }, []);
   return (
     <Layout>
       <ContactLayout />

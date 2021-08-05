@@ -155,7 +155,7 @@ export const EmailInputBox = styled.form`
 export const CounterContainer = styled.div`
   display: flex;
   align-items: flex-end;
-  font-family: NHaasGroteskTXPro sans-serif;
+  font-family: sans-serif;
   p {
     font-size: 3.375rem;
     font-weight: bold;
