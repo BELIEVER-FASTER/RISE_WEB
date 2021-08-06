@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { CounterContainer } from './styles';
 import { useInterval } from 'hooks/useInterval';
+import { useEffect } from 'react';
 
 export default function Couter(): JSX.Element {
-  const [day, setDay] = useState(0);
+  const [day, setDay] = useState('0');
   const [hour, setHour] = useState('00');
   const [minute, setMinute] = useState('00');
-
   const getDDay = () => {
     const date = new Date();
     let ddate = new Date(`August 25, ${date.getFullYear()} 12:00:00`);
@@ -24,9 +24,18 @@ export default function Couter(): JSX.Element {
     setDay(day);
     setHour(hour);
     setMinute(minute);
+    return {
+      day,
+      hour,
+      minute,
+    };
   };
-
   useInterval(getDDay, 1000);
+  useEffect(() => {
+    setDay(getDDay().day);
+    setHour(getDDay().hour);
+    setMinute(getDDay().minute);
+  }, []);
 
   return (
     <CounterContainer>

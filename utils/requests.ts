@@ -2,7 +2,7 @@ import axios from 'axios';
 
 axios.defaults.withCredentials = true;
 if (process.env.NODE_ENV === 'production') {
-  axios.defaults.baseURL = 'https://api.riseenm.com';
+  axios.defaults.baseURL = process.env.NEXT_PUBLIC_SERVER_HOST;
 }
 
 export type EmailNotiRes = {

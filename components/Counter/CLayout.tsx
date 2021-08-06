@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import dynamic from 'next/dynamic';
+// import dynamic from 'next/dynamic';
 import CHeader from './CHeader';
 import Counter from './Couter';
 import Social from './Social';
+import VideoBG from './VideoLayer';
 import { CLayoutContainer } from './styles';
 
-const VideoBG = dynamic(() => import('./VideoLayer'), { ssr: false });
+// const VideoBG = dynamic(() => import('./VideoLayer'), { ssr: false });
 
 export default function CLayout(): JSX.Element {
   const [height, setHeight] = useState(0);
