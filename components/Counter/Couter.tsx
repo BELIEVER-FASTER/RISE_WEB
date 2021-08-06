@@ -4,9 +4,9 @@ import { useInterval } from 'hooks/useInterval';
 import { useEffect } from 'react';
 
 export default function Couter(): JSX.Element {
-  const [day, setDay] = useState('0');
-  const [hour, setHour] = useState('00');
-  const [minute, setMinute] = useState('00');
+  const [day, setDay] = useState<number | string>('0');
+  const [hour, setHour] = useState<number | string>('00');
+  const [minute, setMinute] = useState<number | string>('00');
   const getDDay = () => {
     const date = new Date();
     let ddate = new Date(`August 25, ${date.getFullYear()} 12:00:00`);
