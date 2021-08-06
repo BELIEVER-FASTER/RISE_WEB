@@ -31,7 +31,7 @@ export const CLayoutContainer = styled.div<{ height: number }>`
     .bottom__content {
       display: flex;
       align-items: flex-end;
-      padding: 0 2.75rem;
+      padding: 0 2.5rem;
       justify-content: space-between;
       .social__list {
         display: flex;
@@ -59,8 +59,8 @@ export const CHeaderContainer = styled.header`
   display: flex;
   font-size: 20px;
   justify-content: space-between;
-  margin: 2.75rem auto;
-  padding: 0 2.75rem;
+  margin: 2.5rem auto;
+  padding: 0 2.5rem;
   .header__left {
     display: flex;
     justify-content: space-between;

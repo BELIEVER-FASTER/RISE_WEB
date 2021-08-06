@@ -3,10 +3,10 @@ import styled, { css } from 'styled-components';
 export const LayoutContainer = styled.div``;
 
 export const LogoContainer = styled.div<{ isBlack: boolean }>`
-  position: absolute;
+  position: fixed;
   z-index: 99;
-  top: 2.75rem;
-  left: 2.75rem;
+  top: 2.5rem;
+  left: 2.5rem;
   cursor: pointer;
   svg {
     width: 9.5rem;
@@ -28,10 +28,10 @@ export const LogoContainer = styled.div<{ isBlack: boolean }>`
 `;
 
 export const NavContainer = styled.nav<{ isBlack: boolean }>`
-  position: absolute;
+  position: fixed;
   z-index: 99;
-  top: 2.75rem;
-  right: 2.75rem;
+  top: 2.5rem;
+  right: 2.5rem;
   cursor: pointer;
   font-size: 48px;
   font-family: 'NHaasGroteskTXPro' sans-serif;
@@ -71,8 +71,8 @@ export const NavContainer = styled.nav<{ isBlack: boolean }>`
 `;
 export const FooterContainer = styled.footer`
   width: 100%;
-  padding: 0 2.75rem;
-  margin: 2.75rem 0;
+  padding: 0 2.5rem;
+  margin: 2.5rem 0;
   hr {
     width: 100%;
     height: 3px;
