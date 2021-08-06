@@ -33,6 +33,28 @@ class MyDocument extends Document {
           <meta name="author" content="Believer" />
           <meta name="description" content="rise_web" />
           <meta property="og:type" content="website" />
+          <meta property="og:site_name" content="RISE" />
+          <meta property="og:title" content="라이즈 | 패션&코스메틱 라이브 쇼핑 MCN" />
+          <meta
+            property="og:description"
+            content="패션&코스메틱 전문 쇼핑 호스트 + 크리에이터와 함께하는 라이브 쇼핑의 A~Z"
+          />
+          <meta property="og:image" content="/img/og_thumb.png" />
+          <meta property="og:url" content="https://www.riseenm.com" />
+
+          <meta property="twitter:card" content="summary" />
+          <meta property="twitter:site" content="RISE" />
+          <meta
+            property="twitter:title"
+            content="라이즈 | 패션&코스메틱 라이브 쇼핑 MCN"
+          />
+          <meta
+            property="twitter:description"
+            content="패션&코스메틱 전문 쇼핑 호스트 + 크리에이터와 함께하는 라이브 쇼핑의 A~Z"
+          />
+          <meta property="twitter:image" content="/img/og_thumb.png" />
+          <meta property="twitter:url" content="https://www.riseenm.com" />
+
           <meta name="theme-color" content="#222" />
           <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
