@@ -73,8 +73,22 @@ export const CHeaderContainer = styled.header`
     p {
       flex: 1;
       text-align: center;
+      span {
+        white-space: nowrap;
+      }
       br {
         display: none;
+      }
+    }
+  }
+  @media ${responSiveSize.tablet} {
+    .header__left > p {
+      font-size: 20px;
+      margin-left: 10%;
+      text-align: start;
+      line-height: 1.3;
+      br {
+        display: initial;
       }
     }
   }

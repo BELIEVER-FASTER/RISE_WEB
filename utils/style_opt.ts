@@ -30,6 +30,7 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const responSiveSize = {
-  mobile: '(max-width: 950px)',
+  mobile: '(max-width: 1024px)',
+  tablet: '(max-width: 1440px)',
   desktop: '1700px',
 };

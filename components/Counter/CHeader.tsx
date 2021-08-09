@@ -9,7 +9,7 @@ export default function CHeader(): JSX.Element {
         <img src="/img/Rise.svg" alt="rise" />
         <p>
           우리는 패션 & 코스메틱 라이브쇼핑을
-          <br /> 디렉팅하는 Live MCN Rise기업입니다.
+          <br /> 디렉팅하는 Live MCN 입니다.
         </p>
       </div>
       <div className="header__right">
