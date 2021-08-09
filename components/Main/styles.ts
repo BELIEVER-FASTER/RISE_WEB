@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { responSiveSize } from 'utils/style_opt';
 
 export const MainContainer = styled.main`
   width: 100%;
@@ -21,18 +22,21 @@ export const MainContainer = styled.main`
     font-size: 11.3vw;
     font-weight: 500;
     padding: 0 44px;
-    margin: 2rem auto;
+    margin: 1.6rem auto;
     text-align: justify;
     height: 11.6vw;
     overflow: hidden;
     white-space: nowrap;
+    br {
+      display: none;
+    }
     span {
+      opacity: 0;
       display: inline-block;
       transform: translateY(11.6vw);
     }
     @keyframes showUp {
       from {
-        opacity: 0;
         transform: translateY(11.6vw);
       }
       to {
@@ -55,5 +59,18 @@ export const MainContainer = styled.main`
     content: '';
     display: inline-block;
     width: 100%;
+  }
+  @media ${responSiveSize.mobile} {
+    h1 {
+      height: 40.2vw;
+      padding: 0 24px;
+      white-space: normal;
+      text-align: left;
+      font-size: 18.3vw;
+      line-height: 1.2;
+      br {
+        display: initial;
+      }
+    }
   }
 `;

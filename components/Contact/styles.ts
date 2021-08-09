@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { responSiveSize } from 'utils/style_opt';
 
 export const ContactContainer = styled.div`
   position: relative;
@@ -11,6 +12,15 @@ export const ContactContainer = styled.div`
   section {
     width: 71.25rem;
     padding-left: 8.125rem;
+  }
+
+  @media ${responSiveSize.mobile} {
+    overflow-x: hidden;
+    section {
+      width: 100%;
+      padding-left: 0;
+      padding: 24px;
+    }
   }
 `;
 
@@ -40,6 +50,35 @@ export const ContactBannerContainer = styled.section`
     margin: 4rem 0 0 8.75rem;
     line-height: 1.4;
     font-size: 26px;
+    br:last-of-type,
+    br:first-of-type {
+      display: none;
+    }
+  }
+  @media ${responSiveSize.mobile} {
+    height: 75vh;
+    align-items: center;
+    h1 {
+      font-size: 3.3rem;
+      img {
+        width: 52px;
+        height: 52px;
+        right: -1.125rem;
+      }
+    }
+    p {
+      margin: 0;
+      margin-top: 28px;
+      line-height: 1.4;
+      font-size: 20px;
+      br:last-of-type,
+      br:first-of-type {
+        display: initial;
+      }
+      br:nth-of-type(2) {
+        display: none;
+      }
+    }
   }
 `;
 
@@ -77,6 +116,30 @@ export const ContactInfoContainer = styled.section`
       }
     }
   }
+  @media ${responSiveSize.mobile} {
+    article {
+      display: flex;
+      flex-direction: column;
+      margin-left: 10vw;
+      p,
+      a {
+        font-size: 21px;
+      }
+      .email {
+        flex-direction: column;
+        span {
+          font-size: 18px;
+        }
+        a {
+          margin-top: 1.4rem;
+        }
+        li + li {
+          margin-left: 0;
+          margin-top: 60px;
+        }
+      }
+    }
+  }
 `;
 
 export const ContactPhoneContainer = styled.div`
@@ -108,6 +171,27 @@ export const ContactPhoneContainer = styled.div`
     z-index: 1;
     height: 100%;
   }
+  @media ${responSiveSize.mobile} {
+    margin: 6.75rem 0;
+    height: 20rem;
+    p {
+      font-size: 90px;
+    }
+    .start {
+      z-index: 0;
+      left: 0px;
+      top: 4rem;
+    }
+    .end {
+      z-index: 2;
+      right: -00px;
+      bottom: 4rem;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
 `;
 
 export const ContactFormContainer = styled.section`
@@ -129,11 +213,9 @@ export const ContactFormContainer = styled.section`
       & > div {
         flex: 1;
       }
-      & > div:first-of-type {
-        margin-right: 2.7rem;
-      }
+      & > div:first-of-type,
       & > div:last-of-type {
-        margin-left: 2.7rem;
+        margin-right: 2.7rem;
       }
     }
     .term_box {
@@ -144,6 +226,33 @@ export const ContactFormContainer = styled.section`
       a {
         color: #000;
         font-weight: 500;
+      }
+    }
+  }
+  @media ${responSiveSize.mobile} {
+    form {
+      padding: 1rem;
+      h3 {
+        font-size: 26px;
+        margin-bottom: 0rem;
+      }
+      .contact__field {
+        margin: 0 0 0 0;
+        flex-direction: column;
+        & > div {
+          margin-top: 3rem;
+        }
+        & > div:first-of-type,
+        & > div:last-of-type {
+          margin-right: 0rem;
+        }
+      }
+      .term_box {
+        margin: 1rem 0 4.1rem 0;
+        font-size: 14px;
+      }
+      textarea {
+        margin-top: 3rem;
       }
     }
   }

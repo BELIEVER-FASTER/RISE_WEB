@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { responSiveSize } from 'utils/style_opt';
 
 export const LayoutContainer = styled.div``;
 
@@ -25,9 +26,17 @@ export const LogoContainer = styled.div<{ isBlack: boolean }>`
         fill: #000;
       }
     `}
+  @media ${responSiveSize.mobile} {
+    top: 1.5rem;
+    left: 1.5rem;
+    svg {
+      width: 5.125rem;
+      height: 1.625rem;
+    }
+  }
 `;
 
-export const NavContainer = styled.nav<{ isBlack: boolean }>`
+export const NavContainer = styled.nav<{ menuOpen: boolean; isBlack: boolean }>`
   position: fixed;
   z-index: 99;
   top: 2.5rem;
@@ -36,6 +45,9 @@ export const NavContainer = styled.nav<{ isBlack: boolean }>`
   font-size: 48px;
   font-family: 'NHaasGroteskTXPro' sans-serif;
   font-weight: 600;
+  .icon_menu {
+    display: none;
+  }
   li {
     padding: 0.25rem 0;
     cursor: pointer;
@@ -64,10 +76,39 @@ export const NavContainer = styled.nav<{ isBlack: boolean }>`
   ${({ isBlack }) =>
     isBlack &&
     css`
+      .icon_menu {
+        svg {
+          fill: #000;
+        }
+      }
       li {
         color: #000;
       }
     `}
+  @media ${responSiveSize.mobile} {
+    top: 1.5rem;
+    right: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    .icon_menu {
+      display: initial;
+    }
+    ul {
+      transition: all 0.3s;
+      height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    ${({ menuOpen }) =>
+      menuOpen &&
+      css`
+        ul {
+          height: 240px;
+          opacity: 1;
+        }
+      `}
+  }
 `;
 export const FooterContainer = styled.footer`
   width: 100%;
@@ -106,6 +147,47 @@ export const FooterContainer = styled.footer`
         margin-bottom: 1rem;
         justify-content: flex-end;
         width: auto;
+      }
+    }
+  }
+  @media ${responSiveSize.mobile} {
+    padding: 0 1.5rem;
+    margin: 1.5rem 0;
+    hr {
+      margin-bottom: 1.8rem;
+    }
+    article {
+      flex-direction: column;
+      p {
+        font-size: 16px;
+        line-height: 2;
+      }
+      a {
+        font-size: 24px;
+      }
+      p:first-of-type {
+        line-height: 1.7;
+        margin-bottom: 1rem;
+      }
+      p:last-of-type {
+        position: absolute;
+        bottom: 0;
+        font-size: 14px;
+      }
+
+      .footer__right {
+        margin: 3rem 0 4.5rem 0;
+        a:first-of-type {
+          text-decoration: none;
+          border-bottom: 1px solid black;
+          margin-bottom: 1.5rem;
+          display: inline-block;
+        }
+        a {
+          margin-bottom: 0.2rem;
+          justify-content: flex-start;
+          width: auto;
+        }
       }
     }
   }

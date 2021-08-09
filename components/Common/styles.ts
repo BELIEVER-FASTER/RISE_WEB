@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { responSiveSize } from 'utils/style_opt';
 
 export const InputBox = styled.div`
   height: 4.125rem;
@@ -12,6 +13,11 @@ export const InputBox = styled.div`
     border-radius: 0;
     &::placeholder {
       color: #838383;
+    }
+  }
+  @media ${responSiveSize.mobile} {
+    input {
+      font-size: 20px;
     }
   }
 `;
@@ -37,6 +43,13 @@ export const TextareaBox = styled.div<{ height?: number }>`
     css`
       height: ${height}px;
     `}
+  @media ${responSiveSize.mobile} {
+    textarea {
+      font-size: 20px;
+      min-height: 3.25rem;
+      height: 70%;
+    }
+  }
 `;
 
 export const ButtonBox = styled.button`
@@ -52,5 +65,8 @@ export const ButtonBox = styled.button`
   &:disabled {
     background-color: #c0c0c0;
     cursor: not-allowed;
+  }
+  @media ${responSiveSize.mobile} {
+    font-size: 20px;
   }
 `;

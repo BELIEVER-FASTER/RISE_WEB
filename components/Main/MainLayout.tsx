@@ -11,7 +11,8 @@ export default function MainLayout(): JSX.Element {
         <span>i</span>
         <span>q</span>
         <span>u</span>
-        <span>e</span> <span>L</span>
+        <span>e</span> <br />
+        <span>L</span>
         <span>i</span>
         <span>v</span>
         <span>e</span> <span>M</span>

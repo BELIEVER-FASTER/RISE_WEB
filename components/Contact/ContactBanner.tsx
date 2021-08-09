@@ -36,9 +36,11 @@ export default function ContactBanner(): JSX.Element {
         <span id="contact_title">Contact Us</span>
       </h1>
       <p id="contact_desc">
-        우리는 패션 & 코스메틱 라이브쇼핑을
+        우리는 패션 & 코스메틱 <br />
+        라이브쇼핑을
         <br />
-        디렉팅하는 Live MCN Rise 기업입니다.
+        디렉팅하는 <br />
+        Live MCN Rise 기업입니다.
       </p>
     </ContactBannerContainer>
   );

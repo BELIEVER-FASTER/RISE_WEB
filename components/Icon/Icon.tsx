@@ -32,10 +32,12 @@ const IconBox = styled.i<{ width: number; height: number; round: boolean }>`
 `;
 
 type IconProps = {
-  name: 'link_arrow';
+  name: 'link_arrow' | 'menu' | 'menu_black' | 'close' | 'close_black';
   width?: number;
   height?: number;
   round?: boolean;
+  className?: string;
+  onClick?: () => void;
 };
 
 export default function Icon({
@@ -43,9 +45,17 @@ export default function Icon({
   height = 0,
   name,
   round = true,
+  className = '',
+  onClick = () => null,
 }: IconProps): JSX.Element {
   return (
-    <IconBox width={width} height={height} round={round}>
+    <IconBox
+      onClick={onClick}
+      className={className}
+      width={width}
+      height={height}
+      round={round}
+    >
       <img src={`/icon/${name}.svg`} alt="icon" />
     </IconBox>
   );

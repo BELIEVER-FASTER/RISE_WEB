@@ -22,7 +22,6 @@ export default function ContactForm(): JSX.Element {
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log({ checked, name, email, phone, company, content });
     if (!checked) return;
     if (!name.trim()) return;
     if (!email.trim()) return;
@@ -42,24 +41,18 @@ export default function ContactForm(): JSX.Element {
   }, [name, email, phone, company, content, checked]);
 
   useEffect(() => {
-    const a = gsap.fromTo(
-      '#contact_content',
-      { height: 3, y: 150 },
-      { height: 270, y: 0, duration: 1, opacity: 1 }
-    );
-    const b = gsap.fromTo(
-      '.contact_input',
-      { flex: 0 },
-      { flex: 1, y: 0, duration: 1.5, opacity: 1 }
-    );
     if (inView) {
-      a.play();
-      b.play();
+      gsap.fromTo(
+        '#contact_content',
+        { height: 3, y: 150 },
+        { height: 270, y: 0, duration: 1, opacity: 1 }
+      );
+      gsap.fromTo(
+        '.contact_input',
+        { flex: 0 },
+        { flex: 1, y: 0, duration: 1.5, opacity: 1 }
+      );
     }
-    return () => {
-      a.kill();
-      b.kill();
-    };
   }, [inView]);
 
   return (
