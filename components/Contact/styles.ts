@@ -46,7 +46,7 @@ export const ContactBannerContainer = styled.section`
       z-index: 1;
       position: relative;
     }
-    img {
+    .lottie_contact {
       z-index: 0;
       position: absolute;
       top: -40%;

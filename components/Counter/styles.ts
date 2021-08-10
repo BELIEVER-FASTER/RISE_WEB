@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import { responSiveSize } from 'utils/style_opt';
 
 export const CLayoutContainer = styled.div<{ height: number }>`
   width: 100%;

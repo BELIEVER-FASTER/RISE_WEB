@@ -259,3 +259,11 @@ export const DatePickerBox = styled.div`
     }
   }
 `;
+
+export const LottieBox = styled.div`
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: -35px;
+  right: 30px;
+`;
