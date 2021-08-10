@@ -9,9 +9,17 @@ export const ContactContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
   section {
     width: 71.25rem;
     padding-left: 8.125rem;
+  }
+  @media ${responSiveSize.tablet} {
+    section {
+      width: 100%;
+      padding-left: 0;
+      padding: 1.5rem;
+    }
   }
   @media ${responSiveSize.mobile} {
     overflow-x: hidden;
@@ -52,6 +60,12 @@ export const ContactBannerContainer = styled.section`
     br:last-of-type,
     br:first-of-type {
       display: none;
+    }
+  }
+  @media ${responSiveSize.tablet} {
+    align-items: center;
+    p {
+      margin: 4rem 0 0 0;
     }
   }
   @media ${responSiveSize.mobile} {
@@ -104,7 +118,7 @@ export const ContactInfoContainer = styled.section`
       }
       a {
         cursor: pointer;
-        display: block;
+        display: inline-block;
         margin-top: 2rem;
         border-bottom: 3px solid black;
         text-decoration: none;
@@ -112,6 +126,20 @@ export const ContactInfoContainer = styled.section`
       }
       li + li {
         margin-left: 16.25rem;
+      }
+    }
+  }
+  @media ${responSiveSize.tablet} {
+    article {
+      max-width: 878.406px;
+      margin-left: 10vw;
+      margin: 0 auto;
+      .email {
+        flex-wrap: wrap;
+        gap: 50px;
+        li + li {
+          margin-left: 0;
+        }
       }
     }
   }
@@ -196,6 +224,7 @@ export const ContactPhoneContainer = styled.div`
 export const ContactFormContainer = styled.section`
   margin: 3.125rem 0 12rem 0;
   form {
+    padding-bottom: 10rem;
     h3 {
       font-size: 48px;
       font-weight: 600;
@@ -244,9 +273,14 @@ export const ContactFormContainer = styled.section`
       }
     }
   }
+  @media ${responSiveSize.tablet} {
+    margin: 0 auto;
+    max-width: 1010px;
+  }
   @media ${responSiveSize.mobile} {
     form {
       padding: 1rem;
+      padding-bottom: 5rem;
       h3 {
         font-size: 26px;
         margin-bottom: 0rem;
