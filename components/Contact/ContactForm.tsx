@@ -1,15 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import gsap from 'gsap';
+import dayjs from 'dayjs';
 import Button from 'components/Common/Button';
 import Input from 'components/Common/Input';
 import Textarea from 'components/Common/Textarea';
 import useInput from 'hooks/useInput';
 import { ContactFormContainer } from './styles';
+import CustomSelect from 'components/Common/CustomSelect';
+import { budgetOptions } from 'utils/inputData';
+import DatePick from '../Common/DatePick';
 
 export default function ContactForm(): JSX.Element {
   const { ref, inView } = useInView({
-    threshold: 0.5,
+    threshold: 0.3,
     triggerOnce: true,
   });
   const [checked, setChecked] = useState(false);
@@ -19,6 +23,10 @@ export default function ContactForm(): JSX.Element {
   const [company, onChangeCompany] = useInput('');
   const [content, onChangeContent] = useInput('');
   const [valid, setValid] = useState(false);
+  const [budget, setBudget] = useState('광고예산');
+  const [startDate, setStartDate] = useState<string>(
+    dayjs(new Date()).format('YYYY-MM-DD')
+  );
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -28,6 +36,18 @@ export default function ContactForm(): JSX.Element {
     if (!phone.trim()) return;
     if (!content.trim()) return;
     if (!company.trim()) return;
+    if (!budget.trim()) return;
+    if (!startDate) return;
+    console.log({
+      checked,
+      name,
+      email,
+      phone,
+      content,
+      company,
+      budget,
+      startDate,
+    });
   };
 
   useEffect(() => {
@@ -37,6 +57,8 @@ export default function ContactForm(): JSX.Element {
     if (!phone.trim()) return setValid(false);
     if (!content.trim()) return setValid(false);
     if (!company.trim()) return setValid(false);
+    if (!budget.trim()) return setValid(false);
+    if (!startDate) return setValid(false);
     setValid(true);
   }, [name, email, phone, company, content, checked]);
 
@@ -45,10 +67,20 @@ export default function ContactForm(): JSX.Element {
       gsap.fromTo(
         '#contact_content',
         { height: 3, y: 150 },
-        { height: 270, y: 0, duration: 1, opacity: 1 }
+        { height: 330, y: 0, duration: 1, opacity: 1 }
       );
       gsap.fromTo(
         '.contact_input',
+        { flex: 0 },
+        { flex: 1, y: 0, duration: 1.5, opacity: 1 }
+      );
+      gsap.fromTo(
+        '.budget_input',
+        { flex: 0 },
+        { flex: 1, y: 0, duration: 1.5, opacity: 1 }
+      );
+      gsap.fromTo(
+        '.date_input',
         { flex: 0 },
         { flex: 1, y: 0, duration: 1.5, opacity: 1 }
       );
@@ -58,7 +90,22 @@ export default function ContactForm(): JSX.Element {
   return (
     <ContactFormContainer ref={ref} id="contact__form">
       <form onSubmit={onSubmit}>
-        <h3>서비스 문의</h3>
+        <h3>예산과 일정에 대해 알려주세요.</h3>
+        <div className="budget__field">
+          <CustomSelect
+            className="budget_input invinsible"
+            placeholder="광고예산"
+            value={budget}
+            setValue={setBudget}
+            options={budgetOptions}
+          />
+          <DatePick
+            className="date_input invinsible"
+            value={startDate}
+            setValue={setStartDate}
+          />
+        </div>
+        <h3>간단한 정보를 입력해 주세요.</h3>
         <div className="contact__field">
           <Input
             className="contact_input invinsible"
@@ -91,7 +138,7 @@ export default function ContactForm(): JSX.Element {
         </div>
         <Textarea
           id="contact_content"
-          height={274}
+          height={320}
           placeholder="프로젝트 내용, 일정등 자세한 정보를 알려주세요"
           value={content}
           onChange={onChangeContent}

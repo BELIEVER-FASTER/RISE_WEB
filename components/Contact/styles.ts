@@ -13,13 +13,12 @@ export const ContactContainer = styled.div`
     width: 71.25rem;
     padding-left: 8.125rem;
   }
-
   @media ${responSiveSize.mobile} {
     overflow-x: hidden;
     section {
       width: 100%;
       padding-left: 0;
-      padding: 24px;
+      padding: 1.5rem;
     }
   }
 `;
@@ -61,14 +60,14 @@ export const ContactBannerContainer = styled.section`
     h1 {
       font-size: 3.3rem;
       img {
-        width: 52px;
-        height: 52px;
+        width: 3.25rem;
+        height: 3.25rem;
         right: -1.125rem;
       }
     }
     p {
       margin: 0;
-      margin-top: 28px;
+      margin-top: 1.75rem;
       line-height: 1.4;
       font-size: 20px;
       br:last-of-type,
@@ -135,7 +134,7 @@ export const ContactInfoContainer = styled.section`
         }
         li + li {
           margin-left: 0;
-          margin-top: 60px;
+          margin-top: 3.75rem;
         }
       }
     }
@@ -207,15 +206,31 @@ export const ContactFormContainer = styled.section`
       height: 1.24rem;
       margin-right: 0.56rem;
     }
+    .budget__field {
+      display: flex;
+      margin-bottom: 10rem;
+      margin-top: 3rem;
+      & > div {
+        flex: 1;
+      }
+      & > div:first-of-type {
+        margin-right: 2.7rem;
+      }
+      & > div:last-of-type {
+        margin-left: 2.7rem;
+      }
+    }
     .contact__field {
       display: flex;
       margin: 5rem 0;
       & > div {
         flex: 1;
       }
-      & > div:first-of-type,
-      & > div:last-of-type {
+      & > div:first-of-type {
         margin-right: 2.7rem;
+      }
+      & > div:last-of-type {
+        margin-left: 2.7rem;
       }
     }
     .term_box {
@@ -236,6 +251,23 @@ export const ContactFormContainer = styled.section`
         font-size: 26px;
         margin-bottom: 0rem;
       }
+      .budget__field {
+        display: block;
+        margin-bottom: 0rem;
+        margin-top: 0rem;
+        & > div {
+          flex: auto;
+          margin-top: 3rem;
+        }
+        & > div:first-of-type {
+          margin-right: 0rem;
+          z-index: 90;
+        }
+        & > div:last-of-type {
+          margin-left: 0rem;
+          margin-bottom: 4rem;
+        }
+      }
       .contact__field {
         margin: 0 0 0 0;
         flex-direction: column;
@@ -244,15 +276,19 @@ export const ContactFormContainer = styled.section`
         }
         & > div:first-of-type,
         & > div:last-of-type {
-          margin-right: 0rem;
+          margin: 0rem;
+          margin-top: 3rem;
         }
       }
       .term_box {
         margin: 1rem 0 4.1rem 0;
         font-size: 14px;
       }
-      textarea {
+      #contact_content {
         margin-top: 3rem;
+      }
+      textarea {
+        height: 100%;
       }
     }
   }

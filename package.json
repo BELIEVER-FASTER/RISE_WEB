@@ -11,8 +11,10 @@
     "vercel-deploy": "next build && next export"
   },
   "dependencies": {
+    "@y0c/react-datepicker": "^1.0.4",
     "axios": "^0.21.1",
     "babel-plugin-styled-components": "^1.13.2",
+    "dayjs": "^1.10.6",
     "gsap": "^3.7.1",
     "next": "11.0.1",
     "react": "17.0.2",

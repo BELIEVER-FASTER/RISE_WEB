@@ -21,7 +21,7 @@ export const MainContainer = styled.main`
     color: #fff;
     font-size: 11.3vw;
     font-weight: 500;
-    padding: 0 44px;
+    padding: 0 2.5rem;
     margin: 1.6rem auto;
     text-align: justify;
     height: 11.6vw;
