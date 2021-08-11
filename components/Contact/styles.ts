@@ -9,17 +9,24 @@ export const ContactContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
   section {
     width: 71.25rem;
     padding-left: 8.125rem;
   }
-
+  @media ${responSiveSize.tablet} {
+    section {
+      width: 100%;
+      padding-left: 0;
+      padding: 1.5rem;
+    }
+  }
   @media ${responSiveSize.mobile} {
     overflow-x: hidden;
     section {
       width: 100%;
       padding-left: 0;
-      padding: 24px;
+      padding: 1.5rem;
     }
   }
 `;
@@ -39,7 +46,7 @@ export const ContactBannerContainer = styled.section`
       z-index: 1;
       position: relative;
     }
-    img {
+    .lottie_contact {
       z-index: 0;
       position: absolute;
       top: -40%;
@@ -53,6 +60,12 @@ export const ContactBannerContainer = styled.section`
     br:last-of-type,
     br:first-of-type {
       display: none;
+    }
+  }
+  @media ${responSiveSize.tablet} {
+    align-items: center;
+    p {
+      margin: 4rem 0 0 0;
     }
   }
   @media ${responSiveSize.mobile} {
@@ -105,7 +118,7 @@ export const ContactInfoContainer = styled.section`
       }
       a {
         cursor: pointer;
-        display: block;
+        display: inline-block;
         margin-top: 2rem;
         border-bottom: 3px solid black;
         text-decoration: none;
@@ -113,6 +126,20 @@ export const ContactInfoContainer = styled.section`
       }
       li + li {
         margin-left: 16.25rem;
+      }
+    }
+  }
+  @media ${responSiveSize.tablet} {
+    article {
+      max-width: 878.406px;
+      margin-left: 10vw;
+      margin: 0 auto;
+      .email {
+        flex-wrap: wrap;
+        gap: 50px;
+        li + li {
+          margin-left: 0;
+        }
       }
     }
   }
@@ -197,6 +224,7 @@ export const ContactPhoneContainer = styled.div`
 export const ContactFormContainer = styled.section`
   margin: 3.125rem 0 12rem 0;
   form {
+    padding-bottom: 10rem;
     h3 {
       font-size: 48px;
       font-weight: 600;
@@ -207,15 +235,31 @@ export const ContactFormContainer = styled.section`
       height: 1.24rem;
       margin-right: 0.56rem;
     }
+    .budget__field {
+      display: flex;
+      margin-bottom: 10rem;
+      margin-top: 3rem;
+      & > div {
+        flex: 1;
+      }
+      & > div:first-of-type {
+        margin-right: 2.7rem;
+      }
+      & > div:last-of-type {
+        margin-left: 2.7rem;
+      }
+    }
     .contact__field {
       display: flex;
       margin: 5rem 0;
       & > div {
         flex: 1;
       }
-      & > div:first-of-type,
-      & > div:last-of-type {
+      & > div:first-of-type {
         margin-right: 2.7rem;
+      }
+      & > div:last-of-type {
+        margin-left: 2.7rem;
       }
     }
     .term_box {
@@ -229,12 +273,34 @@ export const ContactFormContainer = styled.section`
       }
     }
   }
+  @media ${responSiveSize.tablet} {
+    margin: 0 auto;
+    max-width: 1010px;
+  }
   @media ${responSiveSize.mobile} {
     form {
       padding: 1rem;
+      padding-bottom: 5rem;
       h3 {
         font-size: 26px;
         margin-bottom: 0rem;
+      }
+      .budget__field {
+        display: block;
+        margin-bottom: 0rem;
+        margin-top: 0rem;
+        & > div {
+          flex: auto;
+          margin-top: 3rem;
+        }
+        & > div:first-of-type {
+          margin-right: 0rem;
+          z-index: 90;
+        }
+        & > div:last-of-type {
+          margin-left: 0rem;
+          margin-bottom: 4rem;
+        }
       }
       .contact__field {
         margin: 0 0 0 0;
@@ -244,15 +310,19 @@ export const ContactFormContainer = styled.section`
         }
         & > div:first-of-type,
         & > div:last-of-type {
-          margin-right: 0rem;
+          margin: 0rem;
+          margin-top: 3rem;
         }
       }
       .term_box {
         margin: 1rem 0 4.1rem 0;
         font-size: 14px;
       }
-      textarea {
+      #contact_content {
         margin-top: 3rem;
+      }
+      textarea {
+        height: 100%;
       }
     }
   }

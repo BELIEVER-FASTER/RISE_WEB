@@ -11,19 +11,23 @@
     "vercel-deploy": "next build && next export"
   },
   "dependencies": {
+    "@y0c/react-datepicker": "^1.0.4",
     "axios": "^0.21.1",
     "babel-plugin-styled-components": "^1.13.2",
+    "dayjs": "^1.10.6",
     "gsap": "^3.7.1",
     "next": "11.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.2.0",
     "react-intersection-observer": "^8.32.0",
+    "react-lottie": "^1.2.3",
     "styled-components": "^5.3.0"
   },
   "devDependencies": {
     "@types/react": "^17.0.15",
     "@types/react-dom": "^17.0.9",
+    "@types/react-lottie": "^1.2.6",
     "@types/styled-components": "^5.1.11",
     "@typescript-eslint/eslint-plugin": "^4.28.5",
     "@typescript-eslint/parser": "^4.28.5",

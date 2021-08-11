@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import { responSiveSize } from 'utils/style_opt';
 
 export const CLayoutContainer = styled.div<{ height: number }>`
   width: 100%;
@@ -42,7 +41,7 @@ export const CLayoutContainer = styled.div<{ height: number }>`
       }
     }
   }
-  @media ${responSiveSize.mobile} {
+  @media (max-width: 1024px) {
     flex-direction: column;
     .counter_page__content {
       .bottom__content {
@@ -78,7 +77,7 @@ export const CHeaderContainer = styled.header`
       }
     }
   }
-  @media ${responSiveSize.mobile} {
+  @media (max-width: 1024px) {
     flex-direction: column;
     padding: 0 1.23rem;
     margin: 1.23rem 0;
@@ -138,7 +137,7 @@ export const EmailInputBox = styled.form`
       cursor: default;
     }
   }
-  @media ${responSiveSize.mobile} {
+  @media (max-width: 1024px) {
     padding: 0 1.23rem;
     width: 100%;
     height: 3rem;
@@ -191,7 +190,7 @@ export const CounterContainer = styled.div`
       }
     }
   }
-  @media ${responSiveSize.mobile} {
+  @media (max-width: 1024px) {
     p {
       font-size: 18px;
     }

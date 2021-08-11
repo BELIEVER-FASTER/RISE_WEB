@@ -13,11 +13,12 @@ export default function Input({
   id = '',
   className = '',
   type = 'text',
+  value = '',
   ...rest
 }: InputProps): JSX.Element {
   return (
-    <InputBox id={id} className={className}>
-      <input type={type} {...rest} />
+    <InputBox value={value} id={id} className={className}>
+      <input value={value} type={type} {...rest} />
     </InputBox>
   );
 }

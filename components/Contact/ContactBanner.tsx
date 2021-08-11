@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import { useInView } from 'react-intersection-observer';
 import { ContactBannerContainer } from './styles';
+import LottieIcon from 'components/Common/LottieIcon';
 
 export default function ContactBanner(): JSX.Element {
   const { ref, inView } = useInView({
@@ -32,7 +33,7 @@ export default function ContactBanner(): JSX.Element {
   return (
     <ContactBannerContainer>
       <h1 ref={ref}>
-        <img src="/img/scroll_down.svg" alt="scroll_down" />
+        <LottieIcon />
         <span id="contact_title">Contact Us</span>
       </h1>
       <p id="contact_desc">

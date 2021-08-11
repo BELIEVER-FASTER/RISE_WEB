@@ -32,7 +32,16 @@ const IconBox = styled.i<{ width: number; height: number; round: boolean }>`
 `;
 
 type IconProps = {
-  name: 'red_arrow' | 'link_arrow' | 'menu' | 'menu_black' | 'close' | 'close_black';
+  name:
+    | 'red_arrow'
+    | 'arrow_right'
+    | 'arrow_left'
+    | 'link_arrow'
+    | 'arrow_down'
+    | 'menu'
+    | 'menu_black'
+    | 'close'
+    | 'close_black';
   width?: number;
   height?: number;
   round?: boolean;
