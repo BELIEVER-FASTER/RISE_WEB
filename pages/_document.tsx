@@ -39,7 +39,10 @@ class MyDocument extends Document {
             property="og:description"
             content="패션&코스메틱 전문 쇼핑 호스트 + 크리에이터와 함께하는 라이브 쇼핑의 A~Z"
           />
-          <meta property="og:image" content="/img/og_thumb.png" />
+          <meta
+            property="og:image"
+            content="https://lh3.googleusercontent.com/zkXM6petYck9HO6bR041dxgedHpTcZhd5MFh3VKp0M3uPZtAi__8tGD42FE6mqrOPX3DO0PFdnyrwr-J8U43w9m5tQiNglp4o3o7NW_5KvoCxQO5YGhMxBbf22Un-m8KREIPlL7a=w2400"
+          />
           <meta property="og:url" content="https://www.riseenm.com" />
 
           <meta property="twitter:card" content="summary" />
@@ -52,7 +55,10 @@ class MyDocument extends Document {
             property="twitter:description"
             content="패션&코스메틱 전문 쇼핑 호스트 + 크리에이터와 함께하는 라이브 쇼핑의 A~Z"
           />
-          <meta property="twitter:image" content="/img/og_thumb.png" />
+          <meta
+            property="twitter:image"
+            content="https://lh3.googleusercontent.com/zkXM6petYck9HO6bR041dxgedHpTcZhd5MFh3VKp0M3uPZtAi__8tGD42FE6mqrOPX3DO0PFdnyrwr-J8U43w9m5tQiNglp4o3o7NW_5KvoCxQO5YGhMxBbf22Un-m8KREIPlL7a=w2400"
+          />
           <meta property="twitter:url" content="https://www.riseenm.com" />
 
           <meta name="theme-color" content="#222" />

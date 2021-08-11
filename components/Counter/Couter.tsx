@@ -43,7 +43,7 @@ export default function Couter(): JSX.Element {
         <p>Days</p>
         <strong>{day}</strong>
       </div>
-      <strong>:</strong>
+      <strong className="comma">:</strong>
       <div className="counter">
         <p>Hours</p>
         <strong>{hour}</strong>
