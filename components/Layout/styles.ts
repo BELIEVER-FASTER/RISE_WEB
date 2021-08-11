@@ -44,7 +44,7 @@ export const NavContainer = styled.nav<{ menuOpen: boolean; isBlack: boolean }>`
   cursor: pointer;
   font-size: 48px;
   font-family: 'NHaasGroteskTXPro' sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   .icon_menu {
     display: none;
   }
@@ -64,14 +64,14 @@ export const NavContainer = styled.nav<{ menuOpen: boolean; isBlack: boolean }>`
     &:hover {
       color: #fa370b;
       i {
-        width: 40px;
+        width: 2.5rem;
         display: initial;
         opacity: 1;
       }
     }
   }
   li.nav__active {
-    color: #fa370b;
+    color: #fa370b !important;
   }
   ${({ isBlack }) =>
     isBlack &&
@@ -104,7 +104,7 @@ export const NavContainer = styled.nav<{ menuOpen: boolean; isBlack: boolean }>`
       menuOpen &&
       css`
         ul {
-          height: 240px;
+          height: 15rem;
           opacity: 1;
         }
       `}

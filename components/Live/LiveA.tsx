@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ModelDesc from './ModelDesc';
 import ModelSecond from './ModelSecond';
 import { Live1Container, LiveLayoutContainer } from './styles';
-import { laelImages, serraImages } from 'utils/modelImages';
+import { laelImages, serraImages } from 'utils/modelsData';
 
 gsap.registerPlugin(ScrollTrigger);
 

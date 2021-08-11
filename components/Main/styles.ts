@@ -21,7 +21,7 @@ export const MainContainer = styled.main`
     color: #fff;
     font-size: 11.3vw;
     font-weight: 500;
-    padding: 0 44px;
+    padding: 0 2.5rem;
     margin: 1.6rem auto;
     text-align: justify;
     height: 11.6vw;
@@ -63,7 +63,7 @@ export const MainContainer = styled.main`
   @media ${responSiveSize.mobile} {
     h1 {
       height: 40.2vw;
-      padding: 0 24px;
+      padding: 0 1.5rem;
       white-space: normal;
       text-align: left;
       font-size: 18.3vw;

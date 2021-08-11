@@ -8,11 +8,11 @@ const LiveA = dynamic(() => import('components/Live/LiveA'), { ssr: false });
 
 export default function live2(): JSX.Element {
   return (
-    <Layout footer={false}>
+    <Layout>
       <LiveLayoutContainer>
         <LiveA />
-        <LiveB />
       </LiveLayoutContainer>
+      <LiveB />
     </Layout>
   );
 }

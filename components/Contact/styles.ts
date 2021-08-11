@@ -61,14 +61,14 @@ export const ContactBannerContainer = styled.section`
     h1 {
       font-size: 3.3rem;
       img {
-        width: 52px;
-        height: 52px;
+        width: 3.25rem;
+        height: 3.25rem;
         right: -1.125rem;
       }
     }
     p {
       margin: 0;
-      margin-top: 28px;
+      margin-top: 1.75rem;
       line-height: 1.4;
       font-size: 20px;
       br:last-of-type,
@@ -135,7 +135,7 @@ export const ContactInfoContainer = styled.section`
         }
         li + li {
           margin-left: 0;
-          margin-top: 60px;
+          margin-top: 3.75rem;
         }
       }
     }
