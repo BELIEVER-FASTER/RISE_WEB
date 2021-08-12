@@ -6,7 +6,7 @@ import VideoBG from './VideoBG';
 type BannerTitleProps = {
   title1?: string;
   title2: string;
-  desc: string;
+  desc?: string;
 };
 export default function BannerTitle({
   title1,
