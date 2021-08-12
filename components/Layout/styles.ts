@@ -16,7 +16,8 @@ export const LogoContainer = styled.div<{ isBlack: boolean }>`
   }
   &:hover {
     svg {
-      fill: #fa370b;
+      fill: #fa370b !important;
+      stroke: #fa370b !important;
     }
   }
   ${({ isBlack }) =>

@@ -1,6 +1,6 @@
 import React from 'react';
 import Lottie from 'react-lottie';
-import scrollDown from 'utils/lottie/scroll_down.json';
+import scrollDown from 'utils/lottie/scroll_d.json';
 import { LottieBox } from './styles';
 
 const lottieOptions = {

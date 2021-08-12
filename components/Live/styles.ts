@@ -8,6 +8,7 @@ export const LiveLayoutContainer = styled.div`
 export const Live1Container = styled.div`
   position: sticky;
   top: 0;
+  overflow: hidden;
   #section1 {
     z-index: 1;
     width: 100vw;
@@ -89,10 +90,12 @@ export const ModelInfoContainer = styled.div`
     span:last-of-type {
       padding-left: 5rem;
       display: flex;
+      gap: 0 1.5rem;
     }
   }
   .line__round {
     margin-bottom: 4%;
+    flex: 1;
   }
   &.section3_model {
     transform: translateY(300px);
@@ -157,7 +160,7 @@ export const LiveBContainer = styled.div`
     font-size: 40px;
   }
   section {
-    width: 100%;
+    width: 72%;
     max-width: 1369px;
     padding-right: 2.5rem;
   }
@@ -168,6 +171,16 @@ export const LiveBContainer = styled.div`
       font-size: 72px;
       font-weight: 600;
       line-height: 1.3;
+      position: relative;
+      display: inline-block;
+      span {
+        z-index: 1;
+        position: relative;
+      }
+      & > div {
+        top: 20px;
+        z-index: 0;
+      }
     }
     p {
       margin-top: 2.5rem;
@@ -178,7 +191,7 @@ export const LiveBContainer = styled.div`
   .live_b__model_list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 9.75rem 2.25rem;
+    gap: 5.75rem 2.25rem;
   }
   .more__info {
     height: 25rem;

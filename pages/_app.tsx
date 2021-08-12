@@ -10,6 +10,7 @@ const tagManagerArgs = {
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   useEffect(() => {
     TagManager.initialize(tagManagerArgs);
+    process.env.NODE_ENV === 'development' && console.log(process.env.NODE_ENV);
   }, []);
 
   return (

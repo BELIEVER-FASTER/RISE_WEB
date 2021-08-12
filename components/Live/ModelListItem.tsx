@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import { useInView } from 'react-intersection-observer';
 import { ModelListItemBox } from './styles';
-import { useRef } from 'react';
 
 type ModelListItemProps = {
   modelData: { id: number; src: string; name: string; desc: string };

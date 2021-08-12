@@ -3,8 +3,9 @@ import React, { useEffect, useState } from 'react';
 import CHeader from './CHeader';
 import Counter from './Couter';
 import Social from './Social';
-import VideoBG from './VideoLayer';
+import VideoBG from '../Common/VideoBG';
 import { CLayoutContainer } from './styles';
+import { videoResources } from 'utils/videoResource';
 
 // const VideoBG = dynamic(() => import('./VideoLayer'), { ssr: false });
 
@@ -22,7 +23,10 @@ export default function CLayout(): JSX.Element {
 
   return (
     <CLayoutContainer height={height}>
-      <VideoBG />
+      <VideoBG
+        videoSrc={videoResources.counterBG.src}
+        thumbnail={videoResources.counterBG.thumb}
+      />
       <div className="counter_page__content">
         <CHeader />
         <div className="bottom__content">

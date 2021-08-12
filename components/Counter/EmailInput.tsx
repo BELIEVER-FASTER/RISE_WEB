@@ -1,5 +1,6 @@
 import useAsync from 'hooks/useAsync';
 import React, { useState, useEffect } from 'react';
+import TagManager from 'react-gtm-module';
 import { emailNoti, EmailNotiRes } from 'utils/requests';
 import { EmailInputBox } from './styles';
 
@@ -13,9 +14,9 @@ export default function EmailInput(): JSX.Element {
   };
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    TagManager.dataLayer({ dataLayer: { event: '출시 알림 등록' } });
     fetch();
   };
-
   useEffect(() => {
     setIsRegister((state.success as EmailNotiRes).success);
     const timeId = setTimeout(() => {

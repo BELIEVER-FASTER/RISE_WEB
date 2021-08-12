@@ -1,19 +1,20 @@
 import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import ScrollTo from 'gsap/ScrollToPlugin';
 import ModelDesc from './ModelDesc';
 import ModelSecond from './ModelSecond';
 import { Live1Container, LiveLayoutContainer } from './styles';
 import { laelImages, serraImages } from 'utils/modelsData';
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, ScrollTo);
 
 export default function LiveA(): JSX.Element {
   useEffect(() => {
     const a1 = gsap.timeline({
       scrollTrigger: {
         trigger: '#section_a',
-        start: 'top top',
+        start: '10% top',
         end: '25% top',
         scrub: 1,
       },
@@ -42,7 +43,7 @@ export default function LiveA(): JSX.Element {
         scrub: 1,
       },
     });
-
+    gsap.to(window, { duration: 0, scrollTo: 0 });
     a1.to('.a1_img', {
       clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
     })
@@ -69,6 +70,7 @@ export default function LiveA(): JSX.Element {
       .to('.main_header', { color: '#000', fill: '#000', stroke: '#000' })
       .to('.red_arrow', { rotate: 90 });
   }, []);
+
   return (
     <LiveLayoutContainer id="section_a">
       <Live1Container>

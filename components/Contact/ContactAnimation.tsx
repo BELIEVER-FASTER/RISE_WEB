@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import ScrollTo from 'gsap/ScrollToPlugin';
 import { ContactPhoneContainer } from './styles';
+import { imageResources } from 'utils/imageResource';
 
-gsap.registerPlugin(ScrollTrigger, ScrollTo);
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Contact(): JSX.Element {
   useEffect(() => {
-    const a = gsap
+    gsap
       .timeline({
         defaults: {
           scrollTrigger: {
@@ -45,18 +45,12 @@ export default function Contact(): JSX.Element {
         },
         { scale: 1.2 }
       );
-
-    a.play();
-
-    return () => {
-      a.kill();
-    };
   }, []);
 
   return (
     <ContactPhoneContainer id="contact-animation__box">
       <p className="start">START A</p>
-      <img src="/img/live_mock.png" alt="phone" />
+      <img src={imageResources.phoneMock} alt="phone" />
       <p className="end">NEW PROJECT</p>
     </ContactPhoneContainer>
   );

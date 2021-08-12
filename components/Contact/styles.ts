@@ -1,9 +1,10 @@
 import styled from 'styled-components';
+import { imageResources } from 'utils/imageResource';
 import { responSiveSize } from 'utils/style_opt';
 
 export const ContactContainer = styled.div`
   position: relative;
-  background-image: url('/img/contact_bg.png');
+  background-image: url(${imageResources.contactBg});
   background-repeat: no-repeat;
   background-size: contain;
   display: flex;

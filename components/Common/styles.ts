@@ -267,3 +267,48 @@ export const LottieBox = styled.div`
   top: -35px;
   right: 30px;
 `;
+export const VideoBGLayer = styled.video`
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+`;
+export const BannerTitleContainer = styled.section`
+  width: 100vw;
+  height: 100vh;
+  padding: 2.5rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  .content__bottom {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    font-size: 227px;
+    h2 {
+      font-family: 'NHaasGroteskTXPro';
+      font-weight: 500;
+    }
+    & > h2 {
+      text-align: right;
+    }
+    article {
+      display: flex;
+      h2 {
+        line-height: 0.75;
+      }
+      p {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-left: 3rem;
+        font-size: 26px;
+        span {
+          line-height: 1.4;
+        }
+      }
+    }
+  }
+`;

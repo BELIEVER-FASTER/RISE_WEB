@@ -1,3 +1,4 @@
+import LottieIcon from 'components/Common/LottieIcon';
 import React from 'react';
 import { moreModelList } from 'utils/modelsData';
 import ModelListItem from './ModelListItem';
@@ -8,7 +9,10 @@ export default function LiveB(): JSX.Element {
     <LiveBContainer>
       <section className="live_b__banner">
         <h3>
-          브랜드 컨셉과 <br /> 어울리는 쇼호스트 매칭
+          <span>
+            브랜드 컨셉과 <br /> 어울리는 쇼호스트 매칭
+          </span>
+          <LottieIcon />
         </h3>
         <p>
           쇼호스트, 인플루언서, 유튜버, 아나운서, 미스코리아 등 <br /> 100여 명의 전문가로
