@@ -11,7 +11,7 @@ export default function ModelSecond({ images }: ModelSecondProps): JSX.Element {
   useEffect(() => {
     if (inView) {
       Array.from({ length: 3 }).forEach((_, index) => {
-        gsap.fromTo(
+        gsap.timeline().fromTo(
           `.model__image_${index + 1}`,
           {
             opacity: 0,

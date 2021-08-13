@@ -1,8 +1,12 @@
 import styled from 'styled-components';
+import { responSiveSize } from 'utils/style_opt';
 
 export const LiveLayoutContainer = styled.div`
   position: relative;
   height: 1100vh;
+  @media ${responSiveSize.mobile} {
+    height: 900vh;
+  }
 `;
 
 export const Live1Container = styled.div`
@@ -16,13 +20,16 @@ export const Live1Container = styled.div`
     overflow: hidden;
     h1 {
       position: absolute;
-      top: 27%;
+      top: 28%;
       left: 0;
       width: 100%;
       text-align: center;
-      font-size: 116px;
+      font-size: 6vw;
       font-weight: 500;
       z-index: 1;
+      span > br {
+        display: none;
+      }
     }
     .a1_img {
       width: 100%;
@@ -69,6 +76,29 @@ export const Live1Container = styled.div`
     overflow: hidden;
     background-color: #fff;
   }
+  @media ${responSiveSize.mobile} {
+    #section1 {
+      height: 100%;
+      h1 {
+        position: absolute;
+        top: 27%;
+        left: 0;
+        font-size: 44px;
+        font-weight: 600;
+        top: 22%;
+        span > br {
+          display: initial;
+        }
+        span:last-of-type {
+          display: block;
+          margin-top: 1rem;
+        }
+      }
+      .a1_img {
+        clip-path: polygon(12% 45%, 88% 45%, 88% 100%, 12% 100%);
+      }
+    }
+  }
 `;
 
 export const ModelInfoContainer = styled.div`
@@ -78,12 +108,13 @@ export const ModelInfoContainer = styled.div`
   align-items: flex-end;
   padding: 2.5rem;
   .model_info_name {
-    font-size: 227px;
+    font-size: 12vw;
     font-weight: 500;
   }
   .model_info_desc {
-    font-size: 130px;
+    font-size: 7vw;
     font-weight: 500;
+    line-height: 1.1;
     span {
       align-items: center;
     }
@@ -113,6 +144,28 @@ export const ModelInfoContainer = styled.div`
     color: #fff;
     stroke: #fff;
   }
+  @media ${responSiveSize.mobile} {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem;
+    color: #000 !important;
+    svg {
+      display: none;
+    }
+    .model_info_name {
+      font-size: 88px;
+      margin-bottom: 24px;
+    }
+    .model_info_desc {
+      font-size: 44px;
+      span:last-of-type {
+        padding-left: 0;
+        .red_arrow {
+          display: none;
+        }
+      }
+    }
+  }
 `;
 
 export const ModelSecondContainer = styled.div`
@@ -121,9 +174,9 @@ export const ModelSecondContainer = styled.div`
   position: relative;
   img {
     transform: translateY(100px);
+    opacity: 0;
   }
   .model__image_1 {
-    opacity: 0;
     top: 38%;
     position: absolute;
     width: 18vw;
@@ -131,7 +184,6 @@ export const ModelSecondContainer = styled.div`
     right: 59%;
   }
   .model__image_2 {
-    opacity: 0;
     top: 10%;
     position: absolute;
     width: 28vw;
@@ -139,12 +191,28 @@ export const ModelSecondContainer = styled.div`
     right: 33%;
   }
   .model__image_3 {
-    opacity: 0;
     position: absolute;
     width: 13vw;
     z-index: 0;
     top: 30%;
     right: 10%;
+  }
+  @media ${responSiveSize.mobile} {
+    .model__image_1 {
+      width: 28%;
+      top: 42%;
+      right: 62%;
+    }
+    .model__image_2 {
+      width: 55%;
+      top: 21%;
+      right: 13%;
+    }
+    .model__image_3 {
+      width: 26%;
+      top: 62%;
+      right: 10%;
+    }
   }
 `;
 
@@ -209,12 +277,46 @@ export const LiveBContainer = styled.div`
       border-bottom: 2px solid #000;
     }
   }
+  @media ${responSiveSize.mobile} {
+    section {
+      padding: 1.5rem;
+      width: 100%;
+    }
+    .live_b__banner {
+      margin-top: 10rem;
+      margin-bottom: 10rem;
+      h3 {
+        font-size: 32px;
+        svg {
+          display: none;
+        }
+      }
+      p {
+        margin-top: 1.3rem;
+        font-size: 16px;
+        br {
+          display: none;
+        }
+        span {
+          display: block;
+          line-height: 1.5;
+        }
+      }
+    }
+    .live_b__model_list {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1.75rem 0;
+    }
+    .more__info {
+      font-size: 32px;
+      height: 13rem;
+    }
+  }
 `;
 
 export const ModelListItemBox = styled.li`
   transform: translateY(0);
   width: 100%;
-  height: 46.9rem;
   list-style: none;
   .img__wrapper {
     opacity: 0;
@@ -235,6 +337,13 @@ export const ModelListItemBox = styled.li`
     p {
       font-size: 18px;
       line-height: 1.4;
+    }
+  }
+  @media ${responSiveSize.mobile} {
+    height: auto;
+    margin-bottom: 2rem;
+    article {
+      padding: 1.5rem 0.7rem;
     }
   }
 `;
