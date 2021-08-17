@@ -273,6 +273,7 @@ export const VideoBGLayer = styled.video`
   position: absolute;
   object-fit: cover;
   top: 0;
+  left: 0;
 `;
 export const BannerTitleContainer = styled.section`
   width: 100vw;
@@ -307,6 +308,31 @@ export const BannerTitleContainer = styled.section`
         font-size: 26px;
         span {
           line-height: 1.4;
+        }
+      }
+    }
+  }
+  @media ${responSiveSize.tablet} {
+    .content__bottom {
+      font-size: 200px;
+    }
+  }
+  @media ${responSiveSize.mobile} {
+    width: 100%;
+    flex-direction: column;
+    padding: 1.5rem;
+    justify-content: flex-end;
+    .content__bottom {
+      font-size: 88px;
+      article {
+        flex-direction: column;
+        p {
+          margin: 0;
+          margin: 24px 0 32px 0;
+          font-size: 20px;
+          span {
+            line-height: 1.64;
+          }
         }
       }
     }
