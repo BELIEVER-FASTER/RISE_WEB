@@ -52,7 +52,7 @@ export default function ContactInfo(): JSX.Element {
           상명대학교 대학로 AI융합센터 1층
         </p>
         <p id="contact__info_tell" className="tell invinsible">
-          +82 02 1234 4324
+          +82. 02. 1688. 6183
         </p>
         <ul className="email ">
           <li>

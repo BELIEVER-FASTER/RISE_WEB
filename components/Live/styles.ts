@@ -287,8 +287,9 @@ export const LiveBContainer = styled.div`
       margin-bottom: 10rem;
       h3 {
         font-size: 32px;
-        svg {
-          display: none;
+        & > div {
+          top: 0.6rem;
+          right: -0.3rem;
         }
       }
       p {
@@ -331,7 +332,7 @@ export const ModelListItemBox = styled.li`
     padding: 2rem 1rem;
     h6 {
       font-size: 26px;
-      font-weight: 500;
+      font-weight: 600;
       margin-bottom: 1rem;
     }
     p {

@@ -74,6 +74,10 @@ export const ContactBannerContainer = styled.section`
     align-items: center;
     h1 {
       font-size: 3.3rem;
+      & > div {
+        top: -1rem;
+        right: -1rem;
+      }
       img {
         width: 3.25rem;
         height: 3.25rem;
