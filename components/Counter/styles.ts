@@ -160,7 +160,9 @@ export const EmailInputBox = styled.form`
     top: 50%;
     left: 0;
     transform: translatey(-50%);
+    width: 100%;
     input {
+      width: 100%;
       font-size: 16px;
       background-color: rgba(255, 255, 255, 0.65);
       &::placeholder {

@@ -7,7 +7,7 @@ type VideoBGProps = {
 };
 export default function VideoBG({ videoSrc, thumbnail }: VideoBGProps): JSX.Element {
   return (
-    <VideoBGLayer loop autoPlay muted poster={thumbnail && thumbnail}>
+    <VideoBGLayer loop autoPlay muted poster={thumbnail && thumbnail} playsInline>
       <source src={videoSrc} type="video/mp4" />
     </VideoBGLayer>
   );
