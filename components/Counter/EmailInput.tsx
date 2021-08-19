@@ -12,11 +12,13 @@ export default function EmailInput(): JSX.Element {
   const onChangeEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
   };
+
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    TagManager.dataLayer({ dataLayer: { event: '출시 알림 등록' } });
+    TagManager.dataLayer({ dataLayer: { event: '출시 알림 등록', email } });
     fetch();
   };
+
   useEffect(() => {
     setIsRegister((state.success as EmailNotiRes).success);
     const timeId = setTimeout(() => {
