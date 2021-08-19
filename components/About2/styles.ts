@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { responSiveSize } from 'utils/style_opt';
 
 export const AboutLayoutContainer = styled.div`
-  section:not(section:first-of-type) {
+  .about_section {
     margin: 0 auto;
     max-width: 1440px;
     position: relative;
@@ -25,7 +25,7 @@ export const AboutLayoutContainer = styled.div`
     }
   }
   @media ${responSiveSize.tablet} {
-    section:not(section:first-of-type) {
+    .about_section {
       max-width: 1120px;
       .section__title {
         h3 {
@@ -44,12 +44,14 @@ export const AboutLayoutContainer = styled.div`
       width: 100%;
       padding: 1.5rem;
     }
-    section:not(section:first-of-type) {
+    .about_section {
       .section__title {
         h3 {
-          font-size: 32px;
+          font-size: 32px !important;
+          font-weight: 600;
         }
         p {
+          font-weight: 400;
           margin-top: 28px;
           font-size: 16px;
           line-height: 1.8;
@@ -63,7 +65,7 @@ export const AboutAContainer = styled.section`
   height: 100vh;
   display: flex;
   align-items: center;
-  margin: 10% auto 25% auto !important;
+  margin: 10% auto 23% auto !important;
   .section__title {
     align-items: flex-end;
     margin-bottom: 250px;
@@ -89,6 +91,7 @@ export const AboutAContainer = styled.section`
     flex-direction: column;
     .section__title {
       align-items: flex-start;
+      width: 100%;
       margin-top: 100px;
       margin-bottom: 120px;
       h3 {
@@ -114,7 +117,7 @@ export const AboutBContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 17% auto 17% auto !important;
+  margin: 15% auto 23% auto !important;
   .section__title {
     text-align: center;
     h3 {
@@ -123,6 +126,9 @@ export const AboutBContainer = styled.section`
       }
       span:last-of-type {
         padding-left: 250px;
+      }
+      br.mobile {
+        display: none;
       }
     }
     p {
@@ -171,6 +177,10 @@ export const AboutBContainer = styled.section`
         }
         span:last-of-type {
           padding-left: 0px;
+          padding-top: 8px;
+        }
+        br.mobile {
+          display: initial;
         }
       }
       p {
@@ -187,31 +197,33 @@ export const AboutBContainer = styled.section`
       width: 100%;
       display: flex;
       flex-direction: column;
-    }
-    img:not(img:nth-of-type(4)) {
-      position: static;
-    }
-    img:first-of-type {
-      order: 2;
-      margin: 0;
-      margin-left: auto;
-      margin-top: 100px;
-      width: 85%;
-    }
-    img:nth-of-type(2) {
-      margin-top: 80px;
-      order: 1;
-      width: 70%;
-    }
-    img:nth-of-type(3) {
-      margin-top: 160px;
-      margin-left: auto;
-      order: 3;
-      width: 55%;
-    }
-    img:nth-of-type(4) {
-      top: 69%;
-      width: 60%;
+      img:first-of-type {
+        position: static;
+        order: 2;
+        margin: 0;
+        margin-left: auto;
+        margin-top: 100px;
+        width: 85%;
+      }
+      img:nth-of-type(2) {
+        position: static;
+        margin-top: 80px;
+        order: 1;
+        width: 70%;
+      }
+      img:nth-of-type(3) {
+        position: static;
+        margin-top: 175px;
+        margin-left: auto;
+        order: 3;
+        width: 55%;
+      }
+      img:nth-of-type(4) {
+        top: 69%;
+        width: 62%;
+        left: 1.5rem;
+        position: absolute;
+      }
     }
   }
 `;
@@ -221,6 +233,7 @@ export const AboutCContainer = styled.section`
     width: 100%;
   }
   .section__title {
+    overflow: hidden;
     margin-top: 50px;
     flex-direction: row !important;
     justify-content: space-between;
