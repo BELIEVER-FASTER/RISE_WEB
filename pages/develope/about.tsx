@@ -1,7 +1,7 @@
-import Head from 'next/head';
 import React from 'react';
-import BannerTitle from 'components/Common/BannerTitle';
+import Head from 'next/head';
 import Layout from 'components/Layout/Layout';
+import AboutLayout from 'components/About/AboutLayout';
 
 export default function about(): JSX.Element {
   return (
@@ -9,11 +9,7 @@ export default function about(): JSX.Element {
       <Head>
         <title>RISE | ABOUT</title>
       </Head>
-      <BannerTitle
-        title1="Rise"
-        title2="About"
-        desc="패션 코스메틱 라이브 쇼핑 MCN 패션&코스메틱 전문 쇼핑 호스트 + 크리에이터와 함께하는 라이브 쇼핑의 A-Z"
-      />
+      <AboutLayout />
     </Layout>
   );
 }

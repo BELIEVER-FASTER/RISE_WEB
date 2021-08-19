@@ -4,29 +4,32 @@ import { BannerTitleContainer } from './styles';
 import VideoBG from './VideoBG';
 
 type BannerTitleProps = {
-  title1?: string;
-  title2: string;
-  desc?: string;
+  firstTitle?: string;
+  secondTitle: string;
+  desc: string;
 };
+
 export default function BannerTitle({
-  title1,
-  title2,
+  firstTitle,
+  secondTitle,
   desc,
 }: BannerTitleProps): JSX.Element {
+  const splitedDesc = desc.split('/');
+
   return (
     <BannerTitleContainer>
       <VideoBG
         thumbnail={videoResources.aboutBG.thumb}
         videoSrc={videoResources.aboutBG.src}
       />
-      <div className="content__bottom">
-        <h2>{title1}</h2>
+      <div>
+        <h2>{firstTitle}</h2>
         <article>
-          <h2>{title2}</h2>
+          <h2>{secondTitle}</h2>
           <p>
-            <span>패션 코스메틱 라이브 쇼핑 MCN</span>
-            <span>패션&코스메틱 전문 쇼핑 호스트 +</span>
-            <span>크리에이터와 함께하는 라이브 쇼핑의 A-Z</span>
+            {splitedDesc.map(desc => (
+              <span key={desc}>{desc}</span>
+            ))}
           </p>
         </article>
       </div>

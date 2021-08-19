@@ -267,6 +267,7 @@ export const LottieBox = styled.div`
   top: -35px;
   right: 30px;
 `;
+
 export const VideoBGLayer = styled.video`
   height: 100%;
   width: 100%;
@@ -274,6 +275,7 @@ export const VideoBGLayer = styled.video`
   object-fit: cover;
   top: 0;
 `;
+
 export const BannerTitleContainer = styled.section`
   width: 100vw;
   height: 100vh;
@@ -282,7 +284,7 @@ export const BannerTitleContainer = styled.section`
   align-items: flex-end;
   justify-content: center;
   position: relative;
-  .content__bottom {
+  div {
     width: 100%;
     position: relative;
     z-index: 1;
@@ -305,8 +307,26 @@ export const BannerTitleContainer = styled.section`
         justify-content: flex-end;
         margin-left: 3rem;
         font-size: 26px;
+        font-weight: 300;
         span {
           line-height: 1.4;
+        }
+      }
+    }
+  }
+  @media ${responSiveSize.mobile} {
+    padding: 1.5rem;
+    div {
+      font-size: 88px;
+      article {
+        flex-direction: column;
+        p {
+          margin: 1.25rem 0 0 0;
+          font-size: 18px;
+          font-weight: 300;
+          span {
+            line-height: 1.8;
+          }
         }
       }
     }
