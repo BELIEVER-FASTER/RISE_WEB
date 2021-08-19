@@ -15,6 +15,8 @@ export default function EmailInput(): JSX.Element {
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (state.loading) return;
+    if (!email.trim()) return;
     TagManager.dataLayer({ dataLayer: { event: '출시 알림 등록', email } });
     fetch();
   };
@@ -38,9 +40,15 @@ export default function EmailInput(): JSX.Element {
         type="email"
         placeholder="이메일 작성하고 혜택 알림 받기"
       />
-      <button type="submit" disabled={isRegister}>
-        {isRegister ? '등록완료' : '보내기'}
-      </button>
+      {state.loading ? (
+        <button type="submit" disabled>
+          <img src="/img/loading.gif" alt="loading" />
+        </button>
+      ) : (
+        <button type="submit" disabled={isRegister}>
+          {isRegister ? '등록완료' : '보내기'}
+        </button>
+      )}
     </EmailInputBox>
   );
 }

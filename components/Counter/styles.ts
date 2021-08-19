@@ -147,6 +147,12 @@ export const EmailInputBox = styled.form`
     color: #fff;
     border-top-right-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 1.6rem;
+    }
     &:disabled {
       background-color: #aaa;
       cursor: default;
