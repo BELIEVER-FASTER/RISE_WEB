@@ -1,7 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { WorkProcessContainer } from './styles';
 
+gsap.registerPlugin(ScrollTrigger);
 export default function WorkProcess(): JSX.Element {
+  useEffect(() => {
+    const a1 = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.process_container',
+        start: '14% top',
+        end: '65% top',
+        scrub: 1.3,
+      },
+    });
+    a1.from('.s_top', { opacity: 0, duration: 0.1 }).to('.right', { y: '-200%' });
+  }, []);
+
   return (
     <WorkProcessContainer>
       <section className="process_container client_nh">

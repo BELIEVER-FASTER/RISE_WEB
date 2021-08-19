@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const LivePageContainer = styled.div`
   section {
@@ -46,7 +46,7 @@ export const RankSectionContainer = styled.section`
   }
 `;
 
-export const WorkClientsContainer = styled.div`
+export const WorkClientsContainer = styled.div<{ blackMode: boolean }>`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -84,13 +84,24 @@ export const WorkClientsContainer = styled.div`
       text-decoration: underline;
     }
   }
+  ${({ blackMode }) =>
+    blackMode &&
+    css`
+      background-color: #26262e;
+      h3 {
+        color: #fff;
+      }
+      p {
+        color: #fff;
+      }
+    `}
 `;
 
 export const WorkProcessContainer = styled.div`
   height: auto;
   .process_container {
     max-width: 1366px;
-    height: 310vh;
+    height: 800vh;
     padding-right: 2.5rem;
     h3 {
       font-size: 72px;
@@ -104,9 +115,12 @@ export const WorkProcessContainer = styled.div`
       background-color: #000;
     }
     .process_info {
+      overflow: hidden;
       display: flex;
       transition: all 0.5s;
       height: 75vh;
+      position: sticky;
+      top: 100px;
       margin-bottom: 100px;
       .shadow {
         width: 900px;
