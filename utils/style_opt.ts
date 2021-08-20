@@ -11,6 +11,9 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Pretendard','Apple SD Gothic Neo', sans-serif;
         transition: all 0.5s;
     }
+    .client_nh{
+        transition: all 0.5s;
+    }
     @font-face{
         font-family: 'NHaasGroteskTXPro';
         src:url('/font/NHaasGroteskTXPro-55Rg.woff') format('woff');
