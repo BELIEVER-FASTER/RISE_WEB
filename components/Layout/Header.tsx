@@ -15,7 +15,7 @@ export default function Header(): JSX.Element {
   const router = useRouter();
 
   useEffect(() => {
-    if (router.asPath === '/main' || router.asPath === '/') {
+    if (router.asPath === '/develope' || router.asPath === '/') {
       setIsBlack(false);
     } else {
       setIsBlack(true);

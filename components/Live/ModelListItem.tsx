@@ -13,15 +13,16 @@ export default function ModelListItem({ modelData }: ModelListItemProps): JSX.El
     if (inView) {
       gsap.to(`#model_item__image-${modelData.id}`, {
         opacity: 1,
-        duration: 2,
+        duration: 1.4,
       });
       gsap.from(`#model_item__summary-${modelData.id}`, {
         opacity: 0,
-        y: 100,
-        delay: 0.5,
+        y: 70,
+        delay: 0.4,
       });
     }
   }, [inView]);
+
   return (
     <ModelListItemBox ref={ref}>
       <div className="img__wrapper" id={`model_item__image-${modelData.id}`}>

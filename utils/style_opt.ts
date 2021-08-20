@@ -5,9 +5,11 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
     body {
+        background-color: #fff;
         overflow-x: hidden;
         position:relative;
         font-family: 'Pretendard','Apple SD Gothic Neo', sans-serif;
+        transition: all 0.5s;
     }
     @font-face{
         font-family: 'NHaasGroteskTXPro';

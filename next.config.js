@@ -1,4 +1,8 @@
-module.exports =
+/* eslint-disable @typescript-eslint/no-var-requires */
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+});
+const nextConfig =
   process.env.NODE_ENV === 'production'
     ? {
         reactStrictMode: true,
@@ -25,3 +29,5 @@ module.exports =
           };
         },
       };
+
+module.exports = withBundleAnalyzer(nextConfig);

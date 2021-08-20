@@ -15,8 +15,11 @@ export default function LiveB(): JSX.Element {
           <LottieIcon />
         </h3>
         <p>
-          쇼호스트, 인플루언서, 유튜버, 아나운서, 미스코리아 등 <br /> 100여 명의 전문가로
-          구성된 블랙핑크 라이브 팀
+          <span>쇼호스트, 인플루언서, 유튜버, 아나운서,</span>
+          <span>
+            미스코리아 등<br /> 100여 명의 전문가로
+          </span>
+          <span>구성된 블랙핑크 라이브 팀</span>
         </p>
       </section>
       <section className="live_b__model_list">
