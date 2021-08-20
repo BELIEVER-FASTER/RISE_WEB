@@ -25,7 +25,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse): Promise<void>
 
         await transporter.sendMail({
           from: `"RiSE" <${process.env.NODEMAILER_USER}>`,
-          to: req.body.email,
+          to: 'official@believer.kr',
           subject: 'RiSE 이메일 등록 알림',
           text: '이메일 등록',
           html: makeNotiMail(req.body.email),

@@ -1,3 +1,5 @@
+import dayjs from 'dayjs';
+
 export const makeNotiMail = (email: string): string => {
   return `
   <div style="background-color: #eee">
@@ -49,7 +51,9 @@ export const makeNotiMail = (email: string): string => {
             "
           >
             <p style="margin-top: 0; margin-bottom: 20px; text-align: right">
-              <span style="color: #ffffff">&nbsp;2021.08.20</span>
+            <span style="color: #ffffff">&nbsp;${dayjs(new Date()).format(
+              'YYYY-MM-DD'
+            )}</span>
             </p>
           </div>
         </div>
@@ -692,7 +696,7 @@ export const makeNotiMail = (email: string): string => {
                 background-color: #41fec8;
                 font-family: Montserrat, DejaVu Sans, Verdana, sans-serif;
               "
-              href="http://www.riseenm.com"
+              href="https://www.instagram.com/riseenm/"
               target="_blank"
               >Visit Instagram</a
             >
@@ -719,7 +723,7 @@ export const makeNotiMail = (email: string): string => {
                 background-color: #41fec8;
                 font-family: Montserrat, DejaVu Sans, Verdana, sans-serif;
               "
-              href="http://www.riseenm.com"
+              href="https://www.facebook.com/%EB%9D%BC%EC%9D%B4%EC%A6%88-RISE-ENM-108682494840345"
               target="_blank"
               >Visit Facebook</a
             >
