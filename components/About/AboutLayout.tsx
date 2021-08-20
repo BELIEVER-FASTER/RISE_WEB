@@ -1,9 +1,11 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 import { AboutContainer } from './styles';
 import BannerTitle from 'components/Common/BannerTitle';
-import AboutA from './AboutA';
 import AboutB from './AboutB';
 import AboutC from './AboutC';
+
+const AboutA = dynamic(() => import('components/About/AboutA'), { ssr: false });
 
 export default function AboutLayout(): JSX.Element {
   return (
