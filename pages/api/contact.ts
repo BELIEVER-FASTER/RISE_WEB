@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import Contact from 'models/Contact';
-import dbConnect from 'utils/dbConnect';
+import dbConnect from 'utils/middlewares/dbConnect';
 
 const handler = async (req: NextApiRequest, res: NextApiResponse): Promise<void> => {
   const { method } = req;

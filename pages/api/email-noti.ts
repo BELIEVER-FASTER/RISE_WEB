@@ -1,6 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import Noti from 'models/Noti';
-import dbConnect from 'utils/dbConnect';
+import dbConnect from 'utils/middlewares/dbConnect';
+import { makeNotiMail } from 'utils/middlewares/makeMail';
+import { transporter } from 'utils/middlewares/mailer';
 
 const handler = async (req: NextApiRequest, res: NextApiResponse): Promise<void> => {
   const { method } = req;
@@ -20,6 +22,15 @@ const handler = async (req: NextApiRequest, res: NextApiResponse): Promise<void>
         if (existEmail) return res.status(500).send('이미 등록된 이메일입니다.');
 
         const result = await Noti.create(req.body);
+
+        await transporter.sendMail({
+          from: `"RiSE" <${process.env.NODEMAILER_USER}>`,
+          to: req.body.email,
+          subject: 'RiSE 이메일 등록 알림',
+          text: '이메일 등록',
+          html: makeNotiMail(req.body.email),
+        });
+
         res.status(201).json(result);
       } catch (e) {
         console.error(e);
