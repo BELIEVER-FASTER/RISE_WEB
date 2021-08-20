@@ -19,6 +19,7 @@ export default function WorkClients(): JSX.Element {
       nextEl.forEach(el => {
         el.style.color = '#fff';
         el.style.fill = '#fff';
+        el.style.backgroundColor = '#26262e';
       });
       header.forEach(el => {
         el.style.color = '#fff';
@@ -30,6 +31,7 @@ export default function WorkClients(): JSX.Element {
       nextEl.forEach(el => {
         el.style.color = '#000';
         el.style.fill = '#000';
+        el.style.backgroundColor = '#fff';
       });
       header.forEach(el => {
         el.style.color = '#000';
@@ -43,7 +45,6 @@ export default function WorkClients(): JSX.Element {
     if (inView) {
       icons.forEach(icon => {
         const delay = Math.random() * 0.7 + 0.15;
-        console.log(delay);
         gsap.fromTo(icon, { opacity: 0, scale: 0.8 }, { scale: 1, opacity: 1, delay });
       });
     }
@@ -53,11 +54,13 @@ export default function WorkClients(): JSX.Element {
     <WorkClientsContainer blackMode={blackMode}>
       <h3>Our Clients</h3>
       <ul ref={ref}>
-        {[...clientsData, ...clientsData, ...clientsData, ...clientsData].map(client => (
-          <li key={client.id} className="client_icon">
-            <ClientLogo src={client.src} name={client.name} />
-          </li>
-        ))}
+        {[...clientsData, ...clientsData, ...clientsData, ...clientsData].map(
+          (client, index) => (
+            <li key={index} className="client_icon">
+              <ClientLogo src={client.src} name={client.name} />
+            </li>
+          )
+        )}
       </ul>
       <p>And More Than 77 Brands</p>
     </WorkClientsContainer>
