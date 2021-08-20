@@ -10,6 +10,8 @@ import { ContactFormContainer } from './styles';
 import CustomSelect from 'components/Common/CustomSelect';
 import { budgetOptions } from 'utils/inputData';
 import DatePick from '../Common/DatePick';
+import useAsync from 'hooks/useAsync';
+import { sendContact } from 'utils/requests';
 
 export default function ContactForm(): JSX.Element {
   const { ref, inView } = useInView({
@@ -17,16 +19,26 @@ export default function ContactForm(): JSX.Element {
     triggerOnce: true,
   });
   const [checked, setChecked] = useState(false);
-  const [name, onChangeName] = useInput('');
-  const [email, onChangeEmail] = useInput('');
-  const [phone, onChangePhone] = useInput('');
-  const [company, onChangeCompany] = useInput('');
-  const [content, onChangeContent] = useInput('');
+  const [name, onChangeName, setName] = useInput('');
+  const [email, onChangeEmail, setEmail] = useInput('');
+  const [phone, onChangePhone, setPhone] = useInput('');
+  const [company, onChangeCompany, setCompany] = useInput('');
+  const [content, onChangeContent, setContent] = useInput('');
   const [valid, setValid] = useState(false);
   const [budget, setBudget] = useState('광고예산');
+  const [result, setResult] = useState('문의하기');
   const [startDate, setStartDate] = useState<string>(
     dayjs(new Date()).format('YYYY-MM-DD')
   );
+  const [state, fetch] = useAsync(sendContact, {
+    budget,
+    schedule: startDate,
+    name,
+    email,
+    tel: phone,
+    info: content,
+    company,
+  });
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -38,16 +50,8 @@ export default function ContactForm(): JSX.Element {
     if (!company.trim()) return;
     if (!budget.trim()) return;
     if (!startDate) return;
-    console.log({
-      checked,
-      name,
-      email,
-      phone,
-      content,
-      company,
-      budget,
-      startDate,
-    });
+
+    fetch();
   };
 
   useEffect(() => {
@@ -61,7 +65,23 @@ export default function ContactForm(): JSX.Element {
     if (!startDate) return setValid(false);
     setValid(true);
   }, [name, email, phone, company, content, checked]);
-
+  useEffect(() => {
+    if (state.loading) return setValid(false);
+    else if (state.success) {
+      setResult('전송완료');
+      setTimeout(() => {
+        setChecked(false);
+        setName('');
+        setEmail('');
+        setPhone('');
+        setContent('');
+        setCompany('');
+        setStartDate(dayjs(new Date()).format('YYYY-MM-DD'));
+        setResult('문의하기');
+        return setValid(true);
+      }, 2000);
+    }
+  }, [state]);
   useEffect(() => {
     if (inView) {
       gsap.fromTo(
@@ -154,7 +174,7 @@ export default function ContactForm(): JSX.Element {
           </a>
           <span>에 동의합니다.</span>
         </div>
-        <Button label="문의하기" type="submit" disabled={!valid} />
+        <Button label={result} type="submit" disabled={!valid} />
       </form>
     </ContactFormContainer>
   );

@@ -11,6 +11,20 @@ export type EmailNotiRes = {
   message: string;
 };
 export const emailNoti = async (email: string): Promise<EmailNotiRes> => {
-  const res = await axios.post<EmailNotiRes>('/landingAPI/landing/register', { email });
+  const res = await axios.post<EmailNotiRes>('/api/email-noti', { email });
+  return res.data;
+};
+
+type ContactData = {
+  budget: string;
+  schedule: string;
+  company: string;
+  tel: string;
+  name: string;
+  email: string;
+  info: string;
+};
+export const sendContact = async (data: ContactData): Promise<EmailNotiRes> => {
+  const res = await axios.post<EmailNotiRes>('/api/contact', data);
   return res.data;
 };
