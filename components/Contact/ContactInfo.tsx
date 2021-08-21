@@ -59,18 +59,15 @@ export default function ContactInfo(): JSX.Element {
             <span className="contact__info_email invinsible">라이브 진행 문의</span>
             <a
               className="contact__title_email invinsible"
-              href="mailto:ProjectOfficial@gmail.com"
+              href="mailto:contact@riseenm.com"
             >
-              ProjectOfficial@gmail.com
+              contact@riseenm.com
             </a>
           </li>
           <li>
             <span className="contact__info_email invinsible">쇼호스트 지원</span>
-            <a
-              className="contact__title_email invinsible"
-              href="mailto:ProjectOfficial@gmail.com"
-            >
-              Official@gmail.com
+            <a className="contact__title_email invinsible" href="mailto:live@riseenm.com">
+              live@riseenm.com
             </a>
           </li>
         </ul>

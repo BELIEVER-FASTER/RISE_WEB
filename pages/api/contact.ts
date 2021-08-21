@@ -19,7 +19,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse): Promise<void>
         res.status(201).json(result);
       } catch (e) {
         console.error(e);
-        res.status(400).send('상품등록 실패');
+        res.status(400).send(e);
       }
       break;
 

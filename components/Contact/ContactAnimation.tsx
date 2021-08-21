@@ -16,11 +16,11 @@ export default function Contact(): JSX.Element {
             end: 'bottom top',
             trigger: '#contact-animation__box',
             scrub: 2,
-            onUpdate: self => {
-              const clamp = gsap.utils.clamp(-20, 20);
-              const skew = clamp(self.getVelocity() / -100);
-              gsap.to('#contact-animation__box p', { skewX: -skew });
-            },
+            // onUpdate: self => {
+            //   const clamp = gsap.utils.clamp(-20, 20);
+            //   const skew = clamp(self.getVelocity() / -100);
+            //   gsap.to('#contact-animation__box p', { skewX: -skew });
+            // },
           },
         },
       })

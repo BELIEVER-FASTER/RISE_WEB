@@ -1,5 +1,24 @@
-import styled, { css } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 import { responSiveSize } from 'utils/style_opt';
+
+const fadeIn = keyframes`
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+`;
+const slideUp = keyframes`
+  from{
+    opacity: 0;
+    transform: translateY(500px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+`;
 
 export const InputBox = styled.div<{ value: string | number }>`
   height: 4.125rem;
@@ -333,6 +352,83 @@ export const BannerTitleContainer = styled.section`
           span {
             line-height: 1.64;
           }
+        }
+      }
+    }
+  }
+`;
+
+export const ModalWrapper = styled.div`
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: ${fadeIn} 0.3s;
+  .modal__content {
+    border-radius: 0.53rem;
+    min-height: 250px;
+    background-color: #fff;
+    padding: 1.7rem 2rem;
+    min-width: 450px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 5px 20px #555;
+    animation: ${slideUp} 0.3s;
+    .img__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      height: 150px;
+      margin-bottom: 30px;
+      img {
+        width: 80%;
+      }
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+    p {
+      line-height: 1.7;
+      font-size: 18px;
+      padding-bottom: 35px;
+      flex: 1;
+      text-align: center;
+      strong {
+        font-weight: 500;
+      }
+    }
+    button {
+      width: 100%;
+      border: none;
+      color: #fff;
+      font-size: 20px;
+      padding: 0.8rem 2rem;
+      border-radius: 5px;
+      outline: none;
+      background-color: #e74c28;
+      cursor: pointer;
+    }
+  }
+  @media ${responSiveSize.mobile} {
+    .modal__content {
+      width: 95%;
+      min-width: auto;
+      margin-bottom: 100px;
+      .img__wrapper {
+        height: 110px;
+        margin-bottom: 20px;
+        img {
+          width: 70%;
         }
       }
     }

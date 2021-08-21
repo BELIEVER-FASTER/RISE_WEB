@@ -63,7 +63,7 @@ export const NavContainer = styled.nav<{ menuOpen: boolean; isBlack: boolean }>`
       opacity: 0;
     }
     &:hover {
-      color: #fa370b;
+      color: #fa370b !important;
       i {
         width: 2.5rem;
         display: initial;
@@ -140,9 +140,12 @@ export const FooterContainer = styled.footer`
     .footer__right {
       a:first-of-type {
         text-decoration: none;
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid #fff;
         margin-bottom: 2rem;
         display: block;
+        &:hover {
+          border-bottom: 1px solid #000;
+        }
       }
       a {
         margin-bottom: 1rem;

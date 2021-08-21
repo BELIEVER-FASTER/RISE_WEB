@@ -1,4 +1,3 @@
-import BannerTitle from 'components/Common/BannerTitle';
 import Layout from 'components/Layout/Layout';
 import WorkLayout from 'components/Work/WorkLayout';
 import Head from 'next/head';

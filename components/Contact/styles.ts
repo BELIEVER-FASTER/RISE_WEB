@@ -125,9 +125,12 @@ export const ContactInfoContainer = styled.section`
         cursor: pointer;
         display: inline-block;
         margin-top: 2rem;
-        border-bottom: 3px solid black;
         text-decoration: none;
+        border-bottom: 3px solid #fff;
         color: #000;
+        &:hover {
+          border-bottom: 3px solid black;
+        }
       }
       li + li {
         margin-left: 16.25rem;

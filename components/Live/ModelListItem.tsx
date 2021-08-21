@@ -7,7 +7,7 @@ type ModelListItemProps = {
   modelData: { id: number; src: string; name: string; desc: string };
 };
 export default function ModelListItem({ modelData }: ModelListItemProps): JSX.Element {
-  const { inView, ref } = useInView({ threshold: 0.6, triggerOnce: true });
+  const { inView, ref } = useInView({ threshold: 0.45, triggerOnce: true });
 
   useEffect(() => {
     if (inView) {

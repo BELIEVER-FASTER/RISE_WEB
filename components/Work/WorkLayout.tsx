@@ -10,6 +10,7 @@ export default function WorkLayout(): JSX.Element {
   return (
     <LivePageContainer>
       <BannerTitle
+        title1="Rise"
         title2="Work"
         desc="패션 코스메틱 라이브 쇼핑 MCN 패션&코스메틱 전문 쇼핑 호스트 + 크리에이터와 함께하는 라이브 쇼핑의 A-Z"
       />

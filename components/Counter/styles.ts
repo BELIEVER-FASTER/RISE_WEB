@@ -235,4 +235,9 @@ export const SocialBox = styled.a`
   i {
     margin-left: 0.25rem;
   }
+  &:hover {
+    span {
+      color: #e74c28;
+    }
+  }
 `;
