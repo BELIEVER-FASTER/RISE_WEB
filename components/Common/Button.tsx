@@ -14,7 +14,7 @@ export default function Button({
 }: ButtonProps): JSX.Element {
   return (
     <ButtonBox disabled={disabled} type={type} {...rest}>
-      {label}
+      {label === 'loading' ? <img src="/img/loading.gif" alt="loading" /> : label}
     </ButtonBox>
   );
 }

@@ -16,7 +16,7 @@ export default function ResultModal({ onClose, name }: ResultModal): JSX.Element
         <div className="img__wrapper">
           <img src="/img/success.gif" alt="success" />
         </div>
-        <h1>등록이 완료되었습니다.</h1>
+        <h1>성공적으로 처리되었습니다.</h1>
         <p>
           <strong>{name}</strong> 님 감사합니다. <br /> 이메일을 확인해주세요!
         </p>

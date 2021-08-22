@@ -161,12 +161,21 @@ export const ButtonBox = styled.button`
   padding: 1rem 2rem;
   cursor: pointer;
   background-color: #ef242f;
+  img {
+    height: 25px;
+    width: 111px;
+    object-fit: contain;
+  }
   &:disabled {
     background-color: #c0c0c0;
     cursor: not-allowed;
   }
   @media ${responSiveSize.mobile} {
     font-size: 20px;
+    img {
+      height: 20px;
+      width: 70px;
+    }
   }
 `;
 

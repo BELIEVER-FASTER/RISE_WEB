@@ -12,6 +12,7 @@ import { budgetOptions } from 'utils/inputData';
 import DatePick from '../Common/DatePick';
 import useAsync from 'hooks/useAsync';
 import { sendContact } from 'utils/requests';
+import ResultModal from 'components/Common/ResultModal';
 
 export default function ContactForm(): JSX.Element {
   const { ref, inView } = useInView({
@@ -26,10 +27,25 @@ export default function ContactForm(): JSX.Element {
   const [content, onChangeContent, setContent] = useInput('');
   const [valid, setValid] = useState(false);
   const [budget, setBudget] = useState('광고예산');
-  const [result, setResult] = useState('문의하기');
   const [startDate, setStartDate] = useState<string>(
     dayjs(new Date()).format('YYYY-MM-DD')
   );
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const onClose = () => {
+    setChecked(false);
+    setName('');
+    setEmail('');
+    setPhone('');
+    setContent('');
+    setCompany('');
+    setBudget('광고예산');
+    setStartDate(dayjs(new Date()).format('YYYY-MM-DD'));
+    setValid(false);
+
+    setModalOpen(false);
+  };
+
   const [state, fetch] = useAsync(sendContact, {
     budget,
     schedule: startDate,
@@ -61,25 +77,15 @@ export default function ContactForm(): JSX.Element {
     if (!phone.trim()) return setValid(false);
     if (!content.trim()) return setValid(false);
     if (!company.trim()) return setValid(false);
-    if (!budget.trim()) return setValid(false);
+    if (budget === '광고예산') return setValid(false);
     if (!startDate) return setValid(false);
     setValid(true);
-  }, [name, email, phone, company, content, checked]);
+  }, [name, email, phone, company, content, checked, budget, startDate]);
+
   useEffect(() => {
     if (state.loading) return setValid(false);
     else if (state.success) {
-      setResult('전송완료');
-      setTimeout(() => {
-        setChecked(false);
-        setName('');
-        setEmail('');
-        setPhone('');
-        setContent('');
-        setCompany('');
-        setStartDate(dayjs(new Date()).format('YYYY-MM-DD'));
-        setResult('문의하기');
-        return setValid(true);
-      }, 2000);
+      setModalOpen(true);
     }
   }, [state]);
   useEffect(() => {
@@ -108,74 +114,81 @@ export default function ContactForm(): JSX.Element {
   }, [inView]);
 
   return (
-    <ContactFormContainer ref={ref} id="contact__form">
-      <form onSubmit={onSubmit}>
-        <h3>예산과 일정에 대해 알려주세요.</h3>
-        <div className="budget__field">
-          <CustomSelect
-            className="budget_input invinsible"
-            placeholder="광고예산"
-            value={budget}
-            setValue={setBudget}
-            options={budgetOptions}
+    <>
+      <ContactFormContainer ref={ref} id="contact__form">
+        <form onSubmit={onSubmit}>
+          <h3>예산과 일정에 대해 알려주세요.</h3>
+          <div className="budget__field">
+            <CustomSelect
+              className="budget_input invinsible"
+              placeholder="광고예산"
+              value={budget}
+              setValue={setBudget}
+              options={budgetOptions}
+            />
+            <DatePick
+              className="date_input invinsible"
+              value={startDate}
+              setValue={setStartDate}
+            />
+          </div>
+          <h3>간단한 정보를 입력해 주세요.</h3>
+          <div className="contact__field">
+            <Input
+              className="contact_input invinsible"
+              placeholder="이름"
+              value={name}
+              onChange={onChangeName}
+            />
+            <Input
+              className="contact_input invinsible"
+              placeholder="연락처"
+              type="tel"
+              value={phone}
+              onChange={onChangePhone}
+            />
+          </div>
+          <div className="contact__field">
+            <Input
+              className="contact_input invinsible"
+              placeholder="기업/브랜드명"
+              value={company}
+              onChange={onChangeCompany}
+            />
+            <Input
+              className="contact_input invinsible"
+              placeholder="이메일"
+              type="email"
+              value={email}
+              onChange={onChangeEmail}
+            />
+          </div>
+          <Textarea
+            id="contact_content"
+            height={320}
+            placeholder="프로젝트 내용, 일정등 자세한 정보를 알려주세요"
+            value={content}
+            onChange={onChangeContent}
           />
-          <DatePick
-            className="date_input invinsible"
-            value={startDate}
-            setValue={setStartDate}
+          <div className="term_box">
+            <input
+              type="checkbox"
+              checked={checked as boolean}
+              onChange={() => setChecked(prev => !prev)}
+            />
+            <a target="_blank" href="/">
+              개인정보 수집 및 이용약관
+            </a>
+            <span>에 동의합니다.</span>
+          </div>
+          <Button
+            label={state.loading ? 'loading' : '문의하기'}
+            type="submit"
+            disabled={!valid}
           />
-        </div>
-        <h3>간단한 정보를 입력해 주세요.</h3>
-        <div className="contact__field">
-          <Input
-            className="contact_input invinsible"
-            placeholder="이름"
-            value={name}
-            onChange={onChangeName}
-          />
-          <Input
-            className="contact_input invinsible"
-            placeholder="연락처"
-            type="tel"
-            value={phone}
-            onChange={onChangePhone}
-          />
-        </div>
-        <div className="contact__field">
-          <Input
-            className="contact_input invinsible"
-            placeholder="기업/브랜드명"
-            value={company}
-            onChange={onChangeCompany}
-          />
-          <Input
-            className="contact_input invinsible"
-            placeholder="이메일"
-            type="email"
-            value={email}
-            onChange={onChangeEmail}
-          />
-        </div>
-        <Textarea
-          id="contact_content"
-          height={320}
-          placeholder="프로젝트 내용, 일정등 자세한 정보를 알려주세요"
-          value={content}
-          onChange={onChangeContent}
-        />
-        <div className="term_box">
-          <input
-            type="checkbox"
-            checked={checked as boolean}
-            onChange={() => setChecked(prev => !prev)}
-          />
-          <a target="_blank" href="/">
-            개인정보 수집 및 이용약관
-          </a>
-          <span>에 동의합니다.</span>
-        </div>
-        <Button label={result} type="submit" disabled={!valid} />
-      </form>
-    </ContactFormContainer>
+        </form>
+      </ContactFormContainer>
+      {modalOpen && <ResultModal name={name} onClose={onClose} />}
+    </>
   );
 }
