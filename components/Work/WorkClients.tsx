@@ -38,7 +38,7 @@ export default function WorkClients(): JSX.Element {
         el.style.fill = '#000';
       });
     }
-  }, [inView]);
+  }, [inView, ref]);
 
   useEffect(() => {
     const icons = document.querySelectorAll('.client_icon') as NodeListOf<HTMLElement>;

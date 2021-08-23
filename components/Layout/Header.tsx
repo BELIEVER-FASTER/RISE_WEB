@@ -20,7 +20,7 @@ export default function Header(): JSX.Element {
     } else {
       setIsBlack(true);
     }
-  }, []);
+  }, [router.asPath]);
 
   return (
     <>
