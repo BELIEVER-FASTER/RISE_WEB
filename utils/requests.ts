@@ -37,7 +37,7 @@ export const sendSlackMessage = async (
 ): Promise<EmailNotiRes> => {
   const res = await axios.post<EmailNotiRes>(
     process.env.NODE_ENV === 'production'
-      ? 'https://hooks.slack.com/services/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'
+      ? (process.env.NEXT_PUBLIC_SLACK_WEB_HOOK as string)
       : '/services/T0278CVRD53/B02BVN80BUM/67TvnyRd5ilVfBdyIhNOUfiM',
     {
       attachments: [
@@ -65,7 +65,7 @@ export const sendSlackMessage = async (
 export const sendSlackContact = async (data: ContactData): Promise<EmailNotiRes> => {
   const res = await axios.post<EmailNotiRes>(
     process.env.NODE_ENV === 'production'
-      ? 'https://hooks.slack.com/services/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'
+      ? (process.env.NEXT_PUBLIC_SLACK_WEB_HOOK as string)
       : '/services/T0278CVRD53/B02BVN80BUM/67TvnyRd5ilVfBdyIhNOUfiM',
     {
       attachments: [

@@ -7,7 +7,7 @@ import { WorkClientsContainer } from './styles';
 
 export default function WorkClients(): JSX.Element {
   const [blackMode, setBlackMode] = useState(false);
-  const { inView, ref, entry } = useInView({ threshold: 0.35 });
+  const { inView, ref } = useInView({ threshold: 0.35 });
 
   useEffect(() => {
     const header = document.querySelectorAll('.main_header') as NodeListOf<HTMLElement>;

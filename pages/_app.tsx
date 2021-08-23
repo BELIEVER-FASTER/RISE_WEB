@@ -3,7 +3,6 @@ import TagManager from 'react-gtm-module';
 import { useEffect } from 'react';
 import { GlobalStyle } from 'utils/style_opt';
 import * as Sentry from '@sentry/nextjs';
-import TransitionLayout from 'components/Layout/TransitionLayout';
 import Layout from 'components/Layout/Layout';
 
 const tagManagerArgs = {

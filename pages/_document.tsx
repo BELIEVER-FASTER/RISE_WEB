@@ -60,7 +60,10 @@ class MyDocument extends Document {
             content="https://lh3.googleusercontent.com/zkXM6petYck9HO6bR041dxgedHpTcZhd5MFh3VKp0M3uPZtAi__8tGD42FE6mqrOPX3DO0PFdnyrwr-J8U43w9m5tQiNglp4o3o7NW_5KvoCxQO5YGhMxBbf22Un-m8KREIPlL7a=w2400"
           />
           <meta property="twitter:url" content="https://www.riseenm.com" />
-
+          <meta
+            name="facebook-domain-verification"
+            content="yjg5pl42821he9rt3davch7x6lp397"
+          />
           <meta name="theme-color" content="#222" />
           <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
