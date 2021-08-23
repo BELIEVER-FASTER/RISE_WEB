@@ -23,7 +23,7 @@ const nextConfig =
             fallback: [
               {
                 source: '/:path*',
-                destination: `https://api.riseenm.com/:path*`,
+                destination: `https://hooks.slack.com/:path*`,
               },
             ],
           };

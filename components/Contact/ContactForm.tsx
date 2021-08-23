@@ -13,6 +13,7 @@ import DatePick from '../Common/DatePick';
 import useAsync from 'hooks/useAsync';
 import { sendContact } from 'utils/requests';
 import ResultModal from 'components/Common/ResultModal';
+import PrivacyModal from 'components/Common/PrivacyModal';
 
 export default function ContactForm(): JSX.Element {
   const { ref, inView } = useInView({
@@ -31,6 +32,7 @@ export default function ContactForm(): JSX.Element {
     dayjs(new Date()).format('YYYY-MM-DD')
   );
   const [modalOpen, setModalOpen] = useState(false);
+  const [prModalOpen, setPrModalOpen] = useState(false);
 
   const onClose = () => {
     setChecked(false);
@@ -176,9 +178,10 @@ export default function ContactForm(): JSX.Element {
               checked={checked as boolean}
               onChange={() => setChecked(prev => !prev)}
             />
-            <a target="_blank" href="/">
+            <strong onClick={() => setPrModalOpen(true)}>
               개인정보 수집 및 이용약관
-            </a>
+            </strong>
+            {prModalOpen && <PrivacyModal onClose={() => setPrModalOpen(false)} />}
             <span>에 동의합니다.</span>
           </div>
           <Button

@@ -443,3 +443,45 @@ export const ModalWrapper = styled.div`
     }
   }
 `;
+
+export const PrivacyModalWrapper = styled(ModalWrapper)`
+  .modal__content {
+    max-width: 90%;
+    position: relative;
+    & > span {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+    .privacy {
+      max-width: 600px;
+      height: 500px;
+      overflow-y: scroll;
+      .content {
+        font-size: 15px;
+      }
+      h2 {
+        font-size: 30px;
+        margin: 10px 0;
+      }
+      h3 {
+        padding-top: 30px;
+        font-size: 22px;
+      }
+      p {
+        font-size: 18px;
+        padding: 20px 0 10px 0;
+      }
+    }
+    .table {
+      li {
+        margin: 15px 0;
+        h5 {
+          font-size: 18px;
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+`;

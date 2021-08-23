@@ -275,9 +275,11 @@ export const ContactFormContainer = styled.section`
       font-size: 20px;
       display: flex;
       align-items: center;
-      a {
+      strong {
         color: #000;
         font-weight: 500;
+        text-decoration: underline;
+        cursor: pointer;
       }
     }
   }

@@ -8,7 +8,7 @@ type Action =
   | { type: 'ERROR'; payload: unknown };
 type AsyncStateType = {
   loading: boolean;
-  success: boolean | EmailNotiRes;
+  success: boolean | EmailNotiRes | any;
   error: boolean | unknown;
 };
 

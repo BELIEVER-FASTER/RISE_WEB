@@ -11,7 +11,8 @@ export type EmailNotiRes = {
   message: string;
 };
 export const emailNoti = async (email: string): Promise<EmailNotiRes> => {
-  const res = await axios.post<EmailNotiRes>('/api/email-noti', { email });
+  const res = await axios.post('/api/email-noti', { email });
+  await sendSlackMessage(email, res.data.amount);
   return res.data;
 };
 
@@ -26,5 +27,65 @@ type ContactData = {
 };
 export const sendContact = async (data: ContactData): Promise<EmailNotiRes> => {
   const res = await axios.post<EmailNotiRes>('/api/contact', data);
+  await sendSlackContact(data);
+  return res.data;
+};
+
+export const sendSlackMessage = async (
+  email: string,
+  amount: number
+): Promise<EmailNotiRes> => {
+  const res = await axios.post<EmailNotiRes>(
+    process.env.NODE_ENV === 'production'
+      ? 'https://hooks.slack.com/services/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'
+      : '/services/T0278CVRD53/B02BVN80BUM/67TvnyRd5ilVfBdyIhNOUfiM',
+    {
+      attachments: [
+        {
+          fallback: 'Required plain-text summary of the attachment.',
+          color: '#0090d2',
+          pretext: 'RiSE - 출시 알림 등록',
+          author_name: '등록하신 분 ▽▽',
+          title: email,
+          title_link: `mailto:${email}`,
+          text: `현재까지 총 ${amount} 명의 유저 등록`,
+          footer: 'NOA',
+          footer_icon: 'https://i.ibb.co/n1w52dJ/loading-1.gif',
+          ts: +new Date(),
+        },
+      ],
+    },
+    {
+      withCredentials: false,
+    }
+  );
+  return res.data;
+};
+
+export const sendSlackContact = async (data: ContactData): Promise<EmailNotiRes> => {
+  const res = await axios.post<EmailNotiRes>(
+    process.env.NODE_ENV === 'production'
+      ? 'https://hooks.slack.com/services/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'
+      : '/services/T0278CVRD53/B02BVN80BUM/67TvnyRd5ilVfBdyIhNOUfiM',
+    {
+      attachments: [
+        {
+          fallback: 'Required plain-text summary of the attachment.',
+          color: '#0090d2',
+          pretext: 'RiSE - 문의 사항',
+          author_name: `${data.name} (${data.company})`,
+          title: data.email,
+          title_link: `mailto:${data.email}`,
+          text: `광고예산: ${data.budget} | 시작희망일: ${data.schedule}`,
+          footer: 'NOA',
+          footer_icon: 'https://i.ibb.co/n1w52dJ/loading-1.gif',
+          ts: +new Date(),
+        },
+      ],
+    },
+    {
+      withCredentials: false,
+    }
+  );
   return res.data;
 };
