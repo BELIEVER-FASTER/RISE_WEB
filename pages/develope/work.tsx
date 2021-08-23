@@ -1,8 +1,11 @@
 import WorkLayout from 'components/Work/WorkLayout';
 import Head from 'next/head';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 export default function work(): JSX.Element {
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, []);
   return (
     <>
       <Head>

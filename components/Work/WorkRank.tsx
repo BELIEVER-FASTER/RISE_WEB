@@ -29,7 +29,7 @@ export default function WorkRank(): JSX.Element {
     return () => {
       clearInterval(timeIdA);
     };
-  }, [inViewA]);
+  }, [inViewA, refA]);
 
   useEffect(() => {
     let timeIdB: NodeJS.Timeout;
@@ -46,7 +46,7 @@ export default function WorkRank(): JSX.Element {
     return () => {
       clearInterval(timeIdB);
     };
-  }, [inViewB]);
+  }, [inViewB, refB]);
 
   useEffect(() => {
     let timeIdC: NodeJS.Timeout;
@@ -63,7 +63,7 @@ export default function WorkRank(): JSX.Element {
     return () => {
       clearInterval(timeIdC);
     };
-  }, [inViewC]);
+  }, [inViewC, refC]);
 
   return (
     <RankSectionContainer id="work_rank">

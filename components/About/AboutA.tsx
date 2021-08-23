@@ -30,7 +30,7 @@ export default function AboutA(): JSX.Element {
           { opacity: 1, y: 0, duration: 0.3 }
         );
     }
-  }, [inView]);
+  }, [inView, ref]);
 
   return (
     <AboutAContainer className="about_section">

@@ -29,7 +29,7 @@ export default function ContactBanner(): JSX.Element {
       a.kill();
       b.kill();
     };
-  }, [inView]);
+  }, [inView, ref]);
   return (
     <ContactBannerContainer>
       <h1 ref={ref}>

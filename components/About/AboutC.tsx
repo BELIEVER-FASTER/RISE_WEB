@@ -29,7 +29,7 @@ export default function AboutC(): JSX.Element {
           { opacity: 1, y: 0, duration: 0.7 }
         );
     }
-  }, [inView]);
+  }, [inView, ref]);
 
   return (
     <AboutCContainer className="about_section" ref={ref}>

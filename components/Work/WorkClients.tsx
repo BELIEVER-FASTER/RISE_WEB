@@ -7,37 +7,43 @@ import { WorkClientsContainer } from './styles';
 
 export default function WorkClients(): JSX.Element {
   const [blackMode, setBlackMode] = useState(false);
-  const { inView, ref } = useInView({ threshold: 0.35 });
+  const { inView, ref, entry } = useInView({ threshold: 0.35 });
 
   useEffect(() => {
     const header = document.querySelectorAll('.main_header') as NodeListOf<HTMLElement>;
     const nextEl = document.querySelectorAll('.client_nh') as NodeListOf<HTMLElement>;
     if (!nextEl) return;
-    if (inView) {
+    if (inView && ref) {
       setBlackMode(true);
       document.body.style.backgroundColor = '#26262e';
-      nextEl.forEach(el => {
-        el.style.color = '#fff';
-        el.style.fill = '#fff';
-        el.style.backgroundColor = '#26262e';
+      gsap.set('.main_header', {
+        duration: 0.5,
+        color: '#fff',
+        fill: '#fff',
       });
-      header.forEach(el => {
-        el.style.color = '#fff';
-        el.style.fill = '#fff';
+      gsap.set('.client_nh', {
+        duration: 0.5,
+        color: '#fff',
+        fill: '#fff',
+        backgroundColor: '#26262e',
       });
     } else {
       setBlackMode(false);
       document.body.style.backgroundColor = '#fff';
-      nextEl.forEach(el => {
-        el.style.color = '#000';
-        el.style.fill = '#000';
-        el.style.backgroundColor = '#fff';
-      });
-      header.forEach(el => {
-        el.style.color = '#000';
-        el.style.fill = '#000';
+      gsap.set('.main_header', { duration: 0.5, color: '#000', fill: '#000' });
+      gsap.set('.client_nh', {
+        duration: 0.5,
+        color: '#000',
+        fill: '#000',
+        backgroundColor: '#fff',
       });
     }
+    return () => {
+      header.forEach(el => {
+        el.style.color = '';
+        el.style.fill = '';
+      });
+    };
   }, [inView, ref]);
 
   useEffect(() => {
@@ -48,7 +54,7 @@ export default function WorkClients(): JSX.Element {
         gsap.fromTo(icon, { opacity: 0, scale: 0.8 }, { scale: 1, opacity: 1, delay });
       });
     }
-  }, [inView]);
+  }, [inView, ref]);
 
   return (
     <WorkClientsContainer blackMode={blackMode}>

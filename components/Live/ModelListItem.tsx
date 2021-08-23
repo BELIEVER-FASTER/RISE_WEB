@@ -21,7 +21,7 @@ export default function ModelListItem({ modelData }: ModelListItemProps): JSX.El
         delay: 0.4,
       });
     }
-  }, [inView]);
+  }, [inView, ref]);
 
   return (
     <ModelListItemBox ref={ref}>

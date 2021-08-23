@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import { videoResources } from 'utils/videoResource';
 import { BannerTitleContainer } from './styles';
 import VideoBG from './VideoBG';
@@ -6,13 +7,16 @@ import VideoBG from './VideoBG';
 type BannerTitleProps = {
   title1?: string;
   title2: string;
-  desc?: string;
+  desc: string;
 };
+
 export default function BannerTitle({
   title1,
   title2,
   desc,
 }: BannerTitleProps): JSX.Element {
+  const [splitedDesc] = useState(desc.split('/'));
+
   return (
     <BannerTitleContainer>
       <VideoBG
@@ -24,9 +28,11 @@ export default function BannerTitle({
         <article>
           <h2>{title2}</h2>
           <p>
-            <span>패션 코스메틱 라이브 쇼핑 MCN</span>
-            <span>패션&코스메틱 전문 쇼핑 호스트 +</span>
-            <span>크리에이터와 함께하는 라이브 쇼핑의 A-Z</span>
+            {splitedDesc.map(descPart => (
+              <span key={descPart}>
+                {descPart} <br />
+              </span>
+            ))}
           </p>
         </article>
       </div>

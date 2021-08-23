@@ -1,8 +1,11 @@
+import React, { useEffect } from 'react';
 import Head from 'next/head';
-import React from 'react';
-import AboutLayout from 'components/About2/AboutLayout';
+import AboutLayout from 'components/About/AboutLayout';
 
 export default function about(): JSX.Element {
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, []);
   return (
     <>
       <Head>

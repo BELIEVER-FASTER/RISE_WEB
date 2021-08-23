@@ -43,39 +43,46 @@ export default function LiveA(): JSX.Element {
         scrub: 1,
       },
     });
-    gsap.to(window, { duration: 0, scrollTo: 0 });
+
     a1.to('.a1_img', {
       clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
     })
+      // .set('.main_header', { color: '#fff', fill: '#fff', stroke: '#fff' })
       .to('#section1_title', { opacity: 0, scale: 0.5, y: 60 })
-      .to('.main_header', { color: '#fff', fill: '#fff', stroke: '#fff' })
       .from('.model_info', { opacity: 0, translateY: 300 });
 
     a2.set('.model__image', { opacity: 0 })
+      // .set('.main_header', {
+      //   color: '#000',
+      //   fill: '#000',
+      //   stroke: '#000',
+      // })
       .from('#section2', { x: '100vw' })
-      .to('.main_header', {
-        color: '#000',
-        fill: '#000',
-        stroke: '#000',
-      })
       .set(`.model__image`, {
         opacity: 1,
       });
 
     b1.from('#section3', { x: '100vw' })
+      // .set('.main_header', { color: '#fff', fill: '#fff', stroke: '#fff' })
       .to('.section3_model', {
         opacity: 1,
         translateY: 0,
-      })
-      .to('.main_header', { color: '#fff', fill: '#fff', stroke: '#fff' });
+      });
 
     b2.set('.model__image', { opacity: 0 })
+      // .set('.main_header', { color: '#000', fill: '#000', stroke: '#000' })
       .from('#section4', { x: '100vw' })
-      .to('.main_header', { color: '#000', fill: '#000', stroke: '#000' })
       .to('.red_arrow', { rotate: 90 })
       .set(`.model__image`, {
         opacity: 1,
       });
+    return () => {
+      a1.kill();
+      a2.kill();
+      b1.kill();
+      b2.kill();
+      window.scrollTo({ top: 0 });
+    };
   }, []);
 
   return (

@@ -25,7 +25,7 @@ export default function ModelSecond({ images }: ModelSecondProps): JSX.Element {
         );
       });
     }
-  }, [inView]);
+  }, [inView, ref]);
   return (
     <ModelSecondContainer ref={ref}>
       {images.map(image => (

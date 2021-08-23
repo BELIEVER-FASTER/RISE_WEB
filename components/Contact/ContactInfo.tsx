@@ -41,7 +41,7 @@ export default function ContactInfo(): JSX.Element {
         }
       );
     }
-  }, [inView]);
+  }, [inView, ref]);
 
   return (
     <ContactInfoContainer>

@@ -325,17 +325,20 @@ export const BannerTitleContainer = styled.section`
     }
     article {
       display: flex;
+      align-items: flex-end;
       h2 {
         line-height: 0.75;
       }
       p {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
         margin-left: 3rem;
         font-size: 26px;
         span {
           line-height: 1.4;
+        }
+        span:nth-of-type(3) {
+          br {
+            display: none;
+          }
         }
       }
     }
@@ -354,12 +357,18 @@ export const BannerTitleContainer = styled.section`
       font-size: 88px;
       article {
         flex-direction: column;
+        align-items: flex-start;
         p {
           margin: 0;
           margin: 24px 0 32px 0;
           font-size: 20px;
           span {
             line-height: 1.64;
+          }
+          span:nth-of-type(3) {
+            br {
+              display: initial;
+            }
           }
         }
       }

@@ -113,7 +113,7 @@ export default function ContactForm(): JSX.Element {
         { flex: 1, y: 0, duration: 1.5, opacity: 1 }
       );
     }
-  }, [inView]);
+  }, [inView, ref]);
 
   return (
     <>

@@ -48,6 +48,8 @@ export const NavContainer = styled.nav<{ menuOpen: boolean; isBlack: boolean }>`
   font-weight: 500;
   .icon_menu {
     display: none;
+    fill: #fff;
+    stroke: #fff;
   }
   li {
     padding: 0.25rem 0;
@@ -78,9 +80,8 @@ export const NavContainer = styled.nav<{ menuOpen: boolean; isBlack: boolean }>`
     isBlack &&
     css`
       .icon_menu {
-        svg {
-          fill: #000;
-        }
+        fill: #000;
+        stroke: #000;
       }
       li {
         color: #000;

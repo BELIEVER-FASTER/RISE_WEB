@@ -6,7 +6,7 @@ import { LayoutContainer } from './styles';
 import { Transition, TransitionGroup, TransitionStatus } from 'react-transition-group';
 import { useEffect } from 'react';
 
-const TIMEOUT = 400;
+const TIMEOUT = 500;
 
 const getTransitionStyles: { [key in TransitionStatus]: React.CSSProperties } = {
   entering: {

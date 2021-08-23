@@ -39,7 +39,7 @@ export default function AboutB(): JSX.Element {
           { opacity: 1, y: 0, duration: 0.2 }
         );
     }
-  }, [inView]);
+  }, [inView, ref]);
 
   return (
     <AboutBContainer className="about_section">
