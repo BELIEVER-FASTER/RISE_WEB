@@ -9,6 +9,7 @@ export default function PrivacyModal({ onClose }: PrivacyModal): JSX.Element {
   const backClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target === e.currentTarget) onClose();
   };
+
   return (
     <PrivacyModalWrapper onClick={backClick}>
       <div className="modal__content">
