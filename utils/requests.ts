@@ -38,7 +38,7 @@ export const sendSlackMessage = async (
   const res = await axios.post<EmailNotiRes>(
     process.env.NODE_ENV === 'production'
       ? (process.env.NEXT_PUBLIC_SLACK_WEB_HOOK as string)
-      : '/services/T0278CVRD53/B02BVN80BUM/67TvnyRd5ilVfBdyIhNOUfiM',
+      : (process.env.NEXT_PUBLIC_SLACK_TEST_HOOK as string),
     {
       attachments: [
         {
@@ -56,6 +56,7 @@ export const sendSlackMessage = async (
       ],
     },
     {
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       withCredentials: false,
     }
   );
@@ -66,7 +67,7 @@ export const sendSlackContact = async (data: ContactData): Promise<EmailNotiRes>
   const res = await axios.post<EmailNotiRes>(
     process.env.NODE_ENV === 'production'
       ? (process.env.NEXT_PUBLIC_SLACK_WEB_HOOK as string)
-      : '/services/T0278CVRD53/B02BVN80BUM/67TvnyRd5ilVfBdyIhNOUfiM',
+      : (process.env.NEXT_PUBLIC_SLACK_TEST_HOOK as string),
     {
       attachments: [
         {
@@ -84,6 +85,7 @@ export const sendSlackContact = async (data: ContactData): Promise<EmailNotiRes>
       ],
     },
     {
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       withCredentials: false,
     }
   );
