@@ -2362,3 +2362,12 @@ export const makeContactMail = (
 
   `;
 };
+
+export const contactResultMail = (): string => {
+  return `
+  <div style='width:100%;display:flex; justify-content: center;'>
+    <p style="opacity: 0;">문의가 정상적으로 접수되었습니다.</p>
+    <img style='width:100%; max-width:600px;' src="https://i.ibb.co/vVfmDKR/E-mail-Form.jpg" alt="poster">
+  </div>
+  `;
+};
