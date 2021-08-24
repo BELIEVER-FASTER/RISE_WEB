@@ -15,7 +15,7 @@ export default function Social({ type, link }: SocialProps): JSX.Element {
   return (
     <SocialBox onClick={onClickSocial} href={link} target="_blank">
       <span>{type}</span>
-      <Icon name="link_arrow" />
+      <Icon name="link_arrow" className="icon__social" />
     </SocialBox>
   );
 }

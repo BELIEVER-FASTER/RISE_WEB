@@ -64,6 +64,10 @@ class MyDocument extends Document {
             name="facebook-domain-verification"
             content="yjg5pl42821he9rt3davch7x6lp397"
           />
+          <meta
+            name="naver-site-verification"
+            content="ceeafc0e07aeadba359eb22c54762497e3549ffd"
+          />
           <meta name="theme-color" content="#222" />
           <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 

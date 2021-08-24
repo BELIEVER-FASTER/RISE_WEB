@@ -20,6 +20,7 @@ export default function WorkClients(): JSX.Element {
         duration: 0.5,
         color: '#fff',
         fill: '#fff',
+        stroke: '#fff',
       });
       gsap.set('.client_nh', {
         duration: 0.5,
@@ -30,7 +31,12 @@ export default function WorkClients(): JSX.Element {
     } else {
       setBlackMode(false);
       document.body.style.backgroundColor = '#fff';
-      gsap.set('.main_header', { duration: 0.5, color: '#000', fill: '#000' });
+      gsap.set('.main_header', {
+        duration: 0.5,
+        color: '#000',
+        fill: '#000',
+        stroke: '#000',
+      });
       gsap.set('.client_nh', {
         duration: 0.5,
         color: '#000',

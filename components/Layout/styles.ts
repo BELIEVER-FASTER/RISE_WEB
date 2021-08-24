@@ -3,7 +3,7 @@ import { responSiveSize } from 'utils/style_opt';
 
 export const LayoutContainer = styled.div``;
 
-export const LogoContainer = styled.div<{ isBlack: boolean }>`
+export const LogoContainer = styled.div<{ isBlack: boolean; visible: boolean }>`
   position: fixed;
   z-index: 99;
   top: 2.5rem;
@@ -25,19 +25,34 @@ export const LogoContainer = styled.div<{ isBlack: boolean }>`
     css`
       svg {
         fill: #000;
+        stroke: #000;
       }
     `}
   @media ${responSiveSize.mobile} {
     top: 1.5rem;
     left: 1.5rem;
+    z-index: 100;
     svg {
       width: 5.125rem;
       height: 1.625rem;
     }
+    ${({ visible }) =>
+      visible &&
+      css`
+        svg {
+          opacity: 0;
+          fill: #fff !important;
+          stroke: #fff !important;
+        }
+      `}
   }
 `;
 
-export const NavContainer = styled.nav<{ menuOpen: boolean; isBlack: boolean }>`
+export const NavContainer = styled.nav<{
+  menuOpen: boolean;
+  isBlack: boolean;
+  visible: boolean;
+}>`
   position: fixed;
   z-index: 99;
   top: 2.5rem;
@@ -76,6 +91,9 @@ export const NavContainer = styled.nav<{ menuOpen: boolean; isBlack: boolean }>`
   li.nav__active {
     color: #fa370b !important;
   }
+  .mobile_social {
+    display: none;
+  }
   ${({ isBlack }) =>
     isBlack &&
     css`
@@ -97,17 +115,68 @@ export const NavContainer = styled.nav<{ menuOpen: boolean; isBlack: boolean }>`
       display: initial;
     }
     ul {
-      transition: all 0.3s;
+      transition: opacity 0.5s;
       height: 0;
       opacity: 0;
       overflow: hidden;
+      li {
+        position: relative;
+        top: -50%;
+        transition: transform 1s;
+      }
+      .mobile_social {
+        display: block;
+        margin: 0 0 30px 0;
+        a {
+          padding: 10px 0;
+          span {
+            color: #fff;
+            font-size: 16px;
+          }
+        }
+        a > .icon__social {
+          border: 1px solid #fff;
+        }
+      }
     }
+
     ${({ menuOpen }) =>
       menuOpen &&
       css`
         ul {
-          height: 15rem;
+          z-index: 98;
+          padding: 1.5rem;
+          position: fixed;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-end;
+          background-color: rgba(250, 55, 11, 0.95);
+          li {
+            font-weight: 400;
+            color: #fff !important;
+            transition: transform 1s ease;
+            transform: translateX(-200px);
+          }
+          li.nav__active {
+            color: #fff !important;
+          }
+        }
+      `}
+    ${({ visible }) =>
+      visible &&
+      css`
+        ul {
           opacity: 1;
+          transition: opacity 0.5s;
+          li {
+            transition: transform 1s;
+            transform: translateX(0px);
+          }
         }
       `}
   }
@@ -196,4 +265,29 @@ export const FooterContainer = styled.footer`
       }
     }
   }
+`;
+
+export const MobileMenuBox = styled.i<{ menuOpen: boolean }>`
+  display: flex;
+  z-index: 99;
+  .line {
+    transition: all 0.5s;
+  }
+  ${({ menuOpen }) =>
+    menuOpen &&
+    css`
+      .line {
+        fill: #fff !important;
+        stroke: #fff !important;
+      }
+      .line1 {
+        transform: translate(25%, -5%) rotate(45deg);
+      }
+      .line2 {
+        opacity: 0;
+      }
+      .line3 {
+        transform: translate(-45%, 22%) rotate(-45deg);
+      }
+    `}
 `;

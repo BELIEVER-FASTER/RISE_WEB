@@ -6,12 +6,20 @@ import Icon from 'components/Icon/Icon';
 import { navData } from 'utils/navData';
 import { LogoContainer, NavContainer } from './styles';
 import MobileMenu from './MobileMenu';
+import Social from 'components/Counter/Social';
 
 export default function Header(): JSX.Element {
   const [isBlack, setIsBlack] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [visible, setVisible] = useState(false);
   const toggleMenuOpen = () => {
-    setMenuOpen(prev => !prev);
+    if (!menuOpen) {
+      setMenuOpen(true);
+      setVisible(true);
+    } else {
+      setVisible(false);
+      setTimeout(() => setMenuOpen(false), 500);
+    }
   };
   const router = useRouter();
 
@@ -21,16 +29,27 @@ export default function Header(): JSX.Element {
     }
     setIsBlack(true);
   }, [router]);
+  useEffect(() => {
+    setVisible(false);
+    setTimeout(() => setMenuOpen(false), 500);
+  }, [router.asPath]);
 
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'initial';
+    }
+  }, [menuOpen]);
   return (
     <>
       <Link href="/">
-        <LogoContainer isBlack={isBlack}>
+        <LogoContainer isBlack={isBlack} visible={visible}>
           <Logo />
         </LogoContainer>
       </Link>
-      <NavContainer isBlack={isBlack} menuOpen={menuOpen}>
-        <MobileMenu onClick={toggleMenuOpen} menuOpen={menuOpen} />
+      <NavContainer isBlack={isBlack} menuOpen={menuOpen} visible={visible}>
+        <MobileMenu onClick={toggleMenuOpen} menuOpen={visible} />
         <ul className="main_nav">
           {navData.map(navItem => (
             <Link href={navItem.link} key={navItem.id}>
@@ -46,6 +65,13 @@ export default function Header(): JSX.Element {
               </li>
             </Link>
           ))}
+          <div className="mobile_social">
+            <Social
+              type="Facebook"
+              link="https://www.facebook.com/%EB%9D%BC%EC%9D%B4%EC%A6%88-RISE-ENM-108682494840345"
+            />
+            <Social type="Instagram" link="https://www.instagram.com/riseenm/" />
+          </div>
         </ul>
       </NavContainer>
     </>
