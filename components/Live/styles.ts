@@ -124,25 +124,32 @@ export const ModelInfoContainer = styled.div`
       gap: 0 1.5rem;
     }
   }
-  .line__round {
-    margin-bottom: 4%;
+  .line__round_box {
+    margin-bottom: 2%;
+    padding: 0 3%;
     flex: 1;
+    .line__round_wrapper {
+      clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+      width: 100%;
+      .line__round {
+        width: 100%;
+      }
+    }
   }
+
   &.section3_model {
-    transform: translateY(300px);
-    z-index: 9;
+    z-index: 5;
     position: absolute;
     bottom: 0;
-    color: #fff;
-    stroke: #fff;
-    opacity: 0;
+    color: #000;
+    stroke: #000;
   }
   &.section1_model {
     z-index: 3;
     position: absolute;
     bottom: 0;
-    color: #fff;
-    stroke: #fff;
+    color: #000;
+    stroke: #000;
   }
   @media ${responSiveSize.mobile} {
     flex-direction: column;
@@ -270,11 +277,11 @@ export const LiveBContainer = styled.div`
     justify-content: center;
     margin-bottom: 3rem;
     h3 {
-      border-bottom: 2px solid #fff;
+      border-bottom: 6px solid #fff;
     }
     h3:hover {
       cursor: pointer;
-      border-bottom: 2px solid #000;
+      border-bottom: 6px solid #000;
     }
   }
   @media ${responSiveSize.mobile} {
@@ -320,7 +327,9 @@ export const ModelListItemBox = styled.li`
   width: 100%;
   list-style: none;
   .img__wrapper {
+    transform: translateY(100px);
     opacity: 0;
+    z-index: 3;
     img {
       width: 100%;
       height: 100%;
@@ -330,6 +339,7 @@ export const ModelListItemBox = styled.li`
   article {
     overflow: hidden;
     padding: 2rem 1rem;
+    z-index: 1;
     h6 {
       font-size: 26px;
       font-weight: 600;

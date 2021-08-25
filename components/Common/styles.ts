@@ -45,6 +45,7 @@ export const InputBox = styled.div<{ value: string | number }>`
   @media ${responSiveSize.mobile} {
     input {
       font-size: 20px;
+      padding: 20px 0;
     }
   }
 `;
@@ -144,7 +145,8 @@ export const TextareaBox = styled.div<{ value?: string; height?: number }>`
     `}
   @media ${responSiveSize.mobile} {
     textarea {
-      font-size: 20px;
+      padding: 1rem;
+      font-size: 16px;
       min-height: 3.25rem;
       height: 70%;
     }
@@ -184,6 +186,10 @@ export const DatePickerBox = styled.div`
   height: 4.125rem;
   position: relative;
   z-index: 40;
+  &.open {
+    & > i {
+    }
+  }
   .picker {
     height: 100%;
     .picker__trigger {
@@ -227,6 +233,10 @@ export const DatePickerBox = styled.div`
     border-top: none;
     background-color: #fff;
     padding: 2.75rem;
+    display: none;
+  }
+  .calendar--show {
+    display: block;
   }
   .calendar__head {
     display: flex;
@@ -297,7 +307,7 @@ export const LottieBox = styled.div`
 `;
 export const VideoBGLayer = styled.video`
   height: 100%;
-  width: 100%;
+  width: 100vw;
   position: absolute;
   object-fit: cover;
   top: 0;
@@ -328,6 +338,30 @@ export const BannerTitleContainer = styled.section`
       align-items: flex-end;
       h2 {
         line-height: 0.75;
+        overflow: hidden;
+        @keyframes showUp {
+          from {
+            transform: translateY(20.6vw);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0vw);
+          }
+        }
+        span {
+          display: inline-block;
+          transform: translateY(20.6vw);
+        }
+        ${() => {
+          const arr = [1, 2, 3, 4, 5];
+          return css`
+            ${arr.map(
+              num => `span:nth-of-type(${num}){
+                        animation: showUp 0.4s ease ${num * 0.1 + 0.5}s forwards;
+                      }`
+            )}
+          `;
+        }}
       }
       p {
         margin-left: 3rem;
@@ -343,6 +377,7 @@ export const BannerTitleContainer = styled.section`
       }
     }
   }
+
   @media ${responSiveSize.tablet} {
     .content__bottom {
       font-size: 200px;
@@ -355,6 +390,9 @@ export const BannerTitleContainer = styled.section`
     justify-content: flex-end;
     .content__bottom {
       font-size: 88px;
+      h2 {
+        margin-bottom: 10px;
+      }
       article {
         flex-direction: column;
         align-items: flex-start;
@@ -493,4 +531,13 @@ export const PrivacyModalWrapper = styled(ModalWrapper)`
       }
     }
   }
+`;
+
+export const FixedWrapper = styled.div`
+  position: fixed;
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: none;
 `;

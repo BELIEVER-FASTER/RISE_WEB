@@ -119,7 +119,9 @@ export default function ContactForm(): JSX.Element {
     <>
       <ContactFormContainer ref={ref} id="contact__form">
         <form onSubmit={onSubmit}>
-          <h3>예산과 일정에 대해 알려주세요.</h3>
+          <h3>
+            예산과 일정에 <br className="mobile" /> 대해 알려주세요.
+          </h3>
           <div className="budget__field">
             <CustomSelect
               className="budget_input invinsible"
@@ -134,7 +136,10 @@ export default function ContactForm(): JSX.Element {
               setValue={setStartDate}
             />
           </div>
-          <h3>간단한 정보를 입력해 주세요.</h3>
+          <h3>
+            간단한 정보를
+            <br className="mobile" /> 입력해 주세요.
+          </h3>
           <div className="contact__field">
             <Input
               className="contact_input invinsible"

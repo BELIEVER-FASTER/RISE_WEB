@@ -47,30 +47,27 @@ export default function LiveA(): JSX.Element {
     a1.to('.a1_img', {
       clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
     })
-      // .set('.main_header', { color: '#fff', fill: '#fff', stroke: '#fff' })
       .to('#section1_title', { opacity: 0, scale: 0.5, y: 60 })
-      .from('.model_info', { opacity: 0, translateY: 300 });
+      .from('.section1_model .model_info_name', { opacity: 0, translateY: 300 })
+      .to('.section1_model .line__round_wrapper', {
+        clipPath: 'polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)',
+      })
+      .from('.section1_model .model_info_desc', { opacity: 0, translateY: 300 });
 
     a2.set('.model__image', { opacity: 0 })
-      // .set('.main_header', {
-      //   color: '#000',
-      //   fill: '#000',
-      //   stroke: '#000',
-      // })
       .from('#section2', { x: '100vw' })
       .set(`.model__image`, {
         opacity: 1,
       });
 
     b1.from('#section3', { x: '100vw' })
-      // .set('.main_header', { color: '#fff', fill: '#fff', stroke: '#fff' })
-      .to('.section3_model', {
-        opacity: 1,
-        translateY: 0,
-      });
+      .from('.section3_model .model_info_name', { opacity: 0, translateY: 300 })
+      .to('.section3_model .line__round_wrapper', {
+        clipPath: 'polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)',
+      })
+      .from('.section3_model .model_info_desc', { opacity: 0, translateY: 300 });
 
     b2.set('.model__image', { opacity: 0 })
-      // .set('.main_header', { color: '#000', fill: '#000', stroke: '#000' })
       .from('#section4', { x: '100vw' })
       .to('.red_arrow', { rotate: 90 })
       .set(`.model__image`, {

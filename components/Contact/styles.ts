@@ -204,7 +204,7 @@ export const ContactPhoneContainer = styled.div`
   }
   img {
     z-index: 1;
-    height: 100%;
+    height: 85%;
   }
   @media ${responSiveSize.mobile} {
     margin: 6.75rem 0;
@@ -237,6 +237,9 @@ export const ContactFormContainer = styled.section`
       font-size: 48px;
       font-weight: 600;
       margin-bottom: 1rem;
+      br.mobile {
+        display: none;
+      }
     }
     input[type='checkbox'] {
       width: 1.24rem;
@@ -253,7 +256,7 @@ export const ContactFormContainer = styled.section`
       & > div:first-of-type {
         margin-right: 2.7rem;
       }
-      & > div:last-of-type {
+      & > .date_input {
         margin-left: 2.7rem;
       }
     }
@@ -292,8 +295,12 @@ export const ContactFormContainer = styled.section`
       padding: 1rem;
       padding-bottom: 5rem;
       h3 {
-        font-size: 26px;
+        font-size: 32px;
         margin-bottom: 0rem;
+        line-height: 1.4;
+        br.mobile {
+          display: initial;
+        }
       }
       .budget__field {
         display: block;
@@ -307,7 +314,7 @@ export const ContactFormContainer = styled.section`
           margin-right: 0rem;
           z-index: 90;
         }
-        & > div:last-of-type {
+        & > .date_input {
           margin-left: 0rem;
           margin-bottom: 4rem;
         }

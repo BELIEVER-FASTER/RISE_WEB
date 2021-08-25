@@ -232,12 +232,17 @@ export const SocialBox = styled.a`
   span {
     font-size: 18px;
   }
-  i {
+  svg {
     margin-left: 0.25rem;
   }
   &:hover {
     span {
       color: #e74c28;
+    }
+  }
+  svg {
+    circle {
+      fill: #e74c28;
     }
   }
 `;

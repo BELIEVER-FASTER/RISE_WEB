@@ -26,7 +26,11 @@ export default function BannerTitle({
       <div className="content__bottom">
         <h2>{title1}</h2>
         <article>
-          <h2>{title2}</h2>
+          <h2>
+            {title2.split('').map((char, i) => (
+              <span key={i}>{char}</span>
+            ))}
+          </h2>
           <p>
             {splitedDesc.map(descPart => (
               <span key={descPart}>

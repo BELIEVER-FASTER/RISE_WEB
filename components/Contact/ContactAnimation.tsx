@@ -37,13 +37,6 @@ export default function Contact(): JSX.Element {
           xPercent: -50,
         },
         { xPercent: 20 }
-      )
-      .fromTo(
-        '#contact-animation__box img',
-        {
-          scale: 0.2,
-        },
-        { scale: 1.2 }
       );
   }, []);
 

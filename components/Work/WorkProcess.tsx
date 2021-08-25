@@ -9,7 +9,7 @@ export default function WorkProcess(): JSX.Element {
     const a1 = gsap.timeline({
       scrollTrigger: {
         trigger: '.process_container',
-        start: '14% top',
+        start: '2% top',
         end: '65% top',
         scrub: 1.3,
       },
@@ -20,8 +20,9 @@ export default function WorkProcess(): JSX.Element {
       else if (window.innerHeight > 630) return '-1720';
       else return '-1850';
     };
-
-    a1.from('.s_top', { opacity: 0, duration: 0.1 }).to('.right', { y: y() });
+    if (innerWidth > 950) {
+      a1.from('.s_top', { opacity: 0, duration: 0.1 }).to('.right', { y: y() });
+    }
   }, []);
 
   return (
@@ -63,7 +64,8 @@ export default function WorkProcess(): JSX.Element {
                   <li>
                     자사 스튜디오 이용
                     <small>
-                      (제휴 스튜디오 및 출장 외부 스튜디오 진행 가능 / 비용 별도)
+                      (제휴 스튜디오 및 출장 외부 <br className="mobile" /> 스튜디오 진행
+                      가능 / 비용 별도)
                     </small>
                   </li>
                   <li>

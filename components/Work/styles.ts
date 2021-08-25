@@ -206,24 +206,36 @@ export const WorkProcessContainer = styled.div`
       overflow: hidden;
       display: flex;
       transition: all 0.5s;
-      height: 75vh;
+      height: 100vh;
       position: sticky;
-      top: 100px;
+      top: 0px;
       margin-bottom: 100px;
+      padding-top: 100px;
       .shadow {
         width: 900px;
         position: absolute;
         right: 0;
-        height: 60px;
+        height: 200px;
         z-index: 90;
       }
       .s_top {
         top: 0;
-        background: linear-gradient(#fff, rgba(255, 255, 255, 0.3));
+        background: linear-gradient(
+          rgba(255, 255, 255, 1) 0%,
+          rgba(255, 255, 255, 0.85) 42%,
+          rgba(255, 255, 255, 0.5) 80%,
+          rgba(255, 255, 255, 0) 100%
+        );
       }
       .s_bottom {
         bottom: 0;
-        background: linear-gradient(rgba(255, 255, 255, 0.3), #fff);
+        background: linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 1) 0%,
+          rgba(255, 255, 255, 0.85) 42%,
+          rgba(255, 255, 255, 0.5) 80%,
+          rgba(255, 255, 255, 0) 100%
+        );
       }
       .left {
         height: 240px;
@@ -236,6 +248,7 @@ export const WorkProcessContainer = styled.div`
       .right {
         flex: 1;
         margin-left: 150px;
+        margin-bottom: 140px;
         .double_list {
           display: flex;
           justify-content: space-between;
@@ -247,6 +260,7 @@ export const WorkProcessContainer = styled.div`
           position: relative;
           border-top: 1px solid #000;
           padding: 60px 0 110px 0;
+
           .step {
             position: absolute;
             top: 64px;
@@ -269,6 +283,11 @@ export const WorkProcessContainer = styled.div`
                 color: #424242;
                 font-size: 17px;
                 margin-top: 7px;
+                padding-left: 15px;
+                line-height: 1.45;
+                br.mobile {
+                  display: none;
+                }
               }
               &::before {
                 content: '- ';
@@ -336,36 +355,40 @@ export const WorkProcessContainer = styled.div`
     .process_container {
       max-width: 100%;
       padding: 0 1.5rem;
-      height: 500vh;
+      height: auto;
       h3 {
         font-size: 40px;
-        margin: 200px 0 80px 0;
+        margin: 200px 0 0px 0;
       }
       .process_info {
+        position: static;
         flex-direction: column;
         margin: 0;
         top: 80px;
-        height: 80vh;
+        height: auto;
         .shadow {
           width: 100%;
+          display: none;
         }
         .s_top {
           top: 133px;
           background: linear-gradient(#fff, rgba(255, 255, 255, 0.3));
         }
         .left {
+          height: auto;
           z-index: 1;
-          padding-bottom: 20px;
+          padding-bottom: 60px;
           h4 {
             font-size: 32px;
             font-weight: 500;
-            line-height: 1.2;
+            line-height: 1.3;
           }
         }
         .right {
           margin-left: 0;
           article {
             padding: 80px 0 88px 0;
+
             .upper {
               margin-top: 50px;
             }
@@ -381,6 +404,11 @@ export const WorkProcessContainer = styled.div`
               margin-top: 32px;
               li {
                 font-size: 20px;
+                small {
+                  br.mobile {
+                    display: initial;
+                  }
+                }
               }
               li + li {
                 margin-top: 20px;

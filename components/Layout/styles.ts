@@ -121,7 +121,7 @@ export const NavContainer = styled.nav<{
       overflow: hidden;
       li {
         position: relative;
-        top: -50%;
+        top: -30%;
         transition: transform 1s;
       }
       .mobile_social {
@@ -136,6 +136,10 @@ export const NavContainer = styled.nav<{
         }
         a > .icon__social {
           border: 1px solid #fff;
+          border-radius: 50%;
+          circle {
+            fill: #000;
+          }
         }
       }
     }
@@ -155,7 +159,7 @@ export const NavContainer = styled.nav<{
           flex-direction: column;
           align-items: flex-start;
           justify-content: flex-end;
-          background-color: rgba(250, 55, 11, 0.95);
+          background-color: rgba(0, 0, 0, 0.95);
           li {
             font-weight: 400;
             color: #fff !important;
@@ -163,7 +167,7 @@ export const NavContainer = styled.nav<{
             transform: translateX(-200px);
           }
           li.nav__active {
-            color: #fff !important;
+            color: #fa370b !important;
           }
         }
       `}
@@ -210,17 +214,26 @@ export const FooterContainer = styled.footer`
     .footer__right {
       a:first-of-type {
         text-decoration: none;
-        border-bottom: 1px solid #fff;
+        border-bottom: 4px solid #fff;
         margin-bottom: 2rem;
         display: block;
+        font-size: 60px;
         &:hover {
-          border-bottom: 1px solid #000;
+          border-bottom: 4px solid #000;
         }
       }
       a {
         margin-bottom: 1rem;
         justify-content: flex-end;
         width: auto;
+        span {
+          font-size: 30px;
+        }
+        i {
+          width: 30px;
+          height: 30px;
+          margin-left: 8px;
+        }
       }
     }
   }
@@ -253,14 +266,22 @@ export const FooterContainer = styled.footer`
         margin: 3rem 0 4.5rem 0;
         a:first-of-type {
           text-decoration: none;
-          border-bottom: 1px solid black;
+          border-bottom: 3px solid #fff;
           margin-bottom: 1.5rem;
           display: inline-block;
+          font-size: 26px;
         }
         a {
           margin-bottom: 0.2rem;
           justify-content: flex-start;
           width: auto;
+          span {
+            font-size: 16px;
+          }
+          i {
+            width: 16px;
+            height: 16px;
+          }
         }
       }
     }
