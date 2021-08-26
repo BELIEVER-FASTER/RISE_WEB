@@ -11,6 +11,11 @@ export const MainContainer = styled.main`
     height: 100%;
     object-fit: cover;
   }
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
   h1 {
     max-width: 120rem;
     font-family: 'NHaasGroteskTXPro';
@@ -18,7 +23,7 @@ export const MainContainer = styled.main`
     bottom: 0;
     left: 0;
     right: 0;
-    color: #fff;
+    color: #000;
     font-size: 11.3vw;
     font-weight: 500;
     padding: 0 2.5rem;
