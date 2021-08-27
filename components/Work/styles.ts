@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import { responSiveSize } from 'utils/style_opt';
 
 export const LivePageContainer = styled.div`
-  width: 100vw;
+  width: 100%;
   section {
     height: 100vh;
     margin-left: auto;
@@ -106,12 +106,12 @@ export const WorkClientsContainer = styled.div<{ blackMode: boolean }>`
   background-color: #fff;
   transition: all 0.5s;
   h3 {
-    margin-top: 100px;
+    margin-top: 150px;
     text-align: center;
     font-size: 92px;
     font-weight: 500;
     color: #000;
-    transition: all 0.5s;
+    transition: color 0.5s;
   }
   ul {
     margin-top: 150px;
@@ -196,6 +196,7 @@ export const WorkProcessContainer = styled.div`
       font-size: 92px;
       font-weight: 500;
       margin: 300px 0 150px 0;
+      transition: color 0.2s;
     }
     hr {
       height: 3px;

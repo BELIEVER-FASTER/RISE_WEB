@@ -34,7 +34,7 @@ export default function AboutC(): JSX.Element {
   return (
     <AboutCContainer className="about_section" ref={ref}>
       <video loop autoPlay muted className="about_c_video invinsible" playsInline>
-        <source src={videoResources.counterBG.src} type="video/mp4" />
+        <source src={videoResources.about_mov.src} type="video/mp4" />
       </video>
       <div className="section__title">
         <h3 className="about_c__title invinsible">

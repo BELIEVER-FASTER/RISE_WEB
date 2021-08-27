@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import { responSiveSize } from 'utils/style_opt';
 
 export const AboutLayoutContainer = styled.div`
+  width: 100%;
+  overflow-x: hidden;
   .about_section {
     margin: 0 auto;
     max-width: 1440px;

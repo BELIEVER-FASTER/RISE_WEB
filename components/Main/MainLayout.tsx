@@ -1,5 +1,6 @@
 import gsap from 'gsap';
 import React, { useEffect } from 'react';
+import { videoResources } from 'utils/videoResource';
 // import { imageResources } from 'utils/imageResource';
 import { MainContainer } from './styles';
 
@@ -16,12 +17,8 @@ export default function MainLayout(): JSX.Element {
   }, []);
   return (
     <MainContainer>
-      {/* <img draggable={false} src={imageResources.mainBg} alt="main_img" /> */}
       <video loop autoPlay muted playsInline>
-        <source
-          src="https://rise-resource.s3.ap-northeast-2.amazonaws.com/video/main.mp4"
-          type="video/mp4"
-        />
+        <source src={videoResources.mainBG.src} type="video/mp4" />
       </video>
       <h1 className="title__main">
         <span>U</span>

@@ -186,8 +186,12 @@ export const DatePickerBox = styled.div`
   height: 4.125rem;
   position: relative;
   z-index: 40;
+  & > i {
+    transition: all 0.2s;
+  }
   &.open {
     & > i {
+      transform: rotate(-180deg) translate(-10px, 20px);
     }
   }
   .picker {
@@ -307,20 +311,29 @@ export const LottieBox = styled.div`
 `;
 export const VideoBGLayer = styled.video`
   height: 100%;
-  width: 100vw;
+  width: 100%;
   position: absolute;
   object-fit: cover;
   top: 0;
   left: 0;
 `;
 export const BannerTitleContainer = styled.section`
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   padding: 2.5rem;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   position: relative;
+  @keyframes showUp {
+    from {
+      transform: translateY(20.6vw);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0vw);
+    }
+  }
   .content__bottom {
     width: 100%;
     position: relative;
@@ -332,22 +345,30 @@ export const BannerTitleContainer = styled.section`
     }
     & > h2 {
       text-align: right;
+      overflow: hidden;
+      span {
+        display: inline-block;
+        transform: translateY(20.6vw);
+      }
+      ${() => {
+        const arr = [1, 2, 3, 4, 5];
+        return css`
+          ${arr.map(
+            num => `span:nth-of-type(${num}){
+                        animation: showUp 0.4s ease ${num * 0.1 + 0.5}s forwards;
+                      }`
+          )}
+        `;
+      }}
     }
     article {
       display: flex;
       align-items: flex-end;
+      overflow: hidden;
       h2 {
         line-height: 0.75;
         overflow: hidden;
-        @keyframes showUp {
-          from {
-            transform: translateY(20.6vw);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0vw);
-          }
-        }
+
         span {
           display: inline-block;
           transform: translateY(20.6vw);
@@ -357,7 +378,7 @@ export const BannerTitleContainer = styled.section`
           return css`
             ${arr.map(
               num => `span:nth-of-type(${num}){
-                        animation: showUp 0.4s ease ${num * 0.1 + 0.5}s forwards;
+                        animation: showUp 0.4s ease ${num * 0.1 + 1.1}s forwards;
                       }`
             )}
           `;
@@ -366,6 +387,10 @@ export const BannerTitleContainer = styled.section`
       p {
         margin-left: 3rem;
         font-size: 26px;
+        animation: showUp 0.4s ease 1.8s forwards;
+
+        display: inline-block;
+        transform: translateY(20.6vw);
         span {
           line-height: 1.4;
         }

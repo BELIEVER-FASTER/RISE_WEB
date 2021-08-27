@@ -5,7 +5,7 @@ import { BannerTitleContainer } from './styles';
 import VideoBG from './VideoBG';
 
 type BannerTitleProps = {
-  title1?: string;
+  title1: string;
   title2: string;
   desc: string;
 };
@@ -24,7 +24,11 @@ export default function BannerTitle({
         videoSrc={videoResources.aboutBG.src}
       />
       <div className="content__bottom">
-        <h2>{title1}</h2>
+        <h2>
+          {title1.split('').map((char, i) => (
+            <span key={i}>{char}</span>
+          ))}
+        </h2>
         <article>
           <h2>
             {title2.split('').map((char, i) => (

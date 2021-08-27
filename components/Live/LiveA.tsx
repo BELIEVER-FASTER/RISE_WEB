@@ -31,7 +31,7 @@ export default function LiveA(): JSX.Element {
       scrollTrigger: {
         trigger: '#section_a',
         start: '50% top',
-        end: '55% top',
+        end: '60% top',
         scrub: 1,
       },
     });

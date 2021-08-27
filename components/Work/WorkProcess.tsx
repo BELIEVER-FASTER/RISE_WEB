@@ -2,9 +2,11 @@ import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { WorkProcessContainer } from './styles';
+import { useInView } from 'react-intersection-observer';
 
 gsap.registerPlugin(ScrollTrigger);
 export default function WorkProcess(): JSX.Element {
+  const { inView, ref } = useInView({ threshold: 0.35, triggerOnce: true });
   useEffect(() => {
     const a1 = gsap.timeline({
       scrollTrigger: {
@@ -25,10 +27,18 @@ export default function WorkProcess(): JSX.Element {
     }
   }, []);
 
+  useEffect(() => {
+    if (inView && ref) {
+      gsap.fromTo('.process_title', { opacity: 0, y: 300 }, { opacity: 1, y: 0 });
+    }
+  }, [inView, ref]);
+
   return (
     <WorkProcessContainer>
       <section className="process_container client_nh">
-        <h3>Live Process</h3>
+        <h3 ref={ref} className="invinsible process_title">
+          Live Process
+        </h3>
         <div className="process_info client_nh">
           <div className="shadow s_top"></div>
           <div className="shadow s_bottom"></div>

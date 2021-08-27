@@ -8,6 +8,10 @@ import { WorkClientsContainer } from './styles';
 export default function WorkClients(): JSX.Element {
   const [blackMode, setBlackMode] = useState(false);
   const { inView, ref } = useInView({ threshold: 0.35 });
+  const { inView: inView2, ref: ref2 } = useInView({
+    threshold: 0.35,
+    triggerOnce: true,
+  });
 
   useEffect(() => {
     const header = document.querySelectorAll('.main_header') as NodeListOf<HTMLElement>;
@@ -53,6 +57,16 @@ export default function WorkClients(): JSX.Element {
   }, [inView, ref]);
 
   useEffect(() => {
+    if (inView2 && ref2) {
+      gsap.fromTo(
+        '.client_title',
+        { y: 300, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1 }
+      );
+    }
+  }, [inView2, ref2]);
+
+  useEffect(() => {
     const icons = document.querySelectorAll('.client_icon') as NodeListOf<HTMLElement>;
     if (inView) {
       icons.forEach(icon => {
@@ -64,7 +78,9 @@ export default function WorkClients(): JSX.Element {
 
   return (
     <WorkClientsContainer blackMode={blackMode}>
-      <h3>Our Clients</h3>
+      <h3 className="client_title invinsible" ref={ref2}>
+        Our Clients
+      </h3>
       <ul ref={ref}>
         {[...clientsData, ...clientsData, ...clientsData, ...clientsData].map(
           (client, index) => (
