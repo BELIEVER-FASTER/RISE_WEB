@@ -106,7 +106,7 @@ export const WorkClientsContainer = styled.div<{ blackMode: boolean }>`
   background-color: #fff;
   transition: all 0.5s;
   h3 {
-    margin-top: 150px;
+    margin-top: 200px;
     text-align: center;
     font-size: 92px;
     font-weight: 500;
@@ -114,18 +114,19 @@ export const WorkClientsContainer = styled.div<{ blackMode: boolean }>`
     transition: color 0.5s;
   }
   ul {
+    margin-bottom: 50px;
     margin-top: 150px;
     max-width: 1440px;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 70px 0;
+    gap: 95px 0;
     li {
       display: flex;
       align-items: center;
       justify-content: center;
       img {
-        height: 58px;
+        height: 45px;
       }
     }
   }

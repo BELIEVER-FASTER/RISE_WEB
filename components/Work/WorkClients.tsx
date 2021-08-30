@@ -82,13 +82,11 @@ export default function WorkClients(): JSX.Element {
         Our Clients
       </h3>
       <ul ref={ref}>
-        {[...clientsData, ...clientsData, ...clientsData, ...clientsData].map(
-          (client, index) => (
-            <li key={index} className="client_icon">
-              <ClientLogo src={client.src} name={client.name} />
-            </li>
-          )
-        )}
+        {clientsData.map(client => (
+          <li key={client.id} className="client_icon">
+            <ClientLogo src={client.src} name={client.name} />
+          </li>
+        ))}
       </ul>
       <p>And More Than 77 Brands</p>
     </WorkClientsContainer>

@@ -38,8 +38,8 @@ export default function AboutC(): JSX.Element {
       </video>
       <div className="section__title">
         <h3 className="about_c__title invinsible">
-          <span>Real-Time Viewer</span>
-          <span>No. 1 Sales Record</span>
+          <span>실시간 시청자수 1위</span>
+          <span>실시간 매출 1위 기록.</span>
         </h3>
         <p className="about_c__desc invinsible">
           브랜드에 가장 효과적인 채널에서 라이브 쇼핑을 <br /> 진행할 수 있습니다. 지금

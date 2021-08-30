@@ -12,7 +12,7 @@ export default function WorkLayout(): JSX.Element {
       <BannerTitle
         title1="Rise"
         title2="Work"
-        desc="패션 코스메틱 라이브 쇼핑 MCN/패션&코스메틱 전문 쇼핑 호스트 /+크리에이터와 함께하는 라이브 / 쇼핑의 A-Z"
+        desc="매일 라이즈는 어떻게 하면/고객이 더 쉽고 매출을 늘릴수 있을까 /하는 고민으로 하루를 시작합니다."
       />
       <WorkRank />
       <WorkClients />

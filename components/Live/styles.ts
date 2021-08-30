@@ -35,7 +35,7 @@ export const Live1Container = styled.div`
       width: 100%;
       height: 100vh;
       pointer-events: none !important;
-      background-image: url('https://lh3.googleusercontent.com/gi2gw9Pp94p42I7hbc3PBQemUMKkB6vv0u9jDAxxyG3djMJXztvtblwTKQOAKpdiOAp83z-iwzff80HAsrR6fzmXzv9AFRF6Jj289g9vHF2vRNfFSjprbPIQqC8v07ab1U8OXyeU=w2400');
+      background-image: url('${process.env.NEXT_PUBLIC_S3_SRC}/image/live/sera_0.png');
       background-size: cover;
       background-position: bottom;
       clip-path: polygon(20% 45%, 80% 45%, 80% 100%, 20% 100%);
@@ -62,9 +62,9 @@ export const Live1Container = styled.div`
       width: 100%;
       height: 100vh;
       pointer-events: none !important;
-      background-image: url('https://lh3.googleusercontent.com/9eelykYI_qN9EdegIfP7SprjrVkF1p6mvagkgEWYTN1RzNdf3ggMSgLzYtIIqH-d0xMtiK1ll_4poh1nLxQm2R7zwPkQA6CynyIJi_GTwXWJAQjDqKBjg98_NPQ1TW9u7NHMLpru=w2400');
       background-size: cover;
       background-position: bottom;
+      background-image: url('${process.env.NEXT_PUBLIC_S3_SRC}/image/live/lael_0.png');
     }
   }
   #section4 {
@@ -327,10 +327,13 @@ export const ModelListItemBox = styled.li`
   width: 100%;
   list-style: none;
   .img__wrapper {
+    overflow: hidden;
+    position: relative;
     transform: translateY(100px);
     opacity: 0;
     z-index: 3;
     img {
+      z-index: 3;
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -350,11 +353,41 @@ export const ModelListItemBox = styled.li`
       line-height: 1.4;
     }
   }
+  .circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: none;
+    display: flex;
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    color: #fff;
+    border-radius: 50%;
+    z-index: 30;
+    opacity: 0;
+    font-size: 22px;
+    transition: opacity 0.5s;
+    span {
+      text-indent: 30px;
+      font-weight: 500;
+    }
+    svg {
+      rotate: -45deg;
+      position: absolute;
+      top: 25px;
+      left: 20px;
+      font-size: 30px;
+    }
+  }
   @media ${responSiveSize.mobile} {
     height: auto;
     margin-bottom: 2rem;
     article {
       padding: 1.5rem 0.7rem;
+    }
+    .circle {
+      display: none;
     }
   }
 `;

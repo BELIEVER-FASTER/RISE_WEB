@@ -5,7 +5,7 @@ import ScrollTo from 'gsap/ScrollToPlugin';
 import ModelDesc from './ModelDesc';
 import ModelSecond from './ModelSecond';
 import { Live1Container, LiveLayoutContainer } from './styles';
-import { laelImages, serraImages } from 'utils/modelsData';
+import { laelImages, seraImages } from 'utils/modelsData';
 
 gsap.registerPlugin(ScrollTrigger, ScrollTo);
 
@@ -31,15 +31,15 @@ export default function LiveA(): JSX.Element {
       scrollTrigger: {
         trigger: '#section_a',
         start: '50% top',
-        end: '60% top',
+        end: '63% top',
         scrub: 1,
       },
     });
     const b2 = gsap.timeline({
       scrollTrigger: {
         trigger: '#section_a',
-        start: '70% top',
-        end: '75% top',
+        start: '75% top',
+        end: '80% top',
         scrub: 1,
       },
     });
@@ -102,7 +102,7 @@ export default function LiveA(): JSX.Element {
           <div className="a1_img"></div>
         </section>
         <section id="section2">
-          <ModelSecond images={serraImages} />
+          <ModelSecond images={seraImages} />
         </section>
         <section id="section3">
           <div className="a2_img"></div>

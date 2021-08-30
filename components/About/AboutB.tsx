@@ -1,6 +1,7 @@
 import gsap from 'gsap';
 import React, { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
+import { imageResources } from 'utils/imageResource';
 import { AboutBContainer } from './styles';
 
 export default function AboutB(): JSX.Element {
@@ -46,10 +47,11 @@ export default function AboutB(): JSX.Element {
       <div className="section__title" ref={ref}>
         <h3 className="about_b__title invinsible">
           <span>
-            Optimized for
-            <br className="mobile" /> the brand
+            브랜드의 컨셉과
+            <br className="mobile" />
+            &nbsp;스타일에 최적화 방송
           </span>
-          <span>Concept And Style.</span>
+          <span></span>
         </h3>
         <p className="about_b__desc invinsible">
           고급스러운 하이엔드 브랜드부터 10-20대를
@@ -62,10 +64,26 @@ export default function AboutB(): JSX.Element {
         </p>
       </div>
       <div className="img__wrapper">
-        <img className="about_b_img1 invinsible" src="/img/about/3.png" alt="" />
-        <img className="about_b_img2 invinsible" src="/img/about/4.png" alt="" />
-        <img className="about_b_img3 invinsible" src="/img/about/5.png" alt="" />
-        <img className="about_b_img4 invinsible" src="/img/about/6.png" alt="" />
+        <img
+          className="about_b_img1 invinsible"
+          src={imageResources.about3}
+          alt="about_image3"
+        />
+        <img
+          className="about_b_img2 invinsible"
+          src={imageResources.about4}
+          alt="about_image4"
+        />
+        <img
+          className="about_b_img3 invinsible"
+          src={imageResources.about5}
+          alt="about_image5"
+        />
+        <img
+          className="about_b_img4 invinsible"
+          src={imageResources.about6}
+          alt="about_image6"
+        />
       </div>
     </AboutBContainer>
   );

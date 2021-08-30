@@ -2,6 +2,7 @@ import gsap from 'gsap';
 import React from 'react';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
+import { imageResources } from 'utils/imageResource';
 import { AboutAContainer } from './styles';
 
 export default function AboutA(): JSX.Element {
@@ -36,8 +37,8 @@ export default function AboutA(): JSX.Element {
     <AboutAContainer className="about_section">
       <div className="section__title" ref={ref}>
         <h3 className="about_a__title invinsible">
-          <span>Create Live</span>
-          <span>Shopping Content</span>
+          <span>한번의 라이브 방송을</span>
+          <span>한편의 컨텐츠 처럼</span>
         </h3>
         <p className="about_a__desc invinsible">
           라이브 커머스 전문 PD와 MD, 작가님들이 <br /> 팀을 이뤄 브랜드와 상품을 분석하고
@@ -45,8 +46,16 @@ export default function AboutA(): JSX.Element {
           진행까지 모든 솔루션을 경험해보세요
         </p>
       </div>
-      <img className="about_a_img1 invinsible" src="/img/about/1.png" alt="" />
-      <img className="about_a_img2 invinsible" src="/img/about/2.png" alt="" />
+      <img
+        className="about_a_img1 invinsible"
+        src={imageResources.about1}
+        alt="about_image1"
+      />
+      <img
+        className="about_a_img2 invinsible"
+        src={imageResources.about2}
+        alt="about_image2"
+      />
     </AboutAContainer>
   );
 }

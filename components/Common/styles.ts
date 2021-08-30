@@ -390,9 +390,9 @@ export const BannerTitleContainer = styled.section`
         animation: showUp 0.4s ease 1.8s forwards;
 
         display: inline-block;
-        transform: translateY(20.6vw);
+        transform: translateY(30.6vw);
         span {
-          line-height: 1.4;
+          line-height: 1.7;
         }
         span:nth-of-type(3) {
           br {

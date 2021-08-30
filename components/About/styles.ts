@@ -124,10 +124,8 @@ export const AboutBContainer = styled.section`
     text-align: center;
     h3 {
       span:first-of-type {
-        padding-right: 100px;
-      }
-      span:last-of-type {
-        padding-left: 250px;
+        padding-right: 00px;
+        line-height: 1.4;
       }
       br.mobile {
         display: none;
@@ -242,6 +240,7 @@ export const AboutCContainer = styled.section`
     h3 {
       span:last-of-type {
         padding-left: 200px;
+        line-height: 1.4;
       }
     }
     p {

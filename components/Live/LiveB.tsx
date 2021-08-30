@@ -37,7 +37,7 @@ export default function LiveB(): JSX.Element {
           <span>
             미스코리아 등<br /> 100여 명의 전문가로
           </span>
-          <span>구성된 블랙핑크 라이브 팀</span>
+          <span>구성된 라이즈 팀</span>
         </p>
       </section>
       <section className="live_b__model_list">
