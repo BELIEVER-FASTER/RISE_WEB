@@ -131,15 +131,12 @@ export const WorkClientsContainer = styled.div<{ blackMode: boolean }>`
     }
   }
   p {
-    cursor: pointer;
     margin-top: 140px;
     color: #000;
     font-size: 36px;
     font-weight: 500;
     transition: all 0.5s;
-    &:hover {
-      text-decoration: underline;
-    }
+    text-decoration: underline;
   }
   ${({ blackMode }) =>
     blackMode &&

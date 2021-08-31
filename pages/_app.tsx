@@ -1,3 +1,5 @@
+/* eslint-disable no-useless-escape */
+/* eslint-disable no-irregular-whitespace */
 import { AppProps } from 'next/dist/next-server/lib/router/router';
 import TagManager from 'react-gtm-module';
 import { useEffect } from 'react';
@@ -11,6 +13,18 @@ const tagManagerArgs = {
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   useEffect(() => {
+    console.log(`       
+                        =========       ==    ========    ========
+    ＼＼＼＼＼             ||      \\\\      ||   ||           ||
+    ＼＼＼∧_∧_            ||      ||      ||   ||           ||
+    ＼|￣( ･ω∩)∩         ||======//       ||    ========   ||=======
+    ＼|＼|￣( ^ω∧)∧       ||     \\\\       ||           ||   ||
+    ＼◎＼|＼|￣(*･∀･）     ||      \\\\      ||           ||   ||
+    ＼◎＼|＼/っｙっ＼       ||       \\\\     ||    =========    ========
+    ＼◎＼|ニニニニ|
+  　  ＼◎ 　　＼◎           W E L C O M E "R i S E" https://www.riseenm.com
+  　    ＼　　　.＼
+    `);
     if (process.env.NODE_ENV === 'development') {
       console.log(process.env.NODE_ENV);
       Sentry.init({

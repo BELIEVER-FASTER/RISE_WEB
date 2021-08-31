@@ -1,7 +1,6 @@
 import ResultModal from 'components/Common/ResultModal';
 import useAsync from 'hooks/useAsync';
 import React, { useState, useEffect } from 'react';
-import TagManager from 'react-gtm-module';
 import { emailNoti } from 'utils/requests';
 import { EmailInputBox } from './styles';
 
@@ -24,7 +23,6 @@ export default function EmailInput(): JSX.Element {
     e.preventDefault();
     if (state.loading) return;
     if (!email.trim()) return;
-    TagManager.dataLayer({ dataLayer: { event: '출시 알림 등록', email } });
     fetch();
   };
 

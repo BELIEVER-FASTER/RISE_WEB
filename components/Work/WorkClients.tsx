@@ -17,16 +17,18 @@ export default function WorkClients(): JSX.Element {
     const header = document.querySelectorAll('.main_header') as NodeListOf<HTMLElement>;
     const nextEl = document.querySelectorAll('.client_nh') as NodeListOf<HTMLElement>;
     if (!nextEl) return;
+    if (!header) return;
+
     if (inView && ref) {
       setBlackMode(true);
       document.body.style.backgroundColor = '#26262e';
-      gsap.set('.main_header', {
+      gsap.set(header, {
         duration: 0.5,
         color: '#fff',
         fill: '#fff',
         stroke: '#fff',
       });
-      gsap.set('.client_nh', {
+      gsap.set(nextEl, {
         duration: 0.5,
         color: '#fff',
         fill: '#fff',
@@ -35,13 +37,13 @@ export default function WorkClients(): JSX.Element {
     } else {
       setBlackMode(false);
       document.body.style.backgroundColor = '#fff';
-      gsap.set('.main_header', {
+      gsap.set(header, {
         duration: 0.5,
         color: '#000',
         fill: '#000',
         stroke: '#000',
       });
-      gsap.set('.client_nh', {
+      gsap.set(nextEl, {
         duration: 0.5,
         color: '#000',
         fill: '#000',

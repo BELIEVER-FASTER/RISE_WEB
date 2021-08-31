@@ -1,19 +1,13 @@
 import React from 'react';
-import TagManager from 'react-gtm-module';
 import { SocialBox } from './styles';
-import Icon from 'components/Icon/Icon';
 
 type SocialProps = {
   type: 'Facebook' | 'Instagram';
   link: string;
 };
 export default function Social({ type, link }: SocialProps): JSX.Element {
-  const onClickSocial = () => {
-    TagManager.dataLayer({ dataLayer: { event: `소셜 링크 클릭`, type } });
-  };
-
   return (
-    <SocialBox onClick={onClickSocial} href={link} target="_blank">
+    <SocialBox href={link} target="_blank">
       <span>{type}</span>
       {/* <Icon name="link_arrow" className="icon__social" /> */}
       <svg
@@ -24,7 +18,7 @@ export default function Social({ type, link }: SocialProps): JSX.Element {
         xmlns="http://www.w3.org/2000/svg"
       >
         <circle cx="7.5" cy="7.5" r="7.5" />
-        <g clip-path="url(#clip0)">
+        <g clipPath="url(#clip0)">
           <path d="M9.26141 4.32104H4.69824V4.95954H9.26141V4.32104Z" fill="white" />
           <path d="M10.6797 10.304V5.62061H10.0394V10.304H10.6797Z" fill="white" />
           <path
