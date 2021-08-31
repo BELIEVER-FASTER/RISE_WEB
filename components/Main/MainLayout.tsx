@@ -10,7 +10,7 @@ export default function MainLayout(): JSX.Element {
       gsap.to('.title__main', {
         fontSize: '5vw',
         height: '5vw',
-        delay: 13,
+        delay: 12,
         duration: 1.3,
       });
     }

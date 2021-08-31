@@ -3,7 +3,7 @@ import { responSiveSize } from 'utils/style_opt';
 
 export const LiveLayoutContainer = styled.div`
   position: relative;
-  height: 1100vh;
+  height: 1200vh;
   @media ${responSiveSize.mobile} {
     height: 900vh;
   }

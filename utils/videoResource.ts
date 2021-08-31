@@ -19,4 +19,9 @@ export const videoResources = {
     src: `${process.env.NEXT_PUBLIC_S3_SRC}/video/about_mov.mp4`,
     thumb: `${process.env.NEXT_PUBLIC_S3_SRC}/image/about_mov.png`,
   },
+  work_mov: {
+    id: 4,
+    src: `${process.env.NEXT_PUBLIC_S3_SRC}/video/work_mov.mp4`,
+    thumb: `${process.env.NEXT_PUBLIC_S3_SRC}/image/work_mov.png`,
+  },
 };

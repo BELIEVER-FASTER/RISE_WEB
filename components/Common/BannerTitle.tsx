@@ -8,20 +8,26 @@ type BannerTitleProps = {
   title1: string;
   title2: string;
   desc: string;
+  page: 'work' | 'about';
 };
 
 export default function BannerTitle({
   title1,
   title2,
   desc,
+  page,
 }: BannerTitleProps): JSX.Element {
   const [splitedDesc] = useState(desc.split('/'));
 
   return (
     <BannerTitleContainer>
       <VideoBG
-        thumbnail={videoResources.aboutBG.thumb}
-        videoSrc={videoResources.aboutBG.src}
+        thumbnail={
+          page === 'work' ? videoResources.work_mov.src : videoResources.aboutBG.src
+        }
+        videoSrc={
+          page === 'work' ? videoResources.work_mov.src : videoResources.aboutBG.src
+        }
       />
       <div className="content__bottom">
         <h2>

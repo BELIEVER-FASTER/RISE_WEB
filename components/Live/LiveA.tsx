@@ -30,16 +30,16 @@ export default function LiveA(): JSX.Element {
     const b1 = gsap.timeline({
       scrollTrigger: {
         trigger: '#section_a',
-        start: '50% top',
-        end: '63% top',
+        start: '55% top',
+        end: '68% top',
         scrub: 1,
       },
     });
     const b2 = gsap.timeline({
       scrollTrigger: {
         trigger: '#section_a',
-        start: '75% top',
-        end: '80% top',
+        start: '80% top',
+        end: '85% top',
         scrub: 1,
       },
     });

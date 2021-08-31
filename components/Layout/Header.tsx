@@ -43,7 +43,7 @@ export default function Header(): JSX.Element {
   }, [menuOpen]);
   return (
     <>
-      <Link href="/">
+      <Link href="/develope">
         <LogoContainer isBlack={isBlack} visible={visible}>
           <Logo />
         </LogoContainer>
