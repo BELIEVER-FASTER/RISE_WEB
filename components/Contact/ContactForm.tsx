@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import gsap from 'gsap';
 import dayjs from 'dayjs';
+import TagManager from 'react-gtm-module';
 import Button from 'components/Common/Button';
 import Input from 'components/Common/Input';
 import Textarea from 'components/Common/Textarea';
@@ -70,6 +71,8 @@ export default function ContactForm(): JSX.Element {
     if (!startDate) return;
 
     fetch();
+
+    TagManager.dataLayer({ dataLayer: { event: 'submitForm' } });
   };
 
   useEffect(() => {

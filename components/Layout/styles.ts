@@ -229,7 +229,7 @@ export const FooterContainer = styled.footer`
         span {
           font-size: 30px;
         }
-        i {
+        svg {
           width: 30px;
           height: 30px;
           margin-left: 8px;
@@ -278,7 +278,7 @@ export const FooterContainer = styled.footer`
           span {
             font-size: 16px;
           }
-          i {
+          svg {
             width: 16px;
             height: 16px;
           }

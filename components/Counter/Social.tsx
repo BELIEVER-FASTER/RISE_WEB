@@ -2,12 +2,12 @@ import React from 'react';
 import { SocialBox } from './styles';
 
 type SocialProps = {
-  type: 'Facebook' | 'Instagram';
+  type: 'Facebook' | 'Instagram' | 'Blog';
   link: string;
 };
 export default function Social({ type, link }: SocialProps): JSX.Element {
   return (
-    <SocialBox href={link} target="_blank">
+    <SocialBox href={link} target="_blank" className="btn__social">
       <span>{type}</span>
       {/* <Icon name="link_arrow" className="icon__social" /> */}
       <svg
