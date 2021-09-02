@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import { useInView } from 'react-intersection-observer';
 import { ModelListItemBox } from './styles';
-import { IoIosArrowUp } from 'react-icons/io';
 
 type ModelListItemProps = {
   modelData: { id: number; src: string; name: string; desc: string };
@@ -35,30 +34,7 @@ export default function ModelListItem({ modelData }: ModelListItemProps): JSX.El
 
   return (
     <ModelListItemBox className={`model__item-${modelData.id}`} ref={ref}>
-      <div
-        className="img__wrapper"
-        id={`model_item__image-${modelData.id}`}
-        onMouseMove={e => {
-          const dim = (
-            document.querySelector(`#model_item__image-${modelData.id}`) as HTMLElement
-          ).getBoundingClientRect();
-          const mouseY = e.clientY - dim.top;
-          const mouseX = e.clientX - dim.left;
-          gsap.set(`#circle_${modelData.id}`, {
-            opacity: 1,
-            top: `${mouseY - 30}px`,
-            left: `${mouseX - 30}px`,
-          });
-        }}
-        onMouseLeave={() => {
-          gsap.set(`#circle_${modelData.id}`, {
-            opacity: 0,
-          });
-        }}
-      >
-        <div className="circle" id={`circle_${modelData.id}`}>
-          <IoIosArrowUp /> <span> MORE</span>
-        </div>
+      <div className="img__wrapper" id={`model_item__image-${modelData.id}`}>
         <img src={modelData.src} alt="model_item__image" />
       </div>
       <article id={`model_item__summary-${modelData.id}`}>

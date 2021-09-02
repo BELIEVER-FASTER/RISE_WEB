@@ -118,6 +118,13 @@ export default function ContactForm(): JSX.Element {
     }
   }, [inView, ref]);
 
+  useEffect(() => {
+    if (prModalOpen) {
+      document.body.style.overflowY = 'hidden';
+    } else {
+      document.body.style.overflowY = 'initial';
+    }
+  }, [prModalOpen]);
   return (
     <>
       <ContactFormContainer ref={ref} id="contact__form">

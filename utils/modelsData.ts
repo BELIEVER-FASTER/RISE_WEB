@@ -64,34 +64,4 @@ export const moreModelList = [
     name: '강수진 / Cosmetics',
     desc: '글로벌 콘텐츠를 시청하는 한국인들의 리얼한 반응을 보여주는 리액션 전문 채널입니다.',
   },
-  {
-    id: 7,
-    src: 'https://lh3.googleusercontent.com/WMEOESqOUlGF1nt-Vv8sz87tfMiLAShqpOWlLhXPVR1Cs6zn5a1I-4XARgvazFzZkKDYxJNK4cyIgpppJ4zmWNOGdFFwRP2OM_LzfToykVWGpZuo9-BQC7oDAokbNVZCFL4-c_2R=w2400',
-    name: '강수진 / Cosmetics',
-    desc: '글로벌 콘텐츠를 시청하는 한국인들의 리얼한 반응을 보여주는 리액션 전문 채널입니다.',
-  },
-  {
-    id: 8,
-    src: 'https://lh3.googleusercontent.com/9cdXCw0uHVADpAgLcJ_vyNMKjLwh40ZkTmlPQOhO0t9TK2ByM3kLA4bzgw5aR7PId2jhJDIMhuP8V3VoC0wyMKXFCqHz-KZCyQePlhzEz5ek3tNjW_qaEzDQhYQQbrz4CIYaivef=w2400',
-    name: '강수진 / Cosmetics',
-    desc: '글로벌 콘텐츠를 시청하는 한국인들의 리얼한 반응을 보여주는 리액션 전문 채널입니다.',
-  },
-  {
-    id: 9,
-    src: 'https://lh3.googleusercontent.com/WMEOESqOUlGF1nt-Vv8sz87tfMiLAShqpOWlLhXPVR1Cs6zn5a1I-4XARgvazFzZkKDYxJNK4cyIgpppJ4zmWNOGdFFwRP2OM_LzfToykVWGpZuo9-BQC7oDAokbNVZCFL4-c_2R=w2400',
-    name: '강수진 / Cosmetics',
-    desc: '글로벌 콘텐츠를 시청하는 한국인들의 리얼한 반응을 보여주는 리액션 전문 채널입니다.',
-  },
-  {
-    id: 10,
-    src: 'https://lh3.googleusercontent.com/2jd1NLONDDfcONOnTe18GJ33GljcYgK_Sf-yyaBGO_dxy0msYgTI-RAzBAwbV68RgdhJ5n5tUxt3ElaulT_p4CNRzKvWH-J4OjrV8-MgVVkGke2pm3zmZdencrU6uS7zma2VgwgM=w2400',
-    name: '강수진 / Cosmetics',
-    desc: '글로벌 콘텐츠를 시청하는 한국인들의 리얼한 반응을 보여주는 리액션 전문 채널입니다.',
-  },
-  {
-    id: 11,
-    src: 'https://lh3.googleusercontent.com/2jd1NLONDDfcONOnTe18GJ33GljcYgK_Sf-yyaBGO_dxy0msYgTI-RAzBAwbV68RgdhJ5n5tUxt3ElaulT_p4CNRzKvWH-J4OjrV8-MgVVkGke2pm3zmZdencrU6uS7zma2VgwgM=w2400',
-    name: '강수진 / Cosmetics',
-    desc: '글로벌 콘텐츠를 시청하는 한국인들의 리얼한 반응을 보여주는 리액션 전문 채널입니다.',
-  },
 ];

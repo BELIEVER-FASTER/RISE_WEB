@@ -71,6 +71,7 @@ export default function Header(): JSX.Element {
               link="https://www.facebook.com/%EB%9D%BC%EC%9D%B4%EC%A6%88-RISE-ENM-108682494840345"
             />
             <Social type="Instagram" link="https://www.instagram.com/riseenm/" />
+            <Social type="Blog" link="https://blog.naver.com/riseenm" />
           </div>
         </ul>
       </NavContainer>

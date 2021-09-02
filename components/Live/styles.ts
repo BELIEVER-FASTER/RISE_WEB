@@ -81,11 +81,10 @@ export const Live1Container = styled.div`
       height: 100%;
       h1 {
         position: absolute;
-        top: 27%;
         left: 0;
         font-size: 44px;
         font-weight: 600;
-        top: 22%;
+        top: 29%;
         span > br {
           display: initial;
         }
@@ -95,7 +94,8 @@ export const Live1Container = styled.div`
         }
       }
       .a1_img {
-        clip-path: polygon(12% 45%, 88% 45%, 88% 100%, 12% 100%);
+        background-position: 47% 0;
+        clip-path: polygon(12% 50%, 88% 50%, 88% 100%, 12% 100%);
       }
     }
   }
@@ -276,13 +276,6 @@ export const LiveBContainer = styled.div`
     align-items: center;
     justify-content: center;
     margin-bottom: 3rem;
-    h3 {
-      border-bottom: 6px solid #fff;
-    }
-    h3:hover {
-      cursor: pointer;
-      border-bottom: 6px solid #000;
-    }
   }
   @media ${responSiveSize.mobile} {
     section {

@@ -95,7 +95,7 @@ export default function LiveA(): JSX.Element {
           </h1>
           <ModelDesc
             className="section1_model main_header"
-            name="Sera"
+            name="Seola"
             desc1="Popular"
             desc2="Showhost"
           />

@@ -518,40 +518,230 @@ export const ModalWrapper = styled.div`
 
 export const PrivacyModalWrapper = styled(ModalWrapper)`
   .modal__content {
-    max-width: 90%;
+    padding: 1.7rem 0;
+    width: 100%;
+    height: 100%;
     position: relative;
+    overflow-y: scroll;
+    br.mobile {
+      display: none;
+    }
     & > span {
-      position: absolute;
-      top: 10px;
-      right: 10px;
+      .close_icon {
+        width: 22px;
+        height: 22px;
+      }
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      top: 60px;
+      right: 60px;
+      background-color: #fff;
+      border-radius: 30px;
+      border: 1px solid #000;
       cursor: pointer;
     }
     .privacy {
-      max-width: 600px;
-      height: 500px;
-      overflow-y: scroll;
+      max-width: 984px;
+      padding-bottom: 500px;
       .content {
-        font-size: 15px;
+        section {
+          width: 100%;
+          padding: 0;
+        }
+        line-height: 1.7;
+        font-size: 20px;
+        b {
+          font-size: 26px;
+          letter-spacing: 0.9px;
+          padding-bottom: 90px;
+          display: block;
+        }
+        h2 {
+          font-size: 72px;
+          font-weight: 500;
+          margin: 280px 0 60px 0;
+        }
+        h3 {
+          padding-top: 80px;
+          font-size: 24px;
+        }
+        h4 {
+          margin-top: 50px;
+          margin-bottom: 20px;
+        }
+        strong {
+          cursor: default;
+          font-weight: 400;
+          text-decoration: none;
+        }
+        p {
+          font-size: 28px;
+          padding: 20px 0 20px 0;
+          font-weight: 500;
+          text-align: left;
+        }
+        ol:first-of-type {
+          margin-top: 30px;
+        }
+        ol {
+          margin: 10px 0;
+          li {
+            display: flex;
+            line-height: 1.6;
+            margin-bottom: 12px;
+            strong {
+              padding-right: 8px;
+            }
+          }
+        }
+        & > ul {
+          margin: 35px 0;
+          li {
+            display: flex;
+            margin: 20px 0;
+            strong {
+              padding-right: 8px;
+            }
+          }
+        }
       }
-      h2 {
-        font-size: 30px;
-        margin: 10px 0;
-      }
-      h3 {
-        padding-top: 30px;
-        font-size: 22px;
-      }
-      p {
-        font-size: 18px;
-        padding: 20px 0 10px 0;
+      .grid {
+        width: 100%;
+        margin-bottom: 80px;
+        .row {
+          display: flex;
+          width: 100%;
+          border-bottom: 1px solid #ddd;
+          &:first-of-type {
+            border-bottom: 2px solid #000;
+          }
+          &:last-of-type {
+            border-bottom: 2px solid #fff;
+          }
+          .title {
+            flex: 1;
+            font-weight: 500;
+            padding: 16px 0;
+          }
+          span {
+            letter-spacing: 0.7px;
+            line-height: 28px;
+            padding: 20px 25px 32px 0;
+            font-size: 16px;
+            width: 33%;
+            display: block;
+          }
+          span:last-of-type {
+            flex: 1;
+            padding-right: 0px;
+          }
+        }
       }
     }
-    .table {
-      li {
-        margin: 15px 0;
-        h5 {
-          font-size: 18px;
-          margin-bottom: 5px;
+  }
+  @media ${responSiveSize.mobile} {
+    .modal__content {
+      margin-bottom: 0;
+      margin-top: 50px;
+      & > span {
+        .close_icon {
+          width: 14px;
+          height: 14px;
+        }
+        width: 36px;
+        height: 36px;
+        top: 61px;
+        right: 20px;
+        border-radius: 30px;
+      }
+      .privacy {
+        width: 100%;
+        padding-bottom: 200px;
+        .content {
+          overflow: hidden;
+          section {
+            width: 100%;
+            padding: 0 1.5rem;
+          }
+          .padding-left {
+            padding-left: 1.5rem;
+          }
+          font-size: 14px;
+          br.desktop {
+            display: none;
+          }
+          br.mobile {
+            display: initial;
+          }
+          b {
+            font-size: 16px;
+            padding-bottom: 60px;
+          }
+          h2 {
+            padding-top: 30px;
+            font-size: 32px;
+            margin: 120px 0 20px 0;
+          }
+          h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 64px 0 16px 0;
+            padding: 0;
+          }
+          h5 {
+            display: inline;
+          }
+          p {
+            font-weight: 600;
+            font-size: 16px;
+            padding: 20px 0 20px 0;
+          }
+          .scroll-x {
+            overflow-x: scroll;
+          }
+          .grid {
+            width: 556px;
+            padding: 0 1.5rem;
+            .row {
+              .title {
+              }
+              span {
+                letter-spacing: 0.6px;
+                font-size: 12px;
+                line-height: 22px;
+                width: 30%;
+              }
+              span:last-of-type {
+                flex: 1;
+                padding-right: 0px;
+              }
+            }
+          }
+          & > section > ul {
+            margin: 20px 0;
+            li {
+              display: flex;
+              margin: 10px 0;
+              strong {
+                padding-right: 8px;
+              }
+            }
+          }
+          ol {
+            margin: 10px 0;
+            li {
+              display: flex;
+              line-height: 1.6;
+              margin-bottom: 10px;
+              strong {
+                padding-right: 8px;
+              }
+            }
+          }
         }
       }
     }
