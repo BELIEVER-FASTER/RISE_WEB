@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import React from 'react';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
-import { moreModelList } from 'utils/modelsData';
+import { modelData2 } from 'utils/modelsData';
 import ModelListItem from './ModelListItem';
 import { LiveBContainer } from './styles';
 
@@ -41,13 +41,11 @@ export default function LiveB(): JSX.Element {
         </p>
       </section>
       <section className="live_b__model_list">
-        {moreModelList.map(model => (
+        {modelData2.map(model => (
           <ModelListItem modelData={model} key={model.id} />
         ))}
       </section>
-      <section className="more__info">
-        <h3>+49</h3>
-      </section>
+      <section className="more__info">{/* <h3>+49</h3> */}</section>
     </LiveBContainer>
   );
 }

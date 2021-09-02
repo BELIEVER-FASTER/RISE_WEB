@@ -34,22 +34,22 @@ export default function Layout({ children }: LayoutProps): JSX.Element {
   const [footerEx, setFooterEx] = useState(false);
 
   useEffect(() => {
-    if (router.asPath === '/develope/about') {
+    if (router.asPath === '/about') {
       setHeaderEx(true);
       setFooterEx(true);
-    } else if (router.asPath === '/develope/contact') {
+    } else if (router.asPath === '/contact') {
       setHeaderEx(true);
       setFooterEx(true);
-    } else if (router.asPath === '/develope/live') {
+    } else if (router.asPath === '/live') {
       setHeaderEx(true);
       setFooterEx(true);
-    } else if (router.asPath === '/develope/work') {
+    } else if (router.asPath === '/work') {
       setHeaderEx(true);
       setFooterEx(true);
-    } else if (router.asPath === '/develope') {
+    } else if (router.asPath === '/') {
       setHeaderEx(true);
       setFooterEx(false);
-    } else if (router.asPath === '/') {
+    } else if (router.asPath === '/counter') {
       setHeaderEx(false);
       setFooterEx(false);
     }

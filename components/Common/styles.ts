@@ -348,7 +348,7 @@ export const BannerTitleContainer = styled.section`
       overflow: hidden;
       span {
         display: inline-block;
-        transform: translateY(20.6vw);
+        transform: translateY(21vw);
       }
       ${() => {
         const arr = [1, 2, 3, 4, 5];
@@ -371,7 +371,7 @@ export const BannerTitleContainer = styled.section`
 
         span {
           display: inline-block;
-          transform: translateY(20.6vw);
+          transform: translateY(21vw);
         }
         ${() => {
           const arr = [1, 2, 3, 4, 5];
@@ -425,6 +425,7 @@ export const BannerTitleContainer = styled.section`
           margin: 0;
           margin: 24px 0 32px 0;
           font-size: 20px;
+          transform: translateY(45.6vw);
           span {
             line-height: 1.64;
           }
@@ -646,7 +647,7 @@ export const PrivacyModalWrapper = styled(ModalWrapper)`
   @media ${responSiveSize.mobile} {
     .modal__content {
       margin-bottom: 0;
-      margin-top: 50px;
+      margin-top: 0px;
       & > span {
         .close_icon {
           width: 14px;

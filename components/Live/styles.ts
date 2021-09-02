@@ -331,6 +331,42 @@ export const ModelListItemBox = styled.li`
       height: 100%;
       object-fit: cover;
     }
+    .count {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      p {
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 52px;
+      }
+      .timer {
+        display: flex;
+        & > div {
+          width: 30%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          margin: 0 13px;
+        }
+        span {
+          display: block;
+          font-size: 0.8vw;
+        }
+        strong {
+          display: block;
+          font-size: 3.8vw;
+          font-weight: 500;
+        }
+      }
+    }
   }
   article {
     overflow: hidden;
@@ -376,6 +412,18 @@ export const ModelListItemBox = styled.li`
   @media ${responSiveSize.mobile} {
     height: auto;
     margin-bottom: 2rem;
+    .img__wrapper {
+      .count {
+        .timer {
+          span {
+            font-size: 4vw;
+          }
+          strong {
+            font-size: 12vw;
+          }
+        }
+      }
+    }
     article {
       padding: 1.5rem 0.7rem;
     }

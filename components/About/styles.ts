@@ -234,7 +234,7 @@ export const AboutCContainer = styled.section`
   }
   .section__title {
     overflow: hidden;
-    margin-top: 50px;
+    margin-top: 80px;
     flex-direction: row !important;
     justify-content: space-between;
     h3 {
@@ -244,7 +244,7 @@ export const AboutCContainer = styled.section`
       }
     }
     p {
-      margin-top: 0 !important;
+      margin-top: 8px !important;
       line-height: 1.6 !important;
     }
   }

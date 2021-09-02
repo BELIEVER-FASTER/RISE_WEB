@@ -23,12 +23,12 @@ export default function AboutA(): JSX.Element {
         .fromTo(
           '.about_a_img1',
           { opacity: 0, y: 70 },
-          { opacity: 1, y: 0, duration: 0.3 }
+          { opacity: 1, y: 0, duration: 0.2 }
         )
         .fromTo(
           '.about_a_img2',
           { opacity: 0, y: 70 },
-          { opacity: 1, y: 0, duration: 0.3 }
+          { opacity: 1, y: 0, duration: 0.2 }
         );
     }
   }, [inView, ref]);

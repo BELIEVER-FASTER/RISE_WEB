@@ -24,11 +24,9 @@ export default function Header(): JSX.Element {
   const router = useRouter();
 
   useEffect(() => {
-    if (router.asPath === '/') {
-      return setIsBlack(false);
-    }
     setIsBlack(true);
   }, [router]);
+
   useEffect(() => {
     setVisible(false);
     setTimeout(() => setMenuOpen(false), 500);
@@ -43,7 +41,7 @@ export default function Header(): JSX.Element {
   }, [menuOpen]);
   return (
     <>
-      <Link href="/develope">
+      <Link href="/">
         <LogoContainer isBlack={isBlack} visible={visible}>
           <Logo />
         </LogoContainer>
