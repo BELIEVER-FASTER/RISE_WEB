@@ -360,24 +360,17 @@ export const ModelListItemBox = styled.li`
     cursor: none;
     display: flex;
     position: absolute;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     color: #fff;
     border-radius: 50%;
+    background-color: #fa370b;
     z-index: 30;
     opacity: 0;
-    font-size: 22px;
+    font-size: 20px;
     transition: opacity 0.5s;
     span {
-      text-indent: 30px;
       font-weight: 500;
-    }
-    svg {
-      rotate: -45deg;
-      position: absolute;
-      top: 25px;
-      left: 20px;
-      font-size: 30px;
     }
   }
   @media ${responSiveSize.mobile} {

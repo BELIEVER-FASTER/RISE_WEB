@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import { useInView } from 'react-intersection-observer';
 import { ModelListItemBox } from './styles';
-import { IoIosArrowUp } from 'react-icons/io';
+import { useRouter } from 'next/dist/client/router';
 
 type ModelListItemProps = {
   modelData: { id: number; src: string; name: string; desc: string };
@@ -10,6 +10,15 @@ type ModelListItemProps = {
 export default function ModelListItem({ modelData }: ModelListItemProps): JSX.Element {
   const { inView, ref } = useInView({ threshold: 0.45, triggerOnce: true });
   const index = ((modelData.id - 1) % 3) * 3;
+  const router = useRouter();
+
+  const detailClick = () => {
+    router.push(
+      `${router.basePath}?model=${modelData.id}`,
+      `${router.basePath}?model=${modelData.id}`,
+      { scroll: false }
+    );
+  };
 
   useEffect(() => {
     if (inView) {
@@ -36,6 +45,7 @@ export default function ModelListItem({ modelData }: ModelListItemProps): JSX.El
   return (
     <ModelListItemBox className={`model__item-${modelData.id}`} ref={ref}>
       <div
+        onClick={detailClick}
         className="img__wrapper"
         id={`model_item__image-${modelData.id}`}
         onMouseMove={e => {
@@ -57,7 +67,7 @@ export default function ModelListItem({ modelData }: ModelListItemProps): JSX.El
         }}
       >
         <div className="circle" id={`circle_${modelData.id}`}>
-          <IoIosArrowUp /> <span> MORE</span>
+          <span>View</span>
         </div>
         <img src={modelData.src} alt="model_item__image" />
       </div>
