@@ -131,7 +131,8 @@ export const WorkClientsContainer = styled.div<{ blackMode: boolean }>`
     }
   }
   p {
-    margin-top: 140px;
+    margin-top: 90px;
+    margin-bottom: 50px;
     color: #000;
     font-size: 36px;
     font-weight: 500;
@@ -241,7 +242,8 @@ export const WorkProcessContainer = styled.div`
         h4 {
           font-size: 48px;
           font-weight: 500;
-          line-height: 1.2;
+          line-height: 60px;
+          padding-left: 4px;
         }
       }
       .right {

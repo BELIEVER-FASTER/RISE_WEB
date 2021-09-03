@@ -41,7 +41,7 @@ export default function ContactBanner(): JSX.Element {
         라이브쇼핑을
         <br />
         디렉팅하는 <br />
-        Live MCN Rise 기업입니다.
+        Live MCN 입니다.
       </p>
     </ContactBannerContainer>
   );

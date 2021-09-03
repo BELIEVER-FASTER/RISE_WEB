@@ -53,7 +53,7 @@ export default function Header(): JSX.Element {
             <Link href={navItem.link} key={navItem.id}>
               <li
                 className={
-                  router.asPath === navItem.link
+                  router.pathname === navItem.link
                     ? 'nav__active main_header'
                     : 'main_header'
                 }

@@ -124,7 +124,7 @@ export type ModelDataItem = {
 export const modelData2: ModelData2 = [
   {
     id: 1,
-    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/comming_soon.png`,
+    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/coming/coming_soon.png`,
     name: 'Showhost',
     desc: '라이즈 홈페이지에서 새로운 쇼호스트 모델분을 만나보세요',
     detail: {
@@ -184,7 +184,7 @@ export const modelData2: ModelData2 = [
   },
   {
     id: 2,
-    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/09.17.png`,
+    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/coming/09.17.png`,
     name: 'Showhost',
     desc: '라이즈 홈페이지에서 새로운 쇼호스트 모델분을 만나보세요',
     detail: {
@@ -256,7 +256,7 @@ export const modelData2: ModelData2 = [
   },
   {
     id: 3,
-    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/09.30.png`,
+    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/coming/09.30.png`,
     name: 'Showhost',
     desc: '라이즈 홈페이지에서 새로운 쇼호스트 모델분을 만나보세요',
     detail: {
@@ -281,7 +281,7 @@ export const modelData2: ModelData2 = [
   },
   {
     id: 4,
-    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/big.png`,
+    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/coming/1.png`,
     name: 'Showhost',
     desc: '라이즈 홈페이지에서 새로운 쇼호스트 모델분을 만나보세요',
     detail: {
@@ -306,7 +306,7 @@ export const modelData2: ModelData2 = [
   },
   {
     id: 5,
-    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/small.png`,
+    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/coming/2.png`,
     name: 'Showhost',
     desc: '라이즈 홈페이지에서 새로운 쇼호스트 모델분을 만나보세요',
     detail: {
@@ -331,7 +331,7 @@ export const modelData2: ModelData2 = [
   },
   {
     id: 6,
-    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/medium.png`,
+    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/coming/3.png`,
     name: 'Showhost',
     desc: '라이즈 홈페이지에서 새로운 쇼호스트 모델분을 만나보세요',
     detail: {
@@ -356,7 +356,7 @@ export const modelData2: ModelData2 = [
   },
   {
     id: 7,
-    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/small.png`,
+    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/coming/4.png`,
     name: 'Showhost',
     desc: '라이즈 홈페이지에서 새로운 쇼호스트 모델분을 만나보세요',
     detail: {
@@ -381,7 +381,7 @@ export const modelData2: ModelData2 = [
   },
   {
     id: 8,
-    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/medium.png`,
+    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/coming/5.png`,
     name: 'Showhost',
     desc: '라이즈 홈페이지에서 새로운 쇼호스트 모델분을 만나보세요',
     detail: {

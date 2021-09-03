@@ -22,7 +22,7 @@ export const AboutLayoutContainer = styled.div`
       p {
         margin-top: 80px;
         font-size: 26px;
-        line-height: 1.5;
+        line-height: 40px;
       }
     }
   }
@@ -36,6 +36,7 @@ export const AboutLayoutContainer = styled.div`
         }
         p {
           font-size: 20px;
+          line-height: 32px;
         }
       }
     }
@@ -56,7 +57,7 @@ export const AboutLayoutContainer = styled.div`
           font-weight: 400;
           margin-top: 28px;
           font-size: 16px;
-          line-height: 1.8;
+          line-height: 28px;
         }
       }
     }
@@ -67,27 +68,50 @@ export const AboutAContainer = styled.section`
   height: 100vh;
   display: flex;
   align-items: center;
-  margin: 10% auto 23% auto !important;
+  margin: 10% auto 30% auto !important;
   .section__title {
     align-items: flex-end;
     margin-bottom: 250px;
+    h3 {
+      margin-left: 30px;
+    }
     h3 > span:last-of-type {
-      text-indent: 60px;
+      text-indent: 180px;
+    }
+    p {
+      margin-right: 51px;
     }
   }
   img:first-of-type {
     position: absolute;
     right: 0;
     top: 30%;
-    width: 40%;
+    width: 37%;
   }
   img:last-of-type {
     position: absolute;
-    left: 12%;
-    top: 70%;
+    left: 14.6%;
+    top: 80%;
     width: 25%;
   }
 
+  @media ${responSiveSize.tablet} {
+    margin: 10% auto 20% auto !important;
+    .section__title {
+      h3 {
+        width: 100%;
+        span:last-of-type {
+          text-indent: 163px;
+        }
+      }
+      p {
+        margin-right: 102px;
+      }
+    }
+    img:last-of-type {
+      top: 68%;
+    }
+  }
   @media ${responSiveSize.mobile} {
     height: auto;
     flex-direction: column;
@@ -98,10 +122,14 @@ export const AboutAContainer = styled.section`
       margin-bottom: 120px;
       h3 {
         width: 100%;
+        margin-left: 0px;
         span:last-of-type {
           text-align: end;
           text-indent: 0;
         }
+      }
+      p {
+        margin-right: 0px;
       }
     }
     img:first-of-type {
@@ -229,6 +257,7 @@ export const AboutBContainer = styled.section`
 `;
 export const AboutCContainer = styled.section`
   height: 1300px;
+  margin-bottom: 130px !important;
   video {
     width: 100%;
   }
@@ -250,15 +279,18 @@ export const AboutCContainer = styled.section`
   }
   @media ${responSiveSize.tablet} {
     height: 1100px;
+    margin-bottom: 110px !important;
   }
   @media ${responSiveSize.mobile} {
     height: 900px;
+    margin-bottom: 30px !important;
     video {
       height: 416px;
       object-fit: cover;
     }
     .section__title {
       flex-direction: column !important;
+      margin-top: 60px;
       h3 {
         span:last-of-type {
           padding-left: 00px;

@@ -13,7 +13,7 @@ export default function WorkLayout(): JSX.Element {
         page="work"
         title1="Rise"
         title2="Work"
-        desc="매일 라이즈는 어떻게 하면/고객이 더 쉽고 매출을 늘릴수 있을까 /하는 고민으로 하루를 시작합니다."
+        desc="라이즈와 함께하는 브랜드를 위해/우리가 할 수 있는 일을/고민하고 연구합니다. "
       />
       <WorkRank />
       <WorkClients />

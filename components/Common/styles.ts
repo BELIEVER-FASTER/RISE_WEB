@@ -308,6 +308,7 @@ export const LottieBox = styled.div`
   position: absolute;
   top: -35px;
   right: 30px;
+  z-index: 20;
 `;
 export const VideoBGLayer = styled.video`
   height: 100%;
@@ -366,9 +367,8 @@ export const BannerTitleContainer = styled.section`
       align-items: flex-end;
       overflow: hidden;
       h2 {
-        line-height: 0.75;
+        line-height: 0.85;
         overflow: hidden;
-
         span {
           display: inline-block;
           transform: translateY(21vw);
@@ -388,11 +388,10 @@ export const BannerTitleContainer = styled.section`
         margin-left: 3rem;
         font-size: 26px;
         animation: showUp 0.4s ease 1.8s forwards;
-
         display: inline-block;
         transform: translateY(30.6vw);
         span {
-          line-height: 1.7;
+          line-height: 40px;
         }
         span:nth-of-type(3) {
           br {

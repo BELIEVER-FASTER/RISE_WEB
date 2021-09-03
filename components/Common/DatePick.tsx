@@ -22,7 +22,6 @@ export default function DatePick({
   const toggleCalender = () => setOpen(prev => !prev);
 
   const onClickBG = (e: React.MouseEvent<HTMLDivElement>) => {
-    console.log(e.target === e.currentTarget);
     if (e.target === e.currentTarget) setOpen(false);
   };
 

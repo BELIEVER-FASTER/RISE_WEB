@@ -170,7 +170,7 @@ export const ContactInfoContainer = styled.section`
         }
         li + li {
           margin-left: 0;
-          margin-top: 3.75rem;
+          margin-top: 1.75rem;
         }
       }
     }
@@ -191,6 +191,7 @@ export const ContactPhoneContainer = styled.div`
     font-size: 310px;
     font-weight: 500;
     color: #fa370b;
+    font-family: 'NHaasGroteskTXPro';
   }
   .start {
     z-index: 0;
@@ -200,11 +201,13 @@ export const ContactPhoneContainer = styled.div`
   .end {
     z-index: 2;
     right: -500px;
-    bottom: 4rem;
+    bottom: 0rem;
   }
   img {
     z-index: 1;
-    height: 85%;
+    width: 1130px;
+    object-fit: cover;
+    margin-bottom: 230px;
   }
   @media ${responSiveSize.mobile} {
     margin: 6.75rem 0;
@@ -223,8 +226,9 @@ export const ContactPhoneContainer = styled.div`
       bottom: 4rem;
     }
     img {
-      width: 100%;
+      width: 95%;
       height: auto;
+      margin-bottom: 100px;
     }
   }
 `;

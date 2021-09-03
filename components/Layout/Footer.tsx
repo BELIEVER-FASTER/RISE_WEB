@@ -9,7 +9,8 @@ export default function Footer(): JSX.Element {
       <article>
         <div className="footer__left">
           <p>
-            서울특별시 종로구 동숭길 133 <br /> 상명대학교 대학로 AI융합센터 1층
+            서울특별시 종로구 동숭길 133 <br />
+            대학로 AI융합센터 1층
           </p>
           <p>상호명 : Believer</p>
           <p>사업자등록번호 : 772-01-01547</p>

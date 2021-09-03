@@ -49,7 +49,7 @@ export default function ContactInfo(): JSX.Element {
         <p id="contact__info_address" className="invinsible">
           서울특별시 종로구 동숭길 133
           <br />
-          상명대학교 대학로 AI융합센터 1층
+          대학로 AI융합센터 1층
         </p>
         <p id="contact__info_tell" className="tell invinsible">
           +82. 02. 1688. 6183

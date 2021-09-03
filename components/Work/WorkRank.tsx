@@ -10,7 +10,7 @@ export default function WorkRank(): JSX.Element {
 
   const [rnumber, setRnumber] = useState(1);
   const [rnumber2, setRnumber2] = useState(1);
-  const [rnumber3, setRnumber3] = useState(100000);
+  const [rnumber3, setRnumber3] = useState(1000000);
 
   useEffect(() => {
     let timeIdA: NodeJS.Timeout;
@@ -57,7 +57,7 @@ export default function WorkRank(): JSX.Element {
       }, 25);
       setTimeout(() => {
         clearInterval(timeIdC);
-        setRnumber3(10000);
+        setRnumber3(100000);
       }, 1000);
     }
     return () => {
@@ -86,7 +86,7 @@ export default function WorkRank(): JSX.Element {
           <small>네이버 쇼핑 라이브 1개월 기준</small>
           <h3>
             라이브 평균 시청자수
-            <br /> {rnumber3.toLocaleString()}명 시청
+            <br /> {rnumber3.toLocaleString()} 명 시청
           </h3>
         </li>
       </ul>
