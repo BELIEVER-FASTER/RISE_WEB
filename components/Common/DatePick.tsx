@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { DatePickerBox, FixedWrapper } from './styles';
 import { DatePicker } from '@y0c/react-datepicker';
+import { DatePickerBox, FixedWrapper } from './styles';
 import Icon from 'components/Icon/Icon';
 
 import 'dayjs/locale/ko';
@@ -22,6 +22,7 @@ export default function DatePick({
   const toggleCalender = () => setOpen(prev => !prev);
 
   const onClickBG = (e: React.MouseEvent<HTMLDivElement>) => {
+    console.log(e.target === e.currentTarget);
     if (e.target === e.currentTarget) setOpen(false);
   };
 
@@ -33,19 +34,19 @@ export default function DatePick({
   }, []);
 
   useEffect(() => {
-    const close = (e: MouseEvent) => {
-      if (document.querySelector('.calendar__container')?.contains(e.target as Node))
-        return setOpen(false);
-    };
+    // const close = (e: MouseEvent) => {
+    //   if (document.querySelector('.calendar__container')?.contains(e.target as Node))
+    //     return setOpen(false);
+    // };
     document
       .querySelector('.picker-input__text')
       ?.addEventListener('click', toggleCalender);
-    window.addEventListener('click', close);
+    // window.addEventListener('click', close);
     return () => {
       document
         .querySelector('.picker-input__text')
         ?.removeEventListener('click', toggleCalender);
-      window.removeEventListener('click', close);
+      // window.removeEventListener('click', close);
     };
   }, []);
 
@@ -56,11 +57,13 @@ export default function DatePick({
           <input type="date" value={value} onChange={e => setValue(e.target.value)} />
         ) : (
           <DatePicker
-            onClick={toggleCalender}
             placeholder="진행일정"
             locale="ko"
             show={open}
-            onChange={date => setValue(date.format('YYYY-MM-DD'))}
+            onChange={date => {
+              setValue(date.format('YYYY-MM-DD'));
+              toggleCalender();
+            }}
           />
         )}
         <Icon name="arrow_down" width={32} height={32} />

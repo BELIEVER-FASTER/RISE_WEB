@@ -1,33 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-	<loc>https://www.riseenm.com/</loc>
-	<lastmod>2021-08-24T13:30:53+09:00</lastmod>
+	<loc>https://www.riseenm.com</loc>
+	<lastmod>2021-09-03T13:30:53+09:00</lastmod>
 	<priority>0.8</priority>
   </url>
   <url>
-	<loc>https://www.riseenm.com/develope/about</loc>
-	<lastmod>2021-08-24T13:30:53+09:00</lastmod>
+	<loc>https://www.riseenm.com/about</loc>
+	<lastmod>2021-09-03T13:30:53+09:00</lastmod>
 	<priority>1</priority>
  </url>
   <url>
-	<loc>https://www.riseenm.com/develope/work</loc>
-	<lastmod>2021-08-24T13:30:53+09:00</lastmod>
+	<loc>https://www.riseenm.com/work</loc>
+	<lastmod>2021-09-03T13:30:53+09:00</lastmod>
 	<priority>1</priority>
  </url>
   <url>
-	<loc>https://www.riseenm.com/develope</loc>
-	<lastmod>2021-08-24T13:30:53+09:00</lastmod>
-	<priority>0.8</priority>
- </url>
-  <url>
-	<loc>https://www.riseenm.com/develope/live</loc>
-	<lastmod>2021-08-24T13:30:53+09:00</lastmod>
+	<loc>https://www.riseenm.com/live</loc>
+	<lastmod>2021-09-03T13:30:53+09:00</lastmod>
 	<priority>0.8</priority>
  </url>   
  <url>
-	<loc>https://www.riseenm.com/develope/contact</loc>
-	<lastmod>2021-08-24T13:30:53+09:00</lastmod>
+	<loc>https://www.riseenm.com/contact</loc>
+	<lastmod>2021-09-03T13:30:53+09:00</lastmod>
 	<priority>1</priority>
  </url> 
 </urlset>
