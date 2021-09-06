@@ -66,6 +66,9 @@ export const NavContainer = styled.nav<{
     fill: #fff;
     stroke: #fff;
   }
+  a {
+    text-decoration: none;
+  }
   li {
     padding: 0.25rem 0;
     cursor: pointer;
@@ -119,14 +122,16 @@ export const NavContainer = styled.nav<{
       height: 0;
       opacity: 0;
       overflow: hidden;
-      li {
+      a {
         position: relative;
-        top: -30%;
+        top: -25%;
+      }
+      li {
         transition: transform 1s;
       }
       .mobile_social {
         display: block;
-        margin: 0 0 30px 0;
+        margin: 0 0 15px 0;
         a {
           padding: 10px 0;
           span {

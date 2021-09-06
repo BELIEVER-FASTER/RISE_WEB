@@ -51,17 +51,18 @@ export default function Header(): JSX.Element {
         <ul className="main_nav">
           {navData.map(navItem => (
             <Link href={navItem.link} key={navItem.id}>
-              <li
-                id={navItem.link}
-                className={
-                  router.pathname === navItem.link
-                    ? 'nav__active main_header'
-                    : 'main_header'
-                }
-              >
-                <span>{navItem.name}</span>
-                <Icon name="link_arrow" width={40} height={40} />
-              </li>
+              <a title={navItem.name} id={`nav_${navItem.name}`}>
+                <li
+                  className={
+                    router.pathname === navItem.link
+                      ? 'nav__active main_header'
+                      : 'main_header'
+                  }
+                >
+                  <span>{navItem.name}</span>
+                  <Icon name="link_arrow" width={40} height={40} />
+                </li>
+              </a>
             </Link>
           ))}
           <div className="mobile_social">

@@ -7,7 +7,7 @@ type SocialProps = {
 };
 export default function Social({ type, link }: SocialProps): JSX.Element {
   return (
-    <SocialBox href={link} target="_blank" className="btn__social">
+    <SocialBox href={link} title={type} target="_blank" className="btn__social">
       <span>{type}</span>
       {/* <Icon name="link_arrow" className="icon__social" /> */}
       <svg
