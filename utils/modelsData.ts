@@ -283,7 +283,7 @@ export const modelData2: ModelData2 = [
     id: 4,
     image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/coming/1.png`,
     name: 'Showhost',
-    desc: '라이즈 홈페이지에서 새로운 쇼호스트 모델분을 만나보세요',
+    desc: '라이즈 홈페이지에서 새로운 쇼호스트/ 모델분을 만나보세요',
     detail: {
       name: '',
       category: '',
