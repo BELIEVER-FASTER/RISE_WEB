@@ -102,7 +102,7 @@ export default function LiveA(): JSX.Element {
           <div className="a1_img"></div>
         </section>
         <section id="section2">
-          <ModelSecond images={seraImages} />
+          <ModelSecond images={seraImages} modelId={2} />
         </section>
         <section id="section3">
           <div className="a2_img"></div>
@@ -114,7 +114,7 @@ export default function LiveA(): JSX.Element {
           desc2="Showhost"
         />
         <section id="section4">
-          <ModelSecond images={laelImages} />
+          <ModelSecond images={laelImages} modelId={1} />
         </section>
       </Live1Container>
     </LiveLayoutContainer>

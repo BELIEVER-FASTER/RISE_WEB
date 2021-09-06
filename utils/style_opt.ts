@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
         overflow-x: hidden;
         position:relative;
         font-family: 'Pretendard','Apple SD Gothic Neo', sans-serif;
-        transition: all 0.5s;
+        transition: background 0.5s;
     }
     .client_nh{
         transition: all 0.5s;
