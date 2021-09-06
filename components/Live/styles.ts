@@ -249,7 +249,7 @@ export const LiveBContainer = styled.div`
       position: relative;
       display: inline-block;
       span {
-        z-index: 1;
+        z-index: 0;
         position: relative;
       }
       & > div {
@@ -379,6 +379,7 @@ export const ModelListItemBox = styled.li`
     }
     p {
       font-size: 18px;
+      line-height: 30px;
       line-height: 1.4;
     }
   }

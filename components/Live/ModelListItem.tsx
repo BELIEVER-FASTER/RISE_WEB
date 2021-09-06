@@ -95,7 +95,11 @@ export default function ModelListItem({ modelData }: ModelListItemProps): JSX.El
       </div>
       <article id={`model_item__summary-${modelData.id}`}>
         <h6>{modelData.name}</h6>
-        <p>{modelData.desc}</p>
+        <p>
+          {modelData.desc.split('/').map(v => (
+            <p>{v}</p>
+          ))}
+        </p>
       </article>
     </ModelListItemBox>
   );
