@@ -245,6 +245,8 @@ export const DetailBox = styled.div`
     }
     .section-3 {
       .img__wrapper_2 {
+        /* width: 360px;
+        height: 640px; */
         width: 328px;
         height: 552px;
       }

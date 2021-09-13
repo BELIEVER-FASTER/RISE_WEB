@@ -269,8 +269,8 @@ export const modelData2: ModelData2 = [
         },
       ],
       liveClips: [
-        { type: 'naver', link: 'http://naver.me/GY2cYzzf' },
-        { type: 'naver', link: 'http://naver.me/IDBOhw4d' },
+        { type: 'naver', link: 'https://naver.me/GY2cYzzf' },
+        { type: 'naver', link: 'https://naver.me/IDBOhw4d' },
       ],
       imageClips: [
         {
