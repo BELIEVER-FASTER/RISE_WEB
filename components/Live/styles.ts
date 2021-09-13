@@ -183,6 +183,25 @@ export const ModelSecondContainer = styled.div`
     transform: translateY(100px);
     opacity: 0;
   }
+  .circle {
+    align-items: center;
+    justify-content: center;
+    cursor: none;
+    display: flex;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    color: #fff;
+    border-radius: 50%;
+    background-color: #fa370b;
+    z-index: 30;
+    opacity: 0;
+    font-size: 20px;
+    transition: opacity 0.5s;
+    span {
+      font-weight: 500;
+    }
+  }
   .model__image_1 {
     top: 38%;
     position: absolute;
@@ -319,6 +338,7 @@ export const ModelListItemBox = styled.li`
   transform: translateY(0);
   width: 100%;
   list-style: none;
+
   .img__wrapper {
     overflow: hidden;
     position: relative;
@@ -384,30 +404,22 @@ export const ModelListItemBox = styled.li`
     }
   }
   .circle {
-    display: flex;
     align-items: center;
     justify-content: center;
     cursor: none;
     display: flex;
     position: absolute;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     color: #fff;
     border-radius: 50%;
+    background-color: #fa370b;
     z-index: 30;
     opacity: 0;
-    font-size: 22px;
+    font-size: 20px;
     transition: opacity 0.5s;
     span {
-      text-indent: 30px;
       font-weight: 500;
-    }
-    svg {
-      rotate: -45deg;
-      position: absolute;
-      top: 25px;
-      left: 20px;
-      font-size: 30px;
     }
   }
   @media ${responSiveSize.mobile} {
