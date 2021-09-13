@@ -85,13 +85,13 @@ export type ModelDataItem = {
 export const modelData2: ModelData2 = [
   {
     id: 1,
-    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/coming/coming_soon.png`,
-    name: 'Showhost',
-    desc: '라이즈 홈페이지에서 새로운 쇼호스트/ 모델분을 만나보세요',
+    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/lael/lael_0.png`,
+    name: '윤라엘 쇼호스트',
+    desc: '품격있는 하이텐션 쇼호스트',
     detail: {
       name: 'Yoon Lael',
       category: 'Cosmetics & Fashion Showhost',
-      summary: '하이텐션 입담과 반전매력을 소유한 샵테이너',
+      summary: '품격있는 하이텐션 쇼호스트',
       social: [{ name: 'Instagram', src: 'https://www.instagram.com/laelism/' }],
       career: [
         {
@@ -125,7 +125,7 @@ export const modelData2: ModelData2 = [
       ],
       liveClips: [
         { type: 'naver', link: 'https://view.shoppinglive.naver.com/replays/69333' },
-        { type: 'naver', link: 'https://view.shoppinglive.naver.com/replays/69333' },
+        { type: 'naver', link: 'https://shoppinglive.naver.com/replays/84078' },
       ],
       imageClips: [
         {
@@ -145,9 +145,9 @@ export const modelData2: ModelData2 = [
   },
   {
     id: 2,
-    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/coming/09.17.png`,
-    name: 'Showhost',
-    desc: '라이즈 홈페이지에서 새로운 쇼호스트/ 모델분을 만나보세요',
+    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/seola/sera_0.png`,
+    name: '박설아 쇼호스트',
+    desc: '유쾌한 진행, 재섭외로 증명하는 쇼호스트',
     detail: {
       name: 'Park Seola',
       category: 'Cosmetics & Fashion Showhost',
@@ -217,32 +217,80 @@ export const modelData2: ModelData2 = [
   },
   {
     id: 3,
-    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/coming/coming_soon.png`,
-    name: 'Showhost',
-    desc: '라이즈 홈페이지에서 새로운 쇼호스트/ 모델분을 만나보세요',
+    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/ahyoon/ahyoon_0.png`,
+    name: '이아윤 쇼호스트',
+    desc: '다양한 라이브방송의 경험으로 브랜드 가치를 높이며/ 재미있는 방송으로 선보입니다.',
     detail: {
-      name: '',
-      category: '',
-      summary: '',
+      name: 'Lee Ahyoon',
+      category: 'Cosmetics & Fashion Showhost',
+      summary:
+        '다양한 라이브방송의 경험으로 브랜드 가치를 높이며 재미있는 방송으로 선보이는 쇼호스트',
       social: [{ name: 'Instagram', src: '' }],
       career: [
         {
-          name: '',
-          link: '',
+          name: '삼성전자 qHD 모니터 S6 런칭',
+          link: 'http://naver.me/FArcKJSb',
+        },
+        {
+          name: '역대급 혜택의 오사비망고 모니터',
+          link: 'https://view.shoppinglive.naver.com/replays/83923?dtm_medium=share&dtm_source=liveviewer&from=share',
+        },
+        {
+          name: 'MS서피스 Laptop GO 오늘만 드리는 특별한 혜택',
+          link: 'http://naver.me/IDBOhw4d',
+        },
+        {
+          name: '에이트 입기만해도 설레는 봄스타일링',
+          link: 'https://shoppinglive.naver.com/replays/104493',
+        },
+        {
+          name: '슈플마켓 조보아 스니커즈 창고에서 행사특가',
+          link: 'https://shoppinglive.naver.com/replays/105595',
+        },
+        {
+          name: '프리미엄 여성 슈즈 브랜드 지니킴',
+          link: 'https://www.instagram.com/p/CM6QfanHfB8/?igshid=83skg66vjnta',
+        },
+        {
+          name: 'APM X2 제곱한 핫 여름 신상할인',
+          link: 'https://view.shoppinglive.naver.com/replays/162328',
+        },
+        {
+          name: '국산 kf94마스크 새부리형 쇼핑라이브',
+          link: 'https://shoppinglive.naver.com/replays/38016',
+        },
+        {
+          name: '스팀베이스 가정의달 기념 토너패드, 온열안대 역대급 구성',
+          link: 'https://shoppinglive.naver.com/replays/90915',
+        },
+        {
+          name: '스팀베이스 마누카팩 + 선크림 + 패드 구성',
+          link: 'https://view.shoppinglive.naver.com/replays/142773',
         },
       ],
-      liveClips: [{ type: 'naver', link: '' }],
+      liveClips: [
+        { type: 'naver', link: 'http://naver.me/GY2cYzzf' },
+        { type: 'naver', link: 'http://naver.me/IDBOhw4d' },
+      ],
       imageClips: [
         {
           id: 1,
-          link: ``,
+          link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/ahyoon/ahyoon_1.png`,
+        },
+        {
+          id: 2,
+          link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/ahyoon/ahyoon_2.png`,
+        },
+        {
+          id: 3,
+          link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/ahyoon/ahyoon_3.png`,
         },
       ],
     },
   },
   {
     id: 4,
-    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/coming/09.17.png`,
+    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/coming/coming_soon.png`,
     name: 'Showhost',
     desc: '라이즈 홈페이지에서 새로운 쇼호스트/ 모델분을 만나보세요',
     detail: {

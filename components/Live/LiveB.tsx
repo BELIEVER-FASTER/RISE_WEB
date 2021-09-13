@@ -31,10 +31,10 @@ export default function LiveB(): JSX.Element {
   useEffect(() => {
     if (router.query.model) {
       document.body.style.overflowY = 'hidden';
-      document.body.style.paddingRight = '15px';
+      if (window.innerWidth > 950) document.body.style.paddingRight = '15px';
     } else {
       document.body.style.overflowY = 'initial';
-      document.body.style.paddingRight = '0px';
+      if (window.innerWidth > 950) document.body.style.paddingRight = '0px';
     }
   }, [router.query]);
   return (

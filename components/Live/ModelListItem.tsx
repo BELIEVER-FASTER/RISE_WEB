@@ -15,9 +15,9 @@ function Count() {
   const [minute, setMinute] = useState<number | string>('00');
   const getDDay = () => {
     const date = new Date();
-    let ddate = new Date(`September 13, ${date.getFullYear()} 14:00:00`);
+    let ddate = new Date(`September 17, ${date.getFullYear()} 14:00:00`);
     if (ddate.getTime() < date.getTime()) {
-      ddate = new Date(`September 13, ${date.getFullYear() + 1} 14:00:00`);
+      ddate = new Date(`September 17, ${date.getFullYear() + 1} 14:00:00`);
     }
     const between = ddate.getTime() - date.getTime();
     const day = Math.floor(between / (1000 * 60 * 60 * 24));
@@ -68,11 +68,13 @@ export default function ModelListItem({ modelData }: ModelListItemProps): JSX.El
   const router = useRouter();
 
   const detailClick = () => {
-    router.push(
-      `${router.basePath}?model=${modelData.id}`,
-      `${router.basePath}?model=${modelData.id}`,
-      { scroll: false }
-    );
+    if (modelData.id < 4) {
+      router.push(
+        `${router.basePath}?model=${modelData.id}`,
+        `${router.basePath}?model=${modelData.id}`,
+        { scroll: false }
+      );
+    }
   };
 
   useEffect(() => {
@@ -96,10 +98,10 @@ export default function ModelListItem({ modelData }: ModelListItemProps): JSX.El
       });
     }
   }, [inView, ref]);
-  if (modelData.id < 3) return <></>;
   return (
     <ModelListItemBox className={`model__item-${modelData.id}`} ref={ref}>
       <div
+        onClick={detailClick}
         className="img__wrapper"
         id={`model_item__image-${modelData.id}`}
         onMouseMove={e => {
@@ -120,13 +122,13 @@ export default function ModelListItem({ modelData }: ModelListItemProps): JSX.El
           });
         }}
       >
-        {modelData.id < 3 && (
-          <div className="circle" id={`circle_${modelData.id}`} onClick={detailClick}>
+        {modelData.id < 4 && (
+          <div className="circle" id={`circle_${modelData.id}`}>
             <span>View</span>
           </div>
         )}
         <img src={modelData.image1_src} alt="model_item__image" />
-        {modelData.id === 3 ? <Count /> : <></>}
+        {modelData.id === 4 ? <Count /> : <></>}
       </div>
       <article id={`model_item__summary-${modelData.id}`}>
         <h6>{modelData.name}</h6>
