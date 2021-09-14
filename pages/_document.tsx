@@ -39,6 +39,10 @@ class MyDocument extends Document {
             name="naver-site-verification"
             content="ceeafc0e07aeadba359eb22c54762497e3549ffd"
           />
+          <meta
+            name="naver-site-verification"
+            content="ff84287595c33449e0f753823ab4394f5eca9647"
+          />
           <meta name="theme-color" content="#222" />
           <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 

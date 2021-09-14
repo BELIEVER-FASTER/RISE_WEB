@@ -10,7 +10,7 @@ export default function main(): JSX.Element {
   return (
     <>
       <Head>
-        <title>RISE</title>
+        <title>라이즈 RISE</title>
       </Head>
       <MainLayout />
     </>
