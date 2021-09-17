@@ -115,8 +115,12 @@ export const modelData2: ModelData2 = [
           link: 'https://shoppinglive.naver.com/replays/81894',
         },
         {
-          name: '스튜디오 톰보이 홀리데이',
-          link: 'https://shoppinglive.naver.com/replays/42195',
+          name: '패션몬스터 감각적인 가을맞이 특가전',
+          link: 'https://view.shoppinglive.naver.com/replays/239215',
+        },
+        {
+          name: '패션몬스터 가을 코디 고민하지 마세요',
+          link: 'https://view.shoppinglive.naver.com/replays/243738',
         },
         {
           name: '패션몬스터 동대문 블랙라벨 여성 의류',
