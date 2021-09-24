@@ -17,14 +17,14 @@ export const MainContainer = styled.main`
     object-fit: cover;
   }
   h1 {
-    max-width: 120rem;
+    /* max-width: 120rem; */
     font-family: 'NHaasGroteskTXPro';
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     color: #000;
-    font-size: 11.3vw;
+    font-size: 11.7vw;
     font-weight: 500;
     padding: 0 2.5rem;
     margin: 1.6rem auto;
