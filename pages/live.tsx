@@ -21,7 +21,7 @@ export default function live2(): JSX.Element {
     <>
       <MetaGe
         title="라이즈 RISE | LIVE"
-        desc="RISE MCN의 패션 코스메틱(뷰티) 전문 모바일 쇼호스트 , 크리에이터를 소개합니다."
+        desc="패션, 뷰티 라이브커머스 대행사인 라이즈 MCN의 전문 모바일 쇼호스트, 크리에이터를 소개합니다."
         url="https://www.riseenm.com/live"
       />
 

@@ -15,9 +15,9 @@ function Count() {
   const [minute, setMinute] = useState<number | string>('00');
   const getDDay = () => {
     const date = new Date();
-    let ddate = new Date(`September 27, ${date.getFullYear()} 14:00:00`);
+    let ddate = new Date(`October 01, ${date.getFullYear()} 14:00:00`);
     if (ddate.getTime() < date.getTime()) {
-      ddate = new Date(`September 27, ${date.getFullYear() + 1} 14:00:00`);
+      ddate = new Date(`October 01, ${date.getFullYear() + 1} 14:00:00`);
     }
     const between = ddate.getTime() - date.getTime();
     const day = Math.floor(between / (1000 * 60 * 60 * 24));
