@@ -223,7 +223,7 @@ export const modelData2: ModelData2 = [
     id: 3,
     image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/ahyoon/ahyoon_0.png`,
     name: '이아윤 쇼호스트',
-    desc: '다양한 라이브방송의 경험으로 브랜드 가치를 높이며/ 재미있는 방송으로 선보입니다.',
+    desc: '다양한 라이브방송의 경험으로 브랜드 가치를/ 높이며 재미있는 방송으로 선보입니다.',
     detail: {
       name: 'Lee Ahyoon',
       category: 'Cosmetics & Fashion Showhost',
@@ -294,32 +294,80 @@ export const modelData2: ModelData2 = [
   },
   {
     id: 4,
-    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/coming/coming_soon.png`,
-    name: 'Showhost',
-    desc: '라이즈 홈페이지에서 새로운 쇼호스트/ 모델분을 만나보세요',
+    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/donghyun/donghyun_0.png`,
+    name: '김동현 쇼호스트',
+    desc: '다양한 라이브방송의 경험으로 브랜드 가치를/ 높이며 재미있는 방송으로 선보입니다.',
     detail: {
-      name: '',
-      category: '',
-      summary: '',
-      social: [{ name: 'Instagram', src: '' }],
+      name: 'Kim DongHyun',
+      category: 'Cosmetics & Fashion Showhost',
+      summary:
+        '다양한 라이브방송의 경험으로 브랜드 가치를  높이며 재미있는 방송으로 선보이는 쇼호스트',
+      social: [{ name: 'Instagram', src: 'https://www.instagram.com/the.0229/' }],
       career: [
         {
-          name: '',
-          link: '',
+          name: 'CJ온스타일 라코스테',
+          link: 'https://view.shoppinglive.naver.com/replays/225405',
+        },
+        {
+          name: '비에스래빗 모자',
+          link: 'https://view.shoppinglive.naver.com/replays/231429',
+        },
+        {
+          name: '모던에이블 의류',
+          link: 'https://view.shoppinglive.naver.com/replays/231441',
+        },
+        {
+          name: '몽크로스 티셔츠',
+          link: 'https://view.shoppinglive.naver.com/replays/209922',
+        },
+        {
+          name: '유세븐 운동화',
+          link: 'https://view.shoppinglive.naver.com/replays/183124',
+        },
+        {
+          name: '명품시계 태그호이어',
+          link: 'https://player.sauceflex.com/broadcast/vcallets-75893888d48a453282d568f03e02ab16?npc=live',
+        },
+        {
+          name: 'MLB 패션 마스크',
+          link: 'https://view.shoppinglive.naver.com/replays/178944',
+        },
+        {
+          name: 'Jeep 맨투맨',
+          link: 'https://view.shoppinglive.naver.com/replays/261709',
+        },
+        {
+          name: '닥터아제라 화장품',
+          link: 'https://view.shoppinglive.naver.com/replays/225914',
+        },
+        {
+          name: '엘리샤코이 콤부차 라인',
+          link: 'https://view.shoppinglive.naver.com/replays/204251',
         },
       ],
-      liveClips: [{ type: 'naver', link: '' }],
+      liveClips: [
+        { type: 'naver', link: 'https://view.shoppinglive.naver.com/replays/246722' },
+        { type: 'naver', link: 'https://view.shoppinglive.naver.com/replays/225405' },
+      ],
       imageClips: [
         {
           id: 1,
-          link: ``,
+          link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/donghyun/donghyun_2.png`,
+        },
+        {
+          id: 2,
+          link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/donghyun/donghyun_1.png`,
+        },
+        {
+          id: 3,
+          link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/donghyun/donghyun_3.png`,
         },
       ],
     },
   },
   {
     id: 5,
-    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/coming/09.30.png`,
+    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/coming/2.png`,
     name: 'Showhost',
     desc: '라이즈 홈페이지에서 새로운 쇼호스트/ 모델분을 만나보세요',
     detail: {

@@ -92,6 +92,7 @@ export const DetailBox = styled.div`
       font-size: 35px;
       margin: 48px 0 48px auto;
       line-height: 52px;
+      letter-spacing: 1px;
     }
     .btn__social {
       width: 50%;
