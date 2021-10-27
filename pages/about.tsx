@@ -9,8 +9,8 @@ export default function about(): JSX.Element {
   return (
     <>
       <MetaGe
-        title="라이즈 RISE | ABOUT"
-        desc="패션(의류), 코스메틱(화장품) 브랜드의 컨셉을 매칭하여 라이즈 MCN의 쇼호스트, 스튜디오,장비를 통해 각 브랜드에 맞춤화된 라이브쇼핑을 진행하여 최고의 패션,뷰티 마케팅을 경험할 수 있습니다. "
+        title="ABOUT RISE | 라이즈 MCN"
+        desc="라이브커머스를 한편의 컨텐츠 처럼 자체 스튜디오, 쇼호스트, 전문PD, 촬영장비를 통해 브랜드 컨셉에 맞춘 최적화 방송을 진행합니다."
         url="https://www.riseenm.com/about"
       />
       <AboutLayout />

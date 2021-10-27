@@ -11,7 +11,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse): Promise<void>
   if (process.env.NODE_ENV === 'development') {
     toEmailAddress = 'yhg0337@gmail.com';
   } else {
-    toEmailAddress = 'official@believer.kr';
+    toEmailAddress = 'contact@riseenm.com';
   }
 
   await dbConnect();
@@ -34,7 +34,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse): Promise<void>
         });
 
         const mailToUser = transporter.sendMail({
-          from: `"RiSE" <official@believer.kr>`,
+          from: `"RiSE" <contact@riseenm.com>`,
           to: req.body.email,
           subject: 'RiSE - 문의결과',
           text: '문의가 성공적으로 접수되었습니다.',
