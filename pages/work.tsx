@@ -9,7 +9,7 @@ export default function work(): JSX.Element {
   return (
     <>
       <MetaGe
-        title="라이즈 RISE | WORK"
+        title="클라이언트 소개 | 라이즈 MCN"
         desc="네이버 쇼핑라이브 패션 부문 1위 대행사인 RISE MCN의 성과와, 라이브쇼핑 프로세스 진행과정을 살펴보세요"
         url="https://www.riseenm.com/work"
       />
