@@ -112,7 +112,7 @@ export const ContactInfoContainer = styled.section`
       line-height: 1.2;
     }
     .tell {
-      margin: 2.75rem 0 7.75rem 0;
+      margin: 2.25rem 0 7.75rem 0;
     }
     .email {
       display: flex;

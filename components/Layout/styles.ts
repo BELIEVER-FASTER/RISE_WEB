@@ -210,7 +210,7 @@ export const FooterContainer = styled.footer`
       line-height: 1.5;
     }
     p:first-of-type {
-      margin-bottom: 1rem;
+      margin-bottom: 0.6rem;
     }
     p:last-of-type {
       margin-top: 17.5rem;

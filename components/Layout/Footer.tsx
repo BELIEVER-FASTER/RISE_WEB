@@ -8,10 +8,7 @@ export default function Footer(): JSX.Element {
       <hr />
       <article>
         <div className="footer__left">
-          <p>
-            서울특별시 종로구 동숭길 133 <br />
-            대학로 AI융합센터 1층
-          </p>
+          <p>서울특별시 강남구 신사동 628-26 2층</p>
           <p>상호명 : Believer</p>
           <p>사업자등록번호 : 772-01-01547</p>
           <p>고객센터 : +82. 02. 1688. 6183</p>

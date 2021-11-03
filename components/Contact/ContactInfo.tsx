@@ -47,9 +47,7 @@ export default function ContactInfo(): JSX.Element {
     <ContactInfoContainer>
       <article ref={ref}>
         <p id="contact__info_address" className="invinsible">
-          서울특별시 종로구 동숭길 133
-          <br />
-          대학로 AI융합센터 1층
+          서울특별시 강남구 신사동 628-26 2층
         </p>
         <p id="contact__info_tell" className="tell invinsible">
           +82. 02. 1688. 6183

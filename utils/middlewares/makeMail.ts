@@ -796,7 +796,7 @@ export const makeNotiMail = (email: string): string => {
               lang="x-size-9"
             >
               <span style="color: #ffffff"
-                >(03086) 서울특별시 종로구 동숭길 133 상명대학교 대학로 AI융합센터</span
+                >서울특별시 강남구 신사동 628-26 2층</span
               >
             </p>
             <p
@@ -2233,8 +2233,7 @@ export const makeNotiMail2 = (email: string): string => {
                           class="email-flexible-footer__additionalinfo--center"
                           style="margin-top: 0; margin-bottom: 0; text-align: right"
                         >
-                          (03086) 서울특별시 종로구 동숭길 133 상명대학교 대학로
-                          AI융합센터
+                          (03086) 서울특별시 강남구 신사동 628-26 2층
                         </p>
                         <p
                           class="email-flexible-footer__additionalinfo--center"
@@ -2351,7 +2350,7 @@ export const makeContactMail = (
   <tfooter>
     <tr>
       <td colspan="2" style="font-size:14px;padding:50px 15px 0 15px;">
-        <strong style="display:block;margin:0 0 10px 0;">Believer | 패스터</strong> RiSE<br> 서울특별시 종로구 동숭길 133 상명대학교 대학로 AI융합센터 1층<br><br>
+        <strong style="display:block;margin:0 0 10px 0;">Believer | 패스터</strong> RiSE<br> 서울특별시 강남구 신사동 628-26 2층<br><br>
         <b>고객센터 :</b> +82. 02. 1688. 6183<br>
         <b>Email:</b> contact@riseenm.com
       </td>
@@ -2367,7 +2366,7 @@ export const contactResultMail = (): string => {
   return `
   <div style='width:100%;display:flex; justify-content: center;'>
     <p style="opacity: 0;">문의가 정상적으로 접수되었습니다.</p>
-    <img style='width:100%; max-width:600px;' src="https://i.ibb.co/vVfmDKR/E-mail-Form.jpg" alt="poster">
+    <img style='width:100%; max-width:600px;' src="https://i.ibb.co/h9T7Dqg/E-mail-Form.png" alt="poster">
   </div>
   `;
 };
