@@ -38,10 +38,13 @@ export default function ContactBanner(): JSX.Element {
       </h1>
       <p id="contact_desc">
         우리는 패션 & 코스메틱 <br />
-        라이브쇼핑을
+        라이브커머스를&nbsp;
         <br />
         디렉팅하는 <br />
         Live MCN 입니다.
+      </p>
+      <p style={{ opacity: 0, height: 0 }}>
+        우리는 패션 & 코스메틱 라이브커머스를 디렉팅하는 라이브커머스 대행사 입니다.
       </p>
     </ContactBannerContainer>
   );

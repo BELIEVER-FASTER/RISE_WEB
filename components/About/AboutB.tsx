@@ -57,7 +57,7 @@ export default function AboutB(): JSX.Element {
           고급스러운 하이엔드 브랜드부터 10-20대를
           <br className="mobile" /> 사로잡는 캐주얼 브랜드까지
           <br className="desk" /> 가장 잘 어울리는
-          <br className="mobile" /> 쇼핑호스트 + 크리에이터를 매칭하여
+          <br className="mobile" /> 쇼호스트 + 크리에이터를 매칭하여
           <br className="mobile" />
           <br className="desk" /> 최고의 라이브 컨디션을 위한 <br className="mobile" />
           1:1 맞춤형 서비스를 제공합니다.
@@ -67,22 +67,26 @@ export default function AboutB(): JSX.Element {
         <img
           className="about_b_img1 invinsible"
           src={imageResources.about3}
-          alt="about_image3"
+          alt="품격있는 하이텐션 윤라엘 쇼호스트"
+          title="윤라엘 쇼호스트"
         />
         <img
           className="about_b_img2 invinsible"
           src={imageResources.about4}
-          alt="about_image4"
+          alt="하이텐션 입담과 반전매력을 소유한 샵테이너 박설아 쇼호스트"
+          title="박설아 쇼호스트"
         />
         <img
           className="about_b_img3 invinsible"
           src={imageResources.about5}
-          alt="about_image5"
+          alt="다양한 라이브커머스 경험으로 브랜드 가치를 높이며 재미있는 방송으로 선보이는 김동현 쇼호스트"
+          title="김동현 쇼호스트"
         />
         <img
           className="about_b_img4 invinsible"
           src={imageResources.about6}
-          alt="about_image6"
+          alt="다양한 라이브커머스 경험으로 브랜드 가치를 높이며 재미있는 방송으로 선보이는 이아윤 쇼호스트"
+          title="이아윤 쇼호스트"
         />
       </div>
     </AboutBContainer>

@@ -93,7 +93,7 @@ export default function DetailLayout(): JSX.Element {
 
             <article className="section-2">
               <h2 className="left">
-                라이브 커머스 <br />
+                라이브커머스 <br />
                 주요경력
               </h2>
               <ul className="right">

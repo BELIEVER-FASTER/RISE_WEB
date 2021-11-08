@@ -7,8 +7,13 @@ import { ModelSecondContainer } from './styles';
 type ModelSecondProps = {
   images: { id: number; src: string }[];
   modelId: number;
+  modelName: string;
 };
-export default function ModelSecond({ images, modelId }: ModelSecondProps): JSX.Element {
+export default function ModelSecond({
+  images,
+  modelId,
+  modelName,
+}: ModelSecondProps): JSX.Element {
   const { ref, inView } = useInView({ threshold: 0.7 });
   const router = useRouter();
   useEffect(() => {
@@ -59,12 +64,13 @@ export default function ModelSecond({ images, modelId }: ModelSecondProps): JSX.
         });
       }}
     >
-      {images.map(image => (
+      {images.map((image, idx) => (
         <img
           onClick={detailClick}
           key={image.id}
           src={image.src}
-          alt="model-image"
+          alt={`${modelName} 쇼호스트 ${idx + 1}`}
+          title={`${modelName} 쇼호스트 ${idx + 1}`}
           className={`model__image model__image_${image.id}`}
         />
       ))}

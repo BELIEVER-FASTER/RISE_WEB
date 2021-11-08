@@ -41,7 +41,7 @@ export default function AboutA(): JSX.Element {
           <span>한편의 컨텐츠 처럼</span>
         </h3>
         <p className="about_a__desc invinsible">
-          라이브 커머스 전문 PD와 MD, 작가님들이 <br /> 팀을 이뤄 브랜드와 상품을 분석하고
+          라이브커머스 전문 PD와 MD, 작가님들이 <br /> 팀을 이뤄 브랜드와 상품을 분석하고
           방송을 <br /> 스타일링 하며 기획부터 사전 마케팅, 방송 연출, <br /> 라이브
           진행까지 모든 솔루션을 경험해보세요
         </p>
@@ -49,12 +49,14 @@ export default function AboutA(): JSX.Element {
       <img
         className="about_a_img1 invinsible"
         src={imageResources.about1}
-        alt="about_image1"
+        title="라이브커머스를 기획하는 PD와 작가"
+        alt="라이브커머스를 기획하는 PD와 작가"
       />
       <img
         className="about_a_img2 invinsible"
         src={imageResources.about2}
-        alt="about_image2"
+        title="라이브커머스를 촬영하는 장비"
+        alt="라이브커머스를 촬영하는 장비"
       />
     </AboutAContainer>
   );

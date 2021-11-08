@@ -127,7 +127,11 @@ export default function ModelListItem({ modelData }: ModelListItemProps): JSX.El
             <span>View</span>
           </div>
         )}
-        <img src={modelData.image1_src} alt="model_item__image" />
+        <img
+          src={modelData.image1_src}
+          alt={`${modelData.name.split(' ')[0]} 쇼호스트는 ${modelData.desc}`}
+          title={`${modelData.name}`}
+        />
         {/* {modelData.id === 4 ? <Count /> : <></>} */}
       </div>
       <article id={`model_item__summary-${modelData.id}`}>

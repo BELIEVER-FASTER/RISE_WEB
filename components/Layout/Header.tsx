@@ -7,6 +7,7 @@ import { navData } from 'utils/navData';
 import { LogoContainer, NavContainer } from './styles';
 import MobileMenu from './MobileMenu';
 import Social from 'components/Counter/Social';
+import TagManager from 'react-gtm-module';
 
 export default function Header(): JSX.Element {
   const [isBlack, setIsBlack] = useState(true);
@@ -39,6 +40,11 @@ export default function Header(): JSX.Element {
       document.body.style.overflow = 'initial';
     }
   }, [menuOpen]);
+
+  const sendEvnet = (navName: string): void => {
+    TagManager.dataLayer({ dataLayer: { event: `nav_click`, to: navName } });
+  };
+
   return (
     <>
       <Link href="/">
@@ -51,7 +57,11 @@ export default function Header(): JSX.Element {
         <ul className="main_nav">
           {navData.map(navItem => (
             <Link href={navItem.link} key={navItem.id}>
-              <a title={navItem.name} id={`nav_${navItem.name}`}>
+              <a
+                title={navItem.name}
+                id={`nav_${navItem.name}`}
+                onClick={() => sendEvnet(navItem.name)}
+              >
                 <li
                   className={
                     router.pathname === navItem.link

@@ -43,7 +43,11 @@ export default function Contact(): JSX.Element {
   return (
     <ContactPhoneContainer id="contact-animation__box">
       <p className="start">START A</p>
-      <img src={imageResources.phoneMock} alt="phone" />
+      <img
+        src={imageResources.phoneMock}
+        title="라이브커머스를 보여주는 아이폰을 닮은 휴대폰"
+        alt="라이브커머스를 진행하고 있는 두명의 쇼호스트"
+      />
       <p className="end">NEW PROJECT</p>
     </ContactPhoneContainer>
   );

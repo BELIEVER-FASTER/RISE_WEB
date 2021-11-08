@@ -44,9 +44,9 @@ export default function WorkProcess(): JSX.Element {
           <div className="shadow s_bottom"></div>
           <div className="left client_nh">
             <h4>
-              라이브 프로세스
-              <br /> 진행과정
-              <br /> 어떻게 되나요?
+              라이브커머스,
+              <br /> 어떻게
+              <br /> 진행 되나요?
             </h4>
           </div>
           <div className="right">

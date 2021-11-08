@@ -70,8 +70,8 @@ export default function PrivacyModal({ onClose }: PrivacyModal): JSX.Element {
               </h4>
               <ol>
                 <li>
-                  <strong>-</strong> 크리에이터/쇼핑 호스트 지원시 지원자의 지원 의사 확인
-                  및 본인 식별, 서비스 부정이용 방지,각종 고지 및 안내,
+                  <strong>-</strong> 크리에이터/쇼호스트 지원시 지원자의 지원 의사 확인 및
+                  본인 식별, 서비스 부정이용 방지,각종 고지 및 안내,
                   <br className="desktop" /> 분쟁 조정을 위한 기록 보존
                 </li>
                 <li>
@@ -96,8 +96,8 @@ export default function PrivacyModal({ onClose }: PrivacyModal): JSX.Element {
                 </li>
                 <li>
                   <strong>-</strong>
-                  크리에이터/쇼핑 호스트 개별 채용공고 신청시 크리에이터/쇼핑 호스트의
-                  개별 채용공고에 대한 지원시 본인확인 및 본인식별,{' '}
+                  크리에이터/쇼호스트 개별 채용공고 신청시 크리에이터/쇼호스트의 개별
+                  채용공고에 대한 지원시 본인확인 및 본인식별,
                   <br className="desktop" />
                   서비스 부정이용 방지, 중복지원 확인, 채용절차를 위한 개인정보 활용, 각종
                   고지 및 안내, 인재 관리
@@ -176,7 +176,7 @@ export default function PrivacyModal({ onClose }: PrivacyModal): JSX.Element {
                   <div className="title">보유·이용기간</div>
                 </div>
                 <div className="row">
-                  <span>크리에이터/쇼핑호스트 지원시</span>
+                  <span>크리에이터/쇼호스트 지원시</span>
                   <span>
                     (필수) 이름, 성별, 생년월일, 전화번호(휴대전화번호), 이메일, 유튜브
                     채널 주소(선택) 유튜브 외 추가 운영 중인 플랫폼 관련 정보
@@ -192,7 +192,7 @@ export default function PrivacyModal({ onClose }: PrivacyModal): JSX.Element {
                   </span>
                 </div>
                 <div className="row">
-                  <span>크리에이터/쇼핑호스트 수익 정산 시</span>
+                  <span>크리에이터/쇼호스트 수익 정산 시</span>
                   <span>(필수) 은행계좌 정보 등 금융거래 정보</span>
                   <span>
                     회사는 법령에 따른 또는 이용자로부터 개인정보 수집 시 동의 받은
