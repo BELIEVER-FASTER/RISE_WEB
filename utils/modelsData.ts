@@ -367,25 +367,49 @@ export const modelData2: ModelData2 = [
   },
   {
     id: 5,
-    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/coming/2.png`,
-    name: 'Showhost',
-    desc: '라이즈 홈페이지에서 새로운 쇼호스트/ 모델분을 만나보세요',
+    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/seungin/seungin_0.png`,
+    name: '최승인 쇼호스트',
+    desc: '새로운 뷰티패션의 쇼호스트를 찾는다면/ 제 피부와 패션 센스로 증명하겠습니다./ 저와 함께 가보시죠!',
     detail: {
-      name: '',
-      category: '',
-      summary: '',
-      social: [{ name: 'Instagram', src: '' }],
+      name: 'Choi Seung In',
+      category: 'Cosmetics & Fashion Showhost',
+      summary:
+        '새로운 뷰티패션의 쇼호스트를 찾는다면 제 피부와 패션센스로 증명하겠습니다. 저와 함께 가보시죠!',
+      social: [{ name: 'Instagram', src: 'https://www.instagram.com/jj_jj_c/?hl=ko' }],
       career: [
         {
-          name: '',
-          link: '',
+          name: '연세닥터톡스프리미엄',
+          link: 'https://naver.me/F9QpERbm',
+        },
+        {
+          name: '산양유 단백질',
+          link: 'https://naver.me/F5bT0gXz',
+        },
+        {
+          name: '국내산 수제 돼지양념갈비',
+          link: 'https://naver.me/xdIUl5Zz',
+        },
+        {
+          name: '고체향수',
+          link: 'https://naver.me/xcKJ8cvG',
         },
       ],
-      liveClips: [{ type: 'naver', link: '' }],
+      liveClips: [
+        { type: 'naver', link: 'https://naver.me/xcKJ8cvG' },
+        { type: 'naver', link: 'https://naver.me/xdIUl5Zz' },
+      ],
       imageClips: [
         {
           id: 1,
-          link: ``,
+          link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/seungin/seungin_1.png`,
+        },
+        {
+          id: 2,
+          link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/seungin/seungin_2.png`,
+        },
+        {
+          id: 3,
+          link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/seungin/seungin_3.png`,
         },
       ],
     },
