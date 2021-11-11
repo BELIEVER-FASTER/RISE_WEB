@@ -53,11 +53,11 @@ export default function WorkRank(): JSX.Element {
     if (inViewC && refC) {
       gsap.fromTo('.rank3', { opacity: 0, y: 200 }, { opacity: 1, y: 0, duration: 1.2 });
       timeIdC = setInterval(() => {
-        setRnumber3(Math.floor(Math.random() * 100000) + 0);
+        setRnumber3(Math.floor(Math.random() * 320749) + 0);
       }, 25);
       setTimeout(() => {
         clearInterval(timeIdC);
-        setRnumber3(100000);
+        setRnumber3(320749);
       }, 1000);
     }
     return () => {
@@ -83,9 +83,9 @@ export default function WorkRank(): JSX.Element {
           </h3>
         </li>
         <li className="rank3 invinsible" ref={refC}>
-          <small>네이버 쇼핑 라이브 1개월 기준</small>
+          <small>네이버 쇼핑 라이브 21.11.11 기준</small>
           <h3>
-            라이브 평균 시청자수
+            라이브 누적 시청자수
             <br /> {rnumber3.toLocaleString()} 명 시청
           </h3>
         </li>

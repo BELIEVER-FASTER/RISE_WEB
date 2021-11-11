@@ -105,7 +105,7 @@ export default function WorkProcess(): JSX.Element {
               </ul>
               <h5 className="upper">2차 마케팅</h5>
               <ul>
-                <li>라이브 영상 클립을 활동한 2차 판매</li>
+                <li>라이브 영상 클립을 활용한 2차 판매</li>
               </ul>
             </article>
 
