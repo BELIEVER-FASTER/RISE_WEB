@@ -14,7 +14,7 @@ export default function ModelListItem({ modelData }: ModelListItemProps): JSX.El
   const router = useRouter();
 
   const detailClick = () => {
-    if (modelData.id < 6) {
+    if (modelData.id < 12) {
       router.push(
         `${router.basePath}?model=${modelData.id}`,
         `${router.basePath}?model=${modelData.id}`,
@@ -68,7 +68,7 @@ export default function ModelListItem({ modelData }: ModelListItemProps): JSX.El
           });
         }}
       >
-        {modelData.id < 6 && (
+        {modelData.id < 12 && (
           <div className="circle" id={`circle_${modelData.id}`}>
             <span>View</span>
           </div>

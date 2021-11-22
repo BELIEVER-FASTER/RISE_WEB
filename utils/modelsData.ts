@@ -416,127 +416,612 @@ export const modelData2: ModelData2 = [
   },
   {
     id: 6,
-    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/coming/1.png`,
-    name: 'Showhost',
-    desc: '라이즈 홈페이지에서 새로운 쇼호스트/ 모델분을 만나보세요',
+    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/seongmin/seongmin_0.png`,
+    name: '노성민 쇼호스트',
+    desc: '뻔하지 않은 FUN한 즐거운 진행!/ 늘 변함없는 마음과 진정성 있는 마음으로/ 다가가겠습니다. ',
     detail: {
-      name: '',
-      category: '',
-      summary: '',
-      social: [{ name: 'Instagram', src: '' }],
+      name: 'Noh SeongMin',
+      category: 'Cosmetics & Fashion Showhost',
+      summary:
+        '뻔하지 않은 FUN한 즐거운 진행! 늘 변함없는 마음과 진정성 있는 마음으로 다가가겠습니다. ',
+      social: [{ name: 'Instagram', src: 'https://www.instagram.com/mc.seongmin/' }],
       career: [
         {
-          name: '',
-          link: '',
+          name: '인천삼대게장',
+          link: 'https://view.shoppinglive.naver.com/replays/151961?from=share',
+        },
+        {
+          name: '인천삼대게장2',
+          link: 'https://view.shoppinglive.naver.com/replays/196508?from=share',
+        },
+        {
+          name: '인천삼대게장3',
+          link: 'https://view.shoppinglive.naver.com/replays/172065?from=share',
+        },
+        {
+          name: '별미담 마약빠삭이',
+          link: 'https://view.shoppinglive.naver.com/replays/141036',
+        },
+        {
+          name: '어나더미트 T본스테이크',
+          link: 'https://view.shoppinglive.naver.com/replays/141363',
+        },
+        {
+          name: '비타민하우스',
+          link: 'https://view.shoppinglive.naver.com/replays/54570',
+        },
+        {
+          name: '엘지 프라엘 메디헤어',
+          link: 'https://view.shoppinglive.naver.com/replays/224859?from=share',
+        },
+        {
+          name: '밸런스온 방석',
+          link: 'https://view.shoppinglive.naver.com/replays/200567?from=share',
+        },
+        {
+          name: '독일럼멜코리아',
+          link: 'https://view.shoppinglive.naver.com/replays/172065?from=share',
+        },
+        {
+          name: '골드리아',
+          link: 'https://view.shoppinglive.naver.com/replays/77601',
         },
       ],
-      liveClips: [{ type: 'naver', link: '' }],
+      liveClips: [
+        { type: 'naver', link: 'https://view.shoppinglive.naver.com/replays/141036' },
+        {
+          type: 'naver',
+          link: 'https://view.shoppinglive.naver.com/replays/224859?from=share',
+        },
+      ],
       imageClips: [
         {
           id: 1,
-          link: ``,
+          link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/seongmin/seongmin_1.png`,
+        },
+        {
+          id: 2,
+          link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/seongmin/seongmin_2.png`,
+        },
+        {
+          id: 3,
+          link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/seongmin/seongmin_3.png`,
         },
       ],
     },
   },
   {
     id: 7,
-    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/coming/2.png`,
-    name: 'Showhost',
-    desc: '라이즈 홈페이지에서 새로운 쇼호스트/ 모델분을 만나보세요',
+    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/gowoon/gowoon_0.png`,
+    name: '정고운 Showhost',
+    desc: '저는 밝은 에너지를 가진 저만의 상큼한/ 에너지로 특별한 방송 보여드리겠습니다',
     detail: {
-      name: '',
-      category: '',
-      summary: '',
-      social: [{ name: 'Instagram', src: '' }],
+      name: 'Jeong Gowoon',
+      category: 'cosmetics & fashion Showhost',
+      summary:
+        '저는 밝은 에너지를 가진 저만의 상큼한 에너지로 특별한 방송 보여드리겠습니다',
+      social: [{ name: 'Instagram', src: 'https://www.instagram.com/ggo_0_131/' }],
       career: [
         {
-          name: '',
-          link: '',
+          name: '명품 메종마르지엘라',
+          link: 'https://www.youtube.com/watch?v=sJOejCbqSRo',
+        },
+        {
+          name: '타미힐피거 반팔',
+          link: 'https://www.youtube.com/watch?v=OcdP6mVMlRE',
+        },
+        {
+          name: '나이키 에어맥스 270 리엑트',
+          link: 'https://www.youtube.com/watch?v=IeR4FO1Ygcg',
+        },
+        {
+          name: '입생로랑 쿠션, 에스티로더 더블웨어 파운데이션',
+          link: 'https://youtu.be/jpv_8T1kuO8',
+        },
+        {
+          name: '에뛰드 플레이 컬러 아이즈',
+          link: 'https://youtu.be/WyeSFrG0B5Y',
+        },
+        {
+          name: '쁘리엘르 펫 노즈워크&동결건조간식',
+          link: 'http://naver.me/IIqoUvIr',
+        },
+        {
+          name: '모립 공부 집중력 타이머',
+          link: 'http://naver.me/GbEaTWg6',
+        },
+        {
+          name: '제주 위호텔 방송',
+          link: 'https://youtu.be/eci3BW4ThUc',
+        },
+        {
+          name: '제주도 청귤',
+          link: 'https://youtu.be/hhoUAWkaJiA',
+        },
+        {
+          name: '제주 스누피가든 투어',
+          link: 'https://youtu.be/JSYXZMuiLXA',
         },
       ],
-      liveClips: [{ type: 'naver', link: '' }],
+      liveClips: [
+        {
+          type: 'naver',
+          link: 'https://view.shoppinglive.naver.com/replays/275026?dtm_medium=share&dtm_source=liveviewer&from=share',
+        },
+        {
+          type: 'naver',
+          link: 'https://view.shoppinglive.naver.com/replays/282646?dtm_medium=share&dtm_source=liveviewer&from=share',
+        },
+      ],
       imageClips: [
         {
           id: 1,
-          link: ``,
+          link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/gowoon/gowoon_1.png`,
+        },
+        {
+          id: 2,
+          link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/gowoon/gowoon_2.png`,
+        },
+        {
+          id: 3,
+          link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/gowoon/gowoon_3.png`,
         },
       ],
     },
   },
   {
     id: 8,
-    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/coming/3.png`,
-    name: 'Showhost',
-    desc: '라이즈 홈페이지에서 새로운 쇼호스트/ 모델분을 만나보세요',
+    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/siyeon/siyeon_0.png`,
+    name: '김시연 Showhost',
+    desc: '다양한 경험과 활동으로 고객의 니즈에 맞는 방송을 진행합니다.',
     detail: {
-      name: '',
-      category: '',
-      summary: '',
-      social: [{ name: 'Instagram', src: '' }],
+      name: 'Kim Siyeon',
+      category: 'cosmetics & fashion Showhost',
+      summary: '다양한 경험과 활동으로 고객의 니즈에 맞는 방송을 진행합니다.',
+      social: [{ name: 'Instagram', src: 'https://www.instagram.com/siyeon0622' }],
       career: [
         {
-          name: '',
-          link: '',
+          name: '앤디스클라인',
+          link: 'https://view.shoppinglive.naver.com/replays/137076?dtm_medium=share&dtm_source=liveviewer&from=share',
+        },
+        {
+          name: '로저던 프리미엄 골프',
+          link: 'https://view.shoppinglive.naver.com/replays/191052?dtm_medium=share&dtm_source=liveviewer&from=share',
+        },
+        {
+          name: '제시뉴욕',
+          link: 'https://view.shoppinglive.naver.com/replays/169309?dtm_medium=share&dtm_source=liveviewer&from=share',
+        },
+        {
+          name: '샤비 화장품',
+          link: 'https://view.shoppinglive.naver.com/replays/310905?dtm_medium=share&dtm_source=liveviewer&from=share',
+        },
+        {
+          name: '데쌍브르 30일의 기적',
+          link: 'https://view.shoppinglive.naver.com/replays/172864?dtm_medium=share&dtm_source=liveviewer&from=share',
+        },
+        {
+          name: '셀더마 마스크팩',
+          link: 'https://view.shoppinglive.naver.com/replays/225992?dtm_medium=share&dtm_source=liveviewer&from=share',
+        },
+        {
+          name: '동일하이씨푸드',
+          link: 'https://view.shoppinglive.naver.com/replays/243681?dtm_medium=share&dtm_source=liveviewer&from=share',
+        },
+        {
+          name: '닭발굽는 바리스타',
+          link: 'https://view.shoppinglive.naver.com/replays/214949?dtm_medium=share&dtm_source=liveviewer&from=share',
+        },
+        {
+          name: '투비펫 오스테크 습식 파우치',
+          link: 'https://view.shoppinglive.naver.com/replays/255693?dtm_medium=share&dtm_source=liveviewer&from=share',
+        },
+        {
+          name: '캠핑캠퍼 카라반',
+          link: 'https://view.shoppinglive.naver.com/replays/285579?dtm_medium=share&dtm_source=liveviewer&from=share',
         },
       ],
-      liveClips: [{ type: 'naver', link: '' }],
+      liveClips: [
+        {
+          type: 'naver',
+          link: 'https://view.shoppinglive.naver.com/replays/310905?dtm_medium=share&dtm_source=liveviewer&from=share',
+        },
+        {
+          type: 'naver',
+          link: 'https://view.shoppinglive.naver.com/replays/169309?dtm_medium=share&dtm_source=liveviewer&from=share',
+        },
+      ],
       imageClips: [
         {
           id: 1,
-          link: ``,
+          link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/siyeon/siyeon_1.png`,
+        },
+        {
+          id: 2,
+          link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/siyeon/siyeon_2.png`,
+        },
+        {
+          id: 3,
+          link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/siyeon/siyeon_3.png`,
         },
       ],
     },
   },
   {
     id: 9,
-    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/coming/4.png`,
-    name: 'Showhost',
-    desc: '라이즈 홈페이지에서 새로운 쇼호스트/ 모델분을 만나보세요',
+    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyeri/hyeri_0.png`,
+    name: '빈혜리 Showhost',
+    desc: '다채로운 필드의 경험과 방송실력까지 겸비한 쇼호스트이자 함께하는 브랜드만의 팔레트입니다.',
     detail: {
-      name: '',
-      category: '',
-      summary: '',
-      social: [{ name: 'Instagram', src: '' }],
+      name: 'Bin Hyeri',
+      category: 'cosmetics & fashion Showhost',
+      summary:
+        '다채로운 필드의 경험과 방송실력까지 겸비한 쇼호스트이자 함께하는 브랜드만의 팔레트입니다.',
+      social: [{ name: 'Instagram', src: 'https://www.instagram.com/palette.bin/' }],
       career: [
         {
-          name: '',
-          link: '',
+          name: 'ZOOC주크 블라우스',
+          link: 'https://view.shoppinglive.naver.com/replays/148951?dtm_medium=share&dtm_source=liveviewer&from=share',
+        },
+        {
+          name: '잇미샤 겨울 아이템',
+          link: 'https://view.shoppinglive.naver.com/replays/228501',
+        },
+        {
+          name: '아디다스 키즈',
+          link: 'https://view.shoppinglive.naver.com/replays/129197?dtm_medium=share&dtm_source=liveviewer&from=share',
+        },
+        {
+          name: '무슈제이 화장품',
+          link: 'https://view.shoppinglive.naver.com/replays/225718?dtm_medium=share&dtm_source=liveviewer&from=share',
+        },
+        {
+          name: '프라다 향수',
+          link: 'https://view.shoppinglive.naver.com/replays/276089?dtm_medium=share&dtm_source=liveviewer&from=share',
+        },
+        {
+          name: '대상웰라이프 마이밀',
+          link: 'https://view.shoppinglive.naver.com/replays/174413?dtm_medium=share&dtm_source=liveviewer&from=share',
+        },
+        {
+          name: '인천광역시 사회적경제센터 수작떡공방',
+          link: 'https://view.shoppinglive.naver.com/replays/303765?dtm_medium=share&dtm_source=liveviewer&from=share',
+        },
+        {
+          name: '함양산삼항노화엑스포 도라지청',
+          link: 'https://view.shoppinglive.naver.com/replays/245051?dtm_medium=share&dtm_source=liveviewer&from=share',
+        },
+        {
+          name: '함양산삼항노화엑스포 스케치방송',
+          link: 'https://view.shoppinglive.naver.com/replays/259111?dtm_medium=share&dtm_source=liveviewer&from=share',
+        },
+        {
+          name: 'HP 노트북',
+          link: 'https://view.shoppinglive.naver.com/replays/122974?dtm_medium=share&dtm_source=liveviewer&from=share',
         },
       ],
-      liveClips: [{ type: 'naver', link: '' }],
+      liveClips: [
+        {
+          type: 'naver',
+          link: 'https://view.shoppinglive.naver.com/replays/228501',
+        },
+        {
+          type: 'naver',
+          link: 'https://view.shoppinglive.naver.com/replays/129197?dtm_medium=share&dtm_source=liveviewer&from=share',
+        },
+      ],
       imageClips: [
         {
           id: 1,
-          link: ``,
+          link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyeri/hyeri_1.png`,
+        },
+        {
+          id: 2,
+          link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyeri/hyeri_2.png`,
+        },
+        {
+          id: 3,
+          link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyeri/hyeri_3.png`,
         },
       ],
     },
   },
   {
     id: 10,
-    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/coming/5.png`,
-    name: 'Showhost',
-    desc: '라이즈 홈페이지에서 새로운 쇼호스트/ 모델분을 만나보세요',
+    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyeyoung/hyeyoung_0.png`,
+    name: '변혜영 Showhost',
+    desc: '시청자들도 웃고 판매자들도 함께 웃을 수/ 있게 하는 전문 쇼호스트로 활약하겠습니다.',
     detail: {
-      name: '',
-      category: '',
-      summary: '',
-      social: [{ name: 'Instagram', src: '' }],
+      name: 'Byun Hyeyoung',
+      category: 'cosmetics & fashion Showhost',
+      summary:
+        '시청자들도 웃고 판매자들도 함께 웃을 수 있게 하는 전문 쇼호스트로 활약하겠습니다.',
+      social: [{ name: 'Instagram', src: 'https://www.instagram.com/youny2323/' }],
       career: [
         {
-          name: '',
-          link: '',
+          name: 'jade 성수동 수제부츠',
+          link: 'https://view.shoppinglive.naver.com/replays/314470?fm',
+        },
+        {
+          name: '라퓨리 샴푸바, 딥클렌져',
+          link: 'https://view.shoppinglive.naver.com/replays/271365',
+        },
+        {
+          name: 'jade 성수동 수제 신발',
+          link: 'https://view.shoppinglive.naver.com/replays/285662',
+        },
+        {
+          name: 'FROMCO 롱가디건 2종(1)',
+          link: 'https://view.shoppinglive.naver.com/replays/282221',
+        },
+        {
+          name: 'FROMCO 롱가디건 2종(2)',
+          link: 'https://view.shoppinglive.naver.com/replays/290340',
+        },
+        {
+          name: 'OTTERS 설거지비누',
+          link: 'https://view.shoppinglive.naver.com/replays/278286',
+        },
+        {
+          name: '보니스 가방',
+          link: 'https://view.shoppinglive.naver.com/replays/274802',
         },
       ],
-      liveClips: [{ type: 'naver', link: '' }],
+      liveClips: [
+        { type: 'naver', link: 'https://view.shoppinglive.naver.com/replays/314470?fm' },
+        { type: 'naver', link: 'https://view.shoppinglive.naver.com/replays/271365' },
+      ],
       imageClips: [
         {
           id: 1,
-          link: ``,
+          link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyeyoung/hyeyoung_1.png`,
+        },
+        {
+          id: 2,
+          link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyeyoung/hyeyoung_2.png`,
+        },
+        {
+          id: 3,
+          link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyeyoung/hyeyoung_3.png`,
         },
       ],
     },
   },
+  {
+    id: 11,
+    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/mimi/mimi_0.png`,
+    name: '김미미 Showhost',
+    desc: '만능 엔터테이너 김미미입니다. 본업 뮤지컬 배우부터 해서 모델 mc 그리고 쇼호스트로 활약하고 있습니다.',
+    detail: {
+      name: 'Kim MiMi',
+      category: 'cosmetics & fashion Showhost',
+      summary:
+        '만능 엔터테이너 김미미입니다. 본업 뮤지컬 배우부터 해서 모델 mc 그리고 쇼호스트로 활약하고 있습니다.',
+      social: [{ name: 'Instagram', src: 'https://www.instagram.com/beautiful_mime93/' }],
+      career: [
+        {
+          name: '11번가 코카콜라 라벨 프리',
+          link: 'https://live11.11st.co.kr/output/20211104_20hlive_full/Default/MP4/20211104_20hlive_full.mp4',
+        },
+        {
+          name: '설공 얌희 스프레드',
+          link: 'https://www.instagram.com/tv/CVvLxWGj9qo/?utm_medium=copy_link',
+        },
+        {
+          name: '김천 샤인 머스캣',
+          link: 'https://www.instagram.com/tv/CUZVouoj86_/?utm_medium=copy_link',
+        },
+        {
+          name: '영암 무화과',
+          link: 'https://www.instagram.com/tv/CTkIdt3pKMf/?utm_medium=copy_link',
+        },
+        {
+          name: '은영이 떡볶이',
+          link: 'https://view.shoppinglive.naver.com/replays/274562?from=share',
+        },
+        {
+          name: '퍼핑 스크래치 매트전',
+          link: 'https://view.shoppinglive.naver.com/replays/260391?from=share',
+        },
+        {
+          name: '11번가 커블 체어 와이더 & 그랜드',
+          link: 'https://live11.11st.co.kr/output/20211028_20hlive_full/Default/MP4/20211028_20hlive_full.mp4',
+        },
+        {
+          name: '샤오미 8세대 로봇 청소기',
+          link: 'https://shoppinglive.naver.com/replays/282441',
+        },
+        {
+          name: '나른 트렁크 & 원피스',
+          link: 'http://naver.me/535rFO8u',
+        },
+        {
+          name: '포밤 문라이트 부스터 라이브 커머스',
+          link: 'https://shoppinglive.naver.com/replays/190610?from=share',
+        },
+      ],
+      liveClips: [
+        {
+          type: 'naver',
+          link: 'https://view.shoppinglive.naver.com/replays/274562?from=share',
+        },
+        {
+          type: 'naver',
+          link: 'https://view.shoppinglive.naver.com/replays/190610?from=share',
+        },
+      ],
+      imageClips: [
+        {
+          id: 1,
+          link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/mimi/mimi_1.png`,
+        },
+        {
+          id: 2,
+          link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/mimi/mimi_2.png`,
+        },
+        {
+          id: 3,
+          link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/mimi/mimi_3.png`,
+        },
+      ],
+    },
+  },
+  {
+    id: 12,
+    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/coming/5.png`,
+    name: 'Showhost',
+    desc: '라이즈 홈페이지에서 새로운 쇼호스트/ 모델분을 만나보세요',
+    detail: {
+      name: 'Park HyunSun ',
+      category: 'cosmetics & fashion Showhost',
+      summary:
+        '뮤지컬을 전공하고 현재 다양한 플랫폼에서 라이브 커머스 쇼호스트로 활동하고 있습니다.',
+      social: [{ name: 'Instagram', src: 'https://www.instagram.com/ddo__ny/' }],
+      career: [
+        {
+          name: '11번가 코카콜라 라벨 프리',
+          link: 'https://live11.11st.co.kr/output/20211104_20hlive_full/Default/MP4/20211104_20hlive_full.mp4',
+        },
+        {
+          name: '설공 얌희 스프레드',
+          link: 'https://www.instagram.com/tv/CVvLxWGj9qo/?utm_medium=copy_link',
+        },
+        {
+          name: '김천 샤인 머스캣',
+          link: 'https://www.instagram.com/tv/CUZVouoj86_/?utm_medium=copy_link',
+        },
+        {
+          name: '영암 무화과',
+          link: 'https://www.instagram.com/tv/CTkIdt3pKMf/?utm_medium=copy_link',
+        },
+        {
+          name: '은영이 떡볶이',
+          link: 'https://view.shoppinglive.naver.com/replays/274562?from=share',
+        },
+        {
+          name: '퍼핑 스크래치 매트전',
+          link: 'https://view.shoppinglive.naver.com/replays/260391?from=share',
+        },
+        {
+          name: '11번가 커블 체어 와이더 & 그랜드',
+          link: 'https://live11.11st.co.kr/output/20211028_20hlive_full/Default/MP4/20211028_20hlive_full.mp4',
+        },
+        {
+          name: '샤오미 8세대 로봇 청소기',
+          link: 'https://shoppinglive.naver.com/replays/282441',
+        },
+        {
+          name: '나른 트렁크 & 원피스',
+          link: 'http://naver.me/535rFO8u',
+        },
+        {
+          name: '포밤 문라이트 부스터 라이브 커머스',
+          link: 'https://shoppinglive.naver.com/replays/190610?from=share',
+        },
+      ],
+      liveClips: [
+        {
+          type: 'naver',
+          link: 'https://view.shoppinglive.naver.com/replays/274562?from=share',
+        },
+        {
+          type: 'naver',
+          link: 'https://view.shoppinglive.naver.com/replays/190610?from=share',
+        },
+      ],
+      imageClips: [
+        {
+          id: 1,
+          link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyunsun/hyunsun_1.png`,
+        },
+        {
+          id: 2,
+          link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyunsun/hyunsun_2.png`,
+        },
+        {
+          id: 3,
+          link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyunsun/hyunsun_3.png`,
+        },
+      ],
+    },
+  },
+  // {
+  //   id: 12,
+  //   image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyunsun/hyunsun_0.png`,
+  //   name: '박현선 Showhost',
+  //   desc: '뮤지컬을 전공하고 현재 다양한 플랫폼에서 라이브 커머스 쇼호스트로 활동하고 있습니다.',
+  //   detail: {
+  //     name: 'Park HyunSun ',
+  //     category: 'cosmetics & fashion Showhost',
+  //     summary:
+  //       '뮤지컬을 전공하고 현재 다양한 플랫폼에서 라이브 커머스 쇼호스트로 활동하고 있습니다.',
+  //     social: [{ name: 'Instagram', src: 'https://www.instagram.com/ddo__ny/' }],
+  //     career: [
+  //       {
+  //         name: '11번가 코카콜라 라벨 프리',
+  //         link: 'https://live11.11st.co.kr/output/20211104_20hlive_full/Default/MP4/20211104_20hlive_full.mp4',
+  //       },
+  //       {
+  //         name: '설공 얌희 스프레드',
+  //         link: 'https://www.instagram.com/tv/CVvLxWGj9qo/?utm_medium=copy_link',
+  //       },
+  //       {
+  //         name: '김천 샤인 머스캣',
+  //         link: 'https://www.instagram.com/tv/CUZVouoj86_/?utm_medium=copy_link',
+  //       },
+  //       {
+  //         name: '영암 무화과',
+  //         link: 'https://www.instagram.com/tv/CTkIdt3pKMf/?utm_medium=copy_link',
+  //       },
+  //       {
+  //         name: '은영이 떡볶이',
+  //         link: 'https://view.shoppinglive.naver.com/replays/274562?from=share',
+  //       },
+  //       {
+  //         name: '퍼핑 스크래치 매트전',
+  //         link: 'https://view.shoppinglive.naver.com/replays/260391?from=share',
+  //       },
+  //       {
+  //         name: '11번가 커블 체어 와이더 & 그랜드',
+  //         link: 'https://live11.11st.co.kr/output/20211028_20hlive_full/Default/MP4/20211028_20hlive_full.mp4',
+  //       },
+  //       {
+  //         name: '샤오미 8세대 로봇 청소기',
+  //         link: 'https://shoppinglive.naver.com/replays/282441',
+  //       },
+  //       {
+  //         name: '나른 트렁크 & 원피스',
+  //         link: 'http://naver.me/535rFO8u',
+  //       },
+  //       {
+  //         name: '포밤 문라이트 부스터 라이브 커머스',
+  //         link: 'https://shoppinglive.naver.com/replays/190610?from=share',
+  //       },
+  //     ],
+  //     liveClips: [
+  //       {
+  //         type: 'naver',
+  //         link: 'https://view.shoppinglive.naver.com/replays/274562?from=share',
+  //       },
+  //       {
+  //         type: 'naver',
+  //         link: 'https://view.shoppinglive.naver.com/replays/190610?from=share',
+  //       },
+  //     ],
+  //     imageClips: [
+  //       {
+  //         id: 1,
+  //         link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyunsun/hyunsun_1.png`,
+  //       },
+  //       {
+  //         id: 2,
+  //         link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyunsun/hyunsun_2.png`,
+  //       },
+  //       {
+  //         id: 3,
+  //         link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyunsun/hyunsun_3.png`,
+  //       },
+  //     ],
+  //   },
+  // },
 ];
