@@ -493,7 +493,7 @@ export const modelData2: ModelData2 = [
   {
     id: 7,
     image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/gowoon/gowoon_0.png`,
-    name: '정고운 Showhost',
+    name: '정고운 쇼호스트',
     desc: '저는 밝은 에너지를 가진 저만의 상큼한/ 에너지로 특별한 방송 보여드리겠습니다',
     detail: {
       name: 'Jeong Gowoon',
@@ -572,7 +572,7 @@ export const modelData2: ModelData2 = [
   {
     id: 8,
     image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/siyeon/siyeon_0.png`,
-    name: '김시연 Showhost',
+    name: '김시연 쇼호스트',
     desc: '다양한 경험과 활동으로 고객의 니즈에 맞는 방송을 진행합니다.',
     detail: {
       name: 'Kim Siyeon',
@@ -650,7 +650,7 @@ export const modelData2: ModelData2 = [
   {
     id: 9,
     image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyeri/hyeri_0.png`,
-    name: '빈혜리 Showhost',
+    name: '빈혜리 쇼호스트',
     desc: '다채로운 필드의 경험과 방송실력까지 겸비한 쇼호스트이자 함께하는 브랜드만의 팔레트입니다.',
     detail: {
       name: 'Bin Hyeri',
@@ -729,7 +729,7 @@ export const modelData2: ModelData2 = [
   {
     id: 10,
     image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyeyoung/hyeyoung_0.png`,
-    name: '변혜영 Showhost',
+    name: '변혜영 쇼호스트',
     desc: '시청자들도 웃고 판매자들도 함께 웃을 수/ 있게 하는 전문 쇼호스트로 활약하겠습니다.',
     detail: {
       name: 'Byun Hyeyoung',
@@ -790,7 +790,7 @@ export const modelData2: ModelData2 = [
   {
     id: 11,
     image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/mimi/mimi_0.png`,
-    name: '김미미 Showhost',
+    name: '김미미 쇼호스트',
     desc: '만능 엔터테이너 김미미입니다. 본업 뮤지컬 배우부터 해서 모델 mc 그리고 쇼호스트로 활약하고 있습니다.',
     detail: {
       name: 'Kim MiMi',
@@ -868,9 +868,9 @@ export const modelData2: ModelData2 = [
   },
   {
     id: 12,
-    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/coming/5.png`,
-    name: 'Showhost',
-    desc: '라이즈 홈페이지에서 새로운 쇼호스트/ 모델분을 만나보세요',
+    image1_src: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyunsun/hyunsun_0.png`,
+    name: '박현선 쇼호스트',
+    desc: '뮤지컬을 전공하고 현재 다양한 플랫폼에서/ 라이브커머스 쇼호스트로 활동하고 있습니다.',
     detail: {
       name: 'Park HyunSun ',
       category: 'cosmetics & fashion Showhost',
@@ -879,54 +879,54 @@ export const modelData2: ModelData2 = [
       social: [{ name: 'Instagram', src: 'https://www.instagram.com/ddo__ny/' }],
       career: [
         {
-          name: '11번가 코카콜라 라벨 프리',
-          link: 'https://live11.11st.co.kr/output/20211104_20hlive_full/Default/MP4/20211104_20hlive_full.mp4',
+          name: '데일리브이(이너뷰티)',
+          link: 'https://view.shoppinglive.naver.com/replays/275947?dtm_medium=share&dtm_source=liveviewer&from=share',
         },
         {
-          name: '설공 얌희 스프레드',
-          link: 'https://www.instagram.com/tv/CVvLxWGj9qo/?utm_medium=copy_link',
+          name: '이스터(샴푸)',
+          link: 'https://naver.me/5dxx6vvD',
         },
         {
-          name: '김천 샤인 머스캣',
-          link: 'https://www.instagram.com/tv/CUZVouoj86_/?utm_medium=copy_link',
+          name: '은성헬스빌(자전거)',
+          link: 'https://naver.me/GOurGHrG',
         },
         {
-          name: '영암 무화과',
-          link: 'https://www.instagram.com/tv/CTkIdt3pKMf/?utm_medium=copy_link',
+          name: '바이탈타임(홍삼)',
+          link: 'https://naver.me/xorV6HYu',
         },
         {
-          name: '은영이 떡볶이',
-          link: 'https://view.shoppinglive.naver.com/replays/274562?from=share',
+          name: '필레오(유산균, 프로틴, 타트체리, 석류 콜라겐, ABC주스, 아보카도 오일)',
+          link: 'https://naver.me/FMAwk1O2',
         },
         {
-          name: '퍼핑 스크래치 매트전',
-          link: 'https://view.shoppinglive.naver.com/replays/260391?from=share',
+          name: '누리웰(계란)',
+          link: 'https://naver.me/xScGdAd3',
         },
         {
-          name: '11번가 커블 체어 와이더 & 그랜드',
-          link: 'https://live11.11st.co.kr/output/20211028_20hlive_full/Default/MP4/20211028_20hlive_full.mp4',
+          name: '하늘청(식혜)',
+          link: 'https://naver.me/5dxyjo8R',
         },
         {
-          name: '샤오미 8세대 로봇 청소기',
-          link: 'https://shoppinglive.naver.com/replays/282441',
+          name: '포러스트(애견)',
+          link: 'https://naver.me/GEASYSXv',
         },
         {
-          name: '나른 트렁크 & 원피스',
-          link: 'http://naver.me/535rFO8u',
+          name: '리리펫(애견)',
+          link: 'https://naver.me/xuIdSdVU',
         },
         {
-          name: '포밤 문라이트 부스터 라이브 커머스',
-          link: 'https://shoppinglive.naver.com/replays/190610?from=share',
+          name: '젤네일',
+          link: 'https://youtu.be/7F4j5T96e1A',
         },
       ],
       liveClips: [
         {
           type: 'naver',
-          link: 'https://view.shoppinglive.naver.com/replays/274562?from=share',
+          link: 'https://view.shoppinglive.naver.com/replays/275947?dtm_medium=share&dtm_source=liveviewer&from=share',
         },
         {
           type: 'naver',
-          link: 'https://view.shoppinglive.naver.com/replays/190610?from=share',
+          link: 'https://naver.me/xorV6HYu',
         },
       ],
       imageClips: [
