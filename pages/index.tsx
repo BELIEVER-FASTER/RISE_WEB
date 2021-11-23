@@ -10,8 +10,8 @@ export default function Home(): JSX.Element {
   return (
     <>
       <MetaGe
-        title="라이즈 MCN | 라이브커머스 대행사"
-        desc="패션,코스메틱 전문 라이브커머스 대행사 RISE 입니다. 스튜디오, 쇼호스트, 촬영장비, PD 라이브쇼핑의 A to Z"
+        title="라이즈 | 라이브커머스 대행사"
+        desc="라이브커머스 대행사 라이즈 입니다. 기획, 촬영, 송출 및 스튜디오, 촬영장비, PD, 라이브쇼핑의 모든것"
         url="https://www.riseenm.com"
       />
       <MainLayout />
