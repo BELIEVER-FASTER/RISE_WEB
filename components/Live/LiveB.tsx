@@ -2,17 +2,22 @@ import LottieIcon from 'components/Common/LottieIcon';
 import gsap from 'gsap';
 import { useRouter } from 'next/dist/client/router';
 import dynamic from 'next/dynamic';
-import React from 'react';
+import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
-import { modelData2 } from 'utils/modelsData';
-import ModelListItem from './ModelListItem';
+import CategoryFilter from './CategoryFilter/CategoryFilter';
+import CategoryFilterAside from './CategoryFilter/CategoryFilterAside';
+import ModelList from './ModelList';
 import { LiveBContainer } from './styles';
 
 const ModelDetail = dynamic(() => import('./ModelDetail/DetailLayout'), { ssr: false });
 
 export default function LiveB(): JSX.Element {
-  const { ref, inView } = useInView({ threshold: 0.4 });
+  const { ref, inView } = useInView({ threshold: 0.4, triggerOnce: true });
+  const { ref: cateRef, inView: cateInView } = useInView({
+    threshold: 0,
+  });
+  const [selectedCate, setSelectedCate] = useState(0);
   const router = useRouter();
   useEffect(() => {
     if (inView && ref) {
@@ -28,6 +33,13 @@ export default function LiveB(): JSX.Element {
       );
     }
   }, [inView, ref]);
+
+  useEffect(() => {
+    if (!cateRef) return;
+    console.log(11111);
+    console.log(cateInView);
+  }, [cateInView, cateRef]);
+
   useEffect(() => {
     if (router.query.model) {
       document.body.style.overflowY = 'hidden';
@@ -47,21 +59,24 @@ export default function LiveB(): JSX.Element {
             </span>
             <LottieIcon />
           </h3>
-          <p className="invinsible">
+          <p className="invinsible" ref={cateRef}>
             <span>쇼호스트, 인플루언서, 유튜버, 아나운서, </span>
             <span>
               미스코리아 등<br /> 100여 명의 전문가로
             </span>
             <span> 구성된 라이즈 팀</span>
           </p>
+          <CategoryFilter selectedCate={selectedCate} setSelectedCate={setSelectedCate} />
         </section>
-        <section className="live_b__model_list">
-          {modelData2.map(model => (
-            <ModelListItem modelData={model} key={model.id} />
-          ))}
-        </section>
+        <ModelList selectedCate={selectedCate} />
         <section className="more__info">{/* <h3>+49</h3> */}</section>
       </LiveBContainer>
+      {!cateInView && (
+        <CategoryFilterAside
+          selectedCate={selectedCate}
+          setSelectedCate={setSelectedCate}
+        />
+      )}
       {router.query.model && <ModelDetail />}
     </>
   );

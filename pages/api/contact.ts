@@ -7,13 +7,6 @@ import { contactResultMail, makeContactMail } from 'utils/middlewares/makeMail';
 const handler = async (req: NextApiRequest, res: NextApiResponse): Promise<void> => {
   const { method } = req;
 
-  // let toEmailAddress = 'yhg0337@gmail.com';
-  // if (process.env.NODE_ENV === 'development') {
-  //   toEmailAddress = 'yhg0337@localhost:3000';
-  // } else {
-  //   toEmailAddress = 'contact@riseenm.com';
-  // }
-
   await dbConnect();
 
   switch (method) {

@@ -40,7 +40,7 @@ export default function Layout({ children }: LayoutProps): JSX.Element {
     } else if (router.pathname === '/contact') {
       setHeaderEx(true);
       setFooterEx(true);
-    } else if (router.pathname === '/live') {
+    } else if (router.pathname === '/showhost') {
       setHeaderEx(true);
       setFooterEx(true);
     } else if (router.pathname === '/work') {

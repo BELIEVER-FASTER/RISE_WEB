@@ -2,11 +2,11 @@ import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import { useInView } from 'react-intersection-observer';
 import { ModelListItemBox } from './styles';
-import { ModelDataItem } from 'utils/modelsData';
 import { useRouter } from 'next/dist/client/router';
+import { Model } from 'utils/modelData';
 
 type ModelListItemProps = {
-  modelData: ModelDataItem;
+  modelData: Model;
 };
 export default function ModelListItem({ modelData }: ModelListItemProps): JSX.Element {
   const { inView, ref } = useInView({ threshold: 0.45, triggerOnce: true });
@@ -74,7 +74,7 @@ export default function ModelListItem({ modelData }: ModelListItemProps): JSX.El
           </div>
         )}
         <img
-          src={modelData.image1_src}
+          src={modelData.thumbnail}
           alt={`${modelData.name.split(' ')[0]} 쇼호스트는 ${modelData.desc}`}
           title={`${modelData.name}`}
         />

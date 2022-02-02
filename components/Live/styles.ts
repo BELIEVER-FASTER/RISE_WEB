@@ -259,8 +259,8 @@ export const LiveBContainer = styled.div`
     padding-right: 2.5rem;
   }
   .live_b__banner {
-    margin-top: 23rem;
-    margin-bottom: 21.25rem;
+    margin-top: 20rem;
+    margin-bottom: 4rem;
     h3 {
       font-size: 72px;
       font-weight: 600;
