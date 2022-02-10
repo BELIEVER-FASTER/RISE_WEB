@@ -7,20 +7,22 @@ import { Model } from 'utils/modelData';
 
 type ModelListItemProps = {
   modelData: Model;
+  idx: number;
 };
-export default function ModelListItem({ modelData }: ModelListItemProps): JSX.Element {
+export default function ModelListItem({
+  modelData,
+  idx,
+}: ModelListItemProps): JSX.Element {
   const { inView, ref } = useInView({ threshold: 0.45, triggerOnce: true });
   const index = ((modelData.id - 3) % 3) * 3;
   const router = useRouter();
 
   const detailClick = () => {
-    if (modelData.id < 13) {
-      router.push(
-        `${router.basePath}?model=${modelData.id}`,
-        `${router.basePath}?model=${modelData.id}`,
-        { scroll: false }
-      );
-    }
+    router.push(
+      `${router.basePath}?model=${modelData.id}`,
+      `${router.basePath}?model=${modelData.id}`,
+      { scroll: false }
+    );
   };
 
   useEffect(() => {
@@ -68,11 +70,11 @@ export default function ModelListItem({ modelData }: ModelListItemProps): JSX.El
           });
         }}
       >
-        {modelData.id < 13 && (
-          <div className="circle" id={`circle_${modelData.id}`}>
-            <span>View</span>
-          </div>
-        )}
+        {/* {modelData.id < 13 && ( */}
+        <div className="circle" id={`circle_${modelData.id}`}>
+          <span>View</span>
+        </div>
+        {/* )} */}
         <img
           src={modelData.thumbnail}
           alt={`${modelData.name.split(' ')[0]} 쇼호스트는 ${modelData.desc}`}

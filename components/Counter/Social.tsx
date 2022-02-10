@@ -2,7 +2,7 @@ import React from 'react';
 import { SocialBox } from './styles';
 
 type SocialProps = {
-  type: 'Facebook' | 'Instagram' | 'Blog';
+  type: 'Facebook' | 'Instagram' | 'Blog' | '쇼호스트 진행문의';
   link: string;
 };
 export default function Social({ type, link }: SocialProps): JSX.Element {

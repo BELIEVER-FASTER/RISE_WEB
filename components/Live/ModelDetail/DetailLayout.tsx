@@ -4,8 +4,8 @@ import ScrollTo from 'gsap/ScrollToPlugin';
 import { useRouter } from 'next/dist/client/router';
 import React, { useEffect, useState } from 'react';
 import { DetailBox, DetailLayoutContainer } from './styles';
+import { modelDetails } from 'utils/modelData';
 import Social from 'components/Counter/Social';
-import { modelData2 } from 'utils/modelsData';
 
 function LinkIcon() {
   return (
@@ -34,8 +34,11 @@ function LinkIcon() {
 gsap.registerPlugin(ScrollTrigger, ScrollTo);
 export default function DetailLayout(): JSX.Element {
   const router = useRouter();
+  // const [modelData] = useState(
+  //   modelData2.find(data => data.id === +(router.query.model as string))
+  // );
   const [modelData] = useState(
-    modelData2.find(data => data.id === +(router.query.model as string))
+    modelDetails.find(data => data.id === +(router.query.model as string))
   );
   useEffect(() => {
     const sc = document.querySelector('#scroll_container') as HTMLElement;
@@ -45,10 +48,10 @@ export default function DetailLayout(): JSX.Element {
           ? 0
           : (100 * (sc.scrollTop + sc.clientHeight)) / sc.scrollHeight;
       console.log(aaa, (100 - aaa) * 3.5 * 0.01);
-      if (aaa > 90) {
+      if (aaa > 82) {
         gsap.to('#scroll_container', { opacity: 0, duration: 0.5 });
         setTimeout(() => {
-          router.push('/live', '/live', { scroll: false });
+          router.push('/showhost', '/showhost', { scroll: false });
         }, 500);
       } else if (aaa > 67) {
         gsap.set('.main_content', {
@@ -79,16 +82,14 @@ export default function DetailLayout(): JSX.Element {
           <section>
             <article className="name">
               <h1>{modelData?.detail.name}</h1>
-              <p>{modelData?.detail.category}</p>
+              <p>{modelData?.detail.part}</p>
             </article>
             <article className="section-1">
               <div className="img__wrapper-1">
-                <img src={modelData?.detail.imageClips[0].link} alt="main_image" />
+                <img src={modelData?.imageClips[0].link} alt="main_image" />
               </div>
-              <p>{modelData?.detail.summary}</p>
-              {modelData?.detail.social.map(soc => (
-                <Social type={soc.name} link={soc.src} />
-              ))}
+              <p>{modelData?.desc}</p>
+              <Social type="쇼호스트 진행문의" link="" />
             </article>
 
             <article className="section-2">
@@ -97,12 +98,20 @@ export default function DetailLayout(): JSX.Element {
                 주요경력
               </h2>
               <ul className="right">
-                {modelData?.detail.career.map(career => (
-                  <li key={career.link}>
-                    <a href={career.link} target="_blank">
-                      {career.name}
-                      <LinkIcon />
-                    </a>
+                {modelData?.career.map(career => (
+                  <li key={career.category}>
+                    <h4>{career.category}</h4>
+                    <ul>
+                      {career.lives.map(lv => (
+                        <li>
+                          <p>{lv.platform}</p>
+                          <a href={lv.link} target="_blank">
+                            {lv.name}
+                            <LinkIcon />
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
                   </li>
                 ))}
               </ul>
@@ -110,19 +119,19 @@ export default function DetailLayout(): JSX.Element {
 
             <article className="section-3">
               <div className="img__wrapper_2">
-                <iframe src={modelData?.detail.liveClips[0].link}></iframe>
+                <iframe src={modelData?.liveClips[0].link}></iframe>
               </div>
               <div className="img__wrapper_3">
-                <img src={modelData?.detail.imageClips[1].link} alt="model_image-2" />
+                <img src={modelData?.imageClips[1].link} alt="model_image-2" />
               </div>
             </article>
 
             <article className="section-4">
               <div className="img__wrapper_4">
-                <img src={modelData?.detail.imageClips[2].link} alt="model_image-3" />
+                <img src={modelData?.imageClips[2].link} alt="model_image-3" />
               </div>
               <div className="img__wrapper_5">
-                <iframe src={modelData?.detail.liveClips[1].link}></iframe>
+                <iframe src={modelData?.liveClips[1].link}></iframe>
               </div>
             </article>
           </section>

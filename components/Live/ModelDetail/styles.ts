@@ -109,7 +109,7 @@ export const DetailBox = styled.div`
   }
   .section-2 {
     width: 100%;
-    padding: 320px 2.5rem;
+    padding: 250px 2.5rem;
     display: flex;
     line-height: 1.4;
     .left {
@@ -119,22 +119,52 @@ export const DetailBox = styled.div`
     }
     .right {
       font-size: 26px;
-      li > a {
-        color: #000;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        margin-bottom: 30px;
-        white-space: nowrap;
-        svg {
-          width: 40px;
-          height: 40px;
-          fill: #000;
+      display: grid;
+      flex: 1;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px 36px;
+      & > li {
+        width: 100%;
+        h4 {
+          padding-bottom: 20px;
+          margin-bottom: 20px;
+          border-bottom: 1px solid #000;
+          font-size: 24px;
         }
-        &:hover {
-          color: #fa370b;
-          svg {
-            fill: #fa370b;
+        & > ul {
+          margin-bottom: 76px;
+          li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+            white-space: nowrap;
+            font-size: 20px;
+            p {
+              width: 22%;
+              font-size: 20px;
+            }
+            a {
+              font-size: 20px;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              width: 78%;
+              color: #000;
+              text-decoration: none;
+              display: flex;
+              align-items: center;
+              white-space: nowrap;
+              svg {
+                width: 40px;
+                height: 40px;
+                fill: #000;
+              }
+              &:hover {
+                color: #fa370b;
+                svg {
+                  fill: #fa370b;
+                }
+              }
+            }
           }
         }
       }

@@ -17,8 +17,8 @@ export default function ModelList({ selectedCate }: ModelListProps): JSX.Element
   }, [selectedCate]);
   return (
     <section className="live_b__model_list">
-      {list.map(model => (
-        <ModelListItem modelData={model} key={model.name} />
+      {list.map((model, idx) => (
+        <ModelListItem modelData={model} key={model.name} idx={idx} />
       ))}
     </section>
   );
