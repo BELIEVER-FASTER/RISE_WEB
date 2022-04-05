@@ -21,7 +21,7 @@ export const categoryData = [
 
 export type Model = typeof modelDetails[0];
 export const modelDetails = [
-  //NOTE: 박설아 쇼호스트
+  //NOTE: 박설아 쇼호스트 1
   {
     id: 1,
     thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/seola/sera_0.png`,
@@ -294,7 +294,7 @@ export const modelDetails = [
       },
     ],
   },
-  //NOTE: 윤라엘 쇼호스트
+  //NOTE: 윤라엘 쇼호스트 2
   {
     id: 2,
     thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/lael/lael_0.png`,
@@ -387,7 +387,7 @@ export const modelDetails = [
       },
     ],
   },
-  //NOTE: 이아윤 쇼호스트
+  //NOTE: 이아윤 쇼호스트 3
   {
     id: 3,
     thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/ahyoon/ahyoon_0.png`,
@@ -605,13 +605,13 @@ export const modelDetails = [
       },
     ],
   },
-  //NOTE: 김동현 쇼호스트 (미완)
+  //NOTE: 김동현 쇼호스트 4
   {
     id: 4,
     thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/donghyun/donghyun_0.png`,
     name: '김동현 쇼호스트',
     desc: '다양한 라이브방송의 경험으로 브랜드 가치를/ 높이며 재미있는 방송으로 선보입니다.',
-    category: [3, 4, 5, 14],
+    category: [1, 2, 7, 5, 6],
     detail: {
       name: 'Kim DongHyun',
       part: 'Live commerce Show host',
@@ -670,8 +670,38 @@ export const modelDetails = [
         category: '뷰티/화장품',
         lives: [
           {
+            name: '라운드랩 기초케어 BEST 7 제품',
+            link: 'https://shoppinglive.naver.com/replays/179879', //이상
+            platform: '네이버',
+          },
+          {
+            name: '라운드랩 약콩라인 기초제품',
+            link: 'https://shoppinglive.naver.com/replays/242359?fm=shoppinglive&sn=home',
+            platform: '네이버',
+          },
+          {
+            name: '라본느 클레이에스테 샴푸&헤어마스크',
+            link: 'https://shoppinglive.naver.com/replays/331598?fm=shoppinglive&sn=home',
+            platform: '네이버',
+          },
+          {
+            name: '레비레스코',
+            link: 'https://shoppinglive.naver.com/replays/179868?fm=shoppinglive&sn=home',
+            platform: '네이버',
+          },
+          {
+            name: '알엔더블유',
+            link: 'https://link.coupang.com/nt/LIVECO?pageKey=117224&pType=live',
+            platform: '쿠팡',
+          },
+        ],
+      },
+      {
+        category: '남성패션',
+        lives: [
+          {
             name: '닥터 아제라 특가',
-            link: 'https://view.shoppinglive.naver.com/replays/225914?fm=shoppinglive&sn=home', //이상
+            link: 'https://view.shoppinglive.naver.com/replays/225914?fm=shoppinglive&sn=home',
             platform: '네이버',
           },
           {
@@ -687,12 +717,12 @@ export const modelDetails = [
           {
             name: '티아이포맨 슈퍼 원데이',
             link: 'https://www.coupang.com/?src=1191000&spec=10999999&addtag=812&ctag=133900&lptag=CFM96148955&itime=20220127003316&pageType=LIVE%20COMMERCE&pageValue=133900&wPcid=12764157189898510098890&wRef=&wTime=20220127003316&redirect=landing&backType=&settlement=N',
-            platform: '네이버',
+            platform: '쿠팡',
           },
           {
             name: '타미힐피거 FW 남성의류',
             link: 'https://www.coupang.com/?src=1191000&spec=10999999&addtag=812&ctag=130726&lptag=CFM96148955&itime=20220127003334&pageType=LIVE%20COMMERCE&pageValue=130726&wPcid=12764157189898510098890&wRef=&wTime=20220127003334&redirect=landing&backType=&settlement=N',
-            platform: '네이버',
+            platform: '쿠팡',
           },
         ],
       },
@@ -733,7 +763,7 @@ export const modelDetails = [
       },
     ],
   },
-  //NOTE: 최승인 쇼호스트
+  //NOTE: 최승인 쇼호스트 5
   {
     id: 5,
     thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/seungin/seungin_0.png`,
@@ -826,7 +856,7 @@ export const modelDetails = [
       },
     ],
   },
-  //NOTE: 노성민 쇼호스트(미완)
+  //NOTE: 노성민 쇼호스트 6
   {
     id: 6,
     thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/seongmin/seongmin_0.png`,
@@ -962,7 +992,7 @@ export const modelDetails = [
       },
     ],
   },
-  //NOTE: 박현선 쇼호스트
+  //NOTE: 박현선 쇼호스트 7
   {
     id: 7,
     thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyunsun/hyunsun_0.png`,
@@ -1201,7 +1231,7 @@ export const modelDetails = [
       },
     ],
   },
-  //NOTE: 김미미 쇼호스트
+  //NOTE: 김미미 쇼호스트 8
   {
     id: 8,
     thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/mimi2/mimi_0.png`,
@@ -1350,7 +1380,7 @@ export const modelDetails = [
       },
     ],
   },
-  //NOTE: 최명진 쇼호스트
+  //NOTE: 최명진 쇼호스트 9
   {
     id: 9,
     thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/myungjin/myungjin_0.png`,
@@ -1524,7 +1554,7 @@ export const modelDetails = [
       },
     ],
   },
-  //NOTE: 고은혜 쇼호스트
+  //NOTE: 고은혜 쇼호스트 10
   {
     id: 10,
     thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/eunhye/eunhye_0.png`,
@@ -1623,7 +1653,7 @@ export const modelDetails = [
       },
     ],
   },
-  //NOTE: 이정미 쇼호스트
+  //NOTE: 이정미 쇼호스트 11
   {
     id: 11,
     thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/jungme/jungme_0.png`,
@@ -1847,7 +1877,7 @@ export const modelDetails = [
       },
     ],
   },
-  //NOTE: 신현아 쇼호스트
+  //NOTE: 신현아 쇼호스트 12
   {
     id: 12,
     thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyeona/hyeona_0.png`,
@@ -1946,7 +1976,7 @@ export const modelDetails = [
       },
     ],
   },
-  //NOTE: 정고운 쇼호스트
+  //NOTE: 정고운 쇼호스트 13
   {
     id: 13,
     thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/gowoon2/gowoon_0.png`,
@@ -2175,7 +2205,7 @@ export const modelDetails = [
       },
     ],
   },
-  //NOTE: 정상환 쇼호스트
+  //NOTE: 정상환 쇼호스트 14
   {
     id: 14,
     thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/sanghwan/sanghwan_0.png`,
@@ -2369,7 +2399,7 @@ export const modelDetails = [
       },
     ],
   },
-  //NOTE: 이상학 쇼호스트
+  //NOTE: 이상학 쇼호스트 15
   {
     id: 15,
     thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/sanghak/sanghak_0.png`,
@@ -2503,7 +2533,7 @@ export const modelDetails = [
       },
     ],
   },
-  //NOTE: 김은규 쇼호스트
+  //NOTE: 김은규 쇼호스트 16
   {
     id: 16,
     thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/eunkyu/eunkyu_0.png`,
@@ -2557,7 +2587,7 @@ export const modelDetails = [
       },
     ],
   },
-  //NOTE: 김태훈 쇼호스트
+  //NOTE: 김태훈 쇼호스트 17
   {
     id: 17,
     thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/taehoon/taehoon_0.png`,
@@ -2691,7 +2721,7 @@ export const modelDetails = [
       },
     ],
   },
-  //NOTE: 민준호 쇼호스트
+  //NOTE: 민준호 쇼호스트 18
   {
     id: 18,
     thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_0.png`,
@@ -2820,13 +2850,13 @@ export const modelDetails = [
       },
     ],
   },
-  //NOTE: 김상린 쇼호스트 2차 시작(카테고리 분류 시작점)
+  //NOTE: 김상린 쇼호스트 19 2차 시작(카테고리 분류 시작점)
   {
     id: 19,
-    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_0.png`,
+    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/sangrin/sangrin_0.png`,
     name: '김상린 쇼호스트',
     desc: '쿠팡 크리에이터로 활동하고 있는 김상린 입니다. 동반 성장한다는 마음으로 최선을 다하겠습니다.',
-    category: [1, 7, 5, 6, 2, 3],
+    category: [1, 5, 6, 3, 2],
     detail: {
       name: 'Kim Sangrin',
       part: 'Live commerce Show host',
@@ -2845,15 +2875,15 @@ export const modelDetails = [
     imageClips: [
       {
         id: 1,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_1.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/sangrin/sangrin_1.png`,
       },
       {
         id: 2,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_2.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/sangrin/sangrin_2.png`,
       },
       {
         id: 3,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_3.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/sangrin/sangrin_3.png`,
       },
     ],
     career: [
@@ -2944,13 +2974,13 @@ export const modelDetails = [
       },
     ],
   },
-  //NOTE: 심예빈 쇼호스트
+  //NOTE: 심예빈 쇼호스트 20
   {
     id: 20,
-    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_0.png`,
+    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/yebin/yebin_0.png`,
     name: '심예빈 쇼호스트',
     desc: '매순간 밝은에너지와 시청자에게 허물없이 다가가는 쇼호스트 입니다.',
-    category: [1, 7, 5, 6, 2, 3],
+    category: [1],
     detail: {
       name: 'Sim Yebin',
       part: 'Live commerce Show host',
@@ -2969,15 +2999,15 @@ export const modelDetails = [
     imageClips: [
       {
         id: 1,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_1.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/yebin/yebin_1.png`,
       },
       {
         id: 2,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_2.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/yebin/yebin_2.png`,
       },
       {
         id: 3,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_3.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/yebin/yebin_3.png`,
       },
     ],
     career: [
@@ -3013,14 +3043,13 @@ export const modelDetails = [
       },
     ],
   },
-
-  //NOTE: 최슬기 쇼호스트
+  //NOTE: 최슬기 쇼호스트 21
   {
     id: 21,
-    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_0.png`,
+    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/seulkee/seulkee_0.png`,
     name: '최슬기 쇼호스트',
     desc: '매순간 밝은에너지와 시청자에게 허물없이 다가가는 쇼호스트 입니다.',
-    category: [1, 7, 5, 6, 2, 3],
+    category: [1, 9, 6, 2],
     detail: {
       name: 'Choi Seulkee',
       part: 'Live commerce Show host',
@@ -3039,15 +3068,15 @@ export const modelDetails = [
     imageClips: [
       {
         id: 1,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_1.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/seulkee/seulkee_1.png`,
       },
       {
         id: 2,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_2.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/seulkee/seulkee_2.png`,
       },
       {
         id: 3,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_3.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/seulkee/seulkee_3.png`,
       },
     ],
     career: [
@@ -3128,13 +3157,13 @@ export const modelDetails = [
       },
     ],
   },
-  //NOTE: 한지희 쇼호스트
+  //NOTE: 한지희 쇼호스트 22
   {
     id: 22,
-    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_0.png`,
+    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/jihee/jihee_0.png`,
     name: '한지희 쇼호스트',
     desc: '연기자출신의 상황극의 달인, 못 받아치는 드립이 없는 높은텐션의 쇼호스트 입니다.',
-    category: [1, 7, 5, 6, 2, 3],
+    category: [1, 10, 12, 7, 2, 3],
     detail: {
       name: 'Han Jihee',
       part: 'Live commerce Show host',
@@ -3153,15 +3182,15 @@ export const modelDetails = [
     imageClips: [
       {
         id: 1,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_1.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/jihee/jihee_1.png`,
       },
       {
         id: 2,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_2.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/jihee/jihee_2.png`,
       },
       {
         id: 3,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_3.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/jihee/jihee_3.png`,
       },
     ],
     career: [
@@ -3297,14 +3326,13 @@ export const modelDetails = [
       },
     ],
   },
-
-  //NOTE: 이가원 쇼호스트
+  //NOTE: 이가원 쇼호스트 23
   {
     id: 23,
-    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_0.png`,
+    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/gawon/gawon_0.png`,
     name: '이가원 쇼호스트',
     desc: '안녕하세요 신뢰감 넘치는 목소리 차고 넘치는 텐션의 소유자 이가원입니다.',
-    category: [1, 7, 5, 6, 2, 3],
+    category: [2, 6, 3, 4],
     detail: {
       name: 'Lee Gawon',
       part: 'Live commerce Show host',
@@ -3323,15 +3351,15 @@ export const modelDetails = [
     imageClips: [
       {
         id: 1,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_1.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/gawon/gawon_1.png`,
       },
       {
         id: 2,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_2.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/gawon/gawon_2.png`,
       },
       {
         id: 3,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_3.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/gawon/gawon_3.png`,
       },
     ],
     career: [
@@ -3412,14 +3440,13 @@ export const modelDetails = [
       },
     ],
   },
-
-  //NOTE: 홍세리 쇼호스트
+  //NOTE: 홍세리 쇼호스트 24
   {
     id: 24,
-    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_0.png`,
+    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/seri/seri_0.png`,
     name: '홍세리 쇼호스트',
     desc: '성실함이 가장 큰 무기라고 생각하는 홍세리 입니다. 어디에서든 나타나겠습니다.',
-    category: [1, 7, 5, 6, 2, 3],
+    category: [4, 3, 1, 2],
     detail: {
       name: 'Hong Seri',
       part: 'Live commerce Show host',
@@ -3438,15 +3465,15 @@ export const modelDetails = [
     imageClips: [
       {
         id: 1,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_1.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/seri/seri_1.png`,
       },
       {
         id: 2,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_2.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/seri/seri_2.png`,
       },
       {
         id: 3,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_3.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/seri/seri_3.png`,
       },
     ],
     career: [
@@ -3497,14 +3524,13 @@ export const modelDetails = [
       },
     ],
   },
-
-  //NOTE: 김시은 쇼호스트
+  //NOTE: 김시은 쇼호스트 25
   {
     id: 25,
-    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_0.png`,
+    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/sieun/sieun_0.png`,
     name: '김시은 쇼호스트',
     desc: '"화끈하게 시연 하는" 쇼호스트 "화시은" 김시은입니다. ',
-    category: [1, 7, 5, 6, 2, 3],
+    category: [1, 2, 4, 7, 8, 12],
     detail: {
       name: 'Kim Sieun',
       part: 'Live commerce Show host',
@@ -3523,15 +3549,15 @@ export const modelDetails = [
     imageClips: [
       {
         id: 1,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_1.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/sieun/sieun_1.png`,
       },
       {
         id: 2,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_2.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/sieun/sieun_2.png`,
       },
       {
         id: 3,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_3.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/sieun/sieun_3.png`,
       },
     ],
     career: [
@@ -3662,14 +3688,13 @@ export const modelDetails = [
       },
     ],
   },
-
-  //NOTE: 최예진 쇼호스트
+  //NOTE: 최예진 쇼호스트 26
   {
     id: 26,
-    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_0.png`,
+    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/yejin/yejin_0.png`,
     name: '최예진 쇼호스트',
     desc: '"화끈하게 시연 하는" 쇼호스트 "화시은" 김시은입니다. ',
-    category: [1, 7, 5, 6, 2, 3],
+    category: [1, 8, 6, 9, 10],
     detail: {
       name: 'Choi Yejin',
       part: 'Live commerce Show host',
@@ -3688,15 +3713,15 @@ export const modelDetails = [
     imageClips: [
       {
         id: 1,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_1.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/yejin/yejin_1.png`,
       },
       {
         id: 2,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_2.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/yejin/yejin_2.png`,
       },
       {
         id: 3,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_3.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/yejin/yejin_3.png`,
       },
     ],
     career: [
@@ -3802,14 +3827,13 @@ export const modelDetails = [
       },
     ],
   },
-
-  //NOTE: 정유진 쇼호스트
+  //NOTE: 정유진 쇼호스트 27
   {
     id: 27,
-    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_0.png`,
+    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/yoojin/yoojin_0.png`,
     name: '정유진 쇼호스트',
     desc: '필라테스 강사 출신으로 건강한 아름다움으로 라이프스타일을 만들어 나가고 있습니다.',
-    category: [1, 7, 5, 6, 2, 3],
+    category: [1, 2, 12, 4, 6],
     detail: {
       name: 'Chong YooJin',
       part: 'Live commerce Show host',
@@ -3828,15 +3852,15 @@ export const modelDetails = [
     imageClips: [
       {
         id: 1,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_1.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/yoojin/yoojin_1.png`,
       },
       {
         id: 2,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_2.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/yoojin/yoojin_2.png`,
       },
       {
         id: 3,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_3.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/yoojin/yoojin_3.png`,
       },
     ],
     career: [
@@ -3997,14 +4021,13 @@ export const modelDetails = [
       },
     ],
   },
-
-  //NOTE: 김다솜 쇼호스트
+  //NOTE: 김다솜 쇼호스트 28
   {
     id: 28,
-    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_0.png`,
+    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/dasom/dasom_0.png`,
     name: '김다솜 쇼호스트',
     desc: '모델연기 전공자 하이텐션 끝판왕 쇼호스트 김다솜입니다.',
-    category: [1, 7, 5, 6, 2, 3],
+    category: [4, 7, 1, 10, 2, 8, 6],
     detail: {
       name: 'Kim Dasom',
       part: 'Live commerce Show host',
@@ -4023,15 +4046,15 @@ export const modelDetails = [
     imageClips: [
       {
         id: 1,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_1.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/dasom/dasom_1.png`,
       },
       {
         id: 2,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_2.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/dasom/dasom_2.png`,
       },
       {
         id: 3,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_3.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/dasom/dasom_3.png`,
       },
     ],
     career: [
@@ -4197,16 +4220,15 @@ export const modelDetails = [
       },
     ],
   },
-
-  //NOTE: 최예원 쇼호스트
+  //NOTE: 최예원 쇼호스트 29
   {
     id: 29,
-    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_0.png`,
+    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/yewon/yewon_0.png`,
     name: '최예원 쇼호스트',
     desc: '공연,리포터,방송활동을 바탕으로 재미와 정보 둘 다 드릴 수 있는 양질의 방송 자신 있습니다.',
-    category: [1, 7, 5, 6, 2, 3],
+    category: [1, 2, 4],
     detail: {
-      name: 'Kim Dasom',
+      name: 'Choi Yewon',
       part: 'Live commerce Show host',
       desc: '공연,리포터,방송활동을 바탕으로 재미와 정보 둘 다 드릴 수 있는 양질의 방송 자신 있습니다.',
     },
@@ -4223,15 +4245,15 @@ export const modelDetails = [
     imageClips: [
       {
         id: 1,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_1.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/yewon/yewon_1.png`,
       },
       {
         id: 2,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_2.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/yewon/yewon_2.png`,
       },
       {
         id: 3,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_3.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/yewon/yewon_3.png`,
       },
     ],
     career: [
@@ -4287,14 +4309,13 @@ export const modelDetails = [
       },
     ],
   },
-
-  //NOTE: 김혜원 쇼호스트
+  //NOTE: 김혜원 쇼호스트 30
   {
     id: 30,
-    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_0.png`,
+    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyewon/hyewon_0.png`,
     name: '김혜원 쇼호스트',
     desc: '맡은 상품의 특징과 분위기, 연령층까지 파악하여 알맞 다양한 컨셉의 진행을 보여드리겠습니다',
-    category: [1, 7, 5, 6, 2, 3],
+    category: [1, 2, 4, 6],
     detail: {
       name: 'Kim Hyewon',
       part: 'Live commerce Show host',
@@ -4313,15 +4334,15 @@ export const modelDetails = [
     imageClips: [
       {
         id: 1,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_1.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyewon/hyewon_1.png`,
       },
       {
         id: 2,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_2.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyewon/hyewon_2.png`,
       },
       {
         id: 3,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_3.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyewon/hyewon_3.png`,
       },
     ],
     career: [
@@ -4377,14 +4398,13 @@ export const modelDetails = [
       },
     ],
   },
-
-  //NOTE: 최예빈 쇼호스트
+  //NOTE: 최예빈 쇼호스트 31
   {
     id: 31,
-    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_0.png`,
+    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/yebin2/yebin_0.png`,
     name: '최예빈 쇼호스트',
     desc: '1월 기준 라이브커머스 방송 300회 이상 승무원, 리포터, MC 출신 쇼호스트!',
-    category: [1, 7, 5, 6, 2, 3],
+    category: [1, 2, 4, 6],
     detail: {
       name: 'Choi Yebin',
       part: 'Live commerce Show host',
@@ -4403,15 +4423,15 @@ export const modelDetails = [
     imageClips: [
       {
         id: 1,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_1.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/yebin2/yebin_1.png`,
       },
       {
         id: 2,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_2.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/yebin2/yebin_2.png`,
       },
       {
         id: 3,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_3.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/yebin2/yebin_3.png`,
       },
     ],
     career: [
@@ -4522,14 +4542,13 @@ export const modelDetails = [
       },
     ],
   },
-
-  //NOTE: 빈혜리 쇼호스트
+  //NOTE: 빈혜리 쇼호스트 32
   {
     id: 32,
     thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyeri/hyeri_0.png`,
     name: '빈혜리 쇼호스트',
     desc: '다채로운 필드의 경험과 방송실력까지 겸비한 쇼호스트이자 함께하는 브랜드만의 팔레트입니다.',
-    category: [1, 7, 5, 6, 2, 3],
+    category: [1, 7, 4, 3, 10, 2],
     detail: {
       name: 'Choi Yebin',
       part: 'Live commerce Show host',
@@ -4717,16 +4736,15 @@ export const modelDetails = [
       },
     ],
   },
-
-  //NOTE: 소연서 쇼호스트
+  //NOTE: 소연서 쇼호스트 33
   {
     id: 33,
-    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyeri/hyeri_0.png`,
+    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/yeonseo/yeonseo_0.png`,
     name: '소연서 쇼호스트',
     desc: 'MC에 이어 1세대 라이브커머스 쇼호스트 티몬, 쿠팡, 보고, 현대H몰, 네이버쇼핑라이브등 경력만렙',
-    category: [1, 7, 5, 6, 2, 3],
+    category: [1, 2, 8],
     detail: {
-      name: 'Choi Yebin',
+      name: 'So Yeonseo',
       part: 'Live commerce Show host',
       desc: 'MC에 이어 1세대 라이브커머스 쇼호스트 티몬, 쿠팡, 보고, 현대H몰, 네이버쇼핑라이브등 경력만렙',
     },
@@ -4743,15 +4761,15 @@ export const modelDetails = [
     imageClips: [
       {
         id: 1,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyeri/hyeri_1.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/yeonseo/yeonseo_1.png`,
       },
       {
         id: 2,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyeri/hyeri_2.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/yeonseo/yeonseo_2.png`,
       },
       {
         id: 3,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyeri/hyeri_3.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/yeonseo/yeonseo_3.png`,
       },
     ],
     career: [
@@ -4832,16 +4850,15 @@ export const modelDetails = [
       },
     ],
   },
-
-  //NOTE: 김정아 쇼호스트
+  //NOTE: 김정아 쇼호스트 34
   {
     id: 34,
-    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyeri/hyeri_0.png`,
+    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/jeongah/jeongah_0.png`,
     name: '김정아 쇼호스트',
     desc: '시청자들과의 원활한 소통과 부드러운 진행력의 소유자 쇼호스트 김정아',
-    category: [1, 7, 5, 6, 2, 3],
+    category: [1, 6, 7],
     detail: {
-      name: 'Kim jeongah',
+      name: 'Kim Jeongah',
       part: 'Live commerce Show host',
       desc: '시청자들과의 원활한 소통과 부드러운 진행력의 소유자 쇼호스트 김정아',
     },
@@ -4858,15 +4875,15 @@ export const modelDetails = [
     imageClips: [
       {
         id: 1,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyeri/hyeri_1.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/jeongah/jeongah_1.png`,
       },
       {
         id: 2,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyeri/hyeri_2.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/jeongah/jeongah_2.png`,
       },
       {
         id: 3,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyeri/hyeri_3.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/jeongah/jeongah_3.png`,
       },
     ],
     career: [
@@ -4932,14 +4949,13 @@ export const modelDetails = [
       },
     ],
   },
-
-  //NOTE: 주민지 쇼호스트
+  //NOTE: 주민지 쇼호스트 35
   {
     id: 35,
-    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyeri/hyeri_0.png`,
+    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/minji/minji_0.png`,
     name: '주민지 쇼호스트',
     desc: '전직 승무원의 마음으로 고객을 섬기며 신뢰감 가고 전달력 있는 목소리로 고객의 마음을 사로잡습니다.',
-    category: [1, 7, 5, 6, 2, 3],
+    category: [1, 2, 4],
     detail: {
       name: 'Ju Minji',
       part: 'Live commerce Show host',
@@ -4958,15 +4974,15 @@ export const modelDetails = [
     imageClips: [
       {
         id: 1,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyeri/hyeri_1.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/minji/minji_1.png`,
       },
       {
         id: 2,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyeri/hyeri_2.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/minji/minji_2.png`,
       },
       {
         id: 3,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyeri/hyeri_3.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/minji/minji_3.png`,
       },
     ],
     career: [
@@ -5012,14 +5028,13 @@ export const modelDetails = [
       },
     ],
   },
-
-  //NOTE: 이성희 쇼호스트
+  //NOTE: 이성희 쇼호스트 36
   {
     id: 36,
-    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyeri/hyeri_0.png`,
+    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/sunghee/sunghee_0.png`,
     name: '이성희 쇼호스트',
     desc: '폭 넓은 카테고리 방송으로 고객의 니즈를 파악하는 장점 상품을 고급스럽고 품격있게 방송하겠습니다.',
-    category: [1, 7, 5, 6, 2, 3],
+    category: [2, 1, 4],
     detail: {
       name: 'Lee Sunghee',
       part: 'Live commerce Show host',
@@ -5038,15 +5053,15 @@ export const modelDetails = [
     imageClips: [
       {
         id: 1,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyeri/hyeri_1.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/sunghee/sunghee_1.png`,
       },
       {
         id: 2,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyeri/hyeri_2.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/sunghee/sunghee_2.png`,
       },
       {
         id: 3,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyeri/hyeri_3.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/sunghee/sunghee_3.png`,
       },
     ],
     career: [
@@ -5130,14 +5145,13 @@ export const modelDetails = [
       },
     ],
   },
-
-  //NOTE: 한경진 쇼호스트
+  //NOTE: 한경진 쇼호스트 38
   {
     id: 38,
-    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyeri/hyeri_0.png`,
+    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/kyungjin/kyungjin_0.png`,
     name: '한경진 쇼호스트',
     desc: '미스코리아, SBS, YTN 출신으로 생방송에서 유연한 전달력이 있고 순발력과 표현력이 좋습니다.',
-    category: [1, 7, 5, 6, 2, 3],
+    category: [9, 4, 6],
     detail: {
       name: 'Han kyungjin',
       part: 'Live commerce Show host',
@@ -5156,15 +5170,15 @@ export const modelDetails = [
     imageClips: [
       {
         id: 1,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyeri/hyeri_1.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/kyungjin/kyungjin_1.png`,
       },
       {
         id: 2,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyeri/hyeri_2.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/kyungjin/kyungjin_2.png`,
       },
       {
         id: 3,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyeri/hyeri_3.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/kyungjin/kyungjin_3.png`,
       },
     ],
     career: [
@@ -5205,14 +5219,13 @@ export const modelDetails = [
       },
     ],
   },
-
-  //NOTE: 최용임 쇼호스트
+  //NOTE: 최영임 쇼호스트 40
   {
     id: 40,
-    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyeri/hyeri_0.png`,
-    name: '최용임 쇼호스트',
+    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/youngim/youngim_0.png`,
+    name: '최영임 쇼호스트',
     desc: '현재 10만명의 틱톡커들에게 행복을 전해주고 유쾌 통쾌 상쾌한 하이텐션 보여드리겠습니다.',
-    category: [1, 7, 5, 6, 2, 3],
+    category: [9, 4, 6],
     detail: {
       name: 'Choi Youngim',
       part: 'Live commerce Show host',
@@ -5231,11 +5244,11 @@ export const modelDetails = [
     imageClips: [
       {
         id: 1,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyeri/hyeri_1.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/youngim/youngim_1.png`,
       },
       {
         id: 2,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyeri/hyeri_2.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/youngim/youngim_2.png`,
       },
       {
         id: 3,
@@ -5295,14 +5308,13 @@ export const modelDetails = [
       },
     ],
   },
-
-  //NOTE: 이혜정 쇼호스트
+  //NOTE: 이혜정 쇼호스트 41
   {
     id: 41,
-    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyeri/hyeri_0.png`,
+    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyejung/hyejung_0.png`,
     name: '이혜정 쇼호스트',
     desc: '오래된 홈쇼핑 경력으로 방송의 질을 추구하는 쇼호스트 이혜정입니다.',
-    category: [1, 7, 5, 6, 2, 3],
+    category: [1, 4, 6, 7, 12, 13, 3],
     detail: {
       name: 'Lee Hyejung',
       part: 'Live commerce Show host',
@@ -5321,15 +5333,15 @@ export const modelDetails = [
     imageClips: [
       {
         id: 1,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyeri/hyeri_1.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyejung/hyejung_1.png`,
       },
       {
         id: 2,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyeri/hyeri_2.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyejung/hyejung_2.png`,
       },
       {
         id: 3,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyeri/hyeri_3.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyejung/hyejung_3.png`,
       },
     ],
     career: [
@@ -5494,6 +5506,633 @@ export const modelDetails = [
           {
             name: '펫엔용 프리미엄 강아지간식',
             link: 'https://view.shoppinglive.naver.com/replays/400581?fm=shoppinglive&amp;sn=home',
+            platform: '네이버',
+          },
+        ],
+      },
+    ],
+  },
+  //NOTE: 김보영 쇼호스트 43
+  {
+    id: 43,
+    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/boyoung/boyoung_0.png`,
+    name: '김보영 쇼호스트',
+    desc: '고객님들이 구매 뿐만 아니라 즐기는 방송으로 행복을 드리는 쇼호스트입니다.',
+    category: [4, 6, 3, 2],
+    detail: {
+      name: 'Kim Boyoung',
+      part: 'Live commerce Show host',
+      desc: '고객님들이 구매 뿐만 아니라 즐기는 방송으로 행복을 드리는 쇼호스트입니다.',
+    },
+    liveClips: [
+      {
+        type: 'naver',
+        link: 'https://view.shoppinglive.naver.com/replays/65561?dtm_medium=share&dtm_source=liveviewer&fm=shoppinglive&from=share&sn=share',
+      },
+      {
+        type: 'naver',
+        link: 'https://view.shoppinglive.naver.com/lives/275481?dtm_medium=share&dtm_source=liveviewer&from=share',
+      },
+    ],
+    imageClips: [
+      {
+        id: 1,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/boyoung/boyoung_1.png`,
+      },
+      {
+        id: 2,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/boyoung/boyoung_2.png`,
+      },
+      {
+        id: 3,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/boyoung/boyoung_3.png`,
+      },
+    ],
+    career: [
+      {
+        category: '뷰티/미용',
+        lives: [
+          {
+            name: '헬로우아이즈 아이클리너',
+            link: 'https://view.shoppinglive.naver.com/replays/205952',
+            platform: '네이버',
+          },
+          {
+            name: '아토보스 제품',
+            link: 'https://view.shoppinglive.naver.com/replays/198757?tr=lim',
+            platform: '네이버',
+          },
+          {
+            name: '얼라이브랩 각질패드',
+            link: 'https://view.shoppinglive.naver.com/replays/65561?dtm_medium=share&dtm_source=liveviewer&fm=shoppinglive&from=share&sn=share',
+            platform: '네이버',
+          },
+        ],
+      },
+      {
+        category: '패션',
+        lives: [
+          {
+            name: '플라스틱아일랜드 원피스',
+            link: 'https://view.shoppinglive.naver.com/lives/275423',
+            platform: '신세계',
+          },
+          {
+            name: '쿠론 크로스백 모음',
+            link: 'https://view.shoppinglive.naver.com/lives/275481?dtm_medium=share&dtm_source=liveviewer&from=share',
+            platform: '네이버',
+          },
+          {
+            name: '그레고리 배낭',
+            link: 'https://view.shoppinglive.naver.com/lives/264265',
+            platform: '네이버',
+          },
+        ],
+      },
+      {
+        category: '건강기능식품',
+        lives: [
+          {
+            name: '마이시톨 이노시돌',
+            link: 'https://view.shoppinglive.naver.com/replays/316984?dtm_medium=share&dtm_source=liveviewer&fm=shoppinglive&from=share&sn=share&tr=dlim',
+            platform: '네이버',
+          },
+        ],
+      },
+      {
+        category: '생활/주방',
+        lives: [
+          {
+            name: '이동식 전신 사우나',
+            link: 'https://view.shoppinglive.naver.com/replays/158080?dtm_medium=share&dtm_source=liveviewer&fm=shoppinglive&from=share&sn=share',
+            platform: '네이버',
+          },
+        ],
+      },
+    ],
+  },
+  //NOTE: 권나연 쇼호스트 44
+  {
+    id: 44,
+    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/nayeon/nayeon_0.png`,
+    name: '권나연 쇼호스트',
+    desc: '과자 구매시 질소를 구매한것과 같은 느낌이 아니라 봉지안에 가득 담은 마음으로 방송에 임하겠습니다.',
+    category: [2, 1, 6, 13, 12, 7, 3],
+    detail: {
+      name: 'Kwon Nayeun',
+      part: 'Live commerce Show host',
+      desc: '과자 구매시 질소를 구매한것과 같은 느낌이 아니라 봉지안에 가득 담은 마음으로 방송에 임하겠습니다.',
+    },
+    liveClips: [
+      {
+        type: 'naver',
+        link: 'https://view.shoppinglive.naver.com/replays/213673',
+      },
+      {
+        type: 'naver',
+        link: 'https://view.shoppinglive.naver.com/replays/168084',
+      },
+    ],
+    imageClips: [
+      {
+        id: 1,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/nayeon/nayeon_1.png`,
+      },
+      {
+        id: 2,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/nayeon/nayeon_2.png`,
+      },
+      {
+        id: 3,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/nayeon/nayeon_3.png`,
+      },
+    ],
+    career: [
+      {
+        category: '식품',
+        lives: [
+          {
+            name: '1++ 백억하누',
+            link: 'https://view.shoppinglive.naver.com/replays/384859?tr=lim',
+            platform: '네이버',
+          },
+          {
+            name: '어린 암소 한우',
+            link: 'https://view.shoppinglive.naver.com/replays/394690?dtm_medium=share&dtm_source=liveviewer&fm=shoppinglive&from=share&sn=share',
+            platform: '네이버',
+          },
+          {
+            name: '매콤 코다리조림',
+            link: 'https://view.shoppinglive.naver.com/replays/343984?dtm_medium=share&dtm_source=liveviewer&fm=shoppinglive&from=share&sn=share',
+            platform: '네이버',
+          },
+          {
+            name: '통통 홍가리비',
+            link: 'https://view.shoppinglive.naver.com/replays/312251?dtm_medium=share&dtm_source=liveviewer&fm=shoppinglive&from=share&sn=share',
+            platform: '네이버',
+          },
+          {
+            name: '풀무원 잇츠콜라겐',
+            link: 'https://view.shoppinglive.naver.com/lives/303390?dtm_medium=share&dtm_source=liveviewer&fm=shoppinglive&from=share&sn=share',
+            platform: '네이버',
+          },
+        ],
+      },
+      {
+        category: '뷰티/미용',
+        lives: [
+          {
+            name: '바이오더마 클렌징워터',
+            link: 'https://view.shoppinglive.naver.com/replays/213673',
+            platform: '네이버',
+          },
+          {
+            name: '유어브랜드 메이크업 기획전',
+            link: 'https://view.shoppinglive.naver.com/replays/195395',
+            platform: '네이버',
+          },
+          {
+            name: '동국제약 피부 콜라겐 화장품',
+            link: 'https://view.shoppinglive.naver.com/replays/176837',
+            platform: '네이버',
+          },
+          {
+            name: '이영애의 리파캐럿',
+            link: 'https://view.shoppinglive.naver.com/replays/259281',
+            platform: '네이버',
+          },
+          {
+            name: '조말론 프리지아 코롱 향수',
+            link: 'https://m.shinsegaetvshopping.com/vod/vodPickDetail/2315/2017120446/10686429',
+            platform: '네이버',
+          },
+        ],
+      },
+      {
+        category: '패션',
+        lives: [
+          {
+            name: '랑카스터가방',
+            link: 'https://m.shinsegaetvshopping.com/vod/vodPickDetail/2288/2017120446/20017848',
+            platform: '신세계',
+          },
+          {
+            name: 'ENC 베스트 아이템',
+            link: 'https://view.shoppinglive.naver.com/replays/168084',
+            platform: '네이버',
+          },
+        ],
+      },
+      {
+        category: '건강기능식품',
+        lives: [
+          {
+            name: '차즈기 루테인영양제',
+            link: 'https://view.shoppinglive.naver.com/replays/340924?fm=shoppinglive&amp;sn=home',
+            platform: '네이버',
+          },
+          {
+            name: '마시는 콜라겐',
+            link: 'https://view.shoppinglive.naver.com/replays/103352?dtm_medium=share&dtm_source=liveviewer&from=share',
+            platform: '네이버',
+          },
+        ],
+      },
+      {
+        category: '생활/주방',
+        lives: [
+          {
+            name: '올스텐 가열식 가습기',
+            link: 'https://view.shoppinglive.naver.com/replays/386247?dtm_medium=share&dtm_source=liveviewer&fm=shoppinglive&from=share&sn=share',
+            platform: '네이버',
+          },
+          {
+            name: '부유먼지 청소기',
+            link: 'https://view.shoppinglive.naver.com/replays/379819?dtm_medium=share&dtm_source=liveviewer&fm=shoppinglive&from=share&sn=share',
+            platform: '네이버',
+          },
+          {
+            name: '핫팩 보온 물주머니',
+            link: 'https://view.shoppinglive.naver.com/lives/364445?dtm_medium=share&dtm_source=liveviewer&fm=shoppinglive&from=share&sn=share&tr=lim',
+            platform: '네이버',
+          },
+          {
+            name: '초극세사 탄소매트',
+            link: 'https://view.shoppinglive.naver.com/replays/332696?dtm_medium=share&dtm_source=liveviewer&fm=shoppinglive&from=share&sn=share',
+            platform: '네이버',
+          },
+        ],
+      },
+      {
+        category: '가전',
+        lives: [
+          {
+            name: '딜팩토리 에어컨',
+            link: 'https://view.shoppinglive.naver.com/replays/153889',
+            platform: '네이버',
+          },
+          {
+            name: '현대모비스 차량용품',
+            link: 'https://view.shoppinglive.naver.com/replays/361267?fm=shoppinglive&amp;sn=home',
+            platform: '네이버',
+          },
+        ],
+      },
+      {
+        category: '유아용품',
+        lives: [
+          {
+            name: '숨그림 유아 캐릭터마스크',
+            link: 'https://view.shoppinglive.naver.com/replays/348322?tr=lim',
+            platform: '신세계',
+          },
+          {
+            name: '안나수이 쥬얼리',
+            link: 'https://m.shinsegaetvshopping.com/vod/vodPickDetail/2364/2017120446/20020017',
+            platform: '신세계',
+          },
+        ],
+      },
+    ],
+  },
+  //NOTE: 라세진 쇼호스트 42
+  {
+    id: 42,
+    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/sejin/sejin_0.png`,
+    name: '라세진 쇼호스트',
+    desc: '상품이 돋보일 수 있도록, 상품에 진심을 담는 쇼호스트 라세진입니다.',
+    category: [1, 4, 3, 2, 6],
+    detail: {
+      name: 'La Sejin',
+      part: 'Live commerce Show host',
+      desc: '상품이 돋보일 수 있도록, 상품에 진심을 담는 쇼호스트 라세진입니다.',
+    },
+    liveClips: [
+      {
+        type: 'naver',
+        link: 'https://view.shoppinglive.naver.com/replays/295261?dtm_medium=share&dtm_source=liveviewer&fm=shoppinglive&from=share&sn=share',
+      },
+      {
+        type: 'naver',
+        link: 'https://view.shoppinglive.naver.com/replays/218878?dtm_medium=share&dtm_source=liveviewer&fm=shoppinglive&from=share&sn=share',
+      },
+    ],
+    imageClips: [
+      {
+        id: 1,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/sejin/sejin_1.png`,
+      },
+      {
+        id: 2,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/sejin/sejin_2.png`,
+      },
+      {
+        id: 3,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/sejin/sejin_3.png`,
+      },
+    ],
+    career: [
+      {
+        category: '식품',
+        lives: [
+          {
+            name: '끼니엔 내가끓인 어묵탕',
+            link: 'https://view.shoppinglive.naver.com/replays/322545?dtm_medium=share&dtm_source=liveviewer&fm=shoppinglive&from=share&sn=share',
+            platform: '네이버',
+          },
+          {
+            name: '미엘드 천연 벌꿀파우치',
+            link: 'https://view.shoppinglive.naver.com/replays/331707?dtm_medium=share&dtm_source=liveviewer&fm=shoppinglive&from=share&sn=share',
+            platform: '네이버',
+          },
+          {
+            name: '화춘옥 LA갈비',
+            link: 'https://view.shoppinglive.naver.com/replays/317279?dtm_medium=share&dtm_source=liveviewer&fm=shoppinglive&from=share&sn=share',
+            platform: '네이버',
+          },
+          {
+            name: '심심포차 무뼈/국물 닭발',
+            link: 'https://view.shoppinglive.naver.com/replays/355470?dtm_medium=share&dtm_source=liveviewer&fm=shoppinglive&from=share&sn=share',
+            platform: '네이버',
+          },
+          {
+            name: '집에서 갓구워먹는 빵',
+            link: 'https://view.shoppinglive.naver.com/replays/298963?dtm_medium=share&dtm_source=liveviewer&fm=shoppinglive&from=share&sn=share',
+            platform: '네이버',
+          },
+        ],
+      },
+      {
+        category: '여성패션',
+        lives: [
+          {
+            name: '디즈니 정품 라이센스 티셔츠',
+            link: 'https://view.shoppinglive.naver.com/replays/218878?dtm_medium=share&dtm_source=liveviewer&fm=shoppinglive&from=share&sn=share',
+            platform: '네이버',
+          },
+          {
+            name: '오호스 디자이너 브랜드',
+            link: 'https://view.shoppinglive.naver.com/replays/198910?dtm_medium=share&dtm_source=liveviewer&fm=shoppinglive&from=share&sn=share',
+            platform: '네이버',
+          },
+        ],
+      },
+      {
+        category: '뷰티/미용',
+        lives: [
+          {
+            name: '프로폴리스 멀티밤',
+            link: 'https://view.shoppinglive.naver.com/replays/295261?dtm_medium=share&dtm_source=liveviewer&fm=shoppinglive&from=share&sn=share',
+            platform: '네이버',
+          },
+          {
+            name: '비타민씨 모닝케어 마스크',
+            link: 'https://view.shoppinglive.naver.com/replays/293401?dtm_medium=share&dtm_source=liveviewer&fm=shoppinglive&from=share&sn=share',
+            platform: '네이버',
+          },
+          {
+            name: '에끌라두 리밸런싱코너',
+            link: 'https://view.shoppinglive.naver.com/replays/387132?dtm_medium=share&dtm_source=liveviewer&fm=shoppinglive&from=share&sn=share',
+            platform: '네이버',
+          },
+          {
+            name: '에끌라두셀매직세트',
+            link: 'https://view.shoppinglive.naver.com/replays/387100?dtm_medium=share&dtm_source=liveviewer&fm=shoppinglive&from=share&sn=share',
+            platform: '네이버',
+          },
+          {
+            name: '바론샴푸',
+            link: 'https://www.coupang.com/?src=1191000&spec=10999999&addtag=812&ctag=121049&lptag=CFM17324532&itime=20220222103902&pageType=LIVE%20COMMERCE&pageValue=121049&wPcid=16400766451878467463064&wRef=&wTime=20220222103902&redirect=landing&backType=&settlement=N',
+            platform: '쿠팡',
+          },
+        ],
+      },
+      {
+        category: '건강기능식품',
+        lives: [
+          {
+            name: '배도라지청(개그맨김수영)',
+            link: 'https://naver.me/x8gMBKx1',
+            platform: '네이버',
+          },
+          {
+            name: '타트 체리정',
+            link: 'https://naver.me/GA1EmodM',
+            platform: '네이버',
+          },
+          {
+            name: '프로폴리스 스프레이',
+            link: 'https://view.shoppinglive.naver.com/replays/175617?dtm_medium=share&dtm_source=liveviewer&fm=shoppinglive&from=share&sn=share',
+            platform: '네이버',
+          },
+        ],
+      },
+      {
+        category: '생활/주방',
+        lives: [
+          {
+            name: '데일리쿨 마스크',
+            link: 'https://view.shoppinglive.naver.com/replays/291433',
+            platform: '네이버',
+          },
+          {
+            name: '카라즈롤 매트',
+            link: 'https://view.shoppinglive.naver.com/replays/209130?dtm_medium=share&dtm_source=liveviewer&fm=shoppinglive&from=share&sn=share',
+            platform: '네이버',
+          },
+          {
+            name: '국대마스크',
+            link: 'https://view.shoppinglive.naver.com/replays/309256?dtm_medium=share&dtm_source=liveviewer&fm=shoppinglive&from=share&sn=share',
+            platform: '네이버',
+          },
+          {
+            name: '국대마스크2',
+            link: 'https://view.shoppinglive.naver.com/replays/323359?dtm_medium=share&dtm_source=liveviewer&fm=shoppinglive&from=share&sn=share',
+            platform: '네이버',
+          },
+        ],
+      },
+    ],
+  },
+
+  //NOTE: 김연동 쇼호스트 45
+  {
+    id: 45,
+    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/yeondong/yeondong_0.png`,
+    name: '김연동 쇼호스트',
+    desc: '재섭외율이 높은 쇼호스트 김연동입니다 그 이유를 방송으로 보여드리겠습니다.',
+    category: [1, 2, 4, 3, 6],
+    detail: {
+      name: 'Kim YeonDong',
+      part: 'Live commerce Show host',
+      desc: '재섭외율이 높은 쇼호스트 김연동입니다 그 이유를 방송으로 보여드리겠습니다.',
+    },
+    liveClips: [
+      {
+        type: 'naver',
+        link: 'https://view.shoppinglive.naver.com/replays/358921?fm=shoppinglive&sn=home',
+      },
+      {
+        type: 'naver',
+        link: 'https://view.shoppinglive.naver.com/replays/331698?fm=shoppinglive&sn=home',
+      },
+    ],
+    imageClips: [
+      {
+        id: 1,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/yeondong/yeondong_1.png`,
+      },
+      {
+        id: 2,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/yeondong/yeondong_2.png`,
+      },
+      {
+        id: 3,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/yeondong/yeondong_3.png`,
+      },
+    ],
+    career: [
+      {
+        category: '식품',
+        lives: [
+          {
+            name: '흑돼지',
+            link: 'https://shoppinglive.naver.com/replays/351716?fm=shoppinglive&sn=home',
+            platform: '네이버',
+          },
+          {
+            name: '샤인머스켓',
+            link: 'https://shoppinglive.naver.com/replays/288983?fm=shoppinglive&sn=home',
+            platform: '네이버',
+          },
+          {
+            name: '오레오',
+            link: 'https://shoppinglive.naver.com/replays/301256?fm=shoppinglive&sn=home',
+            platform: '네이버',
+          },
+          {
+            name: '지리솥 비빔장',
+            link: 'https://shoppinglive.naver.com/replays/117984?fm=shoppinglive&sn=home',
+            platform: '네이버',
+          },
+          {
+            name: '무봉리 순대국',
+            link: 'https://shoppinglive.naver.com/replays/126665?fm=shoppinglive&sn=home',
+            platform: '네이버',
+          },
+        ],
+      },
+      {
+        category: '여성패션',
+        lives: [
+          {
+            name: '센츄리21 알파카코트',
+            link: 'https://view.shoppinglive.naver.com/replays/314038',
+            platform: '네이버',
+          },
+          {
+            name: '리베리베 아우터',
+            link: 'https://view.shoppinglive.naver.com/replays/268109',
+            platform: '네이버',
+          },
+          {
+            name: '니트 투피스',
+            link: 'https://shoppinglive.naver.com/replays/243421?fm=shoppinglive&sn=home',
+            platform: '네이버',
+          },
+          {
+            name: '청바지',
+            link: 'https://shoppinglive.naver.com/replays/234911?fm=shoppinglive&sn=home',
+            platform: '네이버',
+          },
+          {
+            name: '칼하트',
+            link: 'https://shoppinglive.naver.com/replays/415615?fm=shoppinglive&sn=home',
+            platform: '네이버',
+          },
+        ],
+      },
+      {
+        category: '뷰티/미용',
+        lives: [
+          {
+            name: '에이비팜',
+            link: 'https://shoppinglive.naver.com/replays/331698?fm=shoppinglive&sn=home',
+            platform: '네이버',
+          },
+          {
+            name: '인투메디, 블랑루시',
+            link: 'https://shoppinglive.naver.com/replays/300161?fm=shoppinglive&sn=home',
+            platform: '네이버',
+          },
+          {
+            name: '스와니코코 비타민라인',
+            link: 'https://view.shoppinglive.naver.com/replays/250898?from=share&fm=shoppinglive&sn=share',
+            platform: '네이버',
+          },
+          {
+            name: '스와니코코 모공라인',
+            link: 'https://view.shoppinglive.naver.com/replays/243535?from=share&fm=shoppinglive&sn=share',
+            platform: '네이버',
+          },
+          {
+            name: '아페리레 모공팩',
+            link: 'https://link.coupang.com/nt/LIVECO?pageKey=157290&pType=live&source=sharedLink',
+            platform: '쿠팡',
+          },
+        ],
+      },
+      {
+        category: '건강기능식품',
+        lives: [
+          {
+            name: '아모레퍼시픽 효소',
+            link: 'https://view.shoppinglive.naver.com/lives/325434?dtm_medium=share&dtm_source=liveviewer&fm=shoppinglive&from=share&sn=share',
+            platform: '네이버',
+          },
+          {
+            name: '아모레퍼시픽 콜라겐',
+            link: 'https://shoppinglive.naver.com/replays/358921?fm=shoppinglive&sn=home',
+            platform: '네이버',
+          },
+          {
+            name: '한미양행 다이어트',
+            link: 'https://shoppinglive.naver.com/replays/133621?fm=shoppinglive&sn=home',
+            platform: '네이버',
+          },
+          {
+            name: '홍건강 홍삼스틱',
+            link: 'https://shoppinglive.naver.com/replays/136855?fm=shoppinglive&sn=home',
+            platform: '네이버',
+          },
+          {
+            name: '큐옴바이오 유산균',
+            link: 'https://view.shoppinglive.naver.com/lives/274953',
+            platform: '네이버',
+          },
+        ],
+      },
+      {
+        category: '생활/주방',
+        lives: [
+          {
+            name: '양키캔들',
+            link: 'https://shoppinglive.naver.com/replays/346630?fm=shoppinglive&sn=home',
+            platform: '네이버',
+          },
+          {
+            name: '바이아우어 샴푸',
+            link: 'https://link.coupang.com/nt/LIVECO?pageKey=153680&pType=live&source=sharedLink',
+            platform: '쿠팡',
+          },
+          {
+            name: '크루즈 향수',
+            link: 'https://shoppinglive.naver.com/replays/295831?fm=shoppinglive&sn=home',
+            platform: '네이버',
+          },
+          {
+            name: '아이키마스크',
+            link: 'https://shoppinglive.naver.com/replays/380103?fm=shoppinglive&sn=home',
             platform: '네이버',
           },
         ],

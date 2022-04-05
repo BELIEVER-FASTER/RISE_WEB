@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { responSiveSize } from 'utils/style_opt';
 
 export const CategoryListBox = styled.ul`
   margin-top: 10rem;
@@ -57,6 +58,11 @@ export const CateFilterBtn = styled.button<{ open: boolean }>`
       background-color: #fff;
       color: #fa370b;
     `}
+
+  @media ${responSiveSize.mobile} {
+    font-size: 16px;
+    left: 20px;
+  }
 `;
 export const FilterContainer = styled.aside<{ open: boolean }>`
   position: fixed;

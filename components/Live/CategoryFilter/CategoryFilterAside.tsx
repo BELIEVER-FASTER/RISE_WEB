@@ -30,7 +30,10 @@ export default function CategoryFilterAside({
 }: CateListProps): JSX.Element {
   const [open, setOpen] = useState(false);
   const onToggleOpen = () => setOpen(prev => !prev);
-  const onClickCate = (id: number) => setSelectedCate(id);
+  const onClickCate = (id: number) => {
+    setSelectedCate(id);
+    setOpen(false);
+  };
   return (
     <>
       <FilterContainer open={open}>

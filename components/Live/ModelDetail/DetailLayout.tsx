@@ -34,9 +34,7 @@ function LinkIcon() {
 gsap.registerPlugin(ScrollTrigger, ScrollTo);
 export default function DetailLayout(): JSX.Element {
   const router = useRouter();
-  // const [modelData] = useState(
-  //   modelData2.find(data => data.id === +(router.query.model as string))
-  // );
+
   const [modelData] = useState(
     modelDetails.find(data => data.id === +(router.query.model as string))
   );
@@ -88,7 +86,7 @@ export default function DetailLayout(): JSX.Element {
               <div className="img__wrapper-1">
                 <img src={modelData?.imageClips[0].link} alt="main_image" />
               </div>
-              <p>{modelData?.desc}</p>
+              <p>{modelData?.desc.replaceAll('/', ' ')}</p>
               <Social type="쇼호스트 진행문의" link="" />
             </article>
 

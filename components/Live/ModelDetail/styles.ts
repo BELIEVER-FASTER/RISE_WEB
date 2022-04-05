@@ -258,8 +258,10 @@ export const DetailBox = styled.div`
       }
     }
     .section-2 {
+      flex-direction: column;
       .left {
         width: 340px;
+        margin-bottom: 32px;
       }
       .right {
         margin-top: 4px;
@@ -351,6 +353,43 @@ export const DetailBox = styled.div`
       }
       .right {
         font-size: 14px;
+        grid-template-columns: repeat(1, 1fr);
+        & > li {
+          width: 100%;
+          overflow: hidden;
+          h4 {
+            font-size: 16px;
+            padding-bottom: 16px;
+          }
+          ul {
+            width: 100%;
+            li {
+              align-items: flex-start;
+              margin-bottom: 16px;
+              p {
+                width: 30vw;
+                font-size: 16px;
+                line-height: 1.7;
+              }
+              a {
+                display: inline;
+                flex: 1;
+                margin: 0;
+                font-size: 16px;
+                white-space: normal;
+                line-height: 1.7;
+                svg {
+                  margin-left: 2px;
+                  display: inline;
+                  width: 22px;
+                  height: 22px;
+                  vertical-align: middle;
+                  transform: scale(1.2) translateY(-1px);
+                }
+              }
+            }
+          }
+        }
         li > a {
           margin-bottom: 20px;
           svg {

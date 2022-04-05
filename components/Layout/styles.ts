@@ -17,7 +17,7 @@ export const LogoContainer = styled.div<{ isBlack: boolean; visible: boolean }>`
   &:hover {
     svg {
       fill: #fa370b !important;
-      stroke: #fa370b !important;
+      /* stroke: #fa370b !important; */
     }
   }
   ${({ isBlack }) =>
@@ -25,7 +25,7 @@ export const LogoContainer = styled.div<{ isBlack: boolean; visible: boolean }>`
     css`
       svg {
         fill: #000;
-        stroke: #000;
+        /* stroke: #000; */
       }
     `}
   @media ${responSiveSize.mobile} {

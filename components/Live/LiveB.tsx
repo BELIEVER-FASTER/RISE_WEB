@@ -36,9 +36,16 @@ export default function LiveB(): JSX.Element {
 
   useEffect(() => {
     if (!cateRef) return;
-    console.log(11111);
-    console.log(cateInView);
   }, [cateInView, cateRef]);
+
+  useEffect(() => {
+    const offset = document.documentElement.scrollTop;
+    const top = window.innerWidth > 950 ? 700 : 400;
+    if (offset > top) {
+      scrollTo({ top, behavior: 'smooth' });
+      scrollTo({ top, behavior: 'smooth' });
+    }
+  }, [selectedCate]);
 
   useEffect(() => {
     if (router.query.model) {
