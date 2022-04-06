@@ -88,10 +88,13 @@ export default function DetailLayout(): JSX.Element {
             </article>
             <article className="section-1">
               <div className="img__wrapper-1">
-                <img src={modelData?.imageClips[0].link} alt="main_image" />
+                <img src={modelData?.imageClips[0].link} alt={modelData?.name || ''} />
               </div>
               <p>{modelData?.desc.replaceAll('/', ' ')}</p>
-              <Social type="쇼호스트 진행문의" link="" />
+              <Social
+                type="쇼호스트 진행문의"
+                link="https://www.riseenm.com/contact#contact__form"
+              />
             </article>
 
             <article className="section-2">

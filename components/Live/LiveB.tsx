@@ -40,7 +40,7 @@ export default function LiveB(): JSX.Element {
 
   useEffect(() => {
     const offset = document.documentElement.scrollTop;
-    const top = window.innerWidth > 950 ? 700 : 400;
+    const top = window.innerWidth > 950 ? 700 : 350;
     if (offset > top) {
       scrollTo({ top, behavior: 'smooth' });
       scrollTo({ top, behavior: 'smooth' });

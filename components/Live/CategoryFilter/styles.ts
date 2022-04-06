@@ -6,6 +6,20 @@ export const CategoryListBox = styled.ul`
   display: flex;
   flex-wrap: wrap;
   max-width: 710px;
+
+  @media ${responSiveSize.mobile} {
+    -ms-overflow-style: none;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    margin-top: 6rem;
+    position: absolute;
+    padding-left: 16px;
+    left: 0;
+    right: 0;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
 `;
 export const CategoryItem = styled.li<{ selected: boolean }>`
   margin-right: 28px;
@@ -27,6 +41,12 @@ export const CategoryItem = styled.li<{ selected: boolean }>`
       color: #fff;
       padding: 8px 16px;
     `}
+  @media ${responSiveSize.mobile} {
+    white-space: nowrap;
+    font-size: 13px;
+    margin-right: 20px;
+    margin-bottom: 0px;
+  }
 `;
 
 export const CateFilterBtn = styled.button<{ open: boolean }>`

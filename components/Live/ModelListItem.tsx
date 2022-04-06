@@ -13,7 +13,7 @@ export default function ModelListItem({
   modelData,
 }: // idx,
 ModelListItemProps): JSX.Element {
-  const { inView, ref } = useInView({ threshold: 0.45, triggerOnce: true });
+  const { inView, ref } = useInView({ threshold: 0.3, triggerOnce: true });
   const index = ((modelData.id - 3) % 3) * 3;
   const router = useRouter();
 

@@ -603,12 +603,12 @@ export const modelDetails = [
     id: 4,
     thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/donghyun/donghyun_0.png`,
     name: '김동현 쇼호스트',
-    desc: '다양한 라이브방송의 경험으로 브랜드 가치를/ 높이며 재미있는 방송으로 선보입니다.',
+    desc: '높은텐션과 소통능력, 웃는상과 더불어/ 신뢰 가는 목소리가 장점입니다.',
     category: [1, 2, 7, 4, 6],
     detail: {
       name: 'Kim DongHyun',
       part: 'Live commerce Show host',
-      desc: '다양한 라이브방송의 경험으로 브랜드 가치를  높이며 재미있는 방송으로 선보이는 쇼호스트',
+      desc: '높은텐션과 소통능력, 웃는상과 더불어 신뢰 가는 목소리가 장점입니다.',
     },
     liveClips: [
       { type: 'naver', link: 'https://view.shoppinglive.naver.com/replays/246722' },
