@@ -2,27 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
 	<loc>https://www.riseenm.com</loc>
-	<lastmod>2021-09-03T13:30:53+09:00</lastmod>
-	<priority>0.8</priority>
+	<lastmod>2022-04-03T13:30:53+09:00</lastmod>
+	<priority>1</priority>
   </url>
   <url>
 	<loc>https://www.riseenm.com/about</loc>
-	<lastmod>2021-09-03T13:30:53+09:00</lastmod>
-	<priority>1</priority>
+	<lastmod>2022-04-03T13:30:53+09:00</lastmod>
+	<priority>0.8</priority>
  </url>
   <url>
 	<loc>https://www.riseenm.com/work</loc>
-	<lastmod>2021-09-03T13:30:53+09:00</lastmod>
-	<priority>1</priority>
+	<lastmod>2022-04-03T13:30:53+09:00</lastmod>
+	<priority>0.8</priority>
  </url>
   <url>
-	<loc>https://www.riseenm.com/live</loc>
-	<lastmod>2021-09-03T13:30:53+09:00</lastmod>
-	<priority>0.8</priority>
+	<loc>https://www.riseenm.com/showhost</loc>
+	<lastmod>2022-04-03T13:30:53+09:00</lastmod>
+	<priority>0.9</priority>
  </url>   
  <url>
 	<loc>https://www.riseenm.com/contact</loc>
-	<lastmod>2021-09-03T13:30:53+09:00</lastmod>
-	<priority>1</priority>
+	<lastmod>2022-04-03T13:30:53+09:00</lastmod>
+	<priority>0.5</priority>
  </url> 
 </urlset>

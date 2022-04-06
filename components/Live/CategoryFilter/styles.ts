@@ -5,7 +5,7 @@ export const CategoryListBox = styled.ul`
   margin-top: 10rem;
   display: flex;
   flex-wrap: wrap;
-  max-width: 908px;
+  max-width: 710px;
 `;
 export const CategoryItem = styled.li<{ selected: boolean }>`
   margin-right: 28px;

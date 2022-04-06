@@ -25,7 +25,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse): Promise<void>
           text: 'RiSE 문의 사항',
           html: makeContactMail(result.id as string, req.body),
         });
-        console.log(mailToUs);
 
         const mailToUser = transporter.sendMail({
           from: `"RiSE" <contact@riseenm.com>`,

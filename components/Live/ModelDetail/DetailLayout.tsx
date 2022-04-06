@@ -41,11 +41,15 @@ export default function DetailLayout(): JSX.Element {
   useEffect(() => {
     const sc = document.querySelector('#scroll_container') as HTMLElement;
     const handler = () => {
+      const height = (document.querySelector('.main_content') as HTMLDivElement)
+        .offsetHeight;
       const aaa =
         sc.scrollTop === 0
           ? 0
-          : (100 * (sc.scrollTop + sc.clientHeight)) / sc.scrollHeight;
-      console.log(aaa, (100 - aaa) * 3.5 * 0.01);
+          : window.innerWidth > 900
+          ? (100 * (sc.scrollTop + sc.clientHeight)) / sc.scrollHeight
+          : (sc.scrollTop / height) * 100 - 4;
+
       if (aaa > 82) {
         gsap.to('#scroll_container', { opacity: 0, duration: 0.5 });
         setTimeout(() => {

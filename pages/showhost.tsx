@@ -18,7 +18,7 @@ export default function showhost(): JSX.Element {
     <>
       <MetaGe
         title="쇼호스트 소개 | 라이즈"
-        desc="라이브커머스 대행사인 라이즈의 전문 쇼호스트를 소개합니다."
+        desc="트렌디한 라이브커머스 대행 라이즈의 전문적인 쇼호스트를 소개합니다."
         url="https://www.riseenm.com/live"
       />
       <LiveLayoutContainer>

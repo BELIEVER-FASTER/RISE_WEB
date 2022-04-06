@@ -9,8 +9,8 @@ export default function work(): JSX.Element {
   return (
     <>
       <MetaGe
-        title="클라이언트 소개 | 라이즈"
-        desc="라이브커머스 대행사인 라이즈의 성과와, 라이브쇼핑 진행과정을 살펴보세요"
+        title="라이브커머스 대행 프로세스 | 라이즈"
+        desc="라이브커머스 대행 라이즈의 성과와, 라이브커머스 진행 프로세스를 살펴보세요"
         url="https://www.riseenm.com/work"
       />
       <WorkLayout />

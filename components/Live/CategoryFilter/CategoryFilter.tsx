@@ -29,7 +29,7 @@ function CategoryFilter({ selectedCate, setSelectedCate }: CateListProps): JSX.E
       <CateItem
         onClickCate={onClickCate}
         selected={selectedCate === 0}
-        ct={{ id: 0, name: 'all' }}
+        ct={{ id: 0, name: '전체' }}
       />
       {categoryData.map(ct => (
         <CateItem

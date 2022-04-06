@@ -11,8 +11,8 @@ type ModelListItemProps = {
 };
 export default function ModelListItem({
   modelData,
-  idx,
-}: ModelListItemProps): JSX.Element {
+}: // idx,
+ModelListItemProps): JSX.Element {
   const { inView, ref } = useInView({ threshold: 0.45, triggerOnce: true });
   const index = ((modelData.id - 3) % 3) * 3;
   const router = useRouter();
@@ -28,7 +28,7 @@ export default function ModelListItem({
   useEffect(() => {
     if (inView) {
       let delay1 = 0;
-      let delay2 = 0.4;
+      let delay2 = 0.2;
       if (innerWidth > 950) {
         delay1 = index / 10;
         delay2 = index / 10 + 0.4;
@@ -36,7 +36,7 @@ export default function ModelListItem({
       gsap.to(`#model_item__image-${modelData.id}`, {
         opacity: 1,
         y: 0,
-        duration: 1,
+        duration: 0.4,
         delay: delay1,
       });
       gsap.from(`#model_item__summary-${modelData.id}`, {

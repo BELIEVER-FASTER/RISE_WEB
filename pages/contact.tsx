@@ -10,8 +10,8 @@ export default function contact(): JSX.Element {
   return (
     <>
       <MetaGe
-        title="라이브커머스진행 문의하기 | 라이즈"
-        desc="네이버 쇼핑라이브, 카카오 쇼핑라이브, 11번가 라이브 등 다양한 라이브커머스 플랫폼에서의 라이브쇼핑 진행이 가능합니다."
+        title="라이브커머스 대행 문의하기 | 라이즈"
+        desc="네이버 쇼핑라이브, 카카오 쇼핑라이브, 11번가 쇼핑라이브 등 다양한 라이브커머스 플랫폼에서의 쇼핑라이브 진행이 가능합니다."
         url="https://www.riseenm.com/contact"
       />
       <ContactLayout />

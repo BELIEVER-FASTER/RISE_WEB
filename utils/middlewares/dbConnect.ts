@@ -15,7 +15,6 @@ async function dbConnect(): Promise<void> {
     });
 
     connection.isConnected = db.connections[0].readyState;
-    console.log('디비 연결');
   } catch (e) {
     console.error(e);
   }

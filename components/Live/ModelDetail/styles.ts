@@ -301,6 +301,7 @@ export const DetailBox = styled.div`
   }
   @media ${responSiveSize.mobile} {
     width: 85%;
+    padding-bottom: 200px;
     .scroll_message {
       font-size: 16px;
       top: -35px;
@@ -367,7 +368,7 @@ export const DetailBox = styled.div`
               align-items: flex-start;
               margin-bottom: 16px;
               p {
-                width: 30vw;
+                width: 25vw;
                 font-size: 16px;
                 line-height: 1.7;
               }

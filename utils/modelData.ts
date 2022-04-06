@@ -2,22 +2,15 @@ export const categoryData = [
   { id: 1, name: '식품' },
   { id: 2, name: '뷰티/화장품' },
   { id: 3, name: '헬스케어' },
-  { id: 4, name: '여성패션' },
-  { id: 5, name: '남성패션' },
+  { id: 4, name: '패션' },
   { id: 6, name: '생활/주방' },
   { id: 7, name: '디지털/가전' },
   { id: 8, name: '유아용품' },
   { id: 9, name: '가구/소품' },
   { id: 10, name: '여행/레저' },
-  { id: 11, name: '금융/보험' },
   { id: 12, name: '반려동물' },
   { id: 13, name: '쥬얼리' },
-  { id: 14, name: '스포츠' },
-  { id: 15, name: '명품' },
 ];
-
-// 신현아 쇼호스트 링크 1
-// 김태훈 쇼호스트 링크 1
 
 export type Model = typeof modelDetails[0];
 export const modelDetails = [
@@ -27,7 +20,7 @@ export const modelDetails = [
     thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/seola/sera_0.png`,
     name: '박설아 쇼호스트',
     desc: '유쾌한 진행, 재섭외로 증명하는 쇼호스트',
-    category: [1, 2, 3, 4, 6, 7, 8, 9, 12, 14],
+    category: [1, 2, 7, 6, 9, 12, 3],
     detail: {
       name: 'Park Seola',
       part: 'Live commerce Show host',
@@ -300,7 +293,7 @@ export const modelDetails = [
     thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/lael/lael_0.png`,
     name: '윤라엘 쇼호스트',
     desc: '품격있는 하이텐션 쇼호스트',
-    category: [3, 4, 5, 14],
+    category: [3, 4, 14],
     detail: {
       name: 'Yoon lael',
       part: 'Live commerce Show host',
@@ -393,7 +386,7 @@ export const modelDetails = [
     thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/ahyoon/ahyoon_0.png`,
     name: '이아윤 쇼호스트',
     desc: '다양한 라이브방송의 경험으로 브랜드 가치를/ 높이며 재미있는 방송으로 선보입니다.',
-    category: [3, 4, 5, 14],
+    category: [3, 4, 14],
     detail: {
       name: 'Lee Ahyoon',
       part: 'Live commerce Show host',
@@ -611,7 +604,7 @@ export const modelDetails = [
     thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/donghyun/donghyun_0.png`,
     name: '김동현 쇼호스트',
     desc: '다양한 라이브방송의 경험으로 브랜드 가치를/ 높이며 재미있는 방송으로 선보입니다.',
-    category: [1, 2, 7, 5, 6],
+    category: [1, 2, 7, 4, 6],
     detail: {
       name: 'Kim DongHyun',
       part: 'Live commerce Show host',
@@ -862,7 +855,7 @@ export const modelDetails = [
     thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/seongmin/seongmin_0.png`,
     name: '노성민 쇼호스트',
     desc: '뻔하지 않은 FUN한 즐거운 진행!/ 늘 변함없는 마음과 진정성 있는 마음으로/ 다가가겠습니다. ',
-    category: [1, 2, 5, 6, 7],
+    category: [1, 2, 4, 6, 7],
     detail: {
       name: 'Noh SeongMin',
       part: 'Live commerce Show host',
@@ -998,7 +991,7 @@ export const modelDetails = [
     thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyunsun/hyunsun_0.png`,
     name: '박현선 쇼호스트',
     desc: '뮤지컬을 전공하고 현재 다양한 플랫폼에서/ 라이브커머스 쇼호스트로 활동하고 있습니다.',
-    category: [2, 14, 3, 1, 12, 8, 4, 7, 6],
+    category: [1, 3, 12, 8, 7],
     detail: {
       name: 'Park HyunSun ',
       part: 'Live commerce Show host',
@@ -1237,7 +1230,7 @@ export const modelDetails = [
     thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/mimi2/mimi_0.png`,
     name: '김미미 쇼호스트',
     desc: '만능 엔터테이너 김미미입니다. 본업 뮤지컬 배우부터 해서 모델 mc 그리고 쇼호스트로 활약하고 있습니다.',
-    category: [1, 2, 4, 7, 6, 9, 12],
+    category: [1, 2, 12, 6, 7],
     detail: {
       name: 'Kim MiMi',
       part: 'Live commerce Show host',
@@ -1659,7 +1652,7 @@ export const modelDetails = [
     thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/jungme/jungme_0.png`,
     name: '이정미 쇼호스트',
     desc: '초등학교 아이를 키우고 있는 엄마로서 모든 분들께 친근하게 다가갈 수 있는 쇼호스트 이정미 입니다.',
-    category: [1, 2, 7, 6, 12, 8, 3, 9],
+    category: [1, 6, 12, 8, 3],
     detail: {
       name: 'Lee Jungme',
       part: 'Live commerce Show host',
@@ -1982,7 +1975,7 @@ export const modelDetails = [
     thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/gowoon2/gowoon_0.png`,
     name: '정고운 쇼호스트',
     desc: '저는 밝은 에너지를 가진 저만의 상큼한/ 에너지로 특별한 방송 보여드리겠습니다',
-    category: [1, 7, 2, 6, 3, 4, 8, 9],
+    category: [1, 2, 4, 8, 10],
     detail: {
       name: 'Jeong Gowoon',
       part: 'Live commerce Show host',
@@ -2211,7 +2204,7 @@ export const modelDetails = [
     thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/sanghwan/sanghwan_0.png`,
     name: '정상환 쇼호스트',
     desc: '월요일 출근길 만원 지하철에서 하나 남은 빈자리 같은 남자',
-    category: [1, 5, 2, 7, 6, 9, 10],
+    category: [1, 2, 7, 9, 10],
     detail: {
       name: 'Jung Sanghwan',
       part: 'Live commerce Show host',
@@ -2405,7 +2398,7 @@ export const modelDetails = [
     thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/sanghak/sanghak_0.png`,
     name: '이상학 쇼호스트',
     desc: '쇼핑라이브에 유튜브 감성을 더한 진행을 하는 쇼호스트 이상학입니다',
-    category: [1, 2, 7, 5],
+    category: [1, 2, 7, 4],
     detail: {
       name: 'Lee sanghak',
       part: 'Live commerce Show host',
@@ -2593,7 +2586,7 @@ export const modelDetails = [
     thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/taehoon/taehoon_0.png`,
     name: '김태훈 쇼호스트',
     desc: '제대로 학습하여 정확한 정보와 재미있는 방송을 약속드리겠습니다.',
-    category: [1, 2, 5, 7, 6, 9],
+    category: [1, 2, 4, 7, 6, 9],
     detail: {
       name: 'Kim Taehoon',
       part: 'Live commerce Show host',
@@ -2727,7 +2720,7 @@ export const modelDetails = [
     thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/junho/junho_0.png`,
     name: '민준호 쇼호스트',
     desc: '밝은 에너지와 텐션으로 유쾌한 진행을 순수한 마음으로 진정성있는 전달이 동시에',
-    category: [1, 7, 5, 6, 2, 3],
+    category: [1, 7, 4, 6, 2, 3],
     detail: {
       name: 'Min Junho',
       part: 'Live commerce Show host',
@@ -2856,7 +2849,7 @@ export const modelDetails = [
     thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/sangrin/sangrin_0.png`,
     name: '김상린 쇼호스트',
     desc: '쿠팡 크리에이터로 활동하고 있는 김상린 입니다. 동반 성장한다는 마음으로 최선을 다하겠습니다.',
-    category: [1, 5, 6, 3, 2],
+    category: [1, 4, 6, 3, 2],
     detail: {
       name: 'Kim Sangrin',
       part: 'Live commerce Show host',
@@ -3163,7 +3156,7 @@ export const modelDetails = [
     thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/jihee/jihee_0.png`,
     name: '한지희 쇼호스트',
     desc: '연기자출신의 상황극의 달인, 못 받아치는 드립이 없는 높은텐션의 쇼호스트 입니다.',
-    category: [1, 10, 12, 7, 2, 3],
+    category: [1, 10, 12, 7, 2],
     detail: {
       name: 'Han Jihee',
       part: 'Live commerce Show host',
@@ -3530,7 +3523,7 @@ export const modelDetails = [
     thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/sieun/sieun_0.png`,
     name: '김시은 쇼호스트',
     desc: '"화끈하게 시연 하는" 쇼호스트 "화시은" 김시은입니다. ',
-    category: [1, 2, 4, 7, 8, 12],
+    category: [1, 4, 7, 8, 12],
     detail: {
       name: 'Kim Sieun',
       part: 'Live commerce Show host',
@@ -4027,7 +4020,7 @@ export const modelDetails = [
     thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/dasom/dasom_0.png`,
     name: '김다솜 쇼호스트',
     desc: '모델연기 전공자 하이텐션 끝판왕 쇼호스트 김다솜입니다.',
-    category: [4, 7, 1, 10, 2, 8, 6],
+    category: [4, 7, 1, 8, 6],
     detail: {
       name: 'Kim Dasom',
       part: 'Live commerce Show host',
@@ -4548,7 +4541,7 @@ export const modelDetails = [
     thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyeri/hyeri_0.png`,
     name: '빈혜리 쇼호스트',
     desc: '다채로운 필드의 경험과 방송실력까지 겸비한 쇼호스트이자 함께하는 브랜드만의 팔레트입니다.',
-    category: [1, 7, 4, 3, 10, 2],
+    category: [1, 7, 3, 10, 2],
     detail: {
       name: 'Choi Yebin',
       part: 'Live commerce Show host',
@@ -5314,7 +5307,7 @@ export const modelDetails = [
     thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/hyejung/hyejung_0.png`,
     name: '이혜정 쇼호스트',
     desc: '오래된 홈쇼핑 경력으로 방송의 질을 추구하는 쇼호스트 이혜정입니다.',
-    category: [1, 4, 6, 7, 12, 13, 3],
+    category: [6, 7, 12, 13, 3],
     detail: {
       name: 'Lee Hyejung',
       part: 'Live commerce Show host',
@@ -5617,7 +5610,7 @@ export const modelDetails = [
     thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/nayeon/nayeon_0.png`,
     name: '권나연 쇼호스트',
     desc: '과자 구매시 질소를 구매한것과 같은 느낌이 아니라 봉지안에 가득 담은 마음으로 방송에 임하겠습니다.',
-    category: [2, 1, 6, 13, 12, 7, 3],
+    category: [2, 1, 6, 13, 12, 7],
     detail: {
       name: 'Kwon Nayeun',
       part: 'Live commerce Show host',

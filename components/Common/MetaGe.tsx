@@ -10,7 +10,7 @@ export default function MetaGe({ title, desc, url }: MetaGeProps): JSX.Element {
   return (
     <Head>
       <meta name="description" content={desc} />
-      <meta property="og:site_name" content="RISE ENM" />
+      <meta property="og:site_name" content="라이즈 스튜디오" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={desc} />
       <meta
@@ -19,7 +19,7 @@ export default function MetaGe({ title, desc, url }: MetaGeProps): JSX.Element {
       />
       <meta property="og:url" content={url} />
       <meta property="twitter:card" content="summary" />
-      <meta property="twitter:site" content="RISE ENM" />
+      <meta property="twitter:site" content="라이즈 스튜디오" />
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={desc} />
       <meta
