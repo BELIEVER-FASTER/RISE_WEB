@@ -6132,4 +6132,89 @@ export const modelDetails = [
       },
     ],
   },
+
+  //NOTE: 우희준 쇼호스트 46
+  {
+    id: 46,
+    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/yeondong/yeondong_0.png`,
+    name: '우희준 쇼호스트',
+    desc: '재섭외율이 높은 쇼호스트 김연동입니다 그 이유를 방송으로 보여드리겠습니다.',
+    category: [1, 3, 10, 4],
+    detail: {
+      name: 'Kim YeonDong',
+      part: 'Live commerce Show host',
+      desc: '재섭외율이 높은 쇼호스트 김연동입니다 그 이유를 방송으로 보여드리겠습니다.',
+    },
+    liveClips: [
+      {
+        type: 'naver',
+        link: 'https://view.shoppinglive.naver.com/replays/358921?fm=shoppinglive&sn=home',
+      },
+      {
+        type: 'naver',
+        link: 'https://view.shoppinglive.naver.com/replays/331698?fm=shoppinglive&sn=home',
+      },
+    ],
+    imageClips: [
+      {
+        id: 1,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/yeondong/yeondong_1.png`,
+      },
+      {
+        id: 2,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/yeondong/yeondong_2.png`,
+      },
+      {
+        id: 3,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/yeondong/yeondong_3.png`,
+      },
+    ],
+    career: [
+      {
+        category: '식품',
+        lives: [
+          {
+            name: '나드리김밥',
+            link: 'https://www.youtube.com/watch?v=CgLqvKbkN_c',
+            platform: 'CJ온스타일',
+          },
+          {
+            name: '군산오징어 현장 방송',
+            link: 'https://www.youtube.com/watch?v=BiepVwAYCCQ',
+            platform: 'CJ온스타일',
+          },
+          {
+            name: '오뚜기 X O 만두',
+            link: 'https://www.youtube.com/watch?v=3AQyAobDDTM',
+            platform: 'CJ온스타일',
+          },
+        ],
+      },
+      {
+        category: '패션',
+        lives: [
+          {
+            name: '복클래식 패딩',
+            link: 'https://www.youtube.com/watch?v=gicUjli-xD0',
+            platform: 'CJ온스타일',
+          },
+          {
+            name: '내셔널 지오그래픽',
+            link: 'https://www.youtube.com/watch?v=saKP51X3UH0',
+            platform: 'CJ온스타일',
+          },
+        ],
+      },
+      {
+        category: '스포츠',
+        lives: [
+          {
+            name: '인싸쇼핑 나바 힙마스터',
+            link: 'https://www.youtube.com/watch?v=Z3grbqEu8uw',
+            platform: 'CJ온스타일',
+          },
+        ],
+      },
+    ],
+  },
 ];
