@@ -27,8 +27,11 @@ export const modelDetails = [
       desc: '하이텐션 입담과 반전매력을 소유한 샵테이너',
     },
     liveClips: [
-      { type: 'naver', link: 'https://view.shoppinglive.naver.com/replays/141137' },
-      { type: 'naver', link: 'https://view.shoppinglive.naver.com/replays/218495' },
+      {
+        type: 'naver',
+        link: 'https://view.shoppinglive.naver.com/replays/384074?tr=lim5',
+      },
+      { type: 'naver', link: 'https://view.shoppinglive.naver.com/replays/190954' },
     ],
     imageClips: [
       {
@@ -48,11 +51,6 @@ export const modelDetails = [
       {
         category: '식품',
         lives: [
-          {
-            name: '동원 참치회 추석 선물세트',
-            link: 'https://www.instagram.com/p/CT02E2LBdCJ/?utm_medium=copy_link',
-            platform: '현대H몰',
-          },
           {
             name: '곱창거래소 곱창, 대창, 막창 세트',
             link: 'https://www.instagram.com/p/CVxeWzrBVIu/?utm_medium=copy_link',
@@ -176,16 +174,6 @@ export const modelDetails = [
           {
             name: '로탄틱 프랑스 명품 디퓨저',
             link: 'https://view.shoppinglive.naver.com/replays/179866',
-            platform: '네이버',
-          },
-          {
-            name: '아이코코 마스크',
-            link: 'https://view.shoppinglive.naver.com/replays/364666',
-            platform: '네이버',
-          },
-          {
-            name: '아이코코 마스크2',
-            link: 'https://view.shoppinglive.naver.com/replays/352172?fm=shoppinglive&sn=home',
             platform: '네이버',
           },
         ],
@@ -319,16 +307,6 @@ export const modelDetails = [
     ],
     career: [
       {
-        category: '헬스케어',
-        lives: [
-          {
-            name: '홈트 끝판왕 레이몬 멀티핏과 여름준비',
-            link: 'https://view.shoppinglive.naver.com/replays/178826?from=share&fm=shoppinglive&sn=share',
-            platform: '네이버',
-          },
-        ],
-      },
-      {
         category: '여성패션',
         lives: [
           {
@@ -393,7 +371,7 @@ export const modelDetails = [
       desc: '다양한 라이브방송의 경험으로 브랜드 가치를 높이며 재미있는 방송으로 선보이는 쇼호스트',
     },
     liveClips: [
-      { type: 'naver', link: 'https://naver.me/GY2cYzzf' },
+      { type: 'naver', link: 'https://view.shoppinglive.naver.com/replays/283926' },
       { type: 'naver', link: 'https://naver.me/IDBOhw4d' },
     ],
     imageClips: [
@@ -630,7 +608,7 @@ export const modelDetails = [
     ],
     career: [
       {
-        category: '푸드',
+        category: '식품',
         lives: [
           {
             name: '남도 농바름고구마',
@@ -788,7 +766,7 @@ export const modelDetails = [
     ],
     career: [
       {
-        category: '푸드',
+        category: '식품',
         lives: [
           {
             name: '수제밀스틱',
@@ -803,11 +781,6 @@ export const modelDetails = [
           {
             name: '홈밋 국내산 수제 양념돼지갈비2',
             link: 'https://view.shoppinglive.naver.com/replays/285143?dtm_medium=share&dtm_source=liveviewer&from=share',
-            platform: '네이버',
-          },
-          {
-            name: '파스키에 프랑스 디저트 모음',
-            link: 'https://view.shoppinglive.naver.com/replays/381060?fm=shoppinglive&sn=home',
             platform: '네이버',
           },
         ],
@@ -828,7 +801,7 @@ export const modelDetails = [
           {
             name: '베리웰샴푸',
             link: 'https://www.coupang.com/?wPcid=12764157189898510098890&wRef=&wTime=&redirect=landing',
-            platform: '네이버',
+            platform: '쿠팡',
           },
         ],
       },
@@ -862,10 +835,10 @@ export const modelDetails = [
       desc: '뻔하지 않은 FUN한 즐거운 진행! 늘 변함없는 마음과 진정성 있는 마음으로 다가가겠습니다. ',
     },
     liveClips: [
-      { type: 'naver', link: 'https://view.shoppinglive.naver.com/replays/141036' },
+      { type: 'naver', link: 'https://view.shoppinglive.naver.com/replays/118900' },
       {
         type: 'naver',
-        link: 'https://view.shoppinglive.naver.com/replays/224859?from=share',
+        link: 'https://view.shoppinglive.naver.com/replays/141363',
       },
     ],
     imageClips: [
@@ -1004,7 +977,7 @@ export const modelDetails = [
       },
       {
         type: 'naver',
-        link: 'https://naver.me/xorV6HYu',
+        link: 'https://view.shoppinglive.naver.com/replays/331457?dtm_medium=share&dtm_source=liveviewer&fm=shoppinglive&from=share&sn=share',
       },
     ],
     imageClips: [
@@ -1140,11 +1113,6 @@ export const modelDetails = [
             link: 'https://view.shoppinglive.naver.com/replays/242975?dtm_medium=share&dtm_source=liveviewer&from=share',
             platform: '네이버',
           },
-          {
-            name: '프로스펙스 NBR요가매트',
-            link: 'https://view.shoppinglive.naver.com/lives/354344?dtm_medium=share&dtm_source=liveviewer&fm=shoppinglive&from=share&sn=share&tr=lim',
-            platform: '네이버',
-          },
         ],
       },
       {
@@ -1160,11 +1128,6 @@ export const modelDetails = [
       {
         category: '생활/주방',
         lives: [
-          {
-            name: '에어토리2 공기청정',
-            link: 'https://view.shoppinglive.naver.com/lives/354344?dtm_medium=share&dtm_source=liveviewer&fm=shoppinglive&from=share&sn=share&tr=lim',
-            platform: '현대H몰',
-          },
           {
             name: '차량용 5G V2X모듈',
             link: 'https://www.youtube.com/shorts/ukVX-P-_fsU',
@@ -1282,12 +1245,12 @@ export const modelDetails = [
           {
             name: '롯데제과 x 무직타이거',
             link: 'https://www.instagram.com/tv/CY8HJZKr7Re/?utm_medium=copy_lin',
-            platform: '배민',
+            platform: '배달의 민족',
           },
           {
             name: '샤인머스캣',
             link: 'https://www.instagram.com/tv/CUZVouoj86_/?utm_medium=copy_link',
-            platform: '배민',
+            platform: '배달의 민족',
           },
         ],
       },
@@ -1367,7 +1330,7 @@ export const modelDetails = [
           {
             name: '지누스 매트리스',
             link: 'https://live11.11st.co.kr/output/20210416_14hlive_full/Default/MP4/20210416_14hlive_full.mp4',
-            platform: '배민',
+            platform: '배달의 민족',
           },
         ],
       },
@@ -2157,7 +2120,7 @@ export const modelDetails = [
           {
             name: '해즈브로 플레이도우',
             link: 'https://www.youtube.com/watch?v=ZUrtIrRGUAo',
-            platform: '쿠팡라이브',
+            platform: '쿠팡',
           },
           {
             name: '토이쿠키',
@@ -2266,17 +2229,17 @@ export const modelDetails = [
           {
             name: '투쿨포스쿨',
             link: 'https://link.coupang.com/re/NONPROFITLIVE?pageKey=108011&lptag=CFM76223207&pType=live&source=sharedLink&roomId=108011',
-            platform: '쿠팡라이브',
+            platform: '쿠팡',
           },
           {
             name: '쿤달',
             link: 'https://link.coupang.com/re/NONPROFITLIVE?pageKey=103822&lptag=CFM76223207&pType=live&source=sharedLink&roomId=103822',
-            platform: '쿠팡라이브',
+            platform: '쿠팡',
           },
           {
             name: '유리아쥬',
             link: 'https://link.coupang.com/re/NONPROFITLIVE?pageKey=103824&lptag=CFM76223207&pType=live&source=sharedLink&roomId=103824',
-            platform: '쿠팡라이브',
+            platform: '쿠팡',
           },
         ],
       },
@@ -2906,7 +2869,7 @@ export const modelDetails = [
           {
             name: '보늬테라피 순한 폼클렌징',
             link: 'https://link.coupang.com/re/NONPROFITLIVE?pageKey=141583&lptag=CFM66275232&pType=live&source=sharedLink&roomId=141583&backType=1',
-            platform: '쿠팡라이브',
+            platform: '쿠팡',
           },
         ],
       },
@@ -2916,12 +2879,12 @@ export const modelDetails = [
           {
             name: '닥터헤디슨 더 탱글 콜라겐',
             link: 'https://link.coupang.com/nt/LIVECO?pageKey=145748&pType=live',
-            platform: '쿠팡라이브',
+            platform: '쿠팡',
           },
           {
             name: '닥터헤디슨 이로운 효소균',
             link: 'https://link.coupang.com/re/NONPROFITLIVE?pageKey=149275&lptag=CFM66275232&pType=live&source=sharedLink&roomId=149275',
-            platform: '쿠팡라이브',
+            platform: '쿠팡',
           },
         ],
       },
@@ -2956,12 +2919,12 @@ export const modelDetails = [
           {
             name: '바디버든프로젝트 샴푸, 트리트먼트',
             link: 'https://link.coupang.com/re/NONPROFITLIVE?pageKey=128159&lptag=CFM66275232&pType=live&source=sharedLink&roomId=128159',
-            platform: '쿠팡라이브',
+            platform: '쿠팡',
           },
           {
             name: '체인랜서 아이들 장난',
             link: 'https://link.coupang.com/re/NONPROFITLIVE?pageKey=137967&lptag=CFM66275232&pType=live&source=sharedLink&roomId=137967&backType=1',
-            platform: '쿠팡라이브',
+            platform: '쿠팡',
           },
         ],
       },
@@ -4995,12 +4958,12 @@ export const modelDetails = [
           {
             name: '지고트 트렌트코트',
             link: 'https://www.youtube.com/watch?v=Q9sogL1_nKQ',
-            platform: '현대mall',
+            platform: '현대H몰',
           },
           {
             name: '라코스테 가디건',
             link: 'https://www.youtube.com/watch?v=52tIzHq_PHM',
-            platform: '현대mall',
+            platform: '현대H몰',
           },
           {
             name: '베오라 잠옷',
@@ -5076,11 +5039,6 @@ export const modelDetails = [
             link: 'https://view.shoppinglive.naver.com/lives/191652',
             platform: '네이버',
           },
-          {
-            name: '제목없음',
-            link: 'https://www.coupang.com/?wPcid=12764157189898510098890&wRef=&wTime=&redirect=landing',
-            platform: '쿠팡',
-          },
         ],
       },
       {
@@ -5089,11 +5047,6 @@ export const modelDetails = [
           {
             name: 'EGF 올로지',
             link: 'https://view.shoppinglive.naver.com/lives/346986',
-            platform: '네이버',
-          },
-          {
-            name: '스웨덴 에그솝',
-            link: 'https://view.shoppinglive.naver.com/lives/70062',
             platform: '네이버',
           },
           {
@@ -6132,41 +6085,40 @@ export const modelDetails = [
       },
     ],
   },
-
-  //NOTE: 우희준 쇼호스트 46
+  //NOTE: 김선우 쇼호스트 46
   {
     id: 46,
-    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/yeondong/yeondong_0.png`,
-    name: '우희준 쇼호스트',
-    desc: '재섭외율이 높은 쇼호스트 김연동입니다 그 이유를 방송으로 보여드리겠습니다.',
-    category: [1, 3, 10, 4],
+    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/seonwoo/seonwoo_0.png`,
+    name: '김선우 쇼호스트',
+    desc: '"압도적으로 높은 평균 시청시간." 김선우와 함께라면 방송과 매출을 함께 잡을 수 있습니다.',
+    category: [1, 6, 7, 12],
     detail: {
-      name: 'Kim YeonDong',
+      name: 'Kim Seonwoo',
       part: 'Live commerce Show host',
-      desc: '재섭외율이 높은 쇼호스트 김연동입니다 그 이유를 방송으로 보여드리겠습니다.',
+      desc: '"압도적으로 높은 평균 시청시간." 김선우와 함께라면 방송과 매출을 함께 잡을 수 있습니다.',
     },
     liveClips: [
       {
         type: 'naver',
-        link: 'https://view.shoppinglive.naver.com/replays/358921?fm=shoppinglive&sn=home',
+        link: 'https://view.shoppinglive.naver.com/replays/242143',
       },
       {
         type: 'naver',
-        link: 'https://view.shoppinglive.naver.com/replays/331698?fm=shoppinglive&sn=home',
+        link: 'https://shoppinglive.naver.com/replays/246126',
       },
     ],
     imageClips: [
       {
         id: 1,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/yeondong/yeondong_1.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/seonwoo/seonwoo_1.png`,
       },
       {
         id: 2,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/yeondong/yeondong_2.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/seonwoo/seonwoo_2.png`,
       },
       {
         id: 3,
-        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/yeondong/yeondong_3.png`,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/seonwoo/seonwoo_3.png`,
       },
     ],
     career: [
@@ -6174,19 +6126,153 @@ export const modelDetails = [
         category: '식품',
         lives: [
           {
-            name: '나드리김밥',
-            link: 'https://www.youtube.com/watch?v=CgLqvKbkN_c',
-            platform: 'CJ온스타일',
+            name: '100억쭈꾸미송쭈집 [고정진행]',
+            link: 'https://shoppinglive.naver.com/replays/240591',
+            platform: '네이버',
           },
           {
-            name: '군산오징어 현장 방송',
-            link: 'https://www.youtube.com/watch?v=BiepVwAYCCQ',
-            platform: 'CJ온스타일',
+            name: '건화한우다토마호크& 우대갈비',
+            link: 'https://shoppinglive.naver.com/replays/192831',
+            platform: '네이버',
           },
           {
-            name: '오뚜기 X O 만두',
-            link: 'https://www.youtube.com/watch?v=3AQyAobDDTM',
-            platform: 'CJ온스타일',
+            name: '송도 맛집 80 상 참치 런칭',
+            link: 'https://shoppinglive.naver.com/replays/220401',
+            platform: '네이버',
+          },
+          {
+            name: '금강수림 전통육개장 DSLR 3 Cam',
+            link: 'https://view.shoppinglive.naver.com/replays/247354',
+            platform: '네이버',
+          },
+        ],
+      },
+      {
+        category: '생활/주방',
+        lives: [
+          {
+            name: '광진굿샵 자세교정 , 거북목 의료기기',
+            link: 'https://view.shoppinglive.naver.com/replays/252688',
+            platform: '네이버',
+          },
+          {
+            name: 'OREX 5 파장 사각방등 , 전구 모음',
+            link: 'https://shoppinglive.naver.com/replays/260543',
+            platform: '네이버',
+          },
+          {
+            name: '금성침대 X 베드리움 매트리스',
+            link: 'https://player.sauceflex.com/broadcast/vclotteimalllotteimall--283232a0679c4499a45ddec630392df5?',
+            platform: '소스플렉스',
+          },
+          {
+            name: '마운틴이퀍먼트 캠핑 체어',
+            link: 'https://m.simsale.co.kr/tv/replay/10018',
+            platform: '심쿵',
+          },
+        ],
+      },
+      {
+        category: '디지털/가전',
+        lives: [
+          {
+            name: 'SK 세븐모바일알뜰폰유심[고정진행]',
+            link: 'https://shoppinglive.naver.com/replays/246126',
+            platform: '네이버',
+          },
+          {
+            name: '대우 루컴즈 안드로이드TV[고정진행]',
+            link: 'https://shoppinglive.naver.com/replays/239994',
+            platform: '네이버',
+          },
+          {
+            name: '라인 프렌즈 모바일 악세사리 모음전',
+            link: 'https://shoppinglive.naver.com/replays/77987',
+            platform: '네이버',
+          },
+        ],
+      },
+      {
+        category: '반려동물',
+        lives: [
+          {
+            name: "Hill's 힐스 사료 [고정진행]",
+            link: 'https://view.shoppinglive.naver.com/replays/196054',
+            platform: '네이버',
+          },
+          {
+            name: '퍼핑 펫매트 고정진행 [고정진행]',
+            link: 'https://view.shoppinglive.naver.com/replays/242143',
+            platform: '네이버',
+          },
+        ],
+      },
+    ],
+  },
+  //NOTE: 박민혁 쇼호스트 47
+  {
+    id: 47,
+    thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/minhyuk/minhyuk_0.png`,
+    name: '박민혁 쇼호스트',
+    desc: '다양했던 배역만큼 여러가지 경험으로 고객님들에게 소개해드리고 공감하면서 많이 팔고싶습니다.',
+    category: [1, 4, 7],
+    detail: {
+      name: 'Park Minhyuk',
+      part: 'Live commerce Show host',
+      desc: '다양했던 배역만큼 여러가지 경험으로 고객님들에게 소개해드리고 공감하면서 많이 팔고싶습니다.',
+    },
+    liveClips: [
+      {
+        type: 'naver',
+        link: 'https://view.shoppinglive.naver.com/lives/375297?dtm_medium=share&dtm_source=liveviewer&fm=shoppinglive&from=share&sn=share',
+      },
+      {
+        type: 'naver',
+        link: 'https://view.shoppinglive.naver.com/lives/293729',
+      },
+    ],
+    imageClips: [
+      {
+        id: 1,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/minhyuk/minhyuk_1.png`,
+      },
+      {
+        id: 2,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/minhyuk/minhyuk_2.png`,
+      },
+      {
+        id: 3,
+        link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/minhyuk/minhyuk_3.png`,
+      },
+    ],
+    career: [
+      {
+        category: '식품',
+        lives: [
+          {
+            name: '한우1++ 설선물세트 1',
+            link: 'https://shoppinglive.naver.com/livebridge/386426?fm=shoppinglive&sn=share',
+            platform: '네이버',
+          },
+          {
+            name: '한우1++ 설선물세트 2',
+            link: 'https://view.shoppinglive.naver.com/lives/398504?tr=lim&fm=shoppinglive&sn=bridge',
+            platform: '네이버',
+          },
+          {
+            name: '진안마이산김치, 군산 짬뽕라면 ,군산 십리향미',
+            link: 'https://view.shoppinglive.naver.com/lives/348912',
+            platform: '네이버',
+          },
+          {
+            name: '떡볶이 대잔치',
+            link: 'https://view.shoppinglive.naver.com/lives/375297?dtm_medium=share&dtm_source=liveviewer&fm=shoppinglive&from=share&sn=share',
+            platform: '네이버',
+          },
+          {
+            name: '마누카꿀세트 ,새싹인삼 선물세트',
+            link: 'https://shoppinglive.naver.com/livebridge/378780?fm=shoppinglive&sn=home',
+            platform: '네이버',
           },
         ],
       },
@@ -6194,27 +6280,126 @@ export const modelDetails = [
         category: '패션',
         lives: [
           {
-            name: '복클래식 패딩',
-            link: 'https://www.youtube.com/watch?v=gicUjli-xD0',
-            platform: 'CJ온스타일',
+            name: '광진굿샵 자세교정 , 거북목 의료기기',
+            link: 'https://view.shoppinglive.naver.com/replays/252688',
+            platform: '네이버',
           },
           {
-            name: '내셔널 지오그래픽',
-            link: 'https://www.youtube.com/watch?v=saKP51X3UH0',
-            platform: 'CJ온스타일',
+            name: '지오 송지오',
+            link: 'https://view.shoppinglive.naver.com/lives/286360',
+            platform: '네이버',
+          },
+          {
+            name: '파렌하이트',
+            link: 'https://view.shoppinglive.naver.com/lives/293729',
+            platform: '네이버',
+          },
+          {
+            name: '파렌하이트 2',
+            link: 'https://view.shoppinglive.naver.com/replays/382855?tr=lim5',
+            platform: '네이버',
+          },
+          {
+            name: '남성 명품 자켓 경매',
+            link: 'https://shoppinglive.naver.com/livebridge/325541?fm=shoppinglive&sn=home',
+            platform: '네이버',
           },
         ],
       },
       {
-        category: '스포츠',
+        category: '디지털/가전',
         lives: [
           {
-            name: '인싸쇼핑 나바 힙마스터',
-            link: 'https://www.youtube.com/watch?v=Z3grbqEu8uw',
-            platform: 'CJ온스타일',
+            name: '센스필 햅틱마우스 햅틱콘솔[고정진행]',
+            link: 'https://shoppinglive.naver.com/replays/246126',
+            platform: '네이버',
           },
         ],
       },
     ],
   },
+  // //NOTE: 우희준 쇼호스트 46
+  // {
+  //   id: 46,
+  //   thumbnail: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/yeondong/yeondong_0.png`,
+  //   name: '우희준 쇼호스트',
+  //   desc: '재섭외율이 높은 쇼호스트 김연동입니다 그 이유를 방송으로 보여드리겠습니다.',
+  //   category: [1, 3, 10, 4],
+  //   detail: {
+  //     name: 'Kim YeonDong',
+  //     part: 'Live commerce Show host',
+  //     desc: '재섭외율이 높은 쇼호스트 김연동입니다 그 이유를 방송으로 보여드리겠습니다.',
+  //   },
+  //   liveClips: [
+  //     {
+  //       type: 'naver',
+  //       link: 'https://view.shoppinglive.naver.com/replays/358921?fm=shoppinglive&sn=home',
+  //     },
+  //     {
+  //       type: 'naver',
+  //       link: 'https://view.shoppinglive.naver.com/replays/331698?fm=shoppinglive&sn=home',
+  //     },
+  //   ],
+  //   imageClips: [
+  //     {
+  //       id: 1,
+  //       link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/yeondong/yeondong_1.png`,
+  //     },
+  //     {
+  //       id: 2,
+  //       link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/yeondong/yeondong_2.png`,
+  //     },
+  //     {
+  //       id: 3,
+  //       link: `${process.env.NEXT_PUBLIC_S3_SRC}/image/model/yeondong/yeondong_3.png`,
+  //     },
+  //   ],
+  //   career: [
+  //     {
+  //       category: '식품',
+  //       lives: [
+  //         {
+  //           name: '나드리김밥',
+  //           link: 'https://www.youtube.com/watch?v=CgLqvKbkN_c',
+  //           platform: 'CJ온스타일',
+  //         },
+  //         {
+  //           name: '군산오징어 현장 방송',
+  //           link: 'https://www.youtube.com/watch?v=BiepVwAYCCQ',
+  //           platform: 'CJ온스타일',
+  //         },
+  //         {
+  //           name: '오뚜기 X O 만두',
+  //           link: 'https://www.youtube.com/watch?v=3AQyAobDDTM',
+  //           platform: 'CJ온스타일',
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       category: '패션',
+  //       lives: [
+  //         {
+  //           name: '복클래식 패딩',
+  //           link: 'https://www.youtube.com/watch?v=gicUjli-xD0',
+  //           platform: 'CJ온스타일',
+  //         },
+  //         {
+  //           name: '내셔널 지오그래픽',
+  //           link: 'https://www.youtube.com/watch?v=saKP51X3UH0',
+  //           platform: 'CJ온스타일',
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       category: '스포츠',
+  //       lives: [
+  //         {
+  //           name: '인싸쇼핑 나바 힙마스터',
+  //           link: 'https://www.youtube.com/watch?v=Z3grbqEu8uw',
+  //           platform: 'CJ온스타일',
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
 ];

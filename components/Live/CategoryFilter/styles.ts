@@ -50,7 +50,7 @@ export const CategoryItem = styled.li<{ selected: boolean }>`
 `;
 
 export const CateFilterBtn = styled.button<{ open: boolean }>`
-  position: fixed;
+  position: sticky;
   bottom: 40px;
   left: 40px;
   background-color: #aaa;

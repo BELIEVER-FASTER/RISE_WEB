@@ -89,7 +89,7 @@ export const DetailBox = styled.div`
     }
     & > p {
       width: 50%;
-      font-size: 35px;
+      font-size: 32px;
       margin: 48px 0 48px auto;
       line-height: 52px;
       letter-spacing: 1px;
@@ -100,6 +100,7 @@ export const DetailBox = styled.div`
       margin: 48px 0 0px auto;
       span {
         font-size: 30px;
+        color: #fa370b;
       }
       svg {
         width: 30px;
@@ -113,7 +114,7 @@ export const DetailBox = styled.div`
     display: flex;
     line-height: 1.4;
     .left {
-      width: 400px;
+      width: 350px;
       font-size: 40px;
       font-weight: 600;
     }
@@ -140,7 +141,7 @@ export const DetailBox = styled.div`
             white-space: nowrap;
             font-size: 20px;
             p {
-              width: 22%;
+              width: 27%;
               font-size: 20px;
             }
             a {

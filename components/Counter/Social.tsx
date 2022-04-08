@@ -10,7 +10,7 @@ export default function Social({ type, link }: SocialProps): JSX.Element {
     <SocialBox href={link} title={type} target="_blank" className="btn__social">
       <span>{type}</span>
       {/* <Icon name="link_arrow" className="icon__social" /> */}
-      <svg
+      {/* <svg
         className="icon__social"
         width="15"
         height="15"
@@ -36,6 +36,24 @@ export default function Social({ type, link }: SocialProps): JSX.Element {
             />
           </clipPath>
         </defs>
+      </svg> */}
+      <svg
+        width="44"
+        height="44"
+        viewBox="0 0 44 44"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 22C0 9.85189 9.84799 0 21.9961 0C34.1442 0 43.9922 9.85189 43.9922 22C43.9922 34.1481 34.1442 44 21.9961 44C9.84799 44 0 34.1481 0 22Z"
+          fill="#FA370B"
+        />
+        <path d="M25 16H16V17.5H25V16Z" fill="white" />
+        <path d="M27.9922 28V19H26.4922V28H27.9922Z" fill="white" />
+        <path
+          d="M17.108 27.714L25.8462 19L24.7841 17.9408L16.0458 26.6548L17.108 27.714Z"
+          fill="white"
+        />
       </svg>
     </SocialBox>
   );
