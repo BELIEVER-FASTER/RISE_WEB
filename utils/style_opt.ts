@@ -72,6 +72,18 @@ table {
         src:url('/font/NHaasGroteskTXPro-75Bd.woff') format('woff');
         font-weight:600;
     }
+    @font-face{
+        font-family: 'Ivy Mode';
+        src:url('/font/IvyMode-Italic.woff') format('woff');
+        font-weight: normal;
+        font-style: italic;
+    }
+    @font-face {
+        font-family: 'Ivy Mode';
+        src: url('/font/IvyMode-LightItalic.woff') format('woff');
+        font-weight: 300;
+        font-style: italic;
+    }
     .invinsible{
         opacity: 0;
     }
