@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import MainLayout from 'components/Main/MainLayout';
+import MainLayout from 'components/Main/legacy/MainLayout';
 import Head from 'next/head';
 
 export default function main(): JSX.Element {
