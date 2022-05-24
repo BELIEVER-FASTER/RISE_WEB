@@ -14,11 +14,13 @@ export default function Input({
   className = '',
   type = 'text',
   value = '',
+  placeholder = '',
   ...rest
 }: InputProps): JSX.Element {
   return (
     <InputBox value={value} id={id} className={className}>
       <input value={value} type={type} {...rest} />
+      {placeholder && <label>{placeholder}</label>}
     </InputBox>
   );
 }

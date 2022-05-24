@@ -5,7 +5,7 @@ import { MainSection5CT } from './styles';
 export default function MainSection5(): JSX.Element {
   const [scale, setScale] = useState(1);
   useEffect(() => {
-    window.addEventListener('scroll', e => {
+    const handler = () => {
       const container = document.querySelector('.section5') as HTMLDivElement;
       const elOffsetStart = container.offsetHeight + window.innerHeight;
       const currentOffset = document.documentElement.scrollTop - window.innerHeight;
@@ -18,7 +18,9 @@ export default function MainSection5(): JSX.Element {
         if (scale > 1.7) return;
         setScale(scale);
       }
-    });
+    };
+    window.addEventListener('scroll', handler);
+    return () => window.removeEventListener('scroll', handler);
   }, []);
   return (
     <MainSection5CT className="section5" scale={scale}>

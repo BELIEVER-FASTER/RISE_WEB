@@ -82,8 +82,8 @@ export default function ContactForm(): JSX.Element {
     if (!phone.trim()) return setValid(false);
     if (!content.trim()) return setValid(false);
     if (!company.trim()) return setValid(false);
-    if (budget === '광고예산') return setValid(false);
-    if (!startDate) return setValid(false);
+    // if (budget === '광고예산') return setValid(false);
+    // if (!startDate) return setValid(false);
     setValid(true);
   }, [name, email, phone, company, content, checked, budget, startDate]);
 
@@ -129,31 +129,17 @@ export default function ContactForm(): JSX.Element {
     <>
       <ContactFormContainer ref={ref} id="contact__form">
         <form onSubmit={onSubmit}>
-          <h3>
-            예산과 일정에 <br className="mobile" /> 대해 알려주세요.
-          </h3>
-          <div className="budget__field">
-            <CustomSelect
-              className="budget_input invinsible"
-              placeholder="광고예산"
-              value={budget}
-              setValue={setBudget}
-              options={budgetOptions}
-            />
-            <DatePick
-              className="date_input invinsible"
-              value={startDate}
-              setValue={setStartDate}
-            />
-          </div>
-          <h3>
-            간단한 정보를
-            <br className="mobile" /> 입력해 주세요.
-          </h3>
+          {/* <CustomSelect
+            className="budget_input invinsible"
+            placeholder="광고예산"
+            value={budget}
+            setValue={setBudget}
+            options={budgetOptions}
+          /> */}
           <div className="contact__field">
             <Input
               className="contact_input invinsible"
-              placeholder="이름"
+              placeholder="담당자 이름"
               value={name}
               onChange={onChangeName}
             />
@@ -199,11 +185,7 @@ export default function ContactForm(): JSX.Element {
             {prModalOpen && <PrivacyModal onClose={() => setPrModalOpen(false)} />}
             <span>에 동의합니다.</span>
           </div>
-          <Button
-            label={state.loading ? 'loading' : '문의하기'}
-            type="submit"
-            disabled={!valid}
-          />
+          <button disabled={!valid}>{state.loading ? 'loading' : '문의하기'}</button>
         </form>
       </ContactFormContainer>
       {modalOpen && <ResultModal name={name} onClose={onClose} />}

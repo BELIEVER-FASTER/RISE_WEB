@@ -6,6 +6,8 @@ import MainSection3 from './MainSection3';
 import MainSection4 from './MainSection4';
 import MainSection5 from './MainSection5';
 import MainSection6 from './MainSection6';
+import MainSection7 from './MainSection7';
+import MainSection8 from './MainSection8';
 import { SectionWithBanner } from './styles';
 
 export default function MainLayout(): JSX.Element {
@@ -38,7 +40,9 @@ export default function MainLayout(): JSX.Element {
       <SectionWithBanner>
         <LineBanner />
         <MainSection6 />
+        <MainSection7 />
       </SectionWithBanner>
+      <MainSection8 />
     </div>
   );
 }

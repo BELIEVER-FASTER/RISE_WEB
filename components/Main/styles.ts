@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 export const MainSection1CT = styled.section`
-  height: 110vh;
+  height: 115vh;
   display: flex;
   justify-content: center;
   padding-top: 280px;
@@ -30,9 +30,9 @@ export const MainSection1CT = styled.section`
   position: relative;
   .main_banner_video {
     position: absolute;
-    bottom: -35vh;
-    max-width: 1300px;
-    height: 658px;
+    bottom: -29vh;
+    max-width: 1200px;
+    /* height: 658px; */
     video {
       width: 100%;
     }
@@ -214,6 +214,7 @@ export const SectionWithBanner = styled.div`
   position: relative;
 `;
 export const LineBannerCT = styled.aside`
+  z-index: 99;
   position: sticky;
   top: calc(100vh - 52px);
   overflow: hidden;
@@ -227,7 +228,7 @@ export const LineBannerCT = styled.aside`
     font-weight: 600;
   }
   .text {
-    animation: bannermove 20s linear infinite alternate;
+    animation: bannermove 80s linear infinite;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
@@ -246,9 +247,178 @@ export const LineBannerCT = styled.aside`
       margin-left: 0px;
     }
     100% {
-      margin-left: -1850px;
+      margin-left: -7400px;
     }
   }
 `;
 
-export const MainSection6CT = styled.section``;
+export const MainSection6CT = styled.section`
+  padding: 276px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  h2 {
+    text-align: center;
+    color: #040201;
+    font-weight: 500;
+    font-size: 72px;
+    position: relative;
+    em {
+      position: absolute;
+      font-family: 'Ivy Mode';
+      font-style: italic;
+      font-weight: 300;
+      font-size: 20px;
+      top: -30px;
+      right: 20%;
+    }
+  }
+  & > p {
+    text-align: center;
+    font-size: 24px;
+    line-height: 1.4;
+    margin-top: 36px;
+    margin-bottom: 112px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    li {
+      img {
+        width: 280px;
+        height: 280px;
+      }
+      h4 {
+        font-weight: 400;
+        font-size: 24px;
+        strong {
+          font-family: 'Ivy Mode';
+          font-style: italic;
+        }
+      }
+      p {
+        font-size: 16px;
+        margin-top: 16px;
+        line-height: 1.5;
+      }
+    }
+    li:nth-of-type(1) {
+      margin-left: 150px;
+    }
+    li:nth-of-type(2) {
+      align-self: flex-end;
+    }
+    li:nth-of-type(3) {
+    }
+    li:nth-of-type(4) {
+      align-self: flex-end;
+    }
+    li:nth-of-type(5) {
+      margin-left: 130px;
+    }
+  }
+`;
+
+export const MainSection7CT = styled.section`
+  h2 {
+    text-align: center;
+    color: #040201;
+    font-weight: 500;
+    font-size: 72px;
+    position: relative;
+    em {
+      position: absolute;
+      font-family: 'Ivy Mode';
+      font-style: italic;
+      font-weight: 300;
+      font-size: 20px;
+      top: -30px;
+      right: 20%;
+    }
+  }
+  & > p {
+    text-align: center;
+    font-size: 24px;
+    line-height: 1.4;
+    margin-top: 36px;
+    margin-bottom: 72px;
+  }
+  padding-bottom: 170px;
+  .studio_wrapper {
+    margin: 0 auto;
+    max-width: 1200px;
+    height: 740px;
+    position: relative;
+    img {
+      width: 100%;
+    }
+    & > ul {
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      position: absolute;
+      bottom: 40px;
+      color: #dddddd;
+      font-size: 20px;
+      li + li {
+        margin-left: 52px;
+      }
+    }
+  }
+`;
+export const StudioBtnBox = styled.li<{ active: boolean }>`
+  transition: all 0.25s;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  svg {
+    width: 0;
+    transition: all 0.25s;
+  }
+  ${({ active }) =>
+    active &&
+    css`
+      font-weight: 600;
+      color: #fff;
+      transform: translateY(-3px);
+      svg {
+        width: 18px;
+        margin: 0 3px;
+      }
+    `};
+`;
+export const MainSection8CT = styled.section`
+  padding: 224px 0 120px 0;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2 {
+    color: #fff;
+    display: inline;
+    text-align: center;
+    font-weight: 500;
+    font-size: 72px;
+    position: relative;
+    em {
+      position: absolute;
+      font-family: 'Ivy Mode';
+      font-style: italic;
+      font-weight: 300;
+      font-size: 20px;
+      top: -30px;
+      right: -7%;
+    }
+  }
+  & > p {
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+    line-height: 1.4;
+    margin-top: 36px;
+    /* margin-bottom: 112px; */
+  }
+`;

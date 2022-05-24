@@ -23,23 +23,48 @@ const slideUp = keyframes`
 export const InputBox = styled.div<{ value: string | number }>`
   height: 4.125rem;
   z-index: 30;
+  position: relative;
   input {
     height: 100%;
     width: 100%;
-    font-size: 32px;
+    font-size: 26px;
     border: none;
     outline: none;
-    border-bottom: 3px solid #e0e0e0;
+    border-bottom: 3px solid #838383;
     border-radius: 0;
+    background: none;
+    color: #fff;
+    z-index: 9;
+    position: relative;
     &::placeholder {
       color: #838383;
     }
+  }
+  label {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 26px;
+    color: #838383;
+    transition: all 0.25s;
+  }
+  input:focus + label {
+    top: -30px;
+    font-size: 14px;
   }
   ${({ value }) =>
     value &&
     css`
       input {
-        border-bottom: 3px solid #000;
+        border-bottom: 3px solid #838383;
+      }
+      label {
+        top: -30px;
+        font-size: 14px;
       }
     `}
   @media ${responSiveSize.mobile} {
@@ -120,16 +145,18 @@ export const TextareaBox = styled.div<{ value?: string; height?: number }>`
   width: 100%;
   height: 100%;
   textarea {
-    padding: 2rem;
+    padding: 1.5rem;
     font-family: sans-serif;
     letter-spacing: 0.9px;
     min-height: 6.25rem;
-    font-size: 32px;
+    font-size: 26px;
     width: 100%;
     height: 100%;
     resize: none;
     outline: none;
-    border: 3px solid #e0e0e0;
+    background: none;
+    border: 3px solid #838383;
+    color: #fff;
   }
   ${({ height }) =>
     height &&
@@ -140,7 +167,7 @@ export const TextareaBox = styled.div<{ value?: string; height?: number }>`
     value &&
     css`
       textarea {
-        border: 3px solid #000;
+        border: 3px solid #838383;
       }
     `}
   @media ${responSiveSize.mobile} {
@@ -523,6 +550,7 @@ export const PrivacyModalWrapper = styled(ModalWrapper)`
     height: 100%;
     position: relative;
     overflow-y: scroll;
+    color: #000;
     br.mobile {
       display: none;
     }
@@ -577,6 +605,7 @@ export const PrivacyModalWrapper = styled(ModalWrapper)`
           cursor: default;
           font-weight: 400;
           text-decoration: none;
+          color: #000;
         }
         p {
           font-size: 28px;

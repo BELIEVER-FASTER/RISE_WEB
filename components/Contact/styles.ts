@@ -237,6 +237,7 @@ export const ContactFormContainer = styled.section`
   margin: 3.125rem 0 12rem 0;
   form {
     padding-bottom: 10rem;
+    width: 1200px;
     h3 {
       font-size: 48px;
       font-weight: 600;
@@ -282,12 +283,31 @@ export const ContactFormContainer = styled.section`
       font-size: 20px;
       display: flex;
       align-items: center;
+      color: #fff;
       strong {
         color: #000;
         font-weight: 500;
         text-decoration: underline;
         cursor: pointer;
+
+        color: #fff;
       }
+    }
+  }
+
+  button {
+    color: #fff;
+    background: #167df7;
+    border-radius: 99px;
+    outline: none;
+    border: none;
+    width: 100%;
+    padding: 40px 0;
+    font-size: 40px;
+    cursor: pointer;
+    &:disabled {
+      cursor: no-drop;
+      background: #c4c4c4;
     }
   }
   @media ${responSiveSize.tablet} {
