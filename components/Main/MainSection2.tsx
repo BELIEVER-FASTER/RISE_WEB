@@ -11,8 +11,8 @@ export default function MainSection2({ blackMode }: { blackMode: boolean }): JSX
       .timeline({
         defaults: {
           scrollTrigger: {
-            start: '17% 0%',
-            end: '67% 50%',
+            start: '13% 0%',
+            end: '60% 50%',
             trigger: '.section2',
             scrub: 0.2,
           },
@@ -23,6 +23,7 @@ export default function MainSection2({ blackMode }: { blackMode: boolean }): JSX
         { scale: 4.5, yPercent: 450 },
         { yPercent: 0, scale: 1 }
       );
+
     return () => {
       a.clear();
     };
@@ -35,8 +36,8 @@ export default function MainSection2({ blackMode }: { blackMode: boolean }): JSX
       <div className="wrapper">
         <div className="content">
           <h2>
-            <p>라이브 커머스 최초</p>
-            <p>혁신을 만들다.</p>
+            <p data-glitch="라이브 커머스 최초">라이브 커머스 최초</p>
+            <p data-glitch="혁신을 만들다.">혁신을 만들다.</p>
           </h2>
         </div>
       </div>

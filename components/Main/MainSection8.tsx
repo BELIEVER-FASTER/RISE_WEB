@@ -4,7 +4,7 @@ import { MainSection8CT } from './styles';
 
 export default function MainSection8(): JSX.Element {
   return (
-    <MainSection8CT>
+    <MainSection8CT id="contact">
       <h2>
         상상을 현실로 <em>( inquiry )</em>
       </h2>
