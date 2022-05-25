@@ -7,11 +7,22 @@ export default function MainSection1(): JSX.Element {
     <MainSection1CT>
       <h1>
         <p>
-          <strong>Live</strong> Commerce
+          <span className="value">
+            <strong>Live</strong>Commerce
+          </span>
+          <span className="bottom_line" />
         </p>
-        <p>동시간대 시청자수 1위.</p>
+        <p className="verticalFlip">
+          <span>동시간대 시청자 수 1위.</span>
+          <span>실시간 매출 1위.</span>
+          <span>인플루언서 라이브.</span>
+          <span>고화질 라이브.</span>
+        </p>
         <p>
-          <strong>Is</strong> Rise Studio
+          <span className="value">
+            <strong>Is</strong>Rise Studio
+          </span>
+          <span className="bottom_line" />
         </p>
       </h1>
       <div className="main_banner_video">

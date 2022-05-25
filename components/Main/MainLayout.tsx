@@ -1,7 +1,8 @@
-import React from 'react';
+import dynamic from 'next/dynamic';
+import React, { useEffect, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
 import LineBanner from './LineBanner';
 import MainSection1 from './MainSection1';
-import MainSection2 from './MainSection2';
 import MainSection3 from './MainSection3';
 import MainSection4 from './MainSection4';
 import MainSection5 from './MainSection5';
@@ -9,8 +10,47 @@ import MainSection6 from './MainSection6';
 import MainSection7 from './MainSection7';
 import MainSection8 from './MainSection8';
 import { SectionWithBanner } from './styles';
+import gsap from 'gsap';
 
+const MainSection2Animation = dynamic(() => import('./MainSection2'), {
+  ssr: false,
+});
 export default function MainLayout(): JSX.Element {
+  const [blackMode, setBlackMode] = useState(false);
+  const { inView, ref } = useInView({
+    threshold: 0.1,
+  });
+
+  useEffect(() => {
+    const header = document.querySelectorAll('.main_header') as NodeListOf<HTMLElement>;
+    if (!header) return;
+
+    if (inView && ref) {
+      setBlackMode(true);
+      document.body.style.backgroundColor = '#000';
+      gsap.set(header, {
+        duration: 0.5,
+        color: '#fff',
+        fill: '#fff',
+        // stroke: '#fff ',
+      });
+    } else {
+      setBlackMode(false);
+      document.body.style.backgroundColor = '#fff';
+      gsap.set(header, {
+        duration: 0.5,
+        color: '#000',
+        fill: '#000',
+        // stroke: '#000',
+      });
+    }
+    return () => {
+      header.forEach(el => {
+        el.style.color = '';
+        el.style.fill = '';
+      });
+    };
+  }, [inView, ref]);
   return (
     <div>
       <div
@@ -33,8 +73,10 @@ export default function MainLayout(): JSX.Element {
         </a>
       </div>
       <MainSection1 />
-      <MainSection2 />
-      <MainSection3 />
+      <div ref={ref}>
+        <MainSection2Animation blackMode={blackMode} />
+        <MainSection3 />
+      </div>
       <MainSection4 />
       <MainSection5 />
       <SectionWithBanner>

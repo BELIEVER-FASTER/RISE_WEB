@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { MainSection7CT, StudioBtnBox } from './styles';
+
 type StudioList = 'Fashion' | 'Kitchen' | 'Living' | 'Beauty' | 'kids';
 function StudioBtn({
   value,
@@ -23,7 +24,7 @@ function StudioBtn({
           fill-rule="evenodd"
           clip-rule="evenodd"
           d="M107 32.7511L74.4485 67L67.5895 60.2423L88.4139 37.603L0 37.6696V28.0989L88.4055 28.024L65.6483 6.79101L72.5158 0L107 32.7511Z"
-          fill="#000"
+          fill="#fff"
         />
       </svg>
       {value} Room

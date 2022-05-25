@@ -52,7 +52,7 @@ table {
         overflow-x: hidden;
         position:relative;
         font-family: 'Pretendard','Apple SD Gothic Neo', sans-serif;
-        transition: background 0.5s;
+        transition: background 0.3s;
     }
     .client_nh{
         transition: all 0.5s;

@@ -1,31 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import dynamic from 'next/dynamic';
+import React from 'react';
 import { videoResources } from 'utils/videoResource';
 import { MainSection5CT } from './styles';
-
+const Gsap = dynamic(import('../../hooks/gsap/mainVideoBG'), { ssr: false });
 export default function MainSection5(): JSX.Element {
-  const [scale, setScale] = useState(1);
-  useEffect(() => {
-    const handler = () => {
-      const container = document.querySelector('.section5') as HTMLDivElement;
-      const elOffsetStart = container.offsetHeight + window.innerHeight;
-      const currentOffset = document.documentElement.scrollTop - window.innerHeight;
-
-      if (elOffsetStart < currentOffset) {
-        const scale =
-          (currentOffset - elOffsetStart + container.clientHeight - window.innerHeight) /
-          (container.clientHeight - window.innerHeight);
-
-        if (scale > 1.7) return;
-        setScale(scale);
-      }
-    };
-    window.addEventListener('scroll', handler);
-    return () => window.removeEventListener('scroll', handler);
-  }, []);
   return (
-    <MainSection5CT className="section5" scale={scale}>
+    <MainSection5CT className="section5">
       <div className="content">
-        <video loop autoPlay muted playsInline>
+        <video className="background_video" loop autoPlay muted playsInline>
           <source src={videoResources.about_mov.src} type="video/mp4" />
         </video>
         <div className="content_layer"></div>
@@ -50,6 +32,7 @@ export default function MainSection5(): JSX.Element {
           <br /> 모든 솔루션을 제공합니다.
         </p>
       </div>
+      <Gsap />
     </MainSection5CT>
   );
 }
