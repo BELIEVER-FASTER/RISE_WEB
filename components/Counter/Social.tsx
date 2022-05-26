@@ -46,7 +46,7 @@ export default function Social({ type, link }: SocialProps): JSX.Element {
       >
         <path
           d="M0 22C0 9.85189 9.84799 0 21.9961 0C34.1442 0 43.9922 9.85189 43.9922 22C43.9922 34.1481 34.1442 44 21.9961 44C9.84799 44 0 34.1481 0 22Z"
-          fill="#FA370B"
+          fill="#167DF7"
         />
         <path d="M25 16H16V17.5H25V16Z" fill="white" />
         <path d="M27.9922 28V19H26.4922V28H27.9922Z" fill="white" />

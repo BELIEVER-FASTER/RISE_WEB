@@ -72,7 +72,7 @@ export default function BillPlan(): JSX.Element {
         <li>
           <h4>
             Influencer
-            <div className="badge">인플루언서 라이브</div>
+            <div className="badge badge red">인플루언서 라이브</div>
           </h4>
           <p className="price">
             <strong>별도 문의</strong>

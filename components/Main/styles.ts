@@ -569,7 +569,7 @@ export const StudioBtnBox = styled.li<{ active: boolean }>`
 `;
 export const MainSection8CT = styled.section`
   padding: 224px 0 120px 0;
-  background-color: #000;
+  /* background-color: #000; */
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -190,7 +190,7 @@ export const ContactPhoneContainer = styled.div`
     position: absolute;
     font-size: 310px;
     font-weight: 500;
-    color: #fa370b;
+    color: #167df7;
     font-family: 'NHaasGroteskTXPro';
   }
   .start {

@@ -153,6 +153,22 @@ export const BillPlanCT = styled.div`
       display: flex;
       flex-direction: column;
       align-items: center;
+      h4 {
+        display: flex;
+        align-items: center;
+        font-size: 26px;
+      }
+      .badge {
+        padding: 5px 8px;
+        font-size: 12px;
+        margin-left: 4px;
+        background: #167df7;
+        border-radius: 4px;
+        &.red {
+          background: #fa370b;
+        }
+      }
+
       p.price {
         padding: 24px 0 40px 0;
         font-size: 28px;

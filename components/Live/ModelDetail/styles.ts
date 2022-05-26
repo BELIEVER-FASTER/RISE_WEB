@@ -100,7 +100,7 @@ export const DetailBox = styled.div`
       margin: 48px 0 0px auto;
       span {
         font-size: 30px;
-        color: #fa370b;
+        color: #167df7;
       }
       svg {
         width: 30px;
@@ -160,9 +160,9 @@ export const DetailBox = styled.div`
                 fill: #000;
               }
               &:hover {
-                color: #fa370b;
+                color: #167df7;
                 svg {
-                  fill: #fa370b;
+                  fill: #167df7;
                 }
               }
             }

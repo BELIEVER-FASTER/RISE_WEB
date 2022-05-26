@@ -20,19 +20,21 @@ export default function MainLayout(): JSX.Element {
   const { inView, ref } = useInView({
     threshold: 0.1,
   });
+  const { inView: inView2, ref: ref2 } = useInView({
+    threshold: 0.1,
+  });
 
   useEffect(() => {
     const header = document.querySelectorAll('.main_header') as NodeListOf<HTMLElement>;
     if (!header) return;
 
-    if (inView && ref) {
+    if (inView || inView2) {
       setBlackMode(true);
       document.body.style.backgroundColor = '#000';
       gsap.set(header, {
         duration: 0.5,
         color: '#fff',
         fill: '#fff',
-        // stroke: '#fff ',
       });
     } else {
       setBlackMode(false);
@@ -41,16 +43,16 @@ export default function MainLayout(): JSX.Element {
         duration: 0.5,
         color: '#000',
         fill: '#000',
-        // stroke: '#000',
       });
     }
     return () => {
       header.forEach(el => {
         el.style.color = '';
         el.style.fill = '';
+        document.body.style.backgroundColor = '#fff';
       });
     };
-  }, [inView, ref]);
+  }, [inView, ref, inView2]);
   return (
     <div>
       <div
@@ -84,7 +86,9 @@ export default function MainLayout(): JSX.Element {
         <MainSection6 />
         <MainSection7 />
       </SectionWithBanner>
-      <MainSection8 />
+      <div ref={ref2}>
+        <MainSection8 />
+      </div>
     </div>
   );
 }
