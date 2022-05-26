@@ -36,7 +36,9 @@ export default function BillPlan(): JSX.Element {
         </li>
 
         <li>
-          <h4>Premium</h4>
+          <h4>
+            Premium <div className="badge">인기상품</div>
+          </h4>
           <p className="price">
             <strong>200</strong>만 원
           </p>
@@ -68,7 +70,10 @@ export default function BillPlan(): JSX.Element {
           </ul>
         </li>
         <li>
-          <h4>Influencer</h4>
+          <h4>
+            Influencer
+            <div className="badge">인플루언서 라이브</div>
+          </h4>
           <p className="price">
             <strong>별도 문의</strong>
           </p>

@@ -3,7 +3,6 @@ import { useInView } from 'react-intersection-observer';
 import gsap from 'gsap';
 import dayjs from 'dayjs';
 import TagManager from 'react-gtm-module';
-import Button from 'components/Common/Button';
 import Input from 'components/Common/Input';
 import Textarea from 'components/Common/Textarea';
 import useInput from 'hooks/useInput';
@@ -50,8 +49,6 @@ export default function ContactForm(): JSX.Element {
   };
 
   const [state, fetch] = useAsync(sendContact, {
-    budget,
-    schedule: startDate,
     name,
     email,
     tel: phone,
@@ -67,8 +64,6 @@ export default function ContactForm(): JSX.Element {
     if (!phone.trim()) return;
     if (!content.trim()) return;
     if (!company.trim()) return;
-    if (!budget.trim()) return;
-    if (!startDate) return;
 
     fetch();
 
@@ -82,10 +77,8 @@ export default function ContactForm(): JSX.Element {
     if (!phone.trim()) return setValid(false);
     if (!content.trim()) return setValid(false);
     if (!company.trim()) return setValid(false);
-    // if (budget === '광고예산') return setValid(false);
-    // if (!startDate) return setValid(false);
     setValid(true);
-  }, [name, email, phone, company, content, checked, budget, startDate]);
+  }, [name, email, phone, company, content, checked]);
 
   useEffect(() => {
     if (state.loading) return setValid(false);
@@ -97,23 +90,13 @@ export default function ContactForm(): JSX.Element {
     if (inView) {
       gsap.fromTo(
         '#contact_content',
-        { height: 3, y: 150 },
-        { height: 330, y: 0, duration: 1, opacity: 1 }
+        { height: 0, opacity: 0 },
+        { height: 330, duration: 0.7, opacity: 1, delay: 0.5 }
       );
       gsap.fromTo(
         '.contact_input',
-        { flex: 0 },
-        { flex: 1, y: 0, duration: 1.5, opacity: 1 }
-      );
-      gsap.fromTo(
-        '.budget_input',
-        { flex: 0 },
-        { flex: 1, y: 0, duration: 1.5, opacity: 1 }
-      );
-      gsap.fromTo(
-        '.date_input',
-        { flex: 0 },
-        { flex: 1, y: 0, duration: 1.5, opacity: 1 }
+        { flex: 0, opacity: 0 },
+        { flex: 1, duration: 1.7, opacity: 1 }
       );
     }
   }, [inView, ref]);

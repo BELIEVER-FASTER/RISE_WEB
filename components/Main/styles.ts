@@ -292,10 +292,13 @@ export const MainSection4CT = styled.section`
   .app_info {
     align-self: flex-end;
     max-width: 824px;
-    img {
-      width: 100%;
+    .img_wrapper {
+      img {
+        width: 100%;
+      }
     }
     article {
+      width: 824px;
       margin-top: 24px;
       h3 {
         font-weight: 400;
@@ -335,6 +338,9 @@ export const MainSection4CT = styled.section`
 export const MainSection5CT = styled.section`
   height: 350vh;
   position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   .content {
     overflow: hidden;
     width: 100%;
@@ -357,14 +363,9 @@ export const MainSection5CT = styled.section`
       background-color: #040201bb;
     }
   }
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   .text {
     position: relative;
-    margin-top: 330px;
+    margin-top: 630px;
     text-align: center;
     color: #fff;
     h3 {

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-
 export const CommissionPlanCT = styled.div`
   width: 100%;
   h3 {
@@ -25,8 +24,8 @@ export const CommissionPlanCT = styled.div`
           /* height: 14px;
           background-color: #fff;
           border-radius: 99px; */
-          &::before {
-            content: '';
+          .line {
+            width: 0;
             height: 16px;
             display: block;
             background-color: #fff;
@@ -46,8 +45,8 @@ export const CommissionPlanCT = styled.div`
           letter-spacing: 1.8px;
         }
         .bar {
-          &::before {
-            width: 167px;
+          .line {
+            /* width: 167px; */
             background: #d1d0d5;
           }
           &::after {
@@ -58,9 +57,10 @@ export const CommissionPlanCT = styled.div`
       }
       li:nth-of-type(2) {
         .bar {
-          &::before {
+          width: 327px;
+          .line {
             background: #898989;
-            width: 327px;
+            /* width: 327px; */
           }
           &::after {
             content: '타사 진행 가격';
@@ -68,13 +68,19 @@ export const CommissionPlanCT = styled.div`
           }
         }
       }
+      background-color: #000;
+      z-index: 3;
     }
     .arrow {
       display: flex;
       align-items: center;
       margin: 0 72px;
+      background-color: #000;
+      z-index: 2;
     }
     .result {
+      opacity: 0;
+      z-index: 1;
       display: flex;
       flex: 1;
       justify-content: space-between;

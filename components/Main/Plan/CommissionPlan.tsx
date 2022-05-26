@@ -1,9 +1,24 @@
-import React from 'react';
+import gsap from 'gsap';
+import React, { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 import { CommissionPlanCT } from './styles';
 
 export default function CommissionPlan(): JSX.Element {
+  const { inView, ref } = useInView({ threshold: 0.4 });
+  useEffect(() => {
+    if (inView) {
+      gsap.fromTo('.bar1 .line', { width: 0 }, { width: 167, duration: 0.5, delay: 0.5 });
+      gsap.fromTo('.bar2 .line', { width: 0 }, { width: 327, duration: 0.75 });
+      gsap.fromTo('.arrow', { xPercent: -250 }, { xPercent: 0, duration: 0.3, delay: 1 });
+      gsap.fromTo(
+        '.result',
+        { scale: 0, opacity: 0 },
+        { scale: 1, duration: 0.5, delay: 1.3, opacity: 1 }
+      );
+    }
+  }, [inView, ref]);
   return (
-    <CommissionPlanCT>
+    <CommissionPlanCT ref={ref}>
       <h3>
         고정 비용 없는 <br />
         라이즈 파트너 브랜드 전용 상품
@@ -11,11 +26,15 @@ export default function CommissionPlan(): JSX.Element {
       <div className="price">
         <ul className="chart">
           <li>
-            <div className="bar"></div>
+            <div className="bar bar1">
+              <div className="line" />
+            </div>
             <span>50-200만 원</span>
           </li>
           <li>
-            <div className="bar"></div>
+            <div className="bar bar2">
+              <div className="line" />
+            </div>
             <span>300만 원 + @ </span>
           </li>
         </ul>

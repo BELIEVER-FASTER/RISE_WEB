@@ -16,7 +16,10 @@ export default function MainSection4(): JSX.Element {
         </article>
       </div>
       <div className="app_info">
-        <img src="/img/ver2/main_app.png" alt="" />
+        <div className="img_wrapper">
+          <img src="/img/ver2/main_app.png" alt="" />
+        </div>
+
         <article>
           <h3>
             라이브커머스 통합 <br />
