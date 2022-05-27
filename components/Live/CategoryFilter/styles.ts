@@ -37,7 +37,7 @@ export const CategoryItem = styled.li<{ selected: boolean }>`
   ${({ selected }) =>
     selected &&
     css`
-      background: #fa370b;
+      background: #167df7;
       color: #fff;
       padding: 8px 16px;
     `}
@@ -58,7 +58,7 @@ export const CateFilterBtn = styled.button<{ open: boolean }>`
   font-size: 20px;
   padding: 16px 24px;
   border-radius: 32px;
-  background-color: #fa370b;
+  background-color: #167df7;
   color: #fff;
   outline: none;
   border: none;
@@ -76,7 +76,7 @@ export const CateFilterBtn = styled.button<{ open: boolean }>`
     open &&
     css`
       background-color: #fff;
-      color: #fa370b;
+      color: #167df7;
     `}
 
   @media ${responSiveSize.mobile} {
@@ -88,7 +88,7 @@ export const FilterContainer = styled.aside<{ open: boolean }>`
   position: fixed;
   bottom: 0px;
   left: 0px;
-  background-color: #fa370b;
+  background-color: #167df7;
   transition: all 0.3s;
   width: 0px;
   min-height: 600px;

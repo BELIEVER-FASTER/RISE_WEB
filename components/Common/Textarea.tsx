@@ -1,3 +1,4 @@
+import { useRouter } from 'next/dist/client/router';
 import React from 'react';
 import { TextareaBox } from './styles';
 
@@ -17,8 +18,16 @@ export default function Textarea({
   value,
   ...rest
 }: TextareaProps): JSX.Element {
+  const router = useRouter();
+  const isContact = router.route === '/contact';
   return (
-    <TextareaBox value={value} height={height} id={id} className={className}>
+    <TextareaBox
+      whiteMode={isContact}
+      value={value}
+      height={height}
+      id={id}
+      className={className}
+    >
       <textarea {...rest}></textarea>
     </TextareaBox>
   );

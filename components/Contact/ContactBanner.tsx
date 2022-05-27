@@ -37,14 +37,12 @@ export default function ContactBanner(): JSX.Element {
         <span id="contact_title">Contact Us</span>
       </h1>
       <p id="contact_desc">
-        우리는 패션 & 코스메틱 <br />
-        라이브커머스를&nbsp;
+        라이즈 스튜디오는 브랜드 컨셉에 맞는 라이브 진행과 결과 리포트까지
         <br />
-        디렉팅하는 <br />
-        Live MCN 입니다.
+        하나의 콘텐츠로서 제공하여 여러분들의 성장을 함께합니다.
       </p>
       <p style={{ opacity: 0, height: 0 }}>
-        우리는 패션 & 코스메틱 라이브커머스를 디렉팅하는 라이브커머스 대행사 입니다.
+        하나의 콘텐츠로서 제공하여 여러분들의 성장을 함께합니다.
       </p>
     </ContactBannerContainer>
   );

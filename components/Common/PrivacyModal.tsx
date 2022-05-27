@@ -21,8 +21,8 @@ export default function PrivacyModal({ onClose }: PrivacyModal): JSX.Element {
             <section>
               <h2>개인정보 처리 방침</h2>
               <b>
-                빌리버(이하 “회사”라 함)는 다양한 인터넷과 모바일 서비스(RISE:라이즈 [이하
-                라이즈] 등)
+                라이즈 이엔엠(이하 “회사”라 함)은 다양한 인터넷과 모바일
+                서비스(RISE:라이즈 [이하 라이즈] 등)
                 <br className="mobile" /> 이용 및 제반 서비스 제공시 개인정보보호법령에
                 따라 이용자의 개인정보 보호 및 권익을 보호하고 이용자의 고충을 원활하게
                 처리할 수 있도록 다음과 같은 처리방침을 두고 있습니다.
@@ -290,7 +290,7 @@ export default function PrivacyModal({ onClose }: PrivacyModal): JSX.Element {
                   <strong>-</strong> 연락처 : 1688-6183
                 </li>
                 <li>
-                  <strong>-</strong> 이메일 : official@believer.kr
+                  <strong>-</strong> 이메일 : contact@riseenm.com
                 </li>
               </ol>
               <ul>

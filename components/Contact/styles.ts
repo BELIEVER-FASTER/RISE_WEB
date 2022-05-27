@@ -11,9 +11,19 @@ export const ContactContainer = styled.div`
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+  & > section > h3 {
+    transform: translateY(36px);
+    font-weight: 500;
+    font-size: 48px;
+    align-self: flex-start;
+  }
   section {
     width: 71.25rem;
     padding-left: 8.125rem;
+  }
+  .contact_title,
+  #contact__form {
+    padding-left: 0;
   }
   @media ${responSiveSize.tablet} {
     section {
@@ -57,11 +67,8 @@ export const ContactBannerContainer = styled.section`
   p {
     margin: 4rem 0 0 8.75rem;
     line-height: 1.4;
-    font-size: 26px;
-    br:last-of-type,
-    br:first-of-type {
-      display: none;
-    }
+    font-size: 24px;
+    font-weight: 300;
   }
   @media ${responSiveSize.tablet} {
     align-items: center;
@@ -237,7 +244,7 @@ export const ContactFormContainer = styled.section`
   margin: 3.125rem 0 12rem 0;
   form {
     padding-bottom: 10rem;
-    width: 1200px;
+    width: 1140px;
     h3 {
       font-size: 48px;
       font-weight: 600;
@@ -302,8 +309,8 @@ export const ContactFormContainer = styled.section`
     outline: none;
     border: none;
     width: 100%;
-    padding: 40px 0;
-    font-size: 40px;
+    padding: 32px 0;
+    font-size: 26px;
     cursor: pointer;
     &:disabled {
       cursor: no-drop;

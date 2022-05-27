@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import gsap from 'gsap';
-import dayjs from 'dayjs';
 import TagManager from 'react-gtm-module';
 import Input from 'components/Common/Input';
 import Textarea from 'components/Common/Textarea';
@@ -14,6 +13,7 @@ import useAsync from 'hooks/useAsync';
 import { sendContact } from 'utils/requests';
 import ResultModal from 'components/Common/ResultModal';
 import PrivacyModal from 'components/Common/PrivacyModal';
+import { useRouter } from 'next/dist/client/router';
 
 export default function ContactForm(): JSX.Element {
   const { ref, inView } = useInView({
@@ -27,12 +27,11 @@ export default function ContactForm(): JSX.Element {
   const [company, onChangeCompany, setCompany] = useInput('');
   const [content, onChangeContent, setContent] = useInput('');
   const [valid, setValid] = useState(false);
-  const [budget, setBudget] = useState('광고예산');
-  const [startDate, setStartDate] = useState<string>(
-    dayjs(new Date()).format('YYYY-MM-DD')
-  );
   const [modalOpen, setModalOpen] = useState(false);
   const [prModalOpen, setPrModalOpen] = useState(false);
+
+  const router = useRouter();
+  const isContact = router.route === '/contact';
 
   const onClose = () => {
     setChecked(false);
@@ -41,8 +40,6 @@ export default function ContactForm(): JSX.Element {
     setPhone('');
     setContent('');
     setCompany('');
-    setBudget('광고예산');
-    setStartDate(dayjs(new Date()).format('YYYY-MM-DD'));
     setValid(false);
 
     setModalOpen(false);
@@ -162,13 +159,18 @@ export default function ContactForm(): JSX.Element {
               checked={checked as boolean}
               onChange={() => setChecked(prev => !prev)}
             />
-            <strong onClick={() => setPrModalOpen(true)}>
+            <strong
+              style={isContact ? { color: '#000' } : {}}
+              onClick={() => setPrModalOpen(true)}
+            >
               개인정보 수집 및 이용약관
             </strong>
             {prModalOpen && <PrivacyModal onClose={() => setPrModalOpen(false)} />}
-            <span>에 동의합니다.</span>
+            <span style={isContact ? { color: '#000' } : {}}>에 동의합니다.</span>
           </div>
-          <button disabled={!valid}>{state.loading ? 'loading' : '문의하기'}</button>
+          <button disabled={!valid}>
+            {state.loading ? 'loading' : '라이브대행 문의하기'}
+          </button>
         </form>
       </ContactFormContainer>
       {modalOpen && <ResultModal name={name} onClose={onClose} />}

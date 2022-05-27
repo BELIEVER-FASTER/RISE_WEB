@@ -1,3 +1,4 @@
+import { useRouter } from 'next/dist/client/router';
 import React from 'react';
 import { InputBox } from './styles';
 
@@ -17,8 +18,10 @@ export default function Input({
   placeholder = '',
   ...rest
 }: InputProps): JSX.Element {
+  const router = useRouter();
+  const isContact = router.route === '/contact';
   return (
-    <InputBox value={value} id={id} className={className}>
+    <InputBox whiteMode={isContact} value={value} id={id} className={className}>
       <input value={value} type={type} {...rest} />
       {placeholder && <label>{placeholder}</label>}
     </InputBox>

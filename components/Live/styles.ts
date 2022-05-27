@@ -193,7 +193,7 @@ export const ModelSecondContainer = styled.div`
     height: 100px;
     color: #fff;
     border-radius: 50%;
-    background-color: #fa370b;
+    background-color: #167df7;
     z-index: 30;
     opacity: 0;
     font-size: 20px;
@@ -414,7 +414,7 @@ export const ModelListItemBox = styled.li`
     height: 100px;
     color: #fff;
     border-radius: 50%;
-    background-color: #fa370b;
+    background-color: #167df7;
     z-index: 30;
     opacity: 0;
     font-size: 20px;

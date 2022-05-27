@@ -20,7 +20,7 @@ const slideUp = keyframes`
   }
 `;
 
-export const InputBox = styled.div<{ value: string | number }>`
+export const InputBox = styled.div<{ whiteMode: boolean; value: string | number }>`
   height: 4.125rem;
   z-index: 30;
   position: relative;
@@ -67,6 +67,16 @@ export const InputBox = styled.div<{ value: string | number }>`
         font-size: 14px;
       }
     `}
+  ${({ whiteMode }) =>
+    whiteMode &&
+    css`
+      input {
+        color: #000;
+        font-weight: 300;
+        border-bottom: 3px solid #e0e0e0;
+      }
+    `} 
+
   @media ${responSiveSize.mobile} {
     input {
       font-size: 20px;
@@ -141,7 +151,11 @@ export const CustomSelectBox = styled.div<{ selectOpen: boolean }>`
   }
 `;
 
-export const TextareaBox = styled.div<{ value?: string; height?: number }>`
+export const TextareaBox = styled.div<{
+  whiteMode: boolean;
+  value?: string;
+  height?: number;
+}>`
   width: 100%;
   height: 100%;
   textarea {
@@ -169,7 +183,15 @@ export const TextareaBox = styled.div<{ value?: string; height?: number }>`
       textarea {
         border: 3px solid #838383;
       }
-    `}
+    `}  
+    ${({ whiteMode }) =>
+    whiteMode &&
+    css`
+      textarea {
+        border: 3px solid #e0e0e0;
+      }
+    `} 
+
   @media ${responSiveSize.mobile} {
     textarea {
       padding: 1rem;
@@ -336,6 +358,9 @@ export const LottieBox = styled.div`
   top: -35px;
   right: 30px;
   z-index: 20;
+  svg {
+    stroke: #167df7;
+  }
 `;
 export const VideoBGLayer = styled.video`
   height: 100%;
