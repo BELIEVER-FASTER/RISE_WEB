@@ -210,12 +210,22 @@ export const FooterContainer = styled.footer<{ isBlack: boolean }>`
     align-items: center;
     text-align: center;
     h2 {
+      &:hover {
+        text-decoration: underline;
+        .arrow {
+          border-color: #167df7;
+          &::before {
+            transform: translate(-50%, -50%) scale(1);
+          }
+        }
+      }
       cursor: pointer;
       font-size: 120px;
       font-weight: 500;
       display: flex;
       align-items: center;
       .arrow {
+        transition: all 0.3s;
         cursor: pointer;
         margin-left: 12px;
         font-size: 46px;
@@ -224,10 +234,25 @@ export const FooterContainer = styled.footer<{ isBlack: boolean }>`
         border-radius: 120px;
         display: flex;
         align-items: center;
+        position: relative;
+        overflow: hidden;
         svg {
           width: 46px;
           height: 46px;
           stroke: #fff;
+          z-index: 1;
+        }
+        &::before {
+          background-color: #167df7;
+          transition: all 0.3s ease-in-out;
+          position: absolute;
+          content: '';
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) scale(0);
+          width: 200px;
+          height: 200px;
+          border-radius: 99px;
         }
       }
     }

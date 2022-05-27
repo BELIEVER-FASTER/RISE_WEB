@@ -40,7 +40,6 @@ export default function MainSection6(): JSX.Element {
       setCurrent(totalLength);
     }
   }, [inView, inView2, inView3, inView4, totalLength]);
-  console.log(current);
   return (
     <MainSection6CT>
       <div
@@ -48,7 +47,6 @@ export default function MainSection6(): JSX.Element {
           position: 'absolute',
           zIndex: -10,
           left: 0,
-          // background: '#000',
           width: '100%',
           top: 640,
           display: 'flex',
