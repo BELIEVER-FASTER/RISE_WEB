@@ -20,12 +20,12 @@ export default function AboutSection2(): JSX.Element {
           </h2>
           <h3 className="title2 hide">
             든든한
-            <em>( About Us )</em> <br />
+            <em className="top_gap">( About Us )</em> <br />
             솔루션으로 채우다
           </h3>
           <ul className="title2 hide">
             <li>
-              <em>( our mission )</em>
+              <em>( Our Mission )</em>
               <h4>지속성 있는 라이브 미디어 콘텐츠</h4>
               <span>
                 지속적으로 보고싶은 콘텐츠를 통해 기획부터
@@ -36,7 +36,7 @@ export default function AboutSection2(): JSX.Element {
               </span>
             </li>
             <li>
-              <em>( our vision )</em>
+              <em>( Our Vision )</em>
               <h4>차세대 이커머스의 새로운 패러다임</h4>
               <span>
                 빠르게 변화하는 시대에 맞춰 함께 고민하며

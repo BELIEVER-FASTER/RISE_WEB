@@ -83,6 +83,7 @@ export const AboutSection2CT = styled.section`
       max-width: 1019px;
       margin: 0 auto;
       display: flex;
+      padding: 60px 0;
       flex-direction: column;
       justify-content: space-evenly;
       .hide {
@@ -90,18 +91,26 @@ export const AboutSection2CT = styled.section`
         scale: 0.95;
       }
       em {
+        font-weight: 200;
+        color: #ffffffaa;
         font-family: 'Ivy Mode';
         font-size: 16px !important;
       }
+
       h2 {
         font-weight: 500;
         font-size: 72px;
       }
       h3 {
-        font-size: 80px;
-        margin-top: 100px;
+        font-size: 72px;
+        margin-top: 120px;
+        line-height: 1.2;
         em {
-          vertical-align: top;
+          vertical-align: text-top;
+        }
+        em.top_gap {
+          position: absolute;
+          transform: translate(4px, 8px);
         }
       }
       ul {
@@ -120,52 +129,66 @@ export const AboutSection2CT = styled.section`
 `;
 
 export const AboutSection3CT = styled.section`
-  padding: 200px 0;
-  text-align: center;
-  h2 {
-    font-size: 72px;
-    line-height: 1.2;
-    margin-bottom: 88px;
-  }
-  ul {
+  height: 250vh;
+  position: relative;
+  .content {
+    position: sticky;
+    top: 0;
+    padding: 200px 0;
+    text-align: center;
     overflow: hidden;
-    li + li {
-      margin-top: 60px;
-    }
-    li {
-      display: flex;
-    }
-    li:nth-of-type(1) {
-      animation: slide2 34s linear infinite;
-    }
-    li:nth-of-type(2) {
-      animation: slide 40s linear infinite reverse;
-    }
-    li:nth-of-type(3) {
-      animation: slide3 34s linear infinite;
-    }
-    @keyframes slide {
-      0% {
-        transform: translateX(-2222px);
-      }
-      100% {
-        transform: translateX(0px);
+    h2 {
+      font-size: 72px;
+      line-height: 1.2;
+      margin-bottom: 88px;
+      font-weight: 500;
+      &.hide {
+        transform: translateY(130%) scale(1.3);
       }
     }
-    @keyframes slide2 {
-      0% {
-        transform: translateX(-2252px);
+    ul {
+      overflow: hidden;
+      &.hide {
+        opacity: 0;
       }
-      100% {
-        transform: translateX(0px);
+      li + li {
+        margin-top: 60px;
       }
-    }
-    @keyframes slide3 {
-      0% {
-        transform: translateX(-2222px);
+      li {
+        display: flex;
       }
-      100% {
-        transform: translateX(0px);
+      li:nth-of-type(1) {
+        animation: slide2 34s linear infinite;
+      }
+      li:nth-of-type(2) {
+        animation: slide 40s linear infinite reverse;
+      }
+      li:nth-of-type(3) {
+        animation: slide3 34s linear infinite;
+      }
+      @keyframes slide {
+        0% {
+          transform: translateX(-2222px);
+        }
+        100% {
+          transform: translateX(0px);
+        }
+      }
+      @keyframes slide2 {
+        0% {
+          transform: translateX(-2252px);
+        }
+        100% {
+          transform: translateX(0px);
+        }
+      }
+      @keyframes slide3 {
+        0% {
+          transform: translateX(-2222px);
+        }
+        100% {
+          transform: translateX(0px);
+        }
       }
     }
   }
@@ -262,7 +285,7 @@ export const AboutSection5CT = styled.section`
         display: flex;
         flex-direction: row-reverse;
       }
-      &:hover {
+      &.active {
         h3 {
           font-size: 28px;
           font-weight: bold;
@@ -273,13 +296,13 @@ export const AboutSection5CT = styled.section`
           box-shadow: 0 20px 20px -10px #00000055;
         }
       }
-      &:nth-of-type(1):hover img {
+      &:nth-of-type(1).active img {
         transform: rotate(5deg);
       }
-      &:nth-of-type(2):hover img {
+      &:nth-of-type(2).active img {
         transform: rotate(-5deg);
       }
-      &:nth-of-type(3):hover {
+      &:nth-of-type(3).active {
         img {
           transform: translateX(25px) rotate(-10deg);
           z-index: 2;
@@ -289,10 +312,10 @@ export const AboutSection5CT = styled.section`
           z-index: 1;
         }
       }
-      &:nth-of-type(4):hover img {
+      &:nth-of-type(4).active img {
         transform: rotate(7deg);
       }
-      &:nth-of-type(5):hover img {
+      &:nth-of-type(5).active img {
         transform: rotate(-6deg);
         border: 3px solid #000;
         border-radius: 4px;
@@ -355,7 +378,10 @@ export const AboutSection6CT = styled.section`
           background: #e9f3ff;
           align-items: flex-end;
           img {
-            animation: brandsSlide2 5s ease-out infinite;
+            /* animation: brandsSlide2 5s ease-out infinite; */
+          }
+          .app_img {
+            opacity: 0;
           }
         }
       }

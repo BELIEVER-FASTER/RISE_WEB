@@ -1,7 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 import { AboutSection6CT } from './styles';
+import gsap from 'gsap';
 
 export default function AboutSection6(): JSX.Element {
+  const { ref, inView } = useInView({ threshold: 0.7, triggerOnce: true });
+  useEffect(() => {
+    if (inView && ref) {
+      gsap.fromTo(
+        '.app_img',
+        { yPercent: 101 },
+        {
+          opacity: 1,
+          yPercent: 0,
+          duration: 1,
+        }
+      );
+    }
+  }, [inView, ref]);
   return (
     <AboutSection6CT>
       <h2>라이브가 처음이신가요?</h2>
@@ -26,9 +42,9 @@ export default function AboutSection6(): JSX.Element {
             </span>
           </p>
         </li>
-        <li>
+        <li ref={ref}>
           <div className="img_wrapper">
-            <img src="/img/ver2/about/app_image.png" alt="" />
+            <img className="app_img" src="/img/ver2/about/app_image.png" alt="" />
           </div>
           <h3>라이즈 앱 상위 광고 노출</h3>
           <p>

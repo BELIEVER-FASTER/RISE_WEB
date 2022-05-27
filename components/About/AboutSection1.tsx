@@ -1,10 +1,17 @@
-import React from 'react';
+import gsap from 'gsap';
+import React, { useEffect } from 'react';
 import ContentPlus from './ContentPlus';
 import { AboutSection1CT } from './styles';
 
 export default function AboutSection1(): JSX.Element {
+  useEffect(() => {
+    gsap.from('.section1 h1', { opacity: 0, delay: 0.4, duration: 1 });
+    gsap.from('.section1 h2', { opacity: 0, yPercent: -100, delay: 0.9, duration: 1 });
+    gsap.from('.section1 div p', { opacity: 0, xPercent: -100, delay: 1.4, duration: 1 });
+    gsap.from('.section2 .video_wrapper', { yPercent: 30, delay: 1.6, duration: 1 });
+  }, []);
   return (
-    <AboutSection1CT>
+    <AboutSection1CT className="section1">
       <h1>
         <p>콘탠츠로</p>
         <p>

@@ -171,7 +171,7 @@ export const MainSection2CT = styled.section`
       align-items: center;
       justify-content: center;
       h2 {
-        margin-bottom: 20%;
+        margin-bottom: 12%;
         font-family: 'Pretendard';
         font-size: 120px;
         line-height: 1.1;
@@ -327,6 +327,12 @@ export const MainSection4CT = styled.section`
           color: #000;
           border-radius: 30px;
           text-decoration: none;
+          transition: all 0.3s;
+          &:hover {
+            background-color: #167df7;
+            color: #fff;
+            border-color: #167df7;
+          }
         }
       }
       display: flex;

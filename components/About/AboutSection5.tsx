@@ -1,12 +1,14 @@
+import dynamic from 'next/dynamic';
 import React from 'react';
 import { AboutSection5CT } from './styles';
-
+const Gsap = dynamic(import('../../hooks/gsap/aboutProcess'), { ssr: false });
 export default function AboutSection5(): JSX.Element {
   return (
-    <AboutSection5CT>
+    <AboutSection5CT className="section5">
+      <Gsap />
       <h2>올인원 프로세스</h2>
       <ul>
-        <li>
+        <li className="list_1">
           <article>
             <h3>
               <em>Step 1.</em> 문의 / 상담
@@ -21,7 +23,7 @@ export default function AboutSection5(): JSX.Element {
           </article>
           <img src="/img/ver2/about/process1.png" alt="" />
         </li>
-        <li>
+        <li className="list_2">
           <article>
             <h3>
               <em>Step 2.</em> 라이브 기획
@@ -33,7 +35,7 @@ export default function AboutSection5(): JSX.Element {
           </article>
           <img src="/img/ver2/about/process2.png" alt="" />
         </li>
-        <li>
+        <li className="list_3">
           <article>
             <h3>
               <em>Step 3.</em> 쇼호스트 매칭
@@ -50,7 +52,7 @@ export default function AboutSection5(): JSX.Element {
             <img src="/img/ver2/about/process3.1.png" alt="" />
           </div>
         </li>
-        <li>
+        <li className="list_4">
           <article>
             <h3>
               <em>Step 4.</em> 라이브 송출
@@ -65,7 +67,7 @@ export default function AboutSection5(): JSX.Element {
           </article>
           <img src="/img/ver2/about/process4.png" alt="" />
         </li>
-        <li>
+        <li className="list_5">
           <article>
             <h3>
               <em>Step 5.</em> 결과 데이터 리포트
