@@ -321,6 +321,34 @@ export const FooterContainer = styled.footer<{ isBlack: boolean }>`
         color: #000;
       }
     `}
+
+  @media ${responSiveSize.mobile} {
+    .footer_info {
+      flex-direction: column;
+      margin: 0 24px;
+      .left {
+        flex-direction: column;
+        font-weight: 300;
+        padding: 24px 0 32px 0;
+        gap: 32px;
+        & > p {
+          span {
+            display: block;
+          }
+          span + span {
+            margin-left: 0px;
+          }
+        }
+      }
+      .right {
+        justify-content: flex-start;
+        li {
+          font-weight: 300;
+          font-size: 16px;
+        }
+      }
+    }
+  }
 `;
 
 export const MobileMenuBox = styled.i<{ menuOpen: boolean }>`

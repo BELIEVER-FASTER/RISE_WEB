@@ -6,10 +6,33 @@ import { CommissionPlanCT } from './styles';
 export default function CommissionPlan(): JSX.Element {
   const { inView, ref } = useInView({ threshold: 0.4 });
   useEffect(() => {
+    const isMobile = window.innerWidth < 951;
     if (inView) {
-      gsap.fromTo('.bar1 .line', { width: 0 }, { width: 167, duration: 0.5, delay: 0.5 });
-      gsap.fromTo('.bar2 .line', { width: 0 }, { width: 327, duration: 0.75 });
-      gsap.fromTo('.arrow', { xPercent: -250 }, { xPercent: 0, duration: 0.3, delay: 1 });
+      if (isMobile) {
+        gsap.fromTo(
+          '.bar1 .line',
+          { width: 0 },
+          { width: 102, duration: 0.5, delay: 0.5 }
+        );
+        gsap.fromTo('.bar2 .line', { width: 0 }, { width: 155, duration: 0.75 });
+        gsap.fromTo(
+          '.arrow',
+          { yPercent: -250 },
+          { yPercent: 0, duration: 0.3, delay: 1 }
+        );
+      } else {
+        gsap.fromTo(
+          '.bar1 .line',
+          { width: 0 },
+          { width: 167, duration: 0.5, delay: 0.5 }
+        );
+        gsap.fromTo('.bar2 .line', { width: 0 }, { width: 327, duration: 0.75 });
+        gsap.fromTo(
+          '.arrow',
+          { xPercent: -250 },
+          { xPercent: 0, duration: 0.3, delay: 1 }
+        );
+      }
       gsap.fromTo(
         '.result',
         { scale: 0, opacity: 0 },

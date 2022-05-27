@@ -21,7 +21,7 @@ export default function MainSection2({ blackMode }: { blackMode: boolean }): JSX
       .fromTo(
         '.section2 .content h2',
         { scale: 4.5, yPercent: 450 },
-        { yPercent: 0, scale: 1 }
+        { yPercent: 0, scale: 1, opacity: 1 }
       );
 
     return () => {

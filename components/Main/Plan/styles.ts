@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { responSiveSize } from 'utils/style_opt';
 export const CommissionPlanCT = styled.div`
   width: 100%;
   h3 {
@@ -141,6 +142,78 @@ export const CommissionPlanCT = styled.div`
       margin-top: 6px;
     }
   }
+  @media ${responSiveSize.mobile} {
+    h3 {
+      font-size: 24px;
+      font-weight: 400;
+    }
+    .price {
+      flex-direction: column;
+      .chart {
+        width: 100%;
+        li {
+          span {
+            font-size: 24px;
+            margin-left: 16px;
+          }
+          .bar {
+            flex: 1;
+            .line {
+              height: 12px;
+            }
+            &::after {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+      .arrow {
+        margin: 32px 0 56px 0;
+        svg {
+          transform: rotate(90deg);
+          width: 40px;
+        }
+      }
+      .result {
+        width: 100%;
+        justify-content: space-evenly;
+        li:nth-of-type(1) p {
+        }
+        li {
+          p {
+            font-size: 40px;
+            transform: translateY(-10px);
+            strong {
+              font-size: 80px;
+            }
+          }
+          span {
+            font-size: 18px;
+            line-height: 1.2;
+          }
+        }
+      }
+    }
+    .feature {
+      flex-direction: column;
+      padding: 60px 0px;
+      align-items: center;
+      li {
+        .text {
+          span {
+            font-size: 36px;
+            margin-left: 4px;
+          }
+        }
+        & > p {
+          font-size: 14px;
+        }
+      }
+      li + li {
+        margin-top: 46px;
+      }
+    }
+  }
 `;
 export const BillPlanCT = styled.div`
   width: 100%;
@@ -149,6 +222,9 @@ export const BillPlanCT = styled.div`
     display: flex;
     justify-content: space-between;
     & > li {
+      .collapse_btn {
+        display: none;
+      }
       flex: 1;
       display: flex;
       flex-direction: column;
@@ -204,8 +280,9 @@ export const BillPlanCT = styled.div`
             dt + dt {
               margin-top: 12px;
             }
-            dt {
-            }
+          }
+          &.plus dl dt::before {
+            content: '+ ';
           }
         }
       }
@@ -241,6 +318,66 @@ export const BillPlanCT = styled.div`
     font-size: 12px;
     li + li {
       margin-top: 6px;
+    }
+  }
+  @media ${responSiveSize.mobile} {
+    & > .plans {
+      flex-direction: column;
+      & > li.collapsed {
+        .collapse_btn {
+          &::after {
+            font-size: 36px;
+            content: '+';
+          }
+        }
+        & > ul {
+          transition: all 0.25s ease;
+          height: 0;
+          overflow: hidden;
+        }
+      }
+      & > li {
+        position: relative;
+        .collapse_btn {
+          display: initial;
+          top: 24px;
+          right: 0px;
+          font-size: 36px;
+          position: absolute;
+          &::after {
+            font-size: 48px;
+            content: '-';
+          }
+        }
+        border-top: 1px solid #e0e0e0;
+        align-items: flex-start;
+        padding-top: 40px;
+        h4 {
+          font-size: 17px;
+        }
+        .badge {
+          padding: 4px 7px;
+          margin-left: 6px;
+        }
+        p.price {
+          text-align: start;
+          font-size: 34px;
+          font-weight: 500;
+          border-bottom: 1px solid #000;
+          padding: 12px 0 30px 0;
+          strong {
+            font-size: 34px;
+          }
+        }
+        & > ul {
+          transition: all 0.25s ease;
+        }
+      }
+
+      & > li + li {
+        margin-left: 0px;
+        margin-top: 40px;
+      }
     }
   }
 `;

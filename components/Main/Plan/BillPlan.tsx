@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BillPlanCT } from './styles';
 
 export default function BillPlan(): JSX.Element {
+  const [type, setType] = useState<'basic' | 'premium' | 'influencer'>('basic');
   return (
     <BillPlanCT>
       <ul className="plans">
-        <li>
+        <li className={type !== 'basic' ? 'collapsed' : ''}>
           <h4>Basic</h4>
+          <div className="collapse_btn" onClick={() => setType('basic')} />
           <p className="price">
             <strong>50</strong>만 원
           </p>
@@ -35,10 +37,11 @@ export default function BillPlan(): JSX.Element {
           </ul>
         </li>
 
-        <li>
+        <li className={type !== 'premium' ? 'collapsed' : ''}>
           <h4>
             Premium <div className="badge">인기상품</div>
           </h4>
+          <div className="collapse_btn" onClick={() => setType('premium')} />
           <p className="price">
             <strong>200</strong>만 원
           </p>
@@ -47,21 +50,21 @@ export default function BillPlan(): JSX.Element {
               <h5>기본</h5>
               <p>Basic 의 모든 구성 +</p>
             </li>
-            <li>
+            <li className="plus">
               <h5>방송운영</h5>
               <dl>
                 <dt>작가 · 디자이너</dt>
                 <dt>판넬 / 배너 등 컨텐츠 디자인 제공</dt>
               </dl>
             </li>
-            <li>
+            <li className="plus">
               <h5>쇼핑 호스트 & 인플루언서</h5>
               <dl>
                 <dt>라이즈 쇼호스트(선택 가능)</dt>
                 <dt>라이브 방송 영상 클립 컨텐츠 제공</dt>
               </dl>
             </li>
-            <li>
+            <li className="plus">
               <h5>서비스</h5>
               <dl>
                 <dt>특수 촬영(DSRL + 스위처 촬영)</dt>
@@ -69,11 +72,13 @@ export default function BillPlan(): JSX.Element {
             </li>
           </ul>
         </li>
-        <li>
+
+        <li className={type !== 'influencer' ? 'collapsed' : ''}>
           <h4>
             Influencer
             <div className="badge badge red">인플루언서 라이브</div>
           </h4>
+          <div className="collapse_btn" onClick={() => setType('influencer')} />
           <p className="price">
             <strong>별도 문의</strong>
           </p>
@@ -82,13 +87,13 @@ export default function BillPlan(): JSX.Element {
               <h5>기본</h5>
               <p className="strong">Premium 의 모든 구성 +</p>
             </li>
-            <li>
+            <li className="plus">
               <h5>쇼핑 호스트 & 인플루언서</h5>
               <dl>
                 <dt>라이즈 크리에이터(섭외)</dt>
               </dl>
             </li>
-            <li>
+            <li className="plus">
               <h5>서비스</h5>
               <dl>
                 <dt>라이즈 결과 데이터 리포트 제공</dt>

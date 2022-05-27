@@ -43,7 +43,6 @@ export default function Header(): JSX.Element {
   const sendEvnet = (navName: string): void => {
     TagManager.dataLayer({ dataLayer: { event: `nav_click`, to: navName } });
   };
-
   return (
     <>
       <Link href="/">

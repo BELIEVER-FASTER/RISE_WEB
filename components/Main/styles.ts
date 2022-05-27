@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { responSiveSize } from 'utils/style_opt';
 
 export const MainSection1CT = styled.section`
   height: 115vh;
@@ -6,7 +7,7 @@ export const MainSection1CT = styled.section`
   justify-content: center;
   padding-top: 280px;
   h1 {
-    font-weight: 500px;
+    font-weight: 400;
     font-family: 'NHaasGroteskTXPro';
     font-size: 120px;
     z-index: 99;
@@ -136,23 +137,95 @@ export const MainSection1CT = styled.section`
       opacity: 0;
     }
   }
+  @keyframes verticalMobile {
+    0% {
+      opacity: 0;
+      transform: translateY(-40px);
+    }
+    30% {
+      opacity: 0;
+      transform: translateY(-40px);
+    }
+    32% {
+      opacity: 1;
+    }
+    37% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    53% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    58% {
+      opacity: 1;
+    }
+    60% {
+      transform: translateY(40px);
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
   position: relative;
   .main_banner_video {
     z-index: 2;
     position: absolute;
     bottom: -28.3vh;
     max-width: 1200px;
-    /* height: 658px; */
     video {
       width: 100%;
     }
   }
+  @media ${responSiveSize.mobile} {
+    height: 90vh;
+    padding-top: 144px;
+    h1 {
+      font-size: 40px;
+      z-index: 2;
+      font-weight: 400;
+      height: auto;
+      strong {
+        margin-right: 4px;
+      }
+      text-align: center;
+      p:nth-of-type(1) {
+        padding: 0;
+      }
+      p:nth-of-type(2) {
+        font-size: 34px;
+        height: 34px;
+        span {
+          position: absolute;
+          opacity: 0;
+          animation: verticalMobile 4s ease infinite 0s;
+        }
+      }
+      p:nth-of-type(3) {
+        margin-left: 0;
+        padding: 0;
+      }
+    }
+    .main_banner_video {
+      z-index: 1;
+      position: absolute;
+      bottom: 16%;
+      left: 24px;
+      right: 24px;
+      height: 340px;
+      max-width: 1200px;
+      video {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+  }
 `;
 export const MainSection2CT = styled.section`
-  /* height: 1581px; */
   height: 350vh;
   position: relative;
-  /* background-color: #000; */
   margin-top: 302px;
   z-index: 1;
   .wrapper {
@@ -182,6 +255,26 @@ export const MainSection2CT = styled.section`
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
+      }
+    }
+  }
+  @media ${responSiveSize.mobile} {
+    height: 250vh;
+    margin-top: 50px;
+    background-color: #000;
+    position: relative;
+    .wrapper {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      .content {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        h2 {
+          font-size: 36px;
+          opacity: 0;
+        }
       }
     }
   }
@@ -253,6 +346,23 @@ export const MainSection3CT = styled.section`
           background-color: #fff;
         }
       }
+    }
+  }
+  @media ${responSiveSize.mobile} {
+    padding: 120px 24px 120px 24px;
+    width: 100vw;
+    overflow: hidden;
+    h2 {
+      font-size: 34px;
+      em {
+        font-size: 14px;
+        top: -16px;
+      }
+    }
+    & > p {
+      font-size: 16px;
+      margin-top: 24px;
+      margin-bottom: 40px;
     }
   }
 `;
@@ -337,6 +447,60 @@ export const MainSection4CT = styled.section`
       }
       display: flex;
       justify-content: space-between;
+    }
+  }
+  @media ${responSiveSize.mobile} {
+    padding: 80px 0;
+    .title {
+      padding: 0 24px;
+      margin-bottom: 64px;
+      position: relative;
+      & > span {
+        font-size: 14px;
+        position: absolute;
+        top: -20px;
+      }
+      article {
+        h2 {
+          font-size: 36px;
+          margin-bottom: 32px;
+        }
+        p {
+          line-height: 1.5;
+          font-size: 16px;
+        }
+      }
+    }
+    .app_info {
+      padding: 0 24px;
+      width: 100%;
+      .img_wrapper {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+      article {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        h3 {
+          br {
+            display: none;
+          }
+          font-size: 20px;
+          font-weight: 400;
+        }
+        p {
+          margin-top: 20px;
+          span {
+            font-size: 14px;
+          }
+          a {
+            margin-top: 24px;
+          }
+        }
+      }
     }
   }
 `;

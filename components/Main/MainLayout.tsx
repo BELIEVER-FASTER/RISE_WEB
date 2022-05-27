@@ -25,6 +25,7 @@ export default function MainLayout(): JSX.Element {
   });
 
   useEffect(() => {
+    const isMobile = window.innerWidth < 950;
     const header = document.querySelectorAll('.main_header') as NodeListOf<HTMLElement>;
     if (!header) return;
 
@@ -54,8 +55,8 @@ export default function MainLayout(): JSX.Element {
     };
   }, [inView, ref, inView2]);
   return (
-    <div>
-      <div
+    <div style={{}}>
+      {/* <div
         id="awwwards"
         style={{
           position: 'fixed',
@@ -73,22 +74,22 @@ export default function MainLayout(): JSX.Element {
             </g>
           </svg>
         </a>
-      </div>
+      </div> */}
       <MainSection1 />
       <div ref={ref}>
         <MainSection2Animation blackMode={blackMode} />
         <MainSection3 />
       </div>
       <MainSection4 />
-      <MainSection5 />
-      <SectionWithBanner>
-        <LineBanner />
-        <MainSection6 />
-        <MainSection7 />
-      </SectionWithBanner>
-      <div ref={ref2}>
+      {/* <MainSection5 /> */}
+      {/* <SectionWithBanner> */}
+      {/* <LineBanner /> */}
+      {/* <MainSection6 /> */}
+      {/* <MainSection7 /> */}
+      {/* </SectionWithBanner> */}
+      {/* <div ref={ref2}>
         <MainSection8 />
-      </div>
+      </div> */}
     </div>
   );
 }
