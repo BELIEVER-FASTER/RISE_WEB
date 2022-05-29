@@ -323,8 +323,9 @@ export const ContactFormContainer = styled.section`
   }
   @media ${responSiveSize.mobile} {
     form {
-      padding: 1rem;
+      padding: 1.5rem;
       padding-bottom: 5rem;
+      width: 100vw;
       h3 {
         font-size: 32px;
         margin-bottom: 0rem;
@@ -372,6 +373,10 @@ export const ContactFormContainer = styled.section`
       textarea {
         height: 100%;
       }
+    }
+    button {
+      padding: 16px 0;
+      font-size: 16px;
     }
   }
 `;

@@ -25,7 +25,6 @@ export default function MainLayout(): JSX.Element {
   });
 
   useEffect(() => {
-    const isMobile = window.innerWidth < 950;
     const header = document.querySelectorAll('.main_header') as NodeListOf<HTMLElement>;
     if (!header) return;
 
@@ -87,7 +86,9 @@ export default function MainLayout(): JSX.Element {
         <MainSection6 />
         <MainSection7 />
       </SectionWithBanner>
-      <div ref={ref2}>{/* <MainSection8 /> */}</div>
+      <div ref={ref2}>
+        <MainSection8 />
+      </div>
     </div>
   );
 }

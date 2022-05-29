@@ -11,13 +11,26 @@ export default function StudioMobile(): JSX.Element {
     slidesToScroll: 1,
   };
   return (
-    <Slider centerMode={true} centerPadding={'24px'} arrows={false} {...settings}>
-      {(['Fashion', 'Kitchen', 'Living', 'Beauty', 'Kids'] as StudioList[]).map(v => (
-        <div className="item" key={v}>
-          <img src={`/img/ver2/studio/${v.toLowerCase()}.png`} alt="" />
-          <span>{v}</span>
-        </div>
-      ))}
+    <Slider
+      className="studio_wrapper_mobile"
+      centerMode={true}
+      centerPadding={'24px'}
+      arrows={false}
+      {...settings}
+    >
+      {(['Fashion', 'Kitchen', 'Living', 'Beauty', 'Kids'] as StudioList[]).map(
+        (v, idx) => (
+          <div className="item" key={v}>
+            <img src={`/img/ver2/studio/${v.toLowerCase()}.png`} alt="" />
+            <article>
+              <span>{v}</span>
+              <p>
+                <strong>0{idx + 1} / </strong> 05
+              </p>
+            </article>
+          </div>
+        )
+      )}
     </Slider>
   );
 }

@@ -79,9 +79,26 @@ export const InputBox = styled.div<{ whiteMode: boolean; value: string | number 
 
   @media ${responSiveSize.mobile} {
     input {
-      font-size: 20px;
-      padding: 20px 0;
+      font-size: 16px;
+      padding: 8px 0;
     }
+    label {
+      font-size: 14px;
+      padding-bottom: 8px;
+      font-weight: 300;
+    }
+    input:focus + label {
+      top: -20px;
+      font-size: 12px;
+    }
+    ${({ value }) =>
+      value &&
+      css`
+        label {
+          top: -20px;
+          font-size: 12px;
+        }
+      `}
   }
 `;
 export const CustomSelectBox = styled.div<{ selectOpen: boolean }>`
@@ -195,7 +212,7 @@ export const TextareaBox = styled.div<{
   @media ${responSiveSize.mobile} {
     textarea {
       padding: 1rem;
-      font-size: 16px;
+      font-size: 14px;
       min-height: 3.25rem;
       height: 70%;
     }
