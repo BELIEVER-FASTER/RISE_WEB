@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import StudioMobile from './StudioMobile';
 import { MainSection7CT, StudioBtnBox } from './styles';
 
-type StudioList = 'Fashion' | 'Kitchen' | 'Living' | 'Beauty' | 'kids';
+export type StudioList = 'Fashion' | 'Kitchen' | 'Living' | 'Beauty' | 'kids';
 function StudioBtn({
   value,
   onChangeType,
@@ -50,6 +51,17 @@ export default function MainSection7(): JSX.Element {
           ))}
         </ul>
       </div>
+      <StudioMobile />
+      {/* <div className="studio_wrapper_mobile">
+        <ul>
+          {(['Fashion', 'Kitchen', 'Living', 'Beauty', 'Kids'] as StudioList[]).map(v => (
+            <li key={v}>
+              <img src={`/img/ver2/studio/${v.toLowerCase()}.png`} alt="" />
+              <span>{v}</span>
+            </li>
+          ))}
+        </ul>
+      </div> */}
     </MainSection7CT>
   );
 }

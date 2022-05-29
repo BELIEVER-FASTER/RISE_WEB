@@ -18,7 +18,8 @@ export default function MainSection5(): JSX.Element {
           가능성을 더하다.
         </h3>
         <p>
-          촬영부터 마케팅까지 One-Stop 서비스로 당신의 비즈니스를 <br />
+          촬영부터 마케팅까지 One-Stop <br className="mobile" /> 서비스로 당신의
+          비즈니스를 <br />
           성장시키는 방법을 살펴보세요.
         </p>
       </div>

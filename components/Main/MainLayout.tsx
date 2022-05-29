@@ -81,15 +81,13 @@ export default function MainLayout(): JSX.Element {
         <MainSection3 />
       </div>
       <MainSection4 />
-      {/* <MainSection5 /> */}
-      {/* <SectionWithBanner> */}
-      {/* <LineBanner /> */}
-      {/* <MainSection6 /> */}
-      {/* <MainSection7 /> */}
-      {/* </SectionWithBanner> */}
-      {/* <div ref={ref2}>
-        <MainSection8 />
-      </div> */}
+      <MainSection5 />
+      <SectionWithBanner>
+        <LineBanner />
+        <MainSection6 />
+        <MainSection7 />
+      </SectionWithBanner>
+      <div ref={ref2}>{/* <MainSection8 /> */}</div>
     </div>
   );
 }
