@@ -323,6 +323,25 @@ export const FooterContainer = styled.footer<{ isBlack: boolean }>`
     `}
 
   @media ${responSiveSize.mobile} {
+    .contact_us {
+      padding: 120px 0 120px 0;
+      h2 {
+        font-size: 36px;
+        .arrow {
+          border-width: 2px;
+          padding: 8px 16px;
+          svg {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+      & > p {
+        margin-top: 20px;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+    }
     .footer_info {
       flex-direction: column;
       margin: 0 24px;

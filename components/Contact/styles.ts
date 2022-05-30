@@ -39,6 +39,10 @@ export const ContactContainer = styled.div`
       padding-left: 0;
       padding: 1.5rem;
     }
+    .contact_title > h3 {
+      font-size: 32px;
+      padding: 0 24px;
+    }
   }
 `;
 
@@ -92,10 +96,13 @@ export const ContactBannerContainer = styled.section`
       }
     }
     p {
+      align-self: flex-end;
       margin: 0;
       margin-top: 1.75rem;
       line-height: 1.4;
-      font-size: 20px;
+      font-size: 15px;
+      max-width: 224px;
+      margin-right: 12px;
       br:last-of-type,
       br:first-of-type {
         display: initial;

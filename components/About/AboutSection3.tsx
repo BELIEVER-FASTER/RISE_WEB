@@ -27,6 +27,9 @@ export default function AboutSection3(): JSX.Element {
             <img src="/img/ver2/brands/logo2.png" alt="" />
           </li>
         </ul>
+        <div className="section3_brands_mobile section3_brands hide">
+          <img src="/img/ver2/about/brands_mobile.png" alt="" />
+        </div>
       </div>
     </AboutSection3CT>
   );

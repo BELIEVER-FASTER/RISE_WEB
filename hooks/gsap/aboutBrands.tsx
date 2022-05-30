@@ -19,7 +19,7 @@ export default function aboutBrands(): JSX.Element {
         fontWeight: 400,
         scale: 1,
       })
-      .to('.section3_brands', {
+      .to('.section3_brands,.section3_brands_mobile', {
         scrollTrigger: {
           trigger: '.section3',
           scrub: 0.2,

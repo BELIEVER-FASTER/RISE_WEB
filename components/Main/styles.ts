@@ -210,7 +210,7 @@ export const MainSection1CT = styled.section`
     .main_banner_video {
       z-index: 1;
       position: absolute;
-      bottom: 10%;
+      bottom: -10vw;
       left: 24px;
       right: 24px;
       height: 340px;
