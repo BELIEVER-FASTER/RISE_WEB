@@ -38,7 +38,10 @@ export default function MainSection7(): JSX.Element {
   const onChangeType = (type: StudioList) => setType(type);
   return (
     <MainSection7CT>
-      <h2>생산성을 높여주는 스튜디오</h2>
+      <h2>
+        생산성을 높여주는
+        <br className="mobile" /> 스튜디오
+      </h2>
       <p>
         브랜드 컨셉에 맞춘 스튜디오를 통해 <br />
         콘텐츠 품질을 높이고 스마트하게 진행하세요

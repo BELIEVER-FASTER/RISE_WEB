@@ -20,7 +20,10 @@ export default function AboutSection6(): JSX.Element {
   }, [inView, ref]);
   return (
     <AboutSection6CT>
-      <h2>라이브가 처음이신가요?</h2>
+      <h2>
+        라이브가
+        <br className="mobile" /> 처음이신가요?
+      </h2>
       <p>그래서 라이즈가 아낌없이 준비했습니다.</p>
       <ul>
         <li>
@@ -34,7 +37,8 @@ export default function AboutSection6(): JSX.Element {
           </div>
           <h3>다양한 라이브 채널</h3>
           <p>
-            네이버 뿐만 아니라 라이브 커머스를 진행하는 모든 채널에서 가능합니다.
+            네이버 뿐만 아니라 라이브 커머스를 <br className="mobile" /> 모든 채널에서
+            가능합니다.
             <br />
             <span>
               브랜드 자체적인 채널 뿐만 아니라, 채널이 없는 경우 <br />
@@ -52,7 +56,8 @@ export default function AboutSection6(): JSX.Element {
             <br />
             <span>
               라이즈 앱 메인화면 최상단에 노출되며 <br />이 외에도 검색탭, 스폐셜 라이브
-              등 다양한 영역에서 볼 수 있습니다.
+              등
+              <br className="mobile" /> 다양한 영역에서 볼 수 있습니다.
             </span>
           </p>
         </li>

@@ -52,7 +52,8 @@ export default function AboutSection4(): JSX.Element {
     <AboutSection4CT>
       <div className="left">
         <h2>
-          라이즈 스튜디오 서비스에 만족한 <br />
+          라이즈 스튜디오 서비스에
+          <br className="mobile" /> 만족한 <br className="desktop" />
           다양한 브랜드와 셀러들
         </h2>
         <p>

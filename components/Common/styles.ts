@@ -206,6 +206,7 @@ export const TextareaBox = styled.div<{
     css`
       textarea {
         border: 3px solid #e0e0e0;
+        color: #000;
       }
     `} 
 

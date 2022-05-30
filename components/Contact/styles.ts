@@ -25,6 +25,9 @@ export const ContactContainer = styled.div`
   #contact__form {
     padding-left: 0;
   }
+  br.mobile {
+    display: none;
+  }
   @media ${responSiveSize.tablet} {
     section {
       width: 100%;
@@ -42,6 +45,10 @@ export const ContactContainer = styled.div`
     .contact_title > h3 {
       font-size: 32px;
       padding: 0 24px;
+      line-height: 1.24;
+    }
+    br.mobile {
+      display: initial;
     }
   }
 `;

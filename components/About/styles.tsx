@@ -1,7 +1,22 @@
 import styled from 'styled-components';
 import { responSiveSize } from 'utils/style_opt';
 
-export const AboutLayoutCT = styled.main``;
+export const AboutLayoutCT = styled.main`
+  br.mobile {
+    display: none;
+  }
+  br.desktop {
+    display: initial;
+  }
+  @media ${responSiveSize.mobile} {
+    br.mobile {
+      display: initial;
+    }
+    br.desktop {
+      display: none;
+    }
+  }
+`;
 export const AboutSection1CT = styled.section`
   background-color: #fff;
   height: 90vh;
@@ -57,10 +72,10 @@ export const AboutSection1CT = styled.section`
       /* margin-right: 48px; */
       svg {
         bottom: 50%;
-        right: -25%;
+        right: -20%;
         position: absolute;
-        width: 170px;
-        height: 50px;
+        width: 160px;
+        height: 46px;
       }
     }
     .title_info {
@@ -164,16 +179,18 @@ export const AboutSection2CT = styled.section`
       width: 90%;
       .content_layer {
         padding: 20% 24px;
-        justify-content: space-between;
+        justify-content: center;
         em {
           font-size: 14px;
         }
         h2 {
           font-size: 36px;
+          display: none;
         }
         h3 {
           font-size: 36px;
-          margin-top: 20%;
+          margin-top: 0%;
+          margin-bottom: 40px;
           font-weight: 500;
           em.top_gap {
             position: absolute;
@@ -184,6 +201,7 @@ export const AboutSection2CT = styled.section`
           flex-direction: column;
           li {
             h4 {
+              line-height: 1.23;
               font-size: 24px;
               margin: 0px 0 10px 0;
             }
@@ -351,7 +369,7 @@ export const AboutSection4CT = styled.section`
     flex-direction: column;
     padding: 120px 24px;
     align-items: center;
-    gap: 88px;
+    gap: 20%;
     .left {
       text-align: center;
       h2 {
@@ -487,6 +505,10 @@ export const AboutSection5CT = styled.section`
             font-size: 14px;
             margin-bottom: 8px;
             line-height: 1.7;
+            br.mobile {
+              width: 30px;
+              display: block;
+            }
           }
         }
         img {
@@ -589,6 +611,8 @@ export const AboutSection6CT = styled.section`
     padding: 80px 24px;
     h2 {
       font-size: 36px;
+      text-align: center;
+      line-height: 1.24;
     }
     & > p {
       margin-bottom: 36px;

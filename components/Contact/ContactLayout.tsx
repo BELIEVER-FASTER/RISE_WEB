@@ -16,7 +16,11 @@ export default function ContactLayout(): JSX.Element {
       <ContactInfo />
       <ContactAnimation />
       <section className="contact_title">
-        <h3>간단한 정보를 입력해주세요</h3>
+        <h3>
+          간단한 정보를
+          <br className="mobile" />
+          입력해주세요
+        </h3>
       </section>
 
       <ContactForm />

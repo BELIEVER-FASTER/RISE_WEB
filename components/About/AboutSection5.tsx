@@ -15,8 +15,8 @@ export default function AboutSection5(): JSX.Element {
             </h3>
             <dl>
               <dt>
-                ・이메일 / 유선 / 온라인 / 오프라인 미팅을 통해 프로세스와 비용 등을
-                조정합니다.
+                ・이메일 / 유선 / 온라인 / 오프라인 미팅을 <br className="mobile" /> 통해
+                프로세스와 비용 등을 조정합니다.
               </dt>
               <dt>・계약 시 브랜드 컨셉이나 상품에 따라 담당 PD가 배정됩니다.</dt>
             </dl>

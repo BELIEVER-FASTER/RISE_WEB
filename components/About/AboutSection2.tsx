@@ -26,7 +26,9 @@ export default function AboutSection2(): JSX.Element {
           <ul className="title2 hide">
             <li>
               <em>( Our Mission )</em>
-              <h4>지속성 있는 라이브 미디어 콘텐츠</h4>
+              <h4>
+                지속성 있는 <br className="mobile" /> 라이브 미디어 콘텐츠
+              </h4>
               <span>
                 지속적으로 보고싶은 콘텐츠를 통해 기획부터
                 <br />
@@ -37,7 +39,10 @@ export default function AboutSection2(): JSX.Element {
             </li>
             <li>
               <em>( Our Vision )</em>
-              <h4>차세대 이커머스의 새로운 패러다임</h4>
+              <h4>
+                차세대 이커머스의
+                <br className="mobile" /> 새로운 패러다임
+              </h4>
               <span>
                 빠르게 변화하는 시대에 맞춰 함께 고민하며
                 <br />

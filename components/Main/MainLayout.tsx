@@ -9,7 +9,7 @@ import MainSection5 from './MainSection5';
 import MainSection6 from './MainSection6';
 import MainSection7 from './MainSection7';
 import MainSection8 from './MainSection8';
-import { SectionWithBanner } from './styles';
+import { MainContainer, SectionWithBanner } from './styles';
 import gsap from 'gsap';
 
 const MainSection2Animation = dynamic(() => import('./MainSection2'), {
@@ -54,7 +54,7 @@ export default function MainLayout(): JSX.Element {
     };
   }, [inView, ref, inView2]);
   return (
-    <div style={{}}>
+    <MainContainer>
       {/* <div
         id="awwwards"
         style={{
@@ -89,6 +89,6 @@ export default function MainLayout(): JSX.Element {
       <div ref={ref2}>
         <MainSection8 />
       </div>
-    </div>
+    </MainContainer>
   );
 }

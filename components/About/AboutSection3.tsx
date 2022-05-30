@@ -9,7 +9,8 @@ export default function AboutSection3(): JSX.Element {
       <div className="content">
         <h2 className="section3_title hide">
           라이즈 스튜디오와 <br />
-          함께 성장하는 브랜드와 셀러들
+          함께 성장하는
+          <br className="mobile" /> 브랜드와 셀러들
         </h2>
         <ul className="section3_brands hide">
           <li>

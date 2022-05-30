@@ -1,6 +1,21 @@
 import styled, { css } from 'styled-components';
 import { responSiveSize } from 'utils/style_opt';
-
+export const MainContainer = styled.main`
+  br.mobile {
+    display: none;
+  }
+  br.desktop {
+    display: initial;
+  }
+  @media ${responSiveSize.mobile} {
+    br.mobile {
+      display: initial;
+    }
+    br.desktop {
+      display: none;
+    }
+  }
+`;
 export const MainSection1CT = styled.section`
   height: 115vh;
   display: flex;
@@ -465,8 +480,9 @@ export const MainSection4CT = styled.section`
           margin-bottom: 32px;
         }
         p {
-          line-height: 1.5;
+          line-height: 1.7;
           font-size: 16px;
+          font-weight: 300;
         }
       }
     }
@@ -494,6 +510,7 @@ export const MainSection4CT = styled.section`
           margin-top: 20px;
           span {
             font-size: 14px;
+            line-height: 1.6;
           }
           a {
             margin-top: 24px;
@@ -555,9 +572,6 @@ export const MainSection5CT = styled.section`
   .text + .text {
     margin-top: 600px;
   }
-  br.mobile {
-    display: none;
-  }
   @media ${responSiveSize.mobile} {
     .content {
       .background_video {
@@ -580,6 +594,9 @@ export const MainSection5CT = styled.section`
         line-height: 1.5;
         margin-top: 24px;
       }
+    }
+    .text + .text {
+      margin-top: 400px;
     }
   }
 `;
@@ -699,6 +716,7 @@ export const MainSection6CT = styled.section`
     }
     h2 {
       font-size: 36px;
+      line-height: 1.2;
       em {
         font-size: 14px;
         top: -20px;
@@ -709,6 +727,8 @@ export const MainSection6CT = styled.section`
       margin-top: 24px;
       font-size: 16px;
       margin-bottom: 46px;
+      line-height: 1.6;
+      font-weight: 300;
     }
     ul {
       align-items: center;
@@ -730,6 +750,7 @@ export const MainSection6CT = styled.section`
         }
         p {
           font-size: 13px;
+          font-weight: 300;
         }
       }
       li:nth-of-type(1) {
@@ -807,9 +828,13 @@ export const MainSection7CT = styled.section`
     }
     h2 {
       font-size: 36px;
+      line-height: 1.3;
     }
     & > p {
       font-size: 16px;
+      margin-top: 24px;
+      font-weight: 300;
+      line-height: 1.5;
     }
     .studio_wrapper {
       display: none;
