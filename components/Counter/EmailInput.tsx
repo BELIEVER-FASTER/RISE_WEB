@@ -1,4 +1,4 @@
-import ResultModal from 'components/Common/ResultModal';
+// import ResultModal from 'components/Common/ResultModal';
 import useAsync from 'hooks/useAsync';
 import React, { useState, useEffect } from 'react';
 import { emailNoti } from 'utils/requests';
@@ -7,13 +7,13 @@ import { EmailInputBox } from './styles';
 export default function EmailInput(): JSX.Element {
   const [email, setEmail] = useState('');
   const [isRegister, setIsRegister] = useState(false);
-  const [modalOpen, setModalOpen] = useState(false);
+  // const [modalOpen, setModalOpen] = useState(false);
   const [state, fetch] = useAsync(emailNoti, email);
 
-  const onClose = () => {
-    setModalOpen(false);
-    setEmail('');
-  };
+  // const onClose = () => {
+  //   setModalOpen(false);
+  //   setEmail('');
+  // };
 
   const onChangeEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
@@ -37,11 +37,11 @@ export default function EmailInput(): JSX.Element {
     };
   }, [state]);
 
-  useEffect(() => {
-    if (isRegister) {
-      setModalOpen(true);
-    }
-  }, [isRegister]);
+  // useEffect(() => {
+  //   if (isRegister) {
+  //     setModalOpen(true);
+  //   }
+  // }, [isRegister]);
 
   return (
     <>
@@ -62,7 +62,7 @@ export default function EmailInput(): JSX.Element {
           </button>
         )}
       </EmailInputBox>
-      {modalOpen && <ResultModal name={email} onClose={onClose} />}
+      {/* {modalOpen && <ResultModal name={email} onClose={onClose} />} */}
     </>
   );
 }
