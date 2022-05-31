@@ -59,11 +59,15 @@ export default function Footer(): JSX.Element {
         </div>
         <ul className="right">
           <li>
-            Instagram <FiArrowUpRight />
+            <a target="_blank" href="https://www.instagram.com/riseenm/">
+              Instagram <FiArrowUpRight />
+            </a>
           </li>
           <li>
-            Blog
-            <FiArrowUpRight />
+            <a target="_blank" href="https://blog.naver.com/riseenm">
+              Blog
+              <FiArrowUpRight />
+            </a>
           </li>
         </ul>
       </div>

@@ -2,14 +2,6 @@ import mongoose from 'mongoose';
 
 const ContactSchema = new mongoose.Schema(
   {
-    budget: {
-      type: String,
-      required: [true, 'Please provide a Email.'],
-    },
-    schedule: {
-      type: String,
-      required: [true, 'Please provide a Email.'],
-    },
     company: {
       type: String,
       required: [true, 'Please provide a Brand.'],
@@ -25,11 +17,15 @@ const ContactSchema = new mongoose.Schema(
     email: {
       type: String,
       required: [true, 'Please provide a Email.'],
-      maxlength: [60, 'Email cannot be more than 60 characters'],
+      // maxlength: [60, 'Email cannot be more than 60 characters'],
     },
     info: {
       type: String,
       required: [true, 'Please provide a Information.'],
+    },
+    inflow: {
+      type: mongoose.SchemaTypes.String,
+      required: false,
     },
   },
   { timestamps: true }

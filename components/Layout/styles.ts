@@ -296,6 +296,12 @@ export const FooterContainer = styled.footer<{ isBlack: boolean }>`
         display: flex;
         align-items: center;
         font-weight: bold;
+        a {
+          display: flex;
+          align-items: center;
+          color: #fff;
+          text-decoration: none;
+        }
         svg {
           width: 18px;
           height: 18px;
@@ -364,6 +370,9 @@ export const FooterContainer = styled.footer<{ isBlack: boolean }>`
         li {
           font-weight: 300;
           font-size: 16px;
+          a {
+            color: #fff;
+          }
         }
       }
     }

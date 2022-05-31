@@ -6,9 +6,6 @@ import Input from 'components/Common/Input';
 import Textarea from 'components/Common/Textarea';
 import useInput from 'hooks/useInput';
 import { ContactFormContainer } from './styles';
-import CustomSelect from 'components/Common/CustomSelect';
-import { budgetOptions } from 'utils/inputData';
-import DatePick from '../Common/DatePick';
 import useAsync from 'hooks/useAsync';
 import { sendContact } from 'utils/requests';
 import ResultModal from 'components/Common/ResultModal';
@@ -29,6 +26,7 @@ export default function ContactForm(): JSX.Element {
   const [valid, setValid] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const [prModalOpen, setPrModalOpen] = useState(false);
+  const [contactId, setContactId] = useState('');
 
   const router = useRouter();
   const isContact = router.route === '/contact';
@@ -81,6 +79,7 @@ export default function ContactForm(): JSX.Element {
     if (state.loading) return setValid(false);
     else if (state.success) {
       setModalOpen(true);
+      setContactId(state.success._id);
     }
   }, [state]);
   useEffect(() => {
@@ -109,13 +108,6 @@ export default function ContactForm(): JSX.Element {
     <>
       <ContactFormContainer ref={ref} id="contact__form">
         <form onSubmit={onSubmit}>
-          {/* <CustomSelect
-            className="budget_input invinsible"
-            placeholder="광고예산"
-            value={budget}
-            setValue={setBudget}
-            options={budgetOptions}
-          /> */}
           <div className="contact__field">
             <Input
               className="contact_input invinsible"
@@ -173,7 +165,7 @@ export default function ContactForm(): JSX.Element {
           </button>
         </form>
       </ContactFormContainer>
-      {modalOpen && <ResultModal name={name} onClose={onClose} />}
+      {modalOpen && <ResultModal contactId={contactId} onClose={onClose} />}
     </>
   );
 }

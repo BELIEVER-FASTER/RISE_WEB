@@ -79,7 +79,7 @@ export default function AboutSection5(): JSX.Element {
               </dt>
               <dt>
                 ・라이브 종료 이후 시청자 유형, 구매자 유형, 판매 상품 수량, 총 판매 금액
-                등을 <br /> &nbsp;&nbsp;&nbsp;리포트로 작성하여 전달드리며 해당 데이터를
+                등을 <br /> &nbsp;&nbsp;&nbsp;리포트로 작성하여 전달드리며 데이터를
                 바탕으로 다음 전략을 수립합니다.
               </dt>
             </dl>

@@ -1,4 +1,5 @@
 import axios from 'axios';
+import dayjs from 'dayjs';
 
 axios.defaults.withCredentials = true;
 // if (process.env.NODE_ENV === 'production') {
@@ -31,6 +32,13 @@ export const sendContact = async (data: ContactData): Promise<EmailNotiRes> => {
   return res.data;
 };
 
+export const updateInflow = async (data: {
+  _id: string;
+  inflow: string;
+}): Promise<boolean> => {
+  const res = await axios.patch<boolean>('/api/contact', data);
+  return res.data;
+};
 export const sendSlackMessage = async (
   email: string,
   amount: number
@@ -69,18 +77,53 @@ export const sendSlackContact = async (data: ContactData): Promise<EmailNotiRes>
       ? (process.env.NEXT_PUBLIC_SLACK_WEB_HOOK as string)
       : (process.env.NEXT_PUBLIC_SLACK_TEST_HOOK as string),
     {
-      attachments: [
+      blocks: [
         {
-          fallback: 'Required plain-text summary of the attachment.',
-          color: '#0090d2',
-          pretext: 'RiSE - 문의 사항',
-          author_name: `${data.name} (${data.company})`,
-          title: data.email,
-          title_link: `mailto:${data.email}`,
-          text: `광고예산: ${data.budget} | 시작희망일: ${data.schedule}`,
-          footer: 'NOA',
-          footer_icon: 'https://i.ibb.co/n1w52dJ/loading-1.gif',
-          ts: +new Date(),
+          type: 'header',
+          text: {
+            type: 'plain_text',
+            text: `:tada: [${data.company}] 문의가 도착했어요`,
+            emoji: true,
+          },
+        },
+        {
+          type: 'section',
+          fields: [
+            {
+              type: 'mrkdwn',
+              text: `*담당자:*\n${data.name}`,
+            },
+            {
+              type: 'mrkdwn',
+              text: `*이메일:*\n<mailto:${data.email}|${data.email}>`,
+            },
+          ],
+        },
+        {
+          type: 'section',
+          fields: [
+            {
+              type: 'mrkdwn',
+              text: `*문의일자:*\n${dayjs(new Date()).format(
+                'YYYY년 MM월 DD일 hh시 mm분'
+              )}`,
+            },
+          ],
+        },
+        {
+          type: 'divider',
+        },
+        {
+          type: 'context',
+          elements: [
+            {
+              type: 'plain_text',
+              text: `내용:\n ${
+                data.info.length > 70 ? data.info.substring(0, 70) : data.info
+              }`,
+              emoji: true,
+            },
+          ],
         },
       ],
     },

@@ -102,10 +102,13 @@ export const InputBox = styled.div<{ whiteMode: boolean; value: string | number 
   }
 `;
 export const CustomSelectBox = styled.div<{ selectOpen: boolean }>`
-  height: 4.125rem;
+  height: 60px;
   width: 100%;
   position: relative;
   z-index: 40;
+  border: 1px solid #d3d3d3;
+  padding: 0 24px;
+  border-radius: 8px;
   select {
     display: none;
   }
@@ -115,8 +118,7 @@ export const CustomSelectBox = styled.div<{ selectOpen: boolean }>`
     align-items: center;
     height: 100%;
     width: 100%;
-    font-size: 32px;
-    border-bottom: 3px solid #000;
+    font-size: 16px;
     cursor: default;
     img {
       transition: all 0.2s;
@@ -128,6 +130,7 @@ export const CustomSelectBox = styled.div<{ selectOpen: boolean }>`
   ${({ selectOpen }) =>
     selectOpen &&
     css`
+      border: 2px solid #040201;
       .select {
         img {
           transform: rotate(180deg) translateX(-10px);
@@ -135,34 +138,44 @@ export const CustomSelectBox = styled.div<{ selectOpen: boolean }>`
       }
     `}
   ul {
-    border: 3px solid #000;
+    border: 1px solid #d3d3d3;
     border-top: none;
     position: absolute;
-    top: 4.125rem;
+    top: 60px;
     left: 0;
     width: 100%;
     background-color: #fff;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
     li {
-      font-size: 32px;
-      padding: 20px 1.625rem;
+      font-size: 16px;
+      padding: 16px 24px;
+      color: #838383;
+      font-weight: 300;
       &.active {
-        background-color: #000;
+        background: #167df7;
         color: #fff;
       }
       &:hover {
-        background-color: #000;
+        background: #167df7;
         color: #fff;
         cursor: default;
       }
     }
   }
   @media ${responSiveSize.mobile} {
+    padding: 0 12px;
     .select {
-      font-size: 20px;
+      font-size: 13px;
+      img {
+        width: 20px;
+        height: 20px;
+      }
     }
     ul {
       li {
-        font-size: 20px;
+        padding: 12px 12px;
+        font-size: 13px;
       }
     }
   }
@@ -522,65 +535,90 @@ export const ModalWrapper = styled.div`
   justify-content: center;
   animation: ${fadeIn} 0.3s;
   .modal__content {
-    border-radius: 0.53rem;
+    /* border-radius: 0.53rem; */
     min-height: 250px;
     background-color: #fff;
-    padding: 1.7rem 2rem;
-    min-width: 450px;
+    min-width: 420px;
     display: flex;
     align-items: center;
     flex-direction: column;
     box-shadow: 0px 5px 20px #555;
     animation: ${slideUp} 0.3s;
-    .img__wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      height: 150px;
-      margin-bottom: 30px;
-      img {
-        width: 80%;
-      }
-    }
+
     h1 {
       font-size: 28px;
+      line-height: 1.3;
       font-weight: 500;
       margin-bottom: 1rem;
+      margin-top: 4rem;
+      text-align: center;
     }
     p {
-      line-height: 1.7;
-      font-size: 18px;
+      line-height: 1.6;
+      font-size: 16px;
       padding-bottom: 35px;
+      font-weight: 300;
       flex: 1;
       text-align: center;
       strong {
         font-weight: 500;
       }
     }
+    position: relative;
+    & > i {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 14px;
+      font-size: 28px;
+      color: #444;
+      svg {
+        stroke-width: 0px;
+      }
+    }
     button {
       width: 100%;
       border: none;
       color: #fff;
-      font-size: 20px;
-      padding: 0.8rem 2rem;
-      border-radius: 5px;
+      font-size: 18px;
+      padding: 1.3rem 2rem;
       outline: none;
-      background-color: #e74c28;
+      background: #167df7;
       cursor: pointer;
+      &:disabled {
+        background: #c4c4c4;
+      }
+    }
+    .select_wrapper {
+      width: 100%;
+      padding: 0 28px;
+      margin-bottom: 52px;
     }
   }
   @media ${responSiveSize.mobile} {
     .modal__content {
-      width: 95%;
+      width: 90%;
       min-width: auto;
       margin-bottom: 100px;
-      .img__wrapper {
-        height: 110px;
-        margin-bottom: 20px;
-        img {
-          width: 70%;
+      h1 {
+        font-size: 24px;
+      }
+      p {
+        font-size: 15px;
+        padding-bottom: 40px;
+      }
+      button {
+        font-size: 15px;
+        padding: 1rem 2rem;
+        outline: none;
+        background: #167df7;
+        cursor: pointer;
+        &:disabled {
+          background: #c4c4c4;
         }
+      }
+      .select_wrapper {
+        margin-bottom: 48px;
       }
     }
   }

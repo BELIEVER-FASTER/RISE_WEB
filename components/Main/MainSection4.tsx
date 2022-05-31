@@ -38,7 +38,9 @@ export default function MainSection4(): JSX.Element {
               도와주는 AI 기반 1:1 맞춤형 라이브 쇼핑 추천
               <br className="mobile" /> 서비스입니다.
             </span>
-            <a href="/">앱 다운로드</a>
+            <a target="_blank" href="https://rise.onelink.me/IBR6/ao8f5nmr">
+              앱 다운로드
+            </a>
           </p>
         </article>
       </div>

@@ -8,17 +8,33 @@ const handler = async (req: NextApiRequest, res: NextApiResponse): Promise<void>
   const { method } = req;
 
   await dbConnect();
+  console.log(1 + ':' + new Date().toString());
 
   switch (method) {
     case 'GET':
       res.status(404).json({ code: 404, reason: 'Unhandled route call' });
       break;
+    case 'PATCH':
+      try {
+        await Contact.findByIdAndUpdate(
+          req.body._id,
+          { $set: { inflow: req.body.inflow } },
+          { returnDocument: 'after' },
+          (err, doc) => {
+            console.log(doc);
+          }
+        );
 
+        res.status(201).json(true);
+      } catch (e) {
+        res.status(404).json(false);
+      }
+      break;
     case 'POST':
       try {
         const result = await Contact.create(req.body);
 
-        const mailToUs = await transporter.sendMail({
+        const mailToUs = transporter.sendMail({
           from: `"RiSE" <${process.env.NODEMAILER_USER}>`,
           to: 'contact@riseenm.com',
           subject: 'RiSE Contact 발생',
