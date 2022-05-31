@@ -20,7 +20,7 @@ export default function MainSection4(): JSX.Element {
       </div>
       <div className="app_info">
         <div className="img_wrapper">
-          <img src="/img/ver2/main_app.png" alt="" />
+          <img src="/img/ver2/main_app.png" alt="라이즈 앱 이미지" />
         </div>
 
         <article>

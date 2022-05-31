@@ -14,22 +14,25 @@ export default function AboutSection3(): JSX.Element {
         </h2>
         <ul className="section3_brands hide">
           <li>
-            <img src="/img/ver2/brands/logo1.png" alt="" />
-            <img src="/img/ver2/brands/logo1.png" alt="" />
-            <img src="/img/ver2/brands/logo1.png" alt="" />
+            <img src="/img/ver2/brands/logo1.png" alt="협력사로고1" />
+            <img src="/img/ver2/brands/logo1.png" alt="협력사로고1_복제" />
+            <img src="/img/ver2/brands/logo1.png" alt="협력사로고1_복제2" />
           </li>
           <li>
-            <img src="/img/ver2/brands/logo2.png" alt="" />
-            <img src="/img/ver2/brands/logo2.png" alt="" />
+            <img src="/img/ver2/brands/logo2.png" alt="협력사로고2" />
+            <img src="/img/ver2/brands/logo2.png" alt="협력사로고2_복제" />
           </li>
           <li>
-            <img src="/img/ver2/brands/logo3.png" alt="" />
-            <img src="/img/ver2/brands/logo3.png" alt="" />
-            <img src="/img/ver2/brands/logo2.png" alt="" />
+            <img src="/img/ver2/brands/logo3.png" alt="협력사로고3" />
+            <img src="/img/ver2/brands/logo3.png" alt="협력사로고3_복제" />
+            <img src="/img/ver2/brands/logo2.png" alt="협력사로고3_복제2" />
           </li>
         </ul>
         <div className="section3_brands_mobile section3_brands hide">
-          <img src="/img/ver2/about/brands_mobile.png" alt="" />
+          <img
+            src="/img/ver2/about/brands_mobile.png"
+            alt="협력사 로고 리스트 모바일버전"
+          />
         </div>
       </div>
     </AboutSection3CT>

@@ -87,7 +87,7 @@ export default function MainSection6(): JSX.Element {
       </p>
       <ul>
         <li>
-          <img src="/img/ver2/process/Consulting.png" alt="" />
+          <img src="/img/ver2/process/Consulting.png" alt="문의,상담" />
           <h4>
             <strong>Step 1. </strong>문의 및 상담
           </h4>
@@ -100,7 +100,7 @@ export default function MainSection6(): JSX.Element {
           </p>
         </li>
         <li ref={ref}>
-          <img src="/img/ver2/process/Planning.png" alt="" />
+          <img src="/img/ver2/process/Planning.png" alt="라이브/상품 기획" />
           <h4>
             <strong>Step 2. </strong>라이브/상품 기획
           </h4>
@@ -115,7 +115,7 @@ export default function MainSection6(): JSX.Element {
           </p>
         </li>
         <li ref={ref2}>
-          <img src="/img/ver2/process/Showhost.png" alt="" />
+          <img src="/img/ver2/process/Showhost.png" alt="쇼호스트 매칭" />
           <h4>
             <strong>Step 3. </strong>쇼호스트 매칭
           </h4>
@@ -125,7 +125,7 @@ export default function MainSection6(): JSX.Element {
           </p>
         </li>
         <li ref={ref3}>
-          <img src="/img/ver2/process/Broadcasting.png" alt="" />
+          <img src="/img/ver2/process/Broadcasting.png" alt="라이브 송출" />
           <h4>
             <strong>Step 4. </strong>라이브 송출
           </h4>
@@ -138,7 +138,7 @@ export default function MainSection6(): JSX.Element {
           </p>
         </li>
         <li ref={ref4}>
-          <img src="/img/ver2/process/Data.png" alt="" />
+          <img src="/img/ver2/process/Data.png" alt="데이터 리포트" />
           <h4>
             <strong>Step 5. </strong>데이터 리포트
           </h4>

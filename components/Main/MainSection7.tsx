@@ -47,7 +47,10 @@ export default function MainSection7(): JSX.Element {
         콘텐츠 품질을 높이고 스마트하게 진행하세요
       </p>
       <div className="studio_wrapper">
-        <img src={`/img/ver2/studio/${type.toLowerCase()}.png`} alt="" />
+        <img
+          src={`/img/ver2/studio/${type.toLowerCase()}.png`}
+          alt={type + '스튜디오이미지'}
+        />
         <ul>
           {(['Fashion', 'Kitchen', 'Living', 'Beauty', 'Kids'] as StudioList[]).map(v => (
             <StudioBtn value={v} onChangeType={onChangeType} type={type} />
@@ -55,16 +58,6 @@ export default function MainSection7(): JSX.Element {
         </ul>
       </div>
       <StudioMobile />
-      {/* <div className="studio_wrapper_mobile">
-        <ul>
-          {(['Fashion', 'Kitchen', 'Living', 'Beauty', 'Kids'] as StudioList[]).map(v => (
-            <li key={v}>
-              <img src={`/img/ver2/studio/${v.toLowerCase()}.png`} alt="" />
-              <span>{v}</span>
-            </li>
-          ))}
-        </ul>
-      </div> */}
     </MainSection7CT>
   );
 }

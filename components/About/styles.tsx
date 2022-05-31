@@ -354,7 +354,7 @@ export const AboutSection4CT = styled.section`
           &.rotate {
             top: auto;
             bottom: 0;
-            transform: translate(-12px, -2px);
+            transform: translate(8px, -2px) rotate(180deg);
           }
         }
         margin-bottom: 24px;

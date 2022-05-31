@@ -29,10 +29,10 @@ export default function AboutSection6(): JSX.Element {
         <li>
           <div className="img_wrapper">
             <div className="brands">
-              <img src="/img/ver2/about/brands.png" alt="" />
-              <img src="/img/ver2/about/brands.png" alt="" />
-              <img src="/img/ver2/about/brands.png" alt="" />
-              <img src="/img/ver2/about/brands.png" alt="" />
+              <img src="/img/ver2/about/brands.png" alt="브랜드리스트" />
+              <img src="/img/ver2/about/brands.png" alt="브랜드리스트_복제1" />
+              <img src="/img/ver2/about/brands.png" alt="브랜드리스트_복제2" />
+              <img src="/img/ver2/about/brands.png" alt="브랜드리스트_복제3" />
             </div>
           </div>
           <h3>다양한 라이브 채널</h3>
@@ -48,7 +48,11 @@ export default function AboutSection6(): JSX.Element {
         </li>
         <li ref={ref}>
           <div className="img_wrapper">
-            <img className="app_img" src="/img/ver2/about/app_image.png" alt="" />
+            <img
+              className="app_img"
+              src="/img/ver2/about/app_image.png"
+              alt="라이즈 앱 목업"
+            />
           </div>
           <h3>라이즈 앱 상위 광고 노출</h3>
           <p>

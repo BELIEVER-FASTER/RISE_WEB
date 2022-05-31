@@ -21,7 +21,10 @@ export default function StudioMobile(): JSX.Element {
       {(['Fashion', 'Kitchen', 'Living', 'Beauty', 'Kids'] as StudioList[]).map(
         (v, idx) => (
           <div className="item" key={v}>
-            <img src={`/img/ver2/studio/${v.toLowerCase()}.png`} alt="" />
+            <img
+              src={`/img/ver2/studio/${v.toLowerCase()}.png`}
+              alt={v + '스튜디오 이미지'}
+            />
             <article>
               <span>{v}</span>
               <p>

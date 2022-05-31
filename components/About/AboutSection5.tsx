@@ -21,7 +21,7 @@ export default function AboutSection5(): JSX.Element {
               <dt>・계약 시 브랜드 컨셉이나 상품에 따라 담당 PD가 배정됩니다.</dt>
             </dl>
           </article>
-          <img src="/img/ver2/about/process1.png" alt="" />
+          <img src="/img/ver2/about/process1.png" alt="문의,상담" />
         </li>
         <li className="list_2">
           <article>
@@ -33,7 +33,7 @@ export default function AboutSection5(): JSX.Element {
               <dt>・라이브 방송을 기획하고 최적의 연출을 위한 스타일링을 구성합니다.</dt>
             </dl>
           </article>
-          <img src="/img/ver2/about/process2.png" alt="" />
+          <img src="/img/ver2/about/process2.png" alt="라이브 기획단계" />
         </li>
         <li className="list_3">
           <article>
@@ -48,8 +48,8 @@ export default function AboutSection5(): JSX.Element {
             </dl>
           </article>
           <div className="img_list">
-            <img src="/img/ver2/about/process3.2.png" alt="" />
-            <img src="/img/ver2/about/process3.1.png" alt="" />
+            <img src="/img/ver2/about/process3.2.png" alt="쇼호스트 매칭1" />
+            <img src="/img/ver2/about/process3.1.png" alt="쇼호스트 매칭2" />
           </div>
         </li>
         <li className="list_4">
@@ -65,7 +65,7 @@ export default function AboutSection5(): JSX.Element {
               </dt>
             </dl>
           </article>
-          <img src="/img/ver2/about/process4.png" alt="" />
+          <img src="/img/ver2/about/process4.png" alt="라이브 송출 1" />
         </li>
         <li className="list_5">
           <article>
@@ -84,7 +84,7 @@ export default function AboutSection5(): JSX.Element {
               </dt>
             </dl>
           </article>
-          <img src="/img/ver2/about/process5.png" alt="" />
+          <img src="/img/ver2/about/process5.png" alt="결과 데이터 리포트 1" />
         </li>
       </ul>
     </AboutSection5CT>

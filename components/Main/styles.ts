@@ -270,6 +270,7 @@ export const MainSection2CT = styled.section`
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
+        text-shadow: 0px 0px #00000000;
       }
     }
   }
