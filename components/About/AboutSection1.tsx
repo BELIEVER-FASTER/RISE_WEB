@@ -13,7 +13,7 @@ export default function AboutSection1(): JSX.Element {
   return (
     <AboutSection1CT className="section1">
       <h1>
-        <p>콘탠츠로</p>
+        <p>콘텐츠로</p>
         <p>
           가능성을 더하다
           <ContentPlus />

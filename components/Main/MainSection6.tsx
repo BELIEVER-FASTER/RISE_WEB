@@ -80,7 +80,7 @@ export default function MainSection6(): JSX.Element {
       </div>
       <h2>
         라이브 커머스의
-        <br className="mobile" /> 모든 것 <em>(Production)</em>
+        <br className="mobile" /> 모든 것 <em>( Process )</em>
       </h2>
       <p>
         브랜드 컨셉부터 데이터 리포트까지 <br />5 Step으로 쉽고 빠르게 시작해보세요.

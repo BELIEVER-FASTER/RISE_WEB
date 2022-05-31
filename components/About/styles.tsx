@@ -23,7 +23,7 @@ export const AboutSection1CT = styled.section`
   max-width: 1200px;
   margin: 0 auto;
   h1 {
-    padding: 369px 0 80px 0;
+    padding: 320px 0 80px 0;
     font-size: 96px;
     line-height: 1.2;
     font-weight: 500;
@@ -350,11 +350,11 @@ export const AboutSection4CT = styled.section`
         .quotos {
           position: absolute;
           top: 0;
-          transform: translate(-32px, -6px);
+          transform: translate(-32px, -4px);
           &.rotate {
             top: auto;
             bottom: 0;
-            transform: translate(-12px, -6px);
+            transform: translate(-12px, -2px);
           }
         }
         margin-bottom: 24px;
@@ -413,7 +413,7 @@ export const AboutSection5CT = styled.section`
   padding: 200px 0 140px;
   h2 {
     font-size: 80px;
-    font-weight: 500;
+    font-weight: 400;
     text-align: center;
   }
   ul {
@@ -437,6 +437,7 @@ export const AboutSection5CT = styled.section`
           margin-bottom: 4px;
           line-height: 1.4;
           font-size: 20px;
+          word-spacing: 1px;
         }
       }
       img {
@@ -505,6 +506,7 @@ export const AboutSection5CT = styled.section`
             font-size: 14px;
             margin-bottom: 8px;
             line-height: 1.7;
+            word-spacing: initial;
             br.mobile {
               width: 30px;
               display: block;

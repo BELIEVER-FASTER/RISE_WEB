@@ -6,7 +6,7 @@ export default function MainSection8(): JSX.Element {
   return (
     <MainSection8CT id="contact">
       <h2>
-        상상을 현실로 <em>( inquiry )</em>
+        상상을 현실로 <em>( Inquiry )</em>
       </h2>
       <p>
         상상만 하던 라이브커머스. <br />
