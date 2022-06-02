@@ -389,9 +389,9 @@ export const LottieBox = styled.div`
   top: -35px;
   right: 30px;
   z-index: 20;
-  svg {
+  /* svg {
     stroke: #167df7;
-  }
+  } */
 `;
 export const VideoBGLayer = styled.video`
   height: 100%;

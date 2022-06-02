@@ -187,7 +187,7 @@ export const MainSection1CT = styled.section`
   .main_banner_video {
     z-index: 2;
     position: absolute;
-    bottom: -28.3vh;
+    top: 63vh;
     max-width: 1200px;
     video {
       width: 100%;
@@ -225,6 +225,7 @@ export const MainSection1CT = styled.section`
     .main_banner_video {
       z-index: 1;
       position: absolute;
+      top: auto;
       bottom: -10vw;
       left: 24px;
       right: 24px;

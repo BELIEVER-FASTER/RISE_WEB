@@ -325,6 +325,13 @@ export const FooterContainer = styled.footer<{ isBlack: boolean }>`
       .footer_info {
         border-top: 1px solid #000;
         color: #000;
+        .right {
+          li {
+            a {
+              color: #000;
+            }
+          }
+        }
       }
     `}
 
