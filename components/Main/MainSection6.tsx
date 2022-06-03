@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { MainSection6CT } from './styles';
 import { useInView } from 'react-intersection-observer';
+import ProcessLottie from './ProcessLottie';
 
 export default function MainSection6(): JSX.Element {
   const [totalLength, setTotalLength] = useState(0);
@@ -87,6 +88,7 @@ export default function MainSection6(): JSX.Element {
       </p>
       <ul>
         <li>
+          <ProcessLottie type={1} active={current === totalLength} />
           <img src="/img/ver2/process/Consulting.png" alt="문의,상담" />
           <h4>
             <strong>Step 1. </strong>문의 및 상담
@@ -101,6 +103,7 @@ export default function MainSection6(): JSX.Element {
         </li>
         <li ref={ref}>
           <img src="/img/ver2/process/Planning.png" alt="라이브/상품 기획" />
+          <ProcessLottie type={2} active={current === 4.2} />
           <h4>
             <strong>Step 2. </strong>라이브/상품 기획
           </h4>
@@ -116,6 +119,7 @@ export default function MainSection6(): JSX.Element {
         </li>
         <li ref={ref2}>
           <img src="/img/ver2/process/Showhost.png" alt="쇼호스트 매칭" />
+          <ProcessLottie type={3} active={current === 2.45} />
           <h4>
             <strong>Step 3. </strong>쇼호스트 매칭
           </h4>
@@ -126,6 +130,7 @@ export default function MainSection6(): JSX.Element {
         </li>
         <li ref={ref3}>
           <img src="/img/ver2/process/Broadcasting.png" alt="라이브 송출" />
+          <ProcessLottie type={4} active={current === 1.4} />
           <h4>
             <strong>Step 4. </strong>라이브 송출
           </h4>
@@ -139,17 +144,19 @@ export default function MainSection6(): JSX.Element {
         </li>
         <li ref={ref4}>
           <img src="/img/ver2/process/Data.png" alt="데이터 리포트" />
+          <ProcessLottie type={5} active={current === 1} />
           <h4>
             <strong>Step 5. </strong>데이터 리포트
           </h4>
           <p>
-            라이브 진행 시점부터의 판매량을 실시간으로 모니터링하여
-            <br className="mobile" /> 데이터를 수집합니다.
+            라이브 진행 시점부터의 판매량을 실시간으로
+            <br className="mobile" /> 모니터링하여 데이터를 수집합니다.
             <br className="desktop" />
-            시청자 및 구매자 유형, 판매 상품 수량, 총 판매 금액 등을 리포트로 작성하여
+            시청자 및 구매자
+            <br className="mobile" /> 유형, 판매 상품 수량, 총 판매 금액 등을 리포트로
+            <br className="mobile" /> 작성하여
             <br className="desktop" />
-            &nbsp; 데이터를 생성하여
-            <br className="mobile" /> 다음 전략을 수립합니다.
+            데이터를 생성한 다음 전략을 수립합니다.
           </p>
         </li>
       </ul>

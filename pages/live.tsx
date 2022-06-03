@@ -15,6 +15,7 @@ export default function live2(): JSX.Element {
         el.style.color = '';
         el.style.fill = '';
       });
+      window.scrollTo({ top: 0 });
     };
   }, []);
   return (

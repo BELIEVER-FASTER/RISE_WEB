@@ -5,6 +5,9 @@ import MetaGe from 'components/Common/MetaGe';
 export default function contact(): JSX.Element {
   useEffect(() => {
     window.scrollTo({ top: 0 });
+    return () => {
+      window.scrollTo({ top: 0 });
+    };
   }, []);
 
   return (

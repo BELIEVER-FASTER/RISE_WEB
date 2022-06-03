@@ -38,7 +38,7 @@ export default function AboutA(): JSX.Element {
       <div className="section__title" ref={ref}>
         <h3 className="about_a__title invinsible">
           <span>한번의 라이브 방송을</span>
-          <span>한편의 컨텐츠 처럼</span>
+          <span>한편의 콘텐츠 처럼</span>
         </h3>
         <p className="about_a__desc invinsible">
           라이브커머스 전문 PD와 MD, 작가님들이 <br /> 팀을 이뤄 브랜드와 상품을 분석하고

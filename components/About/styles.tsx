@@ -22,8 +22,11 @@ export const AboutSection1CT = styled.section`
   height: 90vh;
   max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   h1 {
-    padding: 320px 0 80px 0;
+    padding: 10vh 0 80px 0;
     font-size: 96px;
     line-height: 1.2;
     font-weight: 500;

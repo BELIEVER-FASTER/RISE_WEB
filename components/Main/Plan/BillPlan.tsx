@@ -54,14 +54,14 @@ export default function BillPlan(): JSX.Element {
               <h5>방송운영</h5>
               <dl>
                 <dt>작가 · 디자이너</dt>
-                <dt>판넬 / 배너 등 컨텐츠 디자인 제공</dt>
+                <dt>판넬 / 배너 등 콘텐츠 디자인 제공</dt>
               </dl>
             </li>
             <li className="plus">
               <h5>쇼핑 호스트 & 인플루언서</h5>
               <dl>
                 <dt>라이즈 쇼호스트(선택 가능)</dt>
-                <dt>라이브 방송 영상 클립 컨텐츠 제공</dt>
+                <dt>라이브 방송 영상 클립 콘텐츠 제공</dt>
               </dl>
             </li>
             <li className="plus">
@@ -139,7 +139,7 @@ export default function BillPlan(): JSX.Element {
       <ul className="warning">
         <li>※ 쇼호스트 추가 섭외, 인플루언서 섭외, 출장 등은 별도 비용이 발생합니다. </li>
         <li>
-          ※ 라이브에 사용될 컨텐츠 디자인 작업을 위한 원본 이미지 및 동영상은 제공받고
+          ※ 라이브에 사용될 콘텐츠 디자인 작업을 위한 원본 이미지 및 동영상은 제공받고
           있습니다.
         </li>
       </ul>

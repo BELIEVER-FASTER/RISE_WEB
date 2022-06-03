@@ -38,10 +38,10 @@ export const MainSection1CT = styled.section`
       width: 0;
       background-color: #e0e0e0;
       height: 1px;
-      animation: lining 3s ease-in-out;
+      animation: lining 1s ease-in-out;
     }
     p .value {
-      animation: liningText 3s ease-in-out;
+      animation: liningText 1s ease-in-out;
     }
     p {
       overflow: hidden;
@@ -70,16 +70,16 @@ export const MainSection1CT = styled.section`
         animation: vertical 4s ease infinite 0s;
       }
       span:nth-of-type(1) {
-        animation-delay: 1s;
+        animation-delay: 0s;
       }
       span:nth-of-type(2) {
-        animation-delay: 2s;
+        animation-delay: 1s;
       }
       span:nth-of-type(3) {
-        animation-delay: 3s;
+        animation-delay: 2s;
       }
       span:nth-of-type(4) {
-        animation-delay: 4s;
+        animation-delay: 3s;
       }
     }
     p:nth-of-type(3) {
@@ -679,6 +679,7 @@ export const MainSection6CT = styled.section`
     flex-direction: column;
     li {
       img {
+        display: none;
         width: 280px;
         height: 280px;
       }
@@ -695,6 +696,9 @@ export const MainSection6CT = styled.section`
         margin-top: 16px;
         line-height: 1.5;
       }
+    }
+    .lottie_ct {
+      display: inline-block;
     }
     li:nth-of-type(1) {
       margin-left: 150px;
@@ -737,6 +741,9 @@ export const MainSection6CT = styled.section`
       padding: 0 24px;
       gap: 60px;
       li {
+        .lottie_ct {
+          display: none;
+        }
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -745,6 +752,7 @@ export const MainSection6CT = styled.section`
           width: 260px;
           height: 260px;
           object-fit: cover;
+          display: initial;
         }
         h4 {
           font-size: 17px;

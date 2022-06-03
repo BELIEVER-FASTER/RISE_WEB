@@ -10,7 +10,7 @@ export default function MainSection3(): JSX.Element {
       <h2>
         상상도 못한 가격으로<em>( Plans )</em>
       </h2>
-      <p>미디어 컨텐츠의 품질을 높이세요</p>
+      <p>미디어 콘텐츠의 품질을 높이세요</p>
       <ul className="type_nav">
         <li
           onClick={() => setType('commision')}
