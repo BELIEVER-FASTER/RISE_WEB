@@ -391,7 +391,7 @@ export const ModelListItemBox = styled.li`
   }
   article {
     overflow: hidden;
-    padding: 2rem 1rem;
+    padding: 2rem 0rem;
     z-index: 1;
     h6 {
       font-size: 26px;
