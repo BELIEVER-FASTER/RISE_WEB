@@ -10,11 +10,15 @@ export default function CommissionPlan(): JSX.Element {
     if (inView) {
       if (isMobile) {
         gsap.fromTo(
-          '.bar1 .line',
-          { width: 0 },
-          { width: 102, duration: 0.5, delay: 0.5 }
+          '.line_through.line1',
+          { opacity: 0 },
+          { opacity: 0.8, duration: 0.5, delay: 0.5 }
         );
-        gsap.fromTo('.bar2 .line', { width: 0 }, { width: 155, duration: 0.75 });
+        gsap.fromTo(
+          '.line_through.line2',
+          { opacity: 0 },
+          { opacity: 0.8, duration: 0.75 }
+        );
         gsap.fromTo(
           '.arrow',
           { yPercent: -250 },
@@ -22,11 +26,15 @@ export default function CommissionPlan(): JSX.Element {
         );
       } else {
         gsap.fromTo(
-          '.bar1 .line',
-          { width: 0 },
-          { width: 167, duration: 0.5, delay: 0.5 }
+          '.line_through.line1',
+          { opacity: 0 },
+          { opacity: 0.8, duration: 0.5, delay: 0.5 }
         );
-        gsap.fromTo('.bar2 .line', { width: 0 }, { width: 327, duration: 0.75 });
+        gsap.fromTo(
+          '.line_through.line2',
+          { opacity: 0 },
+          { opacity: 0.8, duration: 0.75 }
+        );
         gsap.fromTo(
           '.arrow',
           { xPercent: -250 },
@@ -42,25 +50,16 @@ export default function CommissionPlan(): JSX.Element {
   }, [inView, ref]);
   return (
     <CommissionPlanCT ref={ref}>
-      <h3>
-        고정 비용 없는 <br />
-        라이즈 파트너 브랜드 전용 상품
-      </h3>
       <div className="price">
-        <ul className="chart">
-          <li>
-            <div className="bar bar1">
-              <div className="line" />
-            </div>
-            <span>50-200만 원</span>
-          </li>
-          <li>
-            <div className="bar bar2">
-              <div className="line" />
-            </div>
-            <span>300만 원 + @ </span>
-          </li>
-        </ul>
+        <div className="other_brand">
+          <h5>타사 진행가격</h5>
+          <p>
+            <strong>300</strong>만원 이상
+            <div className="line_through line1" />
+            <div className="line_through line2" />
+          </p>
+          <span>제작비용</span>
+        </div>
         <div className="arrow">
           <svg
             width="79"
@@ -78,23 +77,19 @@ export default function CommissionPlan(): JSX.Element {
           </svg>
         </div>
         <ul className="result">
+          <h5>라이즈 진행가격</h5>
           <li>
             <p>
               <strong>0</strong>원
             </p>
-            <span>
-              라이브 커머스 <br />
-              제작비용
-            </span>
+            <span>제작비용</span>
           </li>
+          <li></li>
           <li>
             <p>
               <strong>11</strong>%
             </p>
-            <span>
-              라이브 방송 <br />
-              판매 수수료
-            </span>
+            <span>판매 수수료</span>
           </li>
         </ul>
       </div>

@@ -299,7 +299,7 @@ export const MainSection2CT = styled.section`
 export const MainSection3CT = styled.section`
   /* height: 100vh; */
   color: #fff;
-  max-width: 1200px;
+  max-width: 1040px;
   margin: 0 auto;
   display: flex;
   align-items: center;

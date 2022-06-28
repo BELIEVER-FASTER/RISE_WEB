@@ -11,66 +11,47 @@ export const CommissionPlanCT = styled.div`
     padding: 32px 0 80px 0;
     display: flex;
     align-items: center;
-    .chart {
-      li {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        span {
-          font-weight: 400;
-          font-size: 40px;
-          margin-left: 24px;
-        }
-        .bar {
-          /* height: 14px;
-          background-color: #fff;
-          border-radius: 99px; */
-          .line {
-            width: 0;
-            height: 16px;
-            display: block;
-            background-color: #fff;
-            border-radius: 99px;
-            margin-bottom: 12px;
-          }
-          &::after {
-            display: block;
-            font-weight: 300;
-            font-size: 16px;
-          }
-        }
-      }
-      li:nth-of-type(1) {
-        margin-bottom: 58px;
-        span {
-          letter-spacing: 1.8px;
-        }
-        .bar {
-          .line {
-            /* width: 167px; */
-            background: #d1d0d5;
-          }
-          &::after {
-            content: '라이즈 기본 패키지';
-            display: block;
-          }
-        }
-      }
-      li:nth-of-type(2) {
-        .bar {
-          width: 327px;
-          .line {
-            background: #898989;
-            /* width: 327px; */
-          }
-          &::after {
-            content: '타사 진행 가격';
-            display: block;
-          }
-        }
-      }
+    justify-content: center;
+    h5 {
+      position: absolute;
+      top: -52px;
+      font-weight: 600;
+      font-size: 28px;
+      left: 0;
+    }
+    .other_brand {
+      position: relative;
       background-color: #000;
       z-index: 3;
+      height: 100%;
+      p {
+        font-size: 36px;
+        font-weight: 400;
+        transform: translateY(-10px);
+        color: #b9b9b9;
+        padding: 40px 0 4px 0;
+        strong {
+          font-size: 64px;
+          font-weight: 500;
+        }
+        .line_through {
+          width: 260px;
+          height: 5px;
+          background-color: #fff;
+          position: absolute;
+          bottom: 30px;
+          transform: rotate(-12deg);
+        }
+        .line_through:nth-of-type(2) {
+          transform: rotate(12deg);
+        }
+      }
+      span {
+        color: #b9b9b9;
+        font-size: 24px;
+        line-height: 1.2;
+        font-weight: 300;
+      }
     }
     .arrow {
       display: flex;
@@ -80,10 +61,16 @@ export const CommissionPlanCT = styled.div`
       z-index: 2;
     }
     .result {
+      h5 {
+        background: linear-gradient(90deg, #a4ccfb 9.35%, #74b1fa 90.29%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      position: relative;
       opacity: 0;
       z-index: 1;
       display: flex;
-      flex: 1;
       justify-content: space-between;
       align-items: center;
       li:nth-of-type(1) {
@@ -92,11 +79,11 @@ export const CommissionPlanCT = styled.div`
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
-          /* text-fill-color: transparent; */
         }
       }
       li {
         p {
+          position: relative;
           font-size: 72px;
           font-weight: 400;
           transform: translateY(-10px);
@@ -111,6 +98,12 @@ export const CommissionPlanCT = styled.div`
           font-weight: 300;
         }
       }
+      li:nth-of-type(2) {
+        width: 1px;
+        height: 80px;
+        background: #e0e0e0;
+        margin: 0 36px;
+      }
     }
   }
   .feature {
@@ -122,9 +115,10 @@ export const CommissionPlanCT = styled.div`
       .text {
         display: flex;
         align-items: center;
+        justify-content: center;
         span {
-          font-size: 44px;
-          margin-left: 8px;
+          font-size: 40px;
+          margin-left: 4px;
         }
       }
       & > p {
@@ -132,6 +126,7 @@ export const CommissionPlanCT = styled.div`
         text-align: center;
         color: #e0e0e0;
         font-weight: 300;
+        font-size: 16px;
       }
     }
   }
@@ -148,23 +143,37 @@ export const CommissionPlanCT = styled.div`
       font-weight: 400;
     }
     .price {
+      h5 {
+        top: -36px;
+        font-size: 20px;
+        left: 0;
+        right: 0;
+        text-align: center;
+      }
       flex-direction: column;
-      .chart {
+      .other_brand {
         width: 100%;
-        li {
-          span {
-            font-size: 24px;
-            margin-left: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p {
+          font-size: 28px;
+          strong {
+            font-size: 52px;
+            font-weight: 500;
           }
-          .bar {
-            flex: 1;
-            .line {
-              height: 12px;
-            }
-            &::after {
-              font-size: 14px;
-            }
+          .line_through {
+            width: 200px;
+            height: 5px;
+            background-color: #fff;
+            position: absolute;
+            bottom: 24px;
+            transform: rotate(-12deg);
           }
+          padding: 12px 0 0px 0;
+        }
+        span {
+          font-size: 18px;
         }
       }
       .arrow {
@@ -177,8 +186,8 @@ export const CommissionPlanCT = styled.div`
       .result {
         width: 100%;
         justify-content: space-evenly;
-        li:nth-of-type(1) p {
-        }
+
+        margin-top: 12px;
         li {
           p {
             font-size: 40px;
@@ -191,6 +200,14 @@ export const CommissionPlanCT = styled.div`
             font-size: 18px;
             line-height: 1.2;
           }
+        }
+        li:nth-of-type(2) {
+          height: 60px;
+          margin: 0 8px;
+        }
+        li:nth-of-type(2n-1) {
+          flex: 1;
+          text-align: center;
         }
       }
     }
