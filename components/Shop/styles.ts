@@ -29,6 +29,7 @@ export const ShopCT = styled.main`
     background: #167df7;
     border: none;
     border-radius: 99px;
+    cursor: pointer;
   }
 `;
 export const OptionCT = styled.section`
@@ -156,6 +157,8 @@ export const OptionCT = styled.section`
         border-radius: 99px;
         outline: none;
         border: none;
+        cursor: pointer;
+        transition: all 0.3s;
       }
     }
   }
@@ -284,5 +287,74 @@ export const PolicySectionCT = styled.section`
   .tg-0lax {
     text-align: left;
     vertical-align: top;
+  }
+`;
+
+export const PaymentCT = styled.main`
+  padding-top: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  h1 {
+    font-weight: 500;
+    font-size: 32px;
+    padding: 80px 0 28px;
+  }
+  h2 {
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  h3 {
+    margin-top: 36px;
+    font-weight: 500;
+    font-size: 22px;
+  }
+  .divider {
+    height: 2px;
+    width: 100%;
+    background: #040201;
+  }
+  .col_title {
+    display: flex;
+    align-items: center;
+    margin-top: 36px;
+    h3 {
+      margin-top: 0;
+      margin-right: 12px;
+    }
+  }
+  & > .content {
+    display: flex;
+    gap: 72px;
+    align-items: flex-start;
+    .left_section {
+      flex: 1;
+      .col {
+        display: flex;
+      }
+    }
+    .right_section {
+      position: sticky;
+      top: 70px;
+      width: 360px;
+      border: 1px solid #d1d6db;
+      padding-bottom: 72px;
+      .cta {
+        width: 100%;
+        background: #167df7;
+        outline: none;
+        border: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 72px;
+        font-weight: 600;
+        font-size: 18px;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
   }
 `;

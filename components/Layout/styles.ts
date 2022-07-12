@@ -410,3 +410,26 @@ export const MobileMenuBox = styled.i<{ menuOpen: boolean }>`
       }
     `}
 `;
+
+export const ShopHeaderCT = styled.header`
+  width: 100%;
+  position: fixed;
+  background-color: #fff;
+  .content {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    i {
+      cursor: pointer;
+      svg {
+        fill: #000;
+      }
+      &:hover svg {
+        fill: #167df7;
+      }
+    }
+  }
+`;
