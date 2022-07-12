@@ -796,7 +796,7 @@ export const makeNotiMail = (email: string): string => {
               lang="x-size-9"
             >
               <span style="color: #ffffff"
-                >서울특별시 강남구 신사동 628-26 2층</span
+                >서울시 강남구 선릉로 551 새롬빌딩 디캠프1층, 라이즈이엔엠</span
               >
             </p>
             <p
@@ -2233,7 +2233,7 @@ export const makeNotiMail2 = (email: string): string => {
                           class="email-flexible-footer__additionalinfo--center"
                           style="margin-top: 0; margin-bottom: 0; text-align: right"
                         >
-                          (03086) 서울특별시 강남구 신사동 628-26 2층
+                          (06145) 서울시 강남구 선릉로 551 새롬빌딩 디캠프1층, 라이즈이엔엠
                         </p>
                         <p
                           class="email-flexible-footer__additionalinfo--center"
@@ -2350,7 +2350,7 @@ export const makeContactMail = (
   <tfooter>
     <tr>
       <td colspan="2" style="font-size:14px;padding:50px 15px 0 15px;">
-        <strong style="display:block;margin:0 0 10px 0;">Believer | 패스터</strong> RiSE<br> 서울특별시 강남구 신사동 628-26 2층<br><br>
+        <strong style="display:block;margin:0 0 10px 0;">Believer | 패스터</strong> RiSE<br> 서울시 강남구 선릉로 551 새롬빌딩 디캠프1층, 라이즈이엔엠<br><br>
         <b>고객센터 :</b> +82. 02. 1688. 6183<br>
         <b>Email:</b> contact@riseenm.com
       </td>

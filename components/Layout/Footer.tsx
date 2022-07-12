@@ -49,12 +49,14 @@ export default function Footer(): JSX.Element {
         <div className="left">
           <span>&copy; 2022 Riseenm inc All rights reserved.</span>
           <span>
-            서울특별시 강남구 신사동 628-26 2층 <br />
-            사업자등록번호 772-01-01547
+            사업자등록번호 : 694-81-02476 | 대표 : 김정환
+            <br />
+            서울시 강남구 선릉로 551 새롬빌딩 디캠프1층, 라이즈이엔엠 <br />
+            상호명 : 라이즈이엔엠 주식회사
           </span>
           <p>
             <span>contact@riseenm.com</span>
-            <span>02. 1688. 6183</span>
+            <span>1688-6183(24시간 연중무휴)</span>
           </p>
         </div>
         <ul className="right">

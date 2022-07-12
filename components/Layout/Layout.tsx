@@ -43,8 +43,8 @@ export default function Layout({ children }: LayoutProps): JSX.Element {
       setHeaderEx(true);
     } else if (router.pathname === '/') {
       setHeaderEx(true);
-    } else if (router.pathname === '/counter') {
-      setHeaderEx(false);
+    } else if (router.pathname === '/shop') {
+      setHeaderEx(true);
     }
   }, [router]);
   return (

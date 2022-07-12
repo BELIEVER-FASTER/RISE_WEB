@@ -9,7 +9,7 @@ export default function ContactInfo(): JSX.Element {
     triggerOnce: true,
   });
   useEffect(() => {
-    if (inView && ref) {
+    if (inView) {
       gsap.fromTo(
         '#contact__info_address',
         { opacity: 0, y: 150 },
@@ -42,12 +42,11 @@ export default function ContactInfo(): JSX.Element {
       );
     }
   }, [inView, ref]);
-
   return (
     <ContactInfoContainer>
       <article ref={ref}>
         <p id="contact__info_address" className="invinsible">
-          서울특별시 강남구 신사동 628-26 2층
+          서울시 강남구 선릉로 551 새롬빌딩 디캠프1층, 라이즈이엔엠
         </p>
         <p id="contact__info_tell" className="tell invinsible">
           +82. 02. 1688. 6183
