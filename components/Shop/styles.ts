@@ -358,3 +358,49 @@ export const PaymentCT = styled.main`
     }
   }
 `;
+
+export const ResultCT = styled.main`
+  padding: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 260px;
+    margin-bottom: 76px;
+  }
+  h1 {
+    margin-bottom: 36px;
+    color: #040201;
+    font-weight: 500;
+    font-size: 48px;
+    text-align: center;
+  }
+  p {
+    margin-bottom: 56px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 2;
+    strong {
+      font-weight: 500;
+      font-size: 16px;
+    }
+  }
+  .cta {
+    background: #167df7;
+    border-radius: 99px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    width: 252px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+`;

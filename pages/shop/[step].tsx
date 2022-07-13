@@ -1,5 +1,6 @@
 import MetaGe from 'components/Common/MetaGe';
 import PaymentLayout from 'components/Shop/PaymentLayout';
+import ResultLayout from 'components/Shop/ResultLayout';
 import ShopLayout from 'components/Shop/ShopLayout';
 import { useRouter } from 'next/dist/client/router';
 import React, { useEffect } from 'react';
@@ -12,7 +13,6 @@ export default function Step(): JSX.Element {
       window.scrollTo({ top: 0 });
     };
   }, []);
-  console.log(query.step);
 
   const render = React.useCallback(() => {
     switch (query.step as string) {
@@ -21,6 +21,8 @@ export default function Step(): JSX.Element {
         return <ShopLayout />;
       case 'payment':
         return <PaymentLayout />;
+      case 'result':
+        return <ResultLayout />;
     }
   }, [query.step]);
   return (

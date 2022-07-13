@@ -1,4 +1,5 @@
 import ShopHeader from 'components/Layout/ShopHeader';
+import { useRouter } from 'next/dist/client/router';
 import React from 'react';
 import ClientForm from './payment/ClientForm';
 import CoperationForm from './payment/CoperationForm';
@@ -7,6 +8,7 @@ import PaymentMethod from './payment/PaymentMethod';
 import { PaymentCT } from './styles';
 
 export default function PaymentLayout(): JSX.Element {
+  const { push } = useRouter();
   return (
     <>
       <ShopHeader />
@@ -30,7 +32,9 @@ export default function PaymentLayout(): JSX.Element {
           </section>
           <aside className="right_section">
             <PaymentAside />
-            <button className="cta">{2000}원 결제하기</button>
+            <button className="cta" onClick={() => push('/shop/result')}>
+              {2000}원 결제하기
+            </button>
           </aside>
         </div>
       </PaymentCT>
