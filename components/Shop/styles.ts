@@ -239,7 +239,7 @@ export const PolicySectionCT = styled.section`
     width: 100%;
     border-radius: 8px;
     td {
-      background-color: #fff;
+      /* background-color: #fff; */
       border-color: #d1d6db;
       border-style: solid;
       border-width: 1px;
@@ -260,7 +260,7 @@ export const PolicySectionCT = styled.section`
           line-height: 1.5;
           position: absolute;
           left: 0;
-          right: 0;
+          right: 99px;
           top: 0;
           bottom: 0;
           display: flex;

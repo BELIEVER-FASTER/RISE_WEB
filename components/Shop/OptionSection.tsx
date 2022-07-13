@@ -1,20 +1,21 @@
 import React from 'react';
+import { Option, options } from 'utils/optionData';
 import { OptionCT } from './styles';
 
 type OptionSectionProps = {
   selectedState: {
-    setSelected: React.Dispatch<React.SetStateAction<number>>;
-    selected: number;
+    setSelectedOpt: React.Dispatch<React.SetStateAction<Option>>;
+    selectedOpt: Option;
   };
 };
 export default function OptionSection({
   selectedState,
 }: OptionSectionProps): JSX.Element {
-  const { selected, setSelected } = selectedState;
+  const { selectedOpt, setSelectedOpt } = selectedState;
   return (
     <OptionCT>
       <ul>
-        <li className={`basic ${selected === 1 ? 'active' : ''}`}>
+        <li className={`basic ${selectedOpt.id === 1 ? 'active' : ''}`}>
           <div className="summary_opt">
             <h2>Basic</h2>
             <p>
@@ -39,13 +40,13 @@ export default function OptionSection({
             </ul>
           </div>
           <button
-            onClick={() => setSelected(1)}
-            className={`cta ${selected === 1 ? 'active' : ''}`}
+            onClick={() => setSelectedOpt(options[0])}
+            className={`cta ${selectedOpt.id === 1 ? 'active' : ''}`}
           >
-            {selected === 1 ? '베이직' : '베이직 선택'}
+            {selectedOpt.id === 1 ? '베이직' : '베이직 선택'}
           </button>
         </li>
-        <li className={`premium ${selected === 2 ? 'active' : ''}`}>
+        <li className={`premium ${selectedOpt.id === 2 ? 'active' : ''}`}>
           <div className="summary_opt">
             <h2>Premium </h2>
             <p>
@@ -73,10 +74,10 @@ export default function OptionSection({
             </ul>
           </div>
           <button
-            onClick={() => setSelected(2)}
-            className={`cta ${selected === 2 ? 'active' : ''}`}
+            onClick={() => setSelectedOpt(options[1])}
+            className={`cta ${selectedOpt.id === 2 ? 'active' : ''}`}
           >
-            {selected === 2 ? '프리미엄' : '프리미엄 선택'}
+            {selectedOpt.id === 2 ? '프리미엄' : '프리미엄 선택'}
           </button>
         </li>
       </ul>

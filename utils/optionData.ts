@@ -1,4 +1,11 @@
-export const options = [
+export type Option = {
+  id: number;
+  name: string;
+  label: string;
+  price: number;
+  tax: number;
+};
+export const options: Option[] = [
   {
     id: 1,
     name: 'Basic',

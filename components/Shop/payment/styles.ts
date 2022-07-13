@@ -65,8 +65,12 @@ export const PaymentInput = styled.input`
   display: flex;
   align-items: center;
   justify-content: center;
+  max-height: 52px;
   &:focus {
     outline: 2px solid #167df7;
+  }
+  &.error {
+    outline: 1px solid #ff0000;
   }
 `;
 
@@ -243,5 +247,27 @@ export const PaymentAsideContent = styled.div`
         }
       }
     }
+  }
+`;
+
+export const AlertMessageBox = styled.div`
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  i {
+    margin-right: 4px;
+    border-radius: 99px;
+    width: 14px;
+    height: 14px;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: #ff0000;
+  }
+  span {
+    font-size: 14px;
+    color: #ff0000;
   }
 `;

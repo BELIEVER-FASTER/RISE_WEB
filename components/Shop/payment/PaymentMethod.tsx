@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { PaymentMethodCT } from './styles';
 import { AiOutlineCreditCard } from 'react-icons/ai';
+import { usePaymentFormContext } from 'hooks/provider/PaymentProvider';
 
 const Icon = () => {
   return (
@@ -38,16 +39,16 @@ const methods = [
   { id: 3, value: '계좌 이체', label: '계좌 이체', icon: () => <AiOutlineCreditCard /> },
 ];
 export default function PaymentMethod(): JSX.Element {
-  const [method, setMethod] = useState('카드');
+  const { method } = usePaymentFormContext();
   return (
     <PaymentMethodCT>
       <ul>
         {methods.map(v => (
           <li
-            className={v.value === method ? 'active' : ''}
-            onClick={() => setMethod(v.value)}
+            className={v.value === method.method.value ? 'active' : ''}
+            onClick={() => method.setMethod({ id: v.id, value: v.value, label: v.label })}
           >
-            <i>{v.icon()}</i>
+            <i>{methods.find(m => m.id === v.id)?.icon()}</i>
             <span>{v.label}</span>
           </li>
         ))}

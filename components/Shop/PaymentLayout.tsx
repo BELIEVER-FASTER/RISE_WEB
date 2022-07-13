@@ -1,5 +1,4 @@
 import ShopHeader from 'components/Layout/ShopHeader';
-import { useRouter } from 'next/dist/client/router';
 import React from 'react';
 import ClientForm from './payment/ClientForm';
 import CoperationForm from './payment/CoperationForm';
@@ -8,7 +7,20 @@ import PaymentMethod from './payment/PaymentMethod';
 import { PaymentCT } from './styles';
 
 export default function PaymentLayout(): JSX.Element {
-  const { push } = useRouter();
+  // const handleRouteChange = (url: string) => {
+  //   const res = window.confirm('asdasd');
+  //   if (res) {
+  //     push(url);
+  //   } else {
+  //     throw `Route change to "${url}" was aborted (this error can be safely ignored).`;
+  //   }
+  // };
+  // useEffect(() => {
+  //   events.on('routeChangeStart', handleRouteChange);
+  //   return () => {
+  //     events.off('routeChangeStart', handleRouteChange);
+  //   };
+  // }, []);
   return (
     <>
       <ShopHeader />
@@ -32,9 +44,6 @@ export default function PaymentLayout(): JSX.Element {
           </section>
           <aside className="right_section">
             <PaymentAside />
-            <button className="cta" onClick={() => push('/shop/result')}>
-              {2000}원 결제하기
-            </button>
           </aside>
         </div>
       </PaymentCT>

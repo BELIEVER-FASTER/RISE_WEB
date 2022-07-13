@@ -1,12 +1,24 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { useRef, useState } from 'react';
+import { usePaymentFormContext } from 'hooks/provider/PaymentProvider';
+import React, { useRef } from 'react';
 import { useDaumPostcodePopup } from 'react-daum-postcode';
+import AlertMessage from './AlertMessage';
 import { CopFormCT, PaymentInput, PaymentInputBox, PaymentLabel } from './styles';
 
 export default function CoperationForm(): JSX.Element {
   const open = useDaumPostcodePopup();
-  const [address, setAddress] = useState('');
   const fileRef = useRef<HTMLInputElement>(null);
+  const {
+    address1,
+    address2,
+    ceoName,
+    ceoPhone,
+    coName,
+    coNumber,
+    email,
+    lisence,
+    submitted: { submitted },
+  } = usePaymentFormContext();
 
   const handleComplete = (data: any) => {
     let fullAddress = data.address;
@@ -22,7 +34,7 @@ export default function CoperationForm(): JSX.Element {
       }
       fullAddress += extraAddress !== '' ? ` (${extraAddress})` : '';
     }
-    setAddress(fullAddress);
+    address1.setAddress1(fullAddress);
   };
 
   const handleClick = () => {
@@ -34,22 +46,42 @@ export default function CoperationForm(): JSX.Element {
       <div className="col">
         <PaymentInputBox className="pib">
           <PaymentLabel className="required">상호명(법인명)</PaymentLabel>
-          <PaymentInput />
+          <PaymentInput
+            onChange={coName.onChangeCoName}
+            value={coName.coName}
+            className={submitted && !coName.coName ? 'error' : ''}
+          />
+          {submitted && !coName.coName && <AlertMessage />}
         </PaymentInputBox>
         <PaymentInputBox className="pib">
           <PaymentLabel className="required">사업자 번호</PaymentLabel>
-          <PaymentInput />
+          <PaymentInput
+            onChange={coNumber.onChangeCoNumber}
+            value={coNumber.coNumber}
+            className={submitted && coNumber.coNumberErr ? 'error' : ''}
+          />
+          {submitted && coNumber.coNumberErr && <AlertMessage />}
         </PaymentInputBox>
       </div>
 
       <div className="col">
         <PaymentInputBox className="pib">
           <PaymentLabel className="required">대표자명</PaymentLabel>
-          <PaymentInput />
+          <PaymentInput
+            onChange={ceoName.onChangeCeoName}
+            value={ceoName.ceoName}
+            className={submitted && !ceoName.ceoName ? 'error' : ''}
+          />
+          {submitted && !ceoName.ceoName && <AlertMessage />}
         </PaymentInputBox>
         <PaymentInputBox className="pib">
           <PaymentLabel className="required">대표(자) 전화번호</PaymentLabel>
-          <PaymentInput />
+          <PaymentInput
+            onChange={ceoPhone.onChangeCeoPhone}
+            value={ceoPhone.ceoPhone}
+            className={submitted && ceoPhone.ceoPhoneErr ? 'error' : ''}
+          />
+          {submitted && ceoPhone.ceoPhoneErr && <AlertMessage />}
         </PaymentInputBox>
       </div>
 
@@ -57,12 +89,21 @@ export default function CoperationForm(): JSX.Element {
         <PaymentInputBox className="pib address">
           <PaymentLabel className="required">회사 주소</PaymentLabel>
           <div className="address_col">
-            <PaymentInput value={address} onClick={handleClick} />
+            <PaymentInput
+              value={address1.address1}
+              onClick={handleClick}
+              className={submitted && !address1.address1 ? 'error' : ''}
+            />
             <div className="btn" onClick={handleClick}>
               주소 찾기
             </div>
-            <PaymentInput />
+            <PaymentInput
+              value={address2.address2}
+              onChange={address2.onChangeAddress2}
+              className={submitted && !address2.address2 ? 'error' : ''}
+            />
           </div>
+          {submitted && (!address1.address1 || !address2.address2) && <AlertMessage />}
         </PaymentInputBox>
       </div>
 
@@ -70,8 +111,14 @@ export default function CoperationForm(): JSX.Element {
         <PaymentInputBox className="pib address">
           <PaymentLabel className="required">세금계산서 수취 이메일</PaymentLabel>
           <div className="address_col">
-            <PaymentInput type="email" />
+            <PaymentInput
+              type="email"
+              onChange={email.onChangeEmail}
+              value={email.email}
+              className={submitted && email.emailErr ? 'error' : ''}
+            />
           </div>
+          {submitted && email.emailErr && <AlertMessage />}
         </PaymentInputBox>
       </div>
 
@@ -79,7 +126,7 @@ export default function CoperationForm(): JSX.Element {
         <PaymentInputBox className="pib address">
           <PaymentLabel>사업자 등록증</PaymentLabel>
           <div className="file_col">
-            <PaymentInput />
+            <PaymentInput value={lisence.lisence} />
             <input
               hidden
               className="file_input"

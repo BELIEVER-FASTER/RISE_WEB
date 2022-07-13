@@ -1,16 +1,23 @@
+import { usePaymentFormContext } from 'hooks/provider/PaymentProvider';
 import { useRouter } from 'next/dist/client/router';
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import OptionSection from './OptionSection';
 import PolicySection from './PolicySection';
 import SelectedInfo from './SelectedInfo';
 import { ShopCT } from './styles';
 
 export default function ShopLayout(): JSX.Element {
-  const [selected, setSelected] = useState<number>(2);
+  const { opt, resetForm } = usePaymentFormContext();
+  const { selectedOpt, setSelectedOpt } = opt;
+
   const router = useRouter();
   const onSubmit = () => {
     router.push('/shop/payment');
   };
+
+  useEffect(() => {
+    resetForm();
+  }, []);
   return (
     <ShopCT className="inner">
       <div className="summary">
@@ -20,8 +27,8 @@ export default function ShopLayout(): JSX.Element {
           인플루언서 상품은 문의를 통해 진행해주세요.
         </p>
       </div>
-      <OptionSection selectedState={{ selected, setSelected }} />
-      <SelectedInfo selected={selected} />
+      <OptionSection selectedState={{ selectedOpt, setSelectedOpt }} />
+      <SelectedInfo selectedOpt={selectedOpt} />
       <PolicySection />
       <button type="button" className="submit" onClick={onSubmit}>
         결제하기
