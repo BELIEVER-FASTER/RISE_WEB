@@ -20,6 +20,12 @@ export default function Footer(): JSX.Element {
     } else if (router.pathname === '/') {
       setFooterEx(false);
       setIsBlack(true);
+    } else if (router.asPath === '/shop/list') {
+      setFooterEx(false);
+      setIsBlack(false);
+    } else if (router.asPath === '/shop/payment') {
+      setFooterEx(false);
+      setIsBlack(false);
     }
   }, [router]);
   return (

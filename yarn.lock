@@ -437,6 +437,27 @@
   dependencies:
     "@sentry/cli" "^1.68.0"
 
+"@tosspayments/payment-sdk@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@tosspayments/payment-sdk/-/payment-sdk-1.1.0.tgz#534d353c853100dc1fa89cb0e4d59b73083f118e"
+  integrity sha512-OForAe+6K8m7YfF4eqoG1l+3niergTAPqoVPUuh2E/VBXx/JCwjWx7udrjpfV8XdqS2enmI9VLch8QpPKrhwnQ==
+  dependencies:
+    "@tosspayments/payment__types" "^1.10.1"
+
+"@tosspayments/payment__types@^1.10.1":
+  version "1.10.1"
+  resolved "https://registry.yarnpkg.com/@tosspayments/payment__types/-/payment__types-1.10.1.tgz#a4bea4f0c879ee2b9603a777ab9a1f94116a030d"
+  integrity sha512-/SEGkyz1fnOoOOlqkaNQ2nXEqLETJKqfFjy0Rt3bqUUkmU2o7NRYG3czGpCGD10qYK/CAaujfop58seeoRu1bw==
+  dependencies:
+    "@tosspayments/sdk-constants" "^0.2.0"
+
+"@tosspayments/sdk-constants@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@tosspayments/sdk-constants/-/sdk-constants-0.2.0.tgz#b5e7455821570736701462408a6b3ddfcd97787c"
+  integrity sha512-CuZ6w+CpyNc9dm1WAwtoimMMtYVwguqmWfLRnYd4gaglPwFJqfndtdzDfevwyXblBkVvBsfyjqZ1IyDf7RXB5g==
+  dependencies:
+    type-fest "^2.8.0"
+
 "@types/bson@*":
   version "4.0.5"
   resolved "https://registry.yarnpkg.com/@types/bson/-/bson-4.0.5.tgz#9e0e1d1a6f8866483f96868a9b33bc804926b1fc"
@@ -3344,6 +3365,11 @@ react-transition-group@^4.4.2:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
+react-uuid@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-uuid/-/react-uuid-1.0.2.tgz#c77cea91cf38eafb1aaa7910f92621b2ed91b969"
+  integrity sha512-5e0GM16uuQj9MdRJlZ0GdLC8LKMwpU9PIqYmF27s3fIV2z+rLyASTaiW4aKzSY4DyGanz+ImzsECkftwGWfAwA==
+
 react@17.0.2:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react/-/react-17.0.2.tgz#d0b5cc516d29eb3eee383f75b62864cfb6800037"
@@ -4043,6 +4069,11 @@ type-fest@^0.7.1:
   version "0.7.1"
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.7.1.tgz#8dda65feaf03ed78f0a3f9678f1869147f7c5c48"
   integrity sha512-Ne2YiiGN8bmrmJJEuTWTLJR32nh/JdL1+PSicowtNb0WFpn59GK8/lfD61bVtzguz7b3PBt74nxpv/Pw5po5Rg==
+
+type-fest@^2.8.0:
+  version "2.16.0"
+  resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-2.16.0.tgz#1250fbd64dafaf4c8e405e393ef3fb16d9651db2"
+  integrity sha512-qpaThT2HQkFb83gMOrdKVsfCN7LKxP26Yq+smPzY1FqoHRjqmjqHXA7n5Gkxi8efirtbeEUxzfEdePthQWCuHw==
 
 typescript@^4.3.5:
   version "4.3.5"

@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import { options } from 'utils/optionData';
+import { loadTossPayments } from '@tosspayments/payment-sdk';
+const clientKey = 'test_ck_7XZYkKL4MrjMPPePABWV0zJwlEWR';
+import uuid from 'react-uuid';
+
 const regPhone = /^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$/;
 const regEmail =
   /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
@@ -29,6 +33,8 @@ function checkCorporateRegiNumber(number: string): boolean {
 }
 export type PaymentFormType = ReturnType<typeof usePaymentForm>;
 export default function usePaymentForm(): typeof states {
+  const [isSameValue, setIsSameValue] = useState(false);
+
   const [submitted, setSubmitted] = useState(false);
 
   const [selectedOpt, setSelectedOpt] = useState(options[1]);
@@ -81,12 +87,14 @@ export default function usePaymentForm(): typeof states {
   const [clientName, setClientName] = useState('');
   const onChangeClientName = (e: React.ChangeEvent<HTMLInputElement>) => {
     setClientName(e.target.value);
+    setIsSameValue(false);
   };
 
   const [clientPhone, setClientPhone] = useState('');
   const [clientPhoneErr, setClientPhoneErr] = useState(true);
   const onChangeClientPhone = (e: React.ChangeEvent<HTMLInputElement>) => {
     setClientPhone(e.target.value);
+    setIsSameValue(false);
     if (!regPhone.test(e.target.value)) {
       setClientPhoneErr(true);
     } else setClientPhoneErr(false);
@@ -96,13 +104,31 @@ export default function usePaymentForm(): typeof states {
   const [clientEmailErr, setClientEmailErr] = useState(true);
   const onChangeClientEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
     setClientEmail(e.target.value);
+    setIsSameValue(false);
     if (!regEmail.test(e.target.value)) {
       setClientEmailErr(true);
     } else setClientEmailErr(false);
   };
 
   const [agreeTerm, setAgreeTerm] = useState(false);
-  const [method, setMethod] = useState({ id: 1, value: '카드', label: '신용/체크카드' });
+  const [method, setMethod] = useState<{
+    id: number;
+    value: '카드' | '가상계좌' | '계좌이체';
+    label: string;
+  }>({ id: 1, value: '카드', label: '신용/체크카드' });
+
+  const onChangeSameValue = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setIsSameValue(e.target.checked);
+    if (e.target.checked) {
+      setClientName(ceoName);
+      setClientEmail(email);
+      setClientPhone(ceoPhone);
+    } else {
+      setClientName('');
+      setClientEmail('');
+      setClientPhone('');
+    }
+  };
 
   const resetForm = () => {
     setAddress1('');
@@ -124,7 +150,7 @@ export default function usePaymentForm(): typeof states {
     setMethod({ id: 1, value: '카드', label: '신용/체크카드' });
     setSelectedOpt(options[1]);
   };
-  const onSubmit = () => {
+  const onSubmit = async () => {
     setSubmitted(true);
     console.log({
       address1,
@@ -141,6 +167,58 @@ export default function usePaymentForm(): typeof states {
       method,
       agreeTerm,
     });
+    const tossPayments = await loadTossPayments(clientKey);
+    const id = uuid();
+    if (
+      !address1 ||
+      !address2 ||
+      !ceoName ||
+      !ceoPhone ||
+      !clientEmail ||
+      !clientName ||
+      !clientPhone ||
+      !coName ||
+      !coNumber ||
+      !email ||
+      !agreeTerm ||
+      coNumberErr ||
+      ceoPhoneErr ||
+      emailErr ||
+      clientEmailErr ||
+      clientPhoneErr
+    )
+      return alert('필수 항목을 모두 입력해주세요');
+
+    const options = {
+      amount: selectedOpt.price + selectedOpt.tax,
+      orderId: id,
+      orderName: selectedOpt.label,
+      customerName: clientName,
+      customerEmail: clientEmail,
+      customerMobilePhone: clientPhone,
+      successUrl: 'http://localhost:3000/shop/res/success',
+      failUrl: 'http://localhost:3000/shop/res/fail',
+    };
+    try {
+      document.body.style.overflowY = 'hidden';
+      await tossPayments.requestPayment(
+        method.value,
+        method.value === '가상계좌'
+          ? {
+              ...options,
+              validHours: 24,
+              // cashReceipt: {
+              //   type: '소득공제',
+              // },
+              virtualAccountCallbackUrl: 'http://localhost:3000/shop/res/fail',
+            }
+          : options
+      );
+    } catch (e) {
+      alert('결제 실패');
+    } finally {
+      document.body.style.overflowY = 'auto';
+    }
   };
   const states = {
     resetForm,
@@ -160,6 +238,7 @@ export default function usePaymentForm(): typeof states {
     agreeTerm: { agreeTerm, setAgreeTerm },
     submitted: { submitted, setSubmitted },
     onSubmit,
+    isSameValue: { isSameValue, setIsSameValue, onChangeSameValue },
   };
 
   return states;

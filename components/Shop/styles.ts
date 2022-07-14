@@ -294,6 +294,7 @@ export const PaymentCT = styled.main`
   padding-top: 60px;
   max-width: 1200px;
   margin: 0 auto;
+  margin-bottom: 120px;
 
   h1 {
     font-weight: 500;
@@ -322,6 +323,19 @@ export const PaymentCT = styled.main`
     h3 {
       margin-top: 0;
       margin-right: 12px;
+    }
+    label {
+      display: flex;
+      align-items: center;
+      color: #737373;
+      font-size: 14px;
+      font-weight: 300;
+      margin-left: 20px;
+      input {
+        width: 16px;
+        height: 16px;
+        margin-right: 6px;
+      }
     }
   }
   & > .content {

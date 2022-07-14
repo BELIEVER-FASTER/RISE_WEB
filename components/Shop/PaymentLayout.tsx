@@ -1,4 +1,5 @@
 import ShopHeader from 'components/Layout/ShopHeader';
+import { usePaymentFormContext } from 'hooks/provider/PaymentProvider';
 import React from 'react';
 import ClientForm from './payment/ClientForm';
 import CoperationForm from './payment/CoperationForm';
@@ -21,6 +22,7 @@ export default function PaymentLayout(): JSX.Element {
   //     events.off('routeChangeStart', handleRouteChange);
   //   };
   // }, []);
+  const { isSameValue } = usePaymentFormContext();
   return (
     <>
       <ShopHeader />
@@ -34,7 +36,14 @@ export default function PaymentLayout(): JSX.Element {
             <div className="divider" />
             <div className="col_title">
               <h3>구매자 식별정보</h3>
-              <span>asd</span>
+              <label>
+                <input
+                  type="checkbox"
+                  checked={isSameValue.isSameValue}
+                  onChange={isSameValue.onChangeSameValue}
+                />
+                <span>위의 내용과 같습니다.</span>
+              </label>
             </div>
             <ClientForm />
 
