@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import axios from 'axios';
 import { usePaymentFormContext } from 'hooks/provider/PaymentProvider';
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { useDaumPostcodePopup } from 'react-daum-postcode';
 import AlertMessage from './AlertMessage';
 import { CopFormCT, PaymentInput, PaymentInputBox, PaymentLabel } from './styles';
@@ -19,6 +20,26 @@ export default function CoperationForm(): JSX.Element {
     lisence,
     submitted: { submitted },
   } = usePaymentFormContext();
+  const [fileName, setFileName] = useState('');
+
+  const onChangeImage = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    // http://localhost:8080/api/upload/license
+
+    const formData = new FormData();
+
+    if (!e.target.files) return;
+    formData.append('image', e.target.files[0]);
+
+    const { data } = await axios.post(
+      'http://localhost:8080/api/upload/license',
+      formData
+    );
+    console.log(data);
+    if (data) {
+      lisence.setLisence(data.src);
+      setFileName(e.target.files[0].name);
+    }
+  };
 
   const handleComplete = (data: any) => {
     let fullAddress = data.address;
@@ -126,7 +147,7 @@ export default function CoperationForm(): JSX.Element {
         <PaymentInputBox className="pib address">
           <PaymentLabel>사업자 등록증</PaymentLabel>
           <div className="file_col">
-            <PaymentInput value={lisence.lisence} />
+            <PaymentInput value={fileName} />
             <input
               hidden
               className="file_input"
@@ -134,6 +155,7 @@ export default function CoperationForm(): JSX.Element {
               formEncType="multipart-formdata"
               ref={fileRef}
               multiple={false}
+              onChange={onChangeImage}
             />
             <div className="btn file" onClick={() => fileRef.current?.click()}>
               파일 첨부

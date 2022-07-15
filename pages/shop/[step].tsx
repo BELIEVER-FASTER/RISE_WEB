@@ -5,7 +5,7 @@ import Va from 'components/Shop/payment/res/Va';
 import PaymentLayout from 'components/Shop/PaymentLayout';
 import ResultLayout from 'components/Shop/payment/res/ResultLayout';
 import ShopLayout from 'components/Shop/ShopLayout';
-import PaymentProvider, { usePaymentFormContext } from 'hooks/provider/PaymentProvider';
+import { usePaymentFormContext } from 'hooks/provider/PaymentProvider';
 import { useRouter } from 'next/dist/client/router';
 import React, { useEffect } from 'react';
 
@@ -17,6 +17,7 @@ export default function Step(): JSX.Element {
     window.scrollTo({ top: 0 });
     return () => {
       window.scrollTo({ top: 0 });
+      form.resetForm();
     };
   }, []);
 
@@ -38,7 +39,6 @@ export default function Step(): JSX.Element {
         return <></>;
     }
   }, [router.query.step]);
-  console.log({ name: router.asPath, form });
   return (
     <>
       <MetaGe

@@ -6,9 +6,22 @@ import React, { useEffect } from 'react';
 
 export default function Success(): JSX.Element {
   const router = useRouter();
-  const { onConfirm } = useTossPayments();
+  const { onConfirm, onCheck } = useTossPayments();
+
   useEffect(() => {
-    onConfirm(router);
+    const confirm = async () => {
+      const { query } = router;
+      try {
+        const res = await onCheck(query.orderId as string, query.amount as string);
+        if (res) {
+          await onConfirm(router);
+        }
+      } catch (e) {
+        console.error(e);
+        alert('결제정보가 일치하지 않습니다.');
+      }
+    };
+    confirm();
   }, []);
   return (
     <>

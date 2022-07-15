@@ -51,7 +51,29 @@ export default function useTossPayments(): typeof methods {
       clientPhoneErr
     )
       return alert('필수 항목을 모두 입력해주세요');
-
+    const { data } = await axios.post('http://localhost:8080/api/payment/request', {
+      order: {
+        amount: selectedOpt.price + selectedOpt.tax,
+        orderId: id,
+        orderName: selectedOpt.label,
+        customerName: clientName,
+        customerEmail: clientEmail,
+        customerMobilePhone: clientPhone.replaceAll('-', ''),
+      },
+      // paymentKey: qs.paymentKey,
+      ProductId: selectedOpt.id,
+      paymentMethod: method.value,
+      company: {
+        address: address1 + address2,
+        coName: coName,
+        coNumber: coNumber.replaceAll('-', ''),
+        ceoName: ceoName,
+        ceoPhone: ceoPhone.replaceAll('-', ''),
+        lisence: lisence || null,
+        email: email,
+      },
+    });
+    if (!data) return alert('결제 시도중 문제가 발생하였습니다.');
     const options = {
       amount: selectedOpt.price + selectedOpt.tax,
       orderId: id,
@@ -82,34 +104,33 @@ export default function useTossPayments(): typeof methods {
       document.body.style.overflowY = 'auto';
     }
   };
+
+  const onCheck = async (orderId: string, amount: string) => {
+    try {
+      const { data } = await axios.post(
+        'http://localhost:8080/api/payment/checkPaymentResult',
+        {
+          orderId,
+          amount,
+        }
+      );
+      if (data) return true;
+      else return false;
+    } catch (e) {
+      console.error(e);
+      alert('결제정보가 일치하지 않습니다.');
+    }
+  };
+
   const onConfirm = async (router: NextRouter) => {
     try {
       const qs = router.query;
-      if (+(qs.amount as string) !== selectedOpt.price + selectedOpt.tax) {
-        router.push('/shop/fail?message=결제금액이 일치하지 않습니다.');
-      }
       const { data } = await axios.post('http://localhost:8080/api/payment/approval', {
-        order: {
-          amount: selectedOpt.price + selectedOpt.tax,
-          orderId: qs.orderId,
-          orderName: selectedOpt.name,
-          customerName: clientName,
-          customerEmail: clientEmail,
-          customerMobilePhone: clientPhone.replaceAll('-', ''),
-        },
+        orderId: qs.orderId,
         paymentKey: qs.paymentKey,
-        ProductId: selectedOpt.id,
-        paymentMethod: method.value,
-        company: {
-          address: address1 + address2,
-          coName: coName,
-          coNumber: coNumber.replaceAll('-', ''),
-          ceoName: ceoName,
-          ceoPhone: ceoPhone.replaceAll('-', ''),
-          lisence: lisence || null,
-          email: email,
-        },
+        amount: qs.amount,
       });
+
       if (data.virtualAccount) {
         //가상계좌
         setPaymentInfo(data);
@@ -134,6 +155,7 @@ export default function useTossPayments(): typeof methods {
   const methods = {
     onRequest,
     onConfirm,
+    onCheck,
   };
   return methods;
 }

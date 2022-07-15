@@ -404,9 +404,39 @@ export const ResultCT = styled.main`
     font-weight: 300;
     font-size: 16px;
     line-height: 2;
+    &.col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     strong {
       font-weight: 500;
       font-size: 16px;
+    }
+    .info {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      width: 500px;
+      li {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+      strong {
+        font-weight: 500;
+        font-size: 14px;
+        font-size: 18px;
+        margin-left: 8px;
+      }
+    }
+    .desc {
+      font-size: 14px;
+      line-height: 1.4;
+      strong {
+        font-weight: 500;
+        font-size: 14px;
+      }
     }
   }
   .cta {
