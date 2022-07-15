@@ -385,6 +385,11 @@ export const ResultCT = styled.main`
   img {
     width: 260px;
     margin-bottom: 76px;
+    &.loading {
+      width: 150px;
+      height: 60px;
+      object-fit: cover;
+    }
   }
   h1 {
     margin-bottom: 36px;

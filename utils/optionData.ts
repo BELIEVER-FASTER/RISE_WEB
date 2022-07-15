@@ -17,7 +17,7 @@ export const options: Option[] = [
     id: 2,
     name: 'Premium',
     label: '프리미엄 제작 패키지',
-    price: 20000000,
-    tax: 2000000,
+    price: 2000000,
+    tax: 200000,
   },
 ];

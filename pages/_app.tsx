@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import { GlobalStyle } from 'utils/style_opt';
 import * as Sentry from '@sentry/nextjs';
 import Layout from 'components/Layout/Layout';
+import PaymentProvider from 'hooks/provider/PaymentProvider';
 
 const tagManagerArgs = {
   gtmId: process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID as string,
@@ -43,10 +44,12 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   }, []);
 
   return (
-    <Layout>
-      <Component {...pageProps} />
-      <GlobalStyle />
-    </Layout>
+    <PaymentProvider>
+      <Layout>
+        <Component {...pageProps} />
+        <GlobalStyle />
+      </Layout>
+    </PaymentProvider>
   );
 }
 

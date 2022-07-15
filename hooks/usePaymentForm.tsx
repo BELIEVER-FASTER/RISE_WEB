@@ -1,8 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState } from 'react';
 import { options } from 'utils/optionData';
-import { loadTossPayments } from '@tosspayments/payment-sdk';
-const clientKey = 'test_ck_7XZYkKL4MrjMPPePABWV0zJwlEWR';
-import uuid from 'react-uuid';
 
 const regPhone = /^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$/;
 const regEmail =
@@ -25,7 +23,6 @@ function checkCorporateRegiNumber(number: string): boolean {
     });
 
     chk += parseInt((keyArr[8] * numberMap[8]) / 10 + '', 10);
-    console.log(chk);
     return Math.floor(numberMap[9]) === (10 - (chk % 10)) % 10;
   }
 
@@ -129,97 +126,51 @@ export default function usePaymentForm(): typeof states {
       setClientPhone('');
     }
   };
-
+  const [orderId, setOrderId] = useState('');
   const resetForm = () => {
     setAddress1('');
     setAddress2('');
     setCeoName('');
     setCeoPhone('');
-    setCeoPhoneErr(false);
+    setCeoPhoneErr(true);
     setClientEmail('');
-    setClientEmailErr(false);
+    setClientEmailErr(true);
     setClientName('');
     setClientPhone('');
-    setClientPhoneErr(false);
+    setClientPhoneErr(true);
     setCoName('');
     setCoNumber('');
-    setCoNumberErr(false);
+    setCoNumberErr(true);
     setEmail('');
-    setEmailErr(false);
+    setEmailErr(true);
     setLisence('');
     setMethod({ id: 1, value: '카드', label: '신용/체크카드' });
     setSelectedOpt(options[1]);
+    setSubmitted(false);
+    setPaymentInfo(null);
+    setOrderId('');
   };
-  const onSubmit = async () => {
-    setSubmitted(true);
-    console.log({
-      address1,
-      address2,
-      ceoName,
-      ceoPhone,
-      clientEmail,
-      clientName,
-      clientPhone,
-      coName,
-      coNumber,
-      email,
-      lisence,
-      method,
-      agreeTerm,
-    });
-    const tossPayments = await loadTossPayments(clientKey);
-    const id = uuid();
-    if (
-      !address1 ||
-      !address2 ||
-      !ceoName ||
-      !ceoPhone ||
-      !clientEmail ||
-      !clientName ||
-      !clientPhone ||
-      !coName ||
-      !coNumber ||
-      !email ||
-      !agreeTerm ||
-      coNumberErr ||
-      ceoPhoneErr ||
-      emailErr ||
-      clientEmailErr ||
-      clientPhoneErr
-    )
-      return alert('필수 항목을 모두 입력해주세요');
 
-    const options = {
-      amount: selectedOpt.price + selectedOpt.tax,
-      orderId: id,
-      orderName: selectedOpt.label,
-      customerName: clientName,
-      customerEmail: clientEmail,
-      customerMobilePhone: clientPhone,
-      successUrl: 'http://localhost:3000/shop/res/success',
-      failUrl: 'http://localhost:3000/shop/res/fail',
-    };
-    try {
-      document.body.style.overflowY = 'hidden';
-      await tossPayments.requestPayment(
-        method.value,
-        method.value === '가상계좌'
-          ? {
-              ...options,
-              validHours: 24,
-              // cashReceipt: {
-              //   type: '소득공제',
-              // },
-              virtualAccountCallbackUrl: 'http://localhost:3000/shop/res/fail',
-            }
-          : options
-      );
-    } catch (e) {
-      alert('결제 실패');
-    } finally {
-      document.body.style.overflowY = 'auto';
-    }
+  const fillMock = () => {
+    setCoName('라이즈');
+    setCoNumber('694-81-02476');
+    setCeoName('유원근');
+    setCeoPhone('01087310337');
+    setAddress1('서울특별시 양재대로2길 90');
+    setAddress2('206동 2101호');
+    setEmail('yhg0337@gmail.com');
+    setClientName('유원근');
+    setClientEmail('yhg0337@gmail.com');
+    setClientPhone('01087310337');
+
+    setCeoPhoneErr(false);
+    setClientEmailErr(false);
+    setClientPhoneErr(false);
+    setCoNumberErr(false);
+    setEmailErr(false);
   };
+
+  const [paymentInfo, setPaymentInfo] = useState<any>(null);
   const states = {
     resetForm,
     opt: { selectedOpt, setSelectedOpt },
@@ -237,8 +188,10 @@ export default function usePaymentForm(): typeof states {
     method: { method, setMethod },
     agreeTerm: { agreeTerm, setAgreeTerm },
     submitted: { submitted, setSubmitted },
-    onSubmit,
+    orderId: { setOrderId, orderId },
     isSameValue: { isSameValue, setIsSameValue, onChangeSameValue },
+    fillMock,
+    paymentInfo: { paymentInfo, setPaymentInfo },
   };
 
   return states;

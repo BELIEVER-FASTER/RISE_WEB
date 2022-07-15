@@ -35,9 +35,9 @@ const Icon = () => {
 
 const methods = [
   { id: 1, value: '카드', label: '신용/체크카드', icon: () => <AiOutlineCreditCard /> },
-  { id: 2, value: '무통장(가상계좌)', label: '무통장 (가상계좌)', icon: () => <Icon /> },
-  { id: 3, value: '계좌 이체', label: '계좌 이체', icon: () => <AiOutlineCreditCard /> },
-];
+  { id: 2, value: '가상계좌', label: '무통장 (가상계좌)', icon: () => <Icon /> },
+  { id: 3, value: '계좌이체', label: '계좌 이체', icon: () => <AiOutlineCreditCard /> },
+] as const;
 export default function PaymentMethod(): JSX.Element {
   const { method } = usePaymentFormContext();
   return (

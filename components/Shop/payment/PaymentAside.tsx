@@ -1,13 +1,14 @@
 import { usePaymentFormContext } from 'hooks/provider/PaymentProvider';
+import useTossPayments from 'hooks/useTossPayments';
 import React from 'react';
 import { PaymentAsideContent } from './styles';
 
 export default function PaymentAside(): JSX.Element {
   const {
     opt: { selectedOpt },
-    onSubmit,
     agreeTerm,
   } = usePaymentFormContext();
+  const { onRequest } = useTossPayments();
 
   return (
     <PaymentAsideContent>
@@ -75,7 +76,7 @@ export default function PaymentAside(): JSX.Element {
           </li>
         </ul>
       </div>
-      <button className="cta" onClick={onSubmit}>
+      <button className="cta" onClick={onRequest}>
         {(selectedOpt.price + selectedOpt.tax).toLocaleString()}원 결제하기
       </button>
     </PaymentAsideContent>

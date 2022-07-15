@@ -1,8 +1,16 @@
 import ShopHeader from 'components/Layout/ShopHeader';
-import React from 'react';
-import { ResultCT } from './styles';
+import { usePaymentFormContext } from 'hooks/provider/PaymentProvider';
+import { useRouter } from 'next/dist/client/router';
+import React, { useEffect } from 'react';
+import { ResultCT } from '../../styles';
 
 export default function ResultLayout(): JSX.Element {
+  const router = useRouter();
+  const { paymentInfo, resetForm } = usePaymentFormContext();
+
+  useEffect(() => {
+    return () => resetForm();
+  }, [router]);
   return (
     <>
       <ShopHeader />
@@ -14,7 +22,9 @@ export default function ResultLayout(): JSX.Element {
           <br /> 기타 문의가 있을 경우 <strong>contact@riseenm.com</strong> 또는
           <br /> <strong>1699-6193</strong>으로 연락 남겨주시면 빠르게 도와드리겠습니다.
         </p>
-        <div className="cta">확인</div>
+        <div className="cta" onClick={() => router.push('/shop')}>
+          확인
+        </div>
       </ResultCT>
     </>
   );
