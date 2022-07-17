@@ -1,6 +1,6 @@
 import ShopHeader from 'components/Layout/ShopHeader';
 import { usePaymentFormContext } from 'hooks/provider/PaymentProvider';
-import React, { useEffect } from 'react';
+import React from 'react';
 import ClientForm from './payment/ClientForm';
 import CoperationForm from './payment/CoperationForm';
 import PaymentAside from './payment/PaymentAside';
@@ -8,10 +8,7 @@ import PaymentMethod from './payment/PaymentMethod';
 import { PaymentCT } from './styles';
 
 export default function PaymentLayout(): JSX.Element {
-  const { isSameValue, fillMock } = usePaymentFormContext();
-  useEffect(() => {
-    fillMock();
-  }, []);
+  const { isSameValue } = usePaymentFormContext();
 
   return (
     <>
