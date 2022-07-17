@@ -22,7 +22,7 @@ export default function ResultModal({ onClose, contactId }: ResultModal): JSX.El
   };
   const [selected, setSelected] = useState('어떤 경로를 통해 알게되셨나요?');
   const onSubmit = async () => {
-    updateInflow({ _id: contactId, inflow: selected }).finally(() => {
+    updateInflow({ id: contactId, inflow: selected }).finally(() => {
       onClose();
     });
   };
@@ -57,13 +57,4 @@ export default function ResultModal({ onClose, contactId }: ResultModal): JSX.El
       </div>
     </ModalWrapper>
   );
-}
-{
-  /* <CustomSelect
-            className="budget_input invinsible"
-            placeholder="광고예산"
-            value={budget}
-            setValue={setBudget}
-            options={budgetOptions}
-          /> */
 }

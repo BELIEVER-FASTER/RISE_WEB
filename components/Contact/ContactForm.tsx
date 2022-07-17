@@ -79,7 +79,7 @@ export default function ContactForm(): JSX.Element {
     if (state.loading) return setValid(false);
     else if (state.success) {
       setModalOpen(true);
-      setContactId(state.success._id);
+      setContactId(state.success.id);
     }
   }, [state]);
   useEffect(() => {
