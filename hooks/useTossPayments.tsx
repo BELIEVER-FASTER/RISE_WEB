@@ -4,7 +4,7 @@ import uuid from 'react-uuid';
 import axios from 'axios';
 import { NextRouter } from 'next/dist/client/router';
 
-const clientKey = 'test_ck_ADpexMgkW36egAXbNKB8GbR5ozO0';
+const clientKey = process.env.NEXT_PUBLIC_TOSS_PAYMENTS_CK;
 
 export default function useTossPayments(): typeof methods {
   const {
@@ -29,7 +29,7 @@ export default function useTossPayments(): typeof methods {
 
   const onRequest = async () => {
     setSubmitted(true);
-    const tossPayments = await loadTossPayments(clientKey);
+    const tossPayments = await loadTossPayments(clientKey as string);
     const id = uuid();
     setOrderId(id);
     if (
@@ -51,7 +51,7 @@ export default function useTossPayments(): typeof methods {
       clientPhoneErr
     )
       return alert('필수 항목을 모두 입력해주세요');
-    const { data } = await axios.post('http://localhost:8080/api/payment/request', {
+    const { data } = await axios.post('/api/payment/request', {
       order: {
         amount: selectedOpt.price + selectedOpt.tax,
         orderId: id,
@@ -81,8 +81,8 @@ export default function useTossPayments(): typeof methods {
       customerName: clientName,
       customerEmail: clientEmail,
       customerMobilePhone: clientPhone.replaceAll('-', ''),
-      successUrl: 'http://localhost:3000/shop/success',
-      failUrl: 'http://localhost:3000/shop/fail',
+      successUrl: `${process.env.NEXT_PUBLIC_CLIENT_HOST}/shop/success`,
+      failUrl: `${process.env.NEXT_PUBLIC_CLIENT_HOST}/shop/fail`,
     };
     try {
       document.body.style.overflowY = 'hidden';
@@ -92,13 +92,13 @@ export default function useTossPayments(): typeof methods {
           ? {
               ...options,
               validHours: 24,
-              successUrl: 'http://localhost:3000/shop/va',
-              virtualAccountCallbackUrl: 'http://localhost:3000/shop/fail',
+              successUrl: `${process.env.NEXT_PUBLIC_CLIENT_HOST}/shop/va`,
             }
           : options
       );
     } catch (e) {
       // 취소 이벤트 처리
+      axios.post('/api/payment/cancelOrder', { orderId: id });
       alert('결제를 취소하였습니다.');
     } finally {
       document.body.style.overflowY = 'auto';
@@ -107,13 +107,10 @@ export default function useTossPayments(): typeof methods {
 
   const onCheck = async (orderId: string, amount: string) => {
     try {
-      const { data } = await axios.post(
-        'http://localhost:8080/api/payment/checkPaymentResult',
-        {
-          orderId,
-          amount,
-        }
-      );
+      const { data } = await axios.post('/api/payment/checkPaymentResult', {
+        orderId,
+        amount,
+      });
       if (data) return true;
       else return false;
     } catch (e) {
@@ -125,7 +122,7 @@ export default function useTossPayments(): typeof methods {
   const onConfirm = async (router: NextRouter) => {
     try {
       const qs = router.query;
-      const { data } = await axios.post('http://localhost:8080/api/payment/approval', {
+      const { data } = await axios.post('/api/payment/approval', {
         orderId: qs.orderId,
         paymentKey: qs.paymentKey,
         amount: qs.amount,

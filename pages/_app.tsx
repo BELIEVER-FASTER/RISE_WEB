@@ -7,6 +7,9 @@ import { GlobalStyle } from 'utils/style_opt';
 import * as Sentry from '@sentry/nextjs';
 import Layout from 'components/Layout/Layout';
 import PaymentProvider from 'hooks/provider/PaymentProvider';
+import axios from 'axios';
+
+axios.defaults.baseURL = process.env.NEXT_PUBLIC_SERVER_HOST;
 
 const tagManagerArgs = {
   gtmId: process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID as string,

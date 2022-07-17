@@ -8,24 +8,11 @@ import PaymentMethod from './payment/PaymentMethod';
 import { PaymentCT } from './styles';
 
 export default function PaymentLayout(): JSX.Element {
-  // const handleRouteChange = (url: string) => {
-  //   const res = window.confirm('asdasd');
-  //   if (res) {
-  //     push(url);
-  //   } else {
-  //     throw `Route change to "${url}" was aborted (this error can be safely ignored).`;
-  //   }
-  // };
-  // useEffect(() => {
-  //   events.on('routeChangeStart', handleRouteChange);
-  //   return () => {
-  //     events.off('routeChangeStart', handleRouteChange);
-  //   };
-  // }, []);
   const { isSameValue, fillMock } = usePaymentFormContext();
   useEffect(() => {
     fillMock();
   }, []);
+
   return (
     <>
       <ShopHeader />

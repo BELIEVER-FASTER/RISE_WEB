@@ -23,6 +23,7 @@ export default function Success(): JSX.Element {
     };
     confirm();
   }, []);
+
   return (
     <>
       <ShopHeader />

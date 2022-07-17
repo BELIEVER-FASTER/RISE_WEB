@@ -2,9 +2,6 @@ import axios from 'axios';
 import dayjs from 'dayjs';
 
 axios.defaults.withCredentials = true;
-// if (process.env.NODE_ENV === 'production') {
-//   axios.defaults.baseURL = process.env.NEXT_PUBLIC_SERVER_HOST;
-// }
 
 export type EmailNotiRes = {
   status: number;

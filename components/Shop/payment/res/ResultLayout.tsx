@@ -51,7 +51,7 @@ export default function ResultLayout(): JSX.Element {
                 까지 입금확인이 안될경우 주문이 취소되며 자세한 사항은
                 <br />
                 <strong>contact@riseenm.com</strong> 또는
-                <strong>1699-6193</strong>으로 연락 남겨주시면 빠르게 도와드리겠습니다.
+                <strong>1688-6183</strong>으로 연락 남겨주시면 빠르게 도와드리겠습니다.
               </div>
             </p>
             <div className="cta" onClick={() => router.push('/shop')}>
@@ -65,7 +65,7 @@ export default function ResultLayout(): JSX.Element {
             <p>
               영업일 기준 1일 이내 작성해주신 구매자 이메일로 연락을 드릴 예정입니다.
               <br /> 기타 문의가 있을 경우 <strong>contact@riseenm.com</strong> 또는
-              <br /> <strong>1699-6193</strong>으로 연락 남겨주시면 빠르게
+              <br /> <strong>1688-6183</strong>으로 연락 남겨주시면 빠르게
               도와드리겠습니다.
             </p>
             <div className="cta" onClick={() => router.push('/shop')}>

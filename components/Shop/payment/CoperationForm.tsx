@@ -23,17 +23,12 @@ export default function CoperationForm(): JSX.Element {
   const [fileName, setFileName] = useState('');
 
   const onChangeImage = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    // http://localhost:8080/api/upload/license
-
     const formData = new FormData();
 
     if (!e.target.files) return;
     formData.append('image', e.target.files[0]);
 
-    const { data } = await axios.post(
-      'http://localhost:8080/api/upload/license',
-      formData
-    );
+    const { data } = await axios.post('/api/upload/license', formData);
     console.log(data);
     if (data) {
       lisence.setLisence(data.src);

@@ -120,6 +120,8 @@ export default function usePaymentForm(): typeof states {
       setClientName(ceoName);
       setClientEmail(email);
       setClientPhone(ceoPhone);
+      setClientEmailErr(false);
+      setClientPhoneErr(false);
     } else {
       setClientName('');
       setClientEmail('');
