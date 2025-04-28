@@ -1,34 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# RISE_WEB
 
-## Getting Started
+라이즈 웹페이지 프로젝트입니다. Next.js와 TypeScript를 기반으로 구축되었습니다.
 
-First, run the development server:
+---
+## Project Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- **Framework & Language**
+    - Next.js (`11.0.1`)
+    - React (`17.0.2`)
+    - TypeScript (`4.3.5`)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Styling & UI**
+    - styled-components (`5.3.0`)
+    - react-icons (`4.2.0`)
+    - react-lottie (`1.2.3`)
+    - react-slick (`0.29.0`)
+    - react-transition-group (`4.4.2`)
+    - gsap (`3.7.1`)
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- **Data Fetching & State**
+    - axios (`0.21.1`)
+    - mongoose (`5.13.7`)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- **Payments**
+    - @tosspayments/payment-sdk (`1.1.0`)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- **Analytics & Monitoring**
+    - @sentry/nextjs (`6.11.0`)
+    - react-gtm-module (`2.0.11`)
+    - @next/bundle-analyzer (`11.1.0`)
 
-## Learn More
+- **Development Tools**
+    - ESLint (`7.32.0`)
+    - Prettier (`2.3.2`)
+    - TypeScript (`4.3.5`)
 
-To learn more about Next.js, take a look at the following resources:
+---
+## Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+다음은 `package.json`에 정의된 스크립트 목록입니다. (`yarn [script]` 또는 `npm run [script]`로 실행)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- `yarn dev`: 개발 모드로 Next.js 애플리케이션을 시작합니다.
+- `yarn build`: 프로덕션용으로 애플리케이션을 빌드합니다.
+- `yarn start`: 빌드된 프로덕션 애플리케이션을 시작합니다.
+- `yarn lint`: ESLint를 사용하여 코드 스타일 및 오류를 검사합니다.
+- `yarn out`: 정적 HTML 파일로 애플리케이션을 내보냅니다. (`next export`)
+- `yarn vercel-deploy`: Vercel 배포를 위해 빌드하고 내보냅니다. (`next build && next export`)
+- `yarn bundle`: 번들 분석기를 활성화하여 프로덕션 빌드를 실행합니다. (`ANALYZE=true next build`)
